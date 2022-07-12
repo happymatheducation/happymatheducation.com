@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/happy-math-education/static/css/main.be6275e2.css",
+    "main.js": "/happy-math-education/static/js/main.3053959f.js",
+    "static/js/787.b104852e.chunk.js": "/happy-math-education/static/js/787.b104852e.chunk.js",
+    "static/media/logo.png": "/happy-math-education/static/media/logo.7ef237da561ece48f392.png",
+    "index.html": "/happy-math-education/index.html",
+    "main.be6275e2.css.map": "/happy-math-education/static/css/main.be6275e2.css.map",
+    "main.3053959f.js.map": "/happy-math-education/static/js/main.3053959f.js.map",
+    "787.b104852e.chunk.js.map": "/happy-math-education/static/js/787.b104852e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be6275e2.css",
+    "static/js/main.3053959f.js"
+  ]
+}
