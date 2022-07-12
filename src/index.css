@@ -74,12 +74,12 @@ body {
 .btn {
   /* display: inline-block; */
   background: #fff;
-  color: #000;
+  color: #51557E;
   /* border: steelblue; */
-  padding: 8px 16px;
+  padding: 4px 8px;
   margin: 5px;
   border-width: 3px;
-  border: #000;
+  border: #51557E;
   border-style: solid;
   border-radius: 5px;
   cursor: pointer;
@@ -87,14 +87,24 @@ body {
   text-decoration: none;
   font-size: 22px;
   font-family: inherit;
+  transition: color 0.3s;
+  transition: background 0.3s;
+  /* transition: scale 0.3s; */
 }
 
 .btn:focus {
   outline: rgb(239, 239, 239);
 }
 
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .btn:hover {
-  background: rgb(0, 0, 0);
+  background: #51557E;
   color: #fff;
 }
 
