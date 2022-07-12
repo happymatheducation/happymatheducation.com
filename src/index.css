@@ -73,12 +73,13 @@ body {
 
 .btn {
   /* display: inline-block; */
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   /* border: steelblue; */
   padding: 8px 16px;
   margin: 5px;
-  border-width: 0px;
+  border-width: 3px;
+  border: #000;
   border-style: solid;
   border-radius: 5px;
   cursor: pointer;
@@ -93,8 +94,8 @@ body {
 }
 
 .btn:hover {
-  background: #111;
-  
+  background: rgb(0, 0, 0);
+  color: #fff;
 }
 
 .btn:active {
