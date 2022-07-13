@@ -91,6 +91,8 @@ body {
   font-family: inherit;
   transition: color 0.3s;
   transition: background 0.3s;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
   /* transition: scale 0.3s; */
 }
 
@@ -103,6 +105,8 @@ body {
     border-width: 3px;
     border: #fff;
     border-style: solid;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */ 
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;

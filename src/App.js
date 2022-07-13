@@ -2,17 +2,33 @@ import logo from './logo.png';
 import background from './homebackground.jpg';
 import background2 from './background2.png';
 
+import React from "react";
+import root from './index.js';
+import ReactDOM from 'react-dom/client';
+import { useNavigate } from "react-router-dom"
+
+import Tuition from './Tuition';
+
 const NavBar = () => {
   return(
+  <>
+  <img src = {logo} alt = 'logo' style = {{display: 'block', marginLeft: 'auto', marginTop: '5px', marginRight: 'auto'}}></img>
   <div className="container" style = {{display: 'flex', justifyContent: 'space-between', backgroundColor: '#51557E', width: 'max-content', marginTop: '5px', padding: '10px', marginBottom: '5px', borderWidth: '3px', borderColor: '#51557E', borderStyle: 'solid'}}>
   <button className='btnnavbar' style = {{padding: '', justifySelf: 'center', marginRight: '30px'}}>HOME</button>
-  <button className='btnnavbar' style = {{marginRight: '30px'}}>TUITION & POLICY</button>
+  <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+    () => {
+      root.render (
+        <Tuition/>
+      )          
+    }    
+  }>TUITION & POLICY</button>
   <button className='btnnavbar' style = {{marginRight: '30px'}}>ULTIMATE PRACTICE</button>
   <button className='btnnavbar' style = {{marginRight: '30px'}}>MATH CONTESTS</button>
   <button className='btnnavbar' style = {{marginRight: '30px'}}>CAREER</button>
   <button className='btnnavbar' style = {{marginRight: '30px'}}>CONTACT</button>
   <button className='btnnavbar' style = {{marginLeft: '', marginBottom: '0px'}}>OUR TEAM</button>
 </div>
+</>
   )
 }
 
@@ -34,13 +50,11 @@ const Copyright = () => {
 
 function App() {
   return (
-    <>
-    <img src = {logo} alt = 'logo' style = {{display: 'block', marginLeft: 'auto', marginTop: '5px', marginRight: 'auto'}}></img>
-    
+    <>    
     <NavBar/>
 
     <div style = {{position: 'relative', textAlign: 'center'}}>
-      <img src = {background2} alt = 'background' style = {{height: '600px', border: '10px solid #51557E', borderRadius: '20px', width: '70%', display: 'block', marginLeft: 'auto', marginTop: '50px', marginRight: 'auto'}}></img>
+      <img src = {background2} alt = 'background' style = {{height: '600px', border: '15px solid #51557E', borderRadius: '20px', width: '70%', display: 'block', marginLeft: 'auto', marginTop: '50px', marginRight: 'auto'}}></img>
       <div class='centered' style = {{textAlign: 'center'}}>
         <h1 style = {{marginTop: '120px', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '80px'}}>Happy Math Education</h1>
         <h1 style = {{color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '40px'}}>Our mission: to help kids enjoy maths</h1>
