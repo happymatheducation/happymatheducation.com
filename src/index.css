@@ -13,6 +13,8 @@ body {
 
 .container {
   margin: 30px auto;
+  background-color: #D6EFED;
+  width: 60%;
   /* overflow: auto; */
   /* min-height: 300px auto; */
   max-height: auto;
@@ -90,6 +92,33 @@ body {
   transition: color 0.3s;
   transition: background 0.3s;
   /* transition: scale 0.3s; */
+}
+
+.btnnavbar {
+    background: #fff;
+    color: #51557E;
+    padding: 4px 8px;
+    display: inline;
+    margin: 5px;
+    border-width: 3px;
+    border: #fff;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: inherit;
+    transition: color 0.3s;
+    transition: background 0.3s;
+}
+
+.btnnavbar:hover {
+  background: #51557E;
+  color: #fff;
+}
+
+.btnnavbar:active {
+  transform: scale(0.9);
 }
 
 .btn:focus {
