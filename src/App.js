@@ -7,14 +7,20 @@ import root from './index.js';
 import ReactDOM from 'react-dom/client';
 import { useNavigate } from "react-router-dom"
 
-import Tuition from './Tuition';
+import Tuition from './pages/Tuition';
 
-const NavBar = () => {
+export const NavBar = () => {
   return(
   <>
   <img src = {logo} alt = 'logo' style = {{display: 'block', marginLeft: 'auto', marginTop: '5px', marginRight: 'auto'}}></img>
   <div className="container" style = {{display: 'flex', justifyContent: 'space-between', backgroundColor: '#51557E', width: 'max-content', marginTop: '5px', padding: '10px', marginBottom: '5px', borderWidth: '3px', borderColor: '#51557E', borderStyle: 'solid'}}>
-  <button className='btnnavbar' style = {{padding: '', justifySelf: 'center', marginRight: '30px'}}>HOME</button>
+  <button className='btnnavbar' style = {{padding: '', justifySelf: 'center', marginRight: '30px'}} onClick = {
+    () => {
+      root.render(
+        <App/>
+      )
+    }
+  }>HOME</button>
   <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
     () => {
       root.render (
@@ -32,23 +38,24 @@ const NavBar = () => {
   )
 }
 
-const Copyright = () => {
+export const Copyright = () => {
   return (
     <div className = 'container' style = {{backgroundColor: '#51557E',marginTop: '70px', display: 'flex', justifyContent: 'space-between', width: '100%', borderRadius: '0px', marginBottom: '0px'}}>
-    <h1 style = {{display: 'inline', color: '#fff', fontSize: '30px', justifyContent: 'left'}}>
-      Copyright © 2022: Jeffrey Zang
-    </h1>
-    <button hover = {{background: '#51557E', color: '#fff'}} className = 'btn' style = {{fontSize: '25px', borderWidth: '3px', borderColor: '#fff', marginTop: '0px'}} onClick = {
-      () => {window.open('https://github.com/jeffrey-zang/happy-math-education')}
-    }>
-      {'Source '}
-      <i class={'bi bi-github'} style={{ fontSize: 25 }}></i>
-    </button>
+      <h1 style = {{display: 'inline', color: '#fff', fontSize: '30px', justifyContent: 'left'}}>
+        Copyright © 2022: Jeffrey Zang
+      </h1>
+      <button hover = {{background: '#51557E', color: '#fff'}} className = 'btn' style = {{fontSize: '25px', borderWidth: '3px', borderColor: '#fff', marginTop: '0px'}} onClick = {
+        () => {window.open('https://github.com/jeffrey-zang/happy-math-education')}
+      }>
+        {'Source '}
+        <i class={'bi bi-github'} style={{ fontSize: 25 }}></i>
+      </button>
   </div>
   )
 }
 
 function App() {
+  console.log(window.location)
   return (
     <>    
     <NavBar/>

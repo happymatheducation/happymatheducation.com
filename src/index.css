@@ -15,10 +15,7 @@ body {
   margin: 30px auto;
   background-color: #D6EFED;
   width: 60%;
-  /* overflow: auto; */
-  /* min-height: 300px auto; */
   max-height: auto;
-  /* border: 1px solid steelblue; */
   padding: 30px;
   border-radius: 10px;
 }
