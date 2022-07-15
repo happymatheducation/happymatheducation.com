@@ -1,18 +1,19 @@
 import logo from './logo.png';
 import background2 from './background2.png';
 
-import {React, useRef} from "react";
+import {React} from "react";
 import root from './index.js';
+
 import Tuition from './pages/Tuition';
+import Practice from './pages/Practice';
 
 export const NavBar = () => {
 
-  const reference = useRef(null);
-    
   return(
   <>
   <img src = {logo} alt = 'logo' style = {{display: 'block', marginLeft: 'auto', marginTop: '5px', marginRight: 'auto'}}></img>
-  <div ref={reference} className="topnav" style = {{zIndex: '6969', position: 'sticky', top: -1, backgroundColor: '#51557E', marginTop: '5px', padding: '5px 10px', marginBottom: '5px', borderWidth: '3px', borderColor: '#51557E', borderStyle: 'solid', borderRadius: '0px'}}>
+  <div className="topnav" style = {{zIndex: '6969', position: 'sticky', top: -1, backgroundColor: '#51557E', marginTop: '5px', padding: '5px 10px', marginBottom: '5px', borderWidth: '3px', borderColor: '#51557E', borderStyle: 'solid', borderRadius: '0px'}}>
+    
     <button className='btnnavbar' style = {{padding: '', justifySelf: 'center', marginRight: '30px'}} onClick = {
       () => {
         root.render(
@@ -20,6 +21,7 @@ export const NavBar = () => {
         )
       }
     }>HOME</button>
+    
     <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
       () => {
         root.render (
@@ -27,7 +29,14 @@ export const NavBar = () => {
         )          
       }    
     }>TUITION & POLICY</button>
-    <button className='btnnavbar' style = {{marginRight: '30px'}}>ULTIMATE PRACTICE</button>
+   
+    <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+      () => {
+        root.render(
+          <Practice/>
+        )
+      }
+    }>ULTIMATE PRACTICE</button>
     <button className='btnnavbar' style = {{marginRight: '30px'}}>MATH CONTESTS</button>
     <button className='btnnavbar' style = {{marginRight: '30px'}}>CAREER</button>
     <button className='btnnavbar' style = {{marginRight: '30px'}}>CONTACT</button>
