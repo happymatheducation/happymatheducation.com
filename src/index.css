@@ -20,6 +20,12 @@ body {
   border-radius: 10px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -109,8 +115,14 @@ body {
     text-decoration: none;
     font-size: 22px;
     font-family: inherit;
+    float: left;
     transition: color 0.3s;
     transition: background 0.3s;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
 }
 
 .btnnavbar:hover {

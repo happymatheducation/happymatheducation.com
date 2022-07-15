@@ -6,7 +6,7 @@ function Tuition() {
     <>    
     <NavBar/>
 
-    <h1 style = {{marginTop: '40px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '100px'}}>Tuition</h1>
+    <h1 style = {{marginTop: '40px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '100px', textAlign: 'center'}}>Tuition</h1>
     <h1 style = {{color: '#748DA6', fontSize: '30px', textAlign: 'center', marginTop: '-20px'}}>
       {'All classes are held online\u00A0'}
       <i class="bi bi-person-workspace"></i>    

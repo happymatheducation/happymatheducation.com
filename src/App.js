@@ -2,7 +2,7 @@ import logo from './logo.png';
 import background from './homebackground.jpg';
 import background2 from './background2.png';
 
-import React from "react";
+import {React, useRef} from "react";
 import root from './index.js';
 import ReactDOM from 'react-dom/client';
 import { useNavigate } from "react-router-dom"
@@ -10,29 +10,32 @@ import { useNavigate } from "react-router-dom"
 import Tuition from './pages/Tuition';
 
 export const NavBar = () => {
+
+  const reference = useRef(null);
+    
   return(
   <>
   <img src = {logo} alt = 'logo' style = {{display: 'block', marginLeft: 'auto', marginTop: '5px', marginRight: 'auto'}}></img>
-  <div className="container" style = {{display: 'flex', justifyContent: 'space-between', backgroundColor: '#51557E', width: 'max-content', marginTop: '5px', padding: '10px', marginBottom: '5px', borderWidth: '3px', borderColor: '#51557E', borderStyle: 'solid'}}>
-  <button className='btnnavbar' style = {{padding: '', justifySelf: 'center', marginRight: '30px'}} onClick = {
-    () => {
-      root.render(
-        <App/>
-      )
-    }
-  }>HOME</button>
-  <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
-    () => {
-      root.render (
-        <Tuition/>
-      )          
-    }    
-  }>TUITION & POLICY</button>
-  <button className='btnnavbar' style = {{marginRight: '30px'}}>ULTIMATE PRACTICE</button>
-  <button className='btnnavbar' style = {{marginRight: '30px'}}>MATH CONTESTS</button>
-  <button className='btnnavbar' style = {{marginRight: '30px'}}>CAREER</button>
-  <button className='btnnavbar' style = {{marginRight: '30px'}}>CONTACT</button>
-  <button className='btnnavbar' style = {{marginLeft: '', marginBottom: '0px'}}>OUR TEAM</button>
+  <div ref={reference} className="topnav" style = {{zIndex: '6969', position: 'sticky', top: -1, backgroundColor: '#51557E', marginTop: '5px', padding: '5px 10px', marginBottom: '5px', borderWidth: '3px', borderColor: '#51557E', borderStyle: 'solid', borderRadius: '0px'}}>
+    <button className='btnnavbar' style = {{padding: '', justifySelf: 'center', marginRight: '30px'}} onClick = {
+      () => {
+        root.render(
+          <App/>
+        )
+      }
+    }>HOME</button>
+    <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+      () => {
+        root.render (
+          <Tuition/>
+        )          
+      }    
+    }>TUITION & POLICY</button>
+    <button className='btnnavbar' style = {{marginRight: '30px'}}>ULTIMATE PRACTICE</button>
+    <button className='btnnavbar' style = {{marginRight: '30px'}}>MATH CONTESTS</button>
+    <button className='btnnavbar' style = {{marginRight: '30px'}}>CAREER</button>
+    <button className='btnnavbar' style = {{marginRight: '30px'}}>CONTACT</button>
+    <button className='btnnavbar' style = {{marginLeft: '', marginBottom: '0px', float: 'right'}}>OUR TEAM</button>
 </div>
 </>
   )
