@@ -22,6 +22,9 @@ function Contests() {
       </div>
       {' :'}
     </h1> 
+
+    <div className='container' style = {{display: 'none'}}></div>
+
     <Copyright/>
     </>
   );
