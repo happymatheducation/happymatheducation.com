@@ -6,6 +6,7 @@ import root from './index.js';
 
 import Tuition from './pages/Tuition';
 import Practice from './pages/Practice';
+import Contests from './pages/Contests'
 
 export const NavBar = () => {
 
@@ -37,7 +38,14 @@ export const NavBar = () => {
         )
       }
     }>ULTIMATE PRACTICE</button>
-    <button className='btnnavbar' style = {{marginRight: '30px'}}>MATH CONTESTS</button>
+
+    <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+      () => {
+        root.render(
+          <Contests/>
+        )
+      }
+    }>MATH CONTESTS</button>
     <button className='btnnavbar' style = {{marginRight: '30px'}}>CAREER</button>
     <button className='btnnavbar' style = {{marginRight: '30px'}}>CONTACT</button>
     <button className='btnnavbar' style = {{marginLeft: '', marginBottom: '0px', float: 'right'}}>OUR TEAM</button>
@@ -63,7 +71,6 @@ export const Copyright = () => {
 }
 
 function App() {
-  console.log(window.location)
   return (
     <>    
     <NavBar/>
@@ -71,14 +78,16 @@ function App() {
     <div style = {{position: 'relative', textAlign: 'center'}}>
       <img src = {background2} alt = 'background' style = {{height: '600px', border: '15px solid #51557E', borderRadius: '20px', width: '70%', display: 'block', marginLeft: 'auto', marginTop: '50px', marginRight: 'auto'}}></img>
       <div class='centered' style = {{textAlign: 'center'}}>
-        <h1 style = {{marginTop: '120px', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '80px'}}>Happy Math Education</h1>
-        <h1 style = {{color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '40px'}}>Our mission: to help kids enjoy maths</h1>
+        <h1 style = {{animationName: 'fadeIn', animationDuration: '3s', marginTop: '150px', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '80px'}}>Happy Math Education</h1>
+        <h1 style = {{fontWeight: 'lighter', animationName: 'slideUp', animationDuration: '2s', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '50px', lineHeight: '50px'}}>
+          Our mission: to help<br></br>kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: '50px'}}>enjoy</h1> maths
+        </h1>
       </div>
     </div>
 
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
-      <h1 style = {{color: '#51557E', fontSize: '60px', display: 'block', justifyContent: 'center'}}>Tuition</h1>
+      <h1 style = {{ color: '#51557E', fontSize: '60px', display: 'block', justifyContent: 'center'}}>Tuition</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '30px', marginTop: '20px'}}>{'View Details '}
       <i class={'bi bi-text-left'} style={{ fontSize: 30 }}></i>
       </button>

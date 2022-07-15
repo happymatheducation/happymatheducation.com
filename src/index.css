@@ -6,9 +6,78 @@
   padding: 0;
 }
 
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    line-height: 200px;
+}
+  to {
+    opacity: 1;
+    line-height: 50px;
+  }
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
+}
+
+.gradient {
+  /* color: rgb(2,0,36); */
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(224,219,42,1) 0%, rgba(0,212,255,1) 100%);
+  font-weight: 'bold';
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container {
