@@ -1,12 +1,8 @@
 import logo from './logo.png';
-import background from './homebackground.jpg';
 import background2 from './background2.png';
 
 import {React, useRef} from "react";
 import root from './index.js';
-import ReactDOM from 'react-dom/client';
-import { useNavigate } from "react-router-dom"
-
 import Tuition from './pages/Tuition';
 
 export const NavBar = () => {
