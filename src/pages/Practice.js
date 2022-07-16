@@ -151,7 +151,7 @@ function Practice() {
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/de_moivres_formula_answers.pdf'>Answers</a>
           </div>
           <div style = {{display: 'flex', justifyContent: 'space-between'}}>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'>Logaritm from Contests</a>
+            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'>Logarithm from Contests</a>
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/logarithm.pdf'>Answers</a>
           </div>
         </h1>
