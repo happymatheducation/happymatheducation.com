@@ -18,7 +18,7 @@
 }
   to {
     opacity: 1;
-    line-height: 50px;
+    line-height: 80px;
   }
 }
 
@@ -44,10 +44,10 @@
 
 .dropbtn {
   background-color: #fff;
-  color: #51557E;
+  color: #748DA6;
   padding: 5px 10px;
   border-width: 3px;
-  border: #51557E;
+  border: #748DA6;
   border-style: solid;
   border-radius: 5px;
   cursor: pointer;
@@ -79,8 +79,9 @@
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: #51557E;
-  padding: 6px 8px;
+  color: #748DA6;
+  font-size: 30px;
+  padding: 4px 5px;
   text-decoration: none;
   display: block;
 }
@@ -95,7 +96,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  background-color: #51557E;
+  background-color: #748DA6;
   color: #fff;
 }
 
@@ -254,6 +255,19 @@ body {
 
 .btn:active {
   transform: scale(0.9);
+}
+
+.vl {
+  border-left: 10px solid #51557E;
+  width: 10px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-top: 600px;
+  display: block;
+  margin-left: -5px;
+  margin-right: auto;
+  top: 0;
 }
 
 footer {

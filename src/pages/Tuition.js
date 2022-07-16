@@ -5,15 +5,19 @@ function Tuition() {
 
   const ref = useRef(null);
 
-  const handleClick = () => {
-    ref.current?.scrollIntoView({ behavior: 'smooth'});
+  function scroll(page) {
+    document.getElementById(page).scrollIntoView({
+      behavior: "smooth"
+    });  
   };
 
   return (
     <>    
     <NavBar/>
 
-    <button className = 'btn' onClick={handleClick} style = {{fontSize: '40px', display: 'block', marginTop: '30px', marginLeft: 'auto', marginRight: 'auto', width: ''}}>
+    <button className = 'btn' onClick={
+      () => {scroll('policypart')}
+    } style = {{fontSize: '40px', display: 'block', marginTop: '30px', marginLeft: 'auto', marginRight: 'auto', width: ''}}>
       View Policy
     </button>
 
@@ -127,7 +131,7 @@ function Tuition() {
       </div>
     </div>
     
-    <h1 ref = {ref} style = {{marginTop: '0px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '120px', textAlign: 'center'}}>Policy</h1>
+    <h1 id = 'policypart' style = {{marginTop: '0px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '120px', textAlign: 'center'}}>Policy</h1>
     <div className = 'container'style = {{width: '80%'}}><h1 style = {{fontSize: '25px'}}>
     
     1. Tuitions are paid before each term starts. If the student quits before the end of the term, no refund will be issued.
