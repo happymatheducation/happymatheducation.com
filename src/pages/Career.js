@@ -10,7 +10,7 @@ const Career = () => {
         {'To apply to any position, please send your resume to xudiwaterloo@gmail.com.\u00A0'}
     </h1>
 
-    <h1 style = {{color: '#898AA6', display: 'flex', justifyContent: 'center', fontSize: '120px'}}>Career Opportunities</h1>
+    <h1 style = {{color: '#898AA6', display: 'flex', justifyContent: 'center', fontSize: '600%'}}>Career Opportunities</h1>
     
     <div className = 'container' style = {{backgroundColor: '#D6EFED',width: '800px',}}>
       <h1 style = {{color: '#51557E', fontSize: '80px', display: 'flex', justifyContent: 'center'}}>Teacher</h1>
@@ -65,7 +65,7 @@ const Career = () => {
       </h1>
     </div>    
 
-    <h1 style = {{color: '#898AA6', display: 'flex', justifyContent: 'center', fontSize: '110px'}}>Volunteering Opportunities</h1>
+    <h1 style = {{color: '#898AA6', display: 'flex', justifyContent: 'center', fontSize: '550%'}}>Volunteering Opportunities</h1>
     <div className = 'container' style = {{backgroundColor: '#D6EFED', width: '800px'}}>
     <h1 style = {{color: '#51557E', fontSize: '80px',  display: 'flex', justifyContent: 'center'}}>Problem Designer</h1>
       <h1 style = {{color: '#748DA6', fontSize: '30px',  display: 'flex', justifyContent: 'center'}}>

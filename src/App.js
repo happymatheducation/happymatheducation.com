@@ -25,7 +25,9 @@ export const NavBar = () => {
           <App/>
         )
       }
-    }>HOME</button>
+    }>{'HOME '}
+      {/* <i class="bi bi-house-fill"></i> */}
+    </button>
     
     <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
       () => {
@@ -64,7 +66,7 @@ export const NavBar = () => {
           <Career/>
         )
       }
-    }>CAREER</button>
+    }>CAREERS</button>
     <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
       () => {
         document.body.scrollTop = 0; // For Safari
@@ -104,7 +106,7 @@ function App() {
     <div style = {{position: 'relative', textAlign: 'center'}}>
       <img src = {background2} alt = 'background' style = {{ border: '0px solid #51557E', borderRadius: '0px', width: '100%', display: 'block', marginLeft: 'auto', marginTop: '-10px', marginRight: 'auto'}}></img>
       <div class='centered' style = {{textAlign: 'center'}}>
-        <h1 style = {{animationName: 'fadeIn', animationDuration: '3s', marginTop: '150px', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '120px'}}>Happy Math Education</h1>
+        <h1 style = {{animationName: 'fadeIn', animationDuration: '3s', marginTop: '150px', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '700%'}}>Happy Math Education</h1>
         <h1 style = {{fontWeight: 'lighter', animationName: 'slideUp', animationDuration: '2s', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '80px', lineHeight: '80px'}}>
           Our mission: to help<br></br>kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: '80px'}}>enjoy</h1> maths
         </h1>

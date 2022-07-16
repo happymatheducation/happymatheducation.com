@@ -170,6 +170,9 @@ function Contests() {
         <h1 style = {{textAlign: 'right', fontSize: '30px'}}>
           <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Pascal</a>
         </h1>
+        <h1 style = {{textAlign: 'right', fontSize: '30px'}}>
+          <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>Canadian Computing Competition Junior</a>
+        </h1>
       </div>
 
       <div className = 'container' style = {{width: '30%', marginLeft: '200px'}}>
@@ -218,6 +221,9 @@ function Contests() {
         <h1 style = {{color: '#51557E', fontSize: '50px', textAlign: 'right'}}><i class="bi bi-thermometer-snow"></i>February</h1>
         <h1 style = {{textAlign: 'right', fontSize: '30px'}}>
           <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Cayley</a>
+        </h1>
+        <h1 style = {{textAlign: 'right', fontSize: '30px'}}>
+          <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>Canadian Computing Competition Junior</a>
         </h1>
       </div>
 
@@ -272,6 +278,9 @@ function Contests() {
         <h1 style = {{textAlign: 'left', fontSize: '30px'}}>
           <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Fermat</a>
         </h1>
+        <h1 style = {{textAlign: 'right', fontSize: '30px'}}>
+          <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>Canadian Computing Competition Senior</a>
+        </h1>
       </div>
 
       <div className = 'container' style = {{width: '30%', marginRight: '200px'}}>
@@ -293,7 +302,7 @@ function Contests() {
 
     <div id = 'twelve' style = {{display: 'none'}}>
       <h1 style = {{marginTop: '70px',color: '#51557E', fontSize: '60px', textAlign: 'center', fontWeight: 'lighter', textDecoration: 'underline'}}>Grade 12</h1>
-      <div style = {{height: '200%'}} className = 'vl'></div>
+      <div style = {{height: '210%'}} className = 'vl'></div>
 
       <div className = 'container' style = {{width: '30%', marginLeft: '200px'}}>
         <h1 style = {{color: '#51557E', fontSize: '50px', textAlign: 'left'}}>September
@@ -324,15 +333,22 @@ function Contests() {
       </div>
 
       <div className = 'container' style = {{width: '30%', marginLeft: '200px'}}>
-        <h1 style = {{color: '#51557E', fontSize: '50px', textAlign: 'left'}}>April<i class="bi bi-thermometer-half"></i></h1>
+        <h1 style = {{color: '#51557E', fontSize: '50px', textAlign: 'left'}}>February <i class="bi bi-thermometer-snow"></i></h1>
         <h1 style = {{textAlign: 'left', fontSize: '30px'}}>
-          <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a>
+          <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>Canadian Computing Competition Senior</a>
         </h1>
       </div>
 
       <div className = 'container' style = {{width: '30%', marginRight: '200px'}}>
-        <h1 style = {{color: '#51557E', fontSize: '50px', textAlign: 'right'}}><i class="bi bi-thermometer-sun"></i>June</h1>
-        <h1 style = {{textAlign: 'right', fontSize: '30px'}}>{'End of school year\n'}
+        <h1 style = {{color: '#51557E', fontSize: '50px', textAlign: 'right'}}><i class="bi bi-thermometer-half"></i>April</h1>
+        <h1 style = {{textAlign: 'right', fontSize: '30px'}}>
+          <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a>
+        </h1>
+      </div>
+
+      <div className = 'container' style = {{width: '30%', marginLeft: '200px'}}>
+        <h1 style = {{color: '#51557E', fontSize: '50px', textAlign: 'left'}}>June <i class="bi bi-thermometer-sun"></i></h1>
+        <h1 style = {{textAlign: 'left', fontSize: '30px'}}>{'End of school year\n'}
         </h1>
       </div>
     </div>
