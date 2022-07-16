@@ -118,7 +118,7 @@ body {
   margin: 30px auto;
   background-color: #D6EFED;
   width: 60%;
-  max-height: auto;
+  /* max-height: auto; */
   padding: 30px;
   border-radius: 10px;
 }

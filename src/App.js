@@ -9,6 +9,7 @@ import Practice from './pages/Practice';
 import Contests from './pages/Contests';
 import Career from './pages/Career'
 import Contact from './pages/Contact';
+import Team from './pages/Team';
 
 export const NavBar = () => {
 
@@ -76,7 +77,15 @@ export const NavBar = () => {
         )
       }
     }>CONTACT</button>
-    <button className='btnnavbar' style = {{marginLeft: '', marginBottom: '0px', float: 'right'}}>OUR TEAM</button>
+    <button className='btnnavbar' style = {{marginLeft: '', marginBottom: '0px', float: 'right'}} onClick = {
+      () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
+        root.render(
+          <Team/>
+        )
+      }
+    }>OUR TEAM</button>
 </div>
 </>
   )
