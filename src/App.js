@@ -8,6 +8,7 @@ import Tuition from './pages/Tuition';
 import Practice from './pages/Practice';
 import Contests from './pages/Contests';
 import Career from './pages/Career'
+import Contact from './pages/Contact';
 
 export const NavBar = () => {
 
@@ -64,7 +65,15 @@ export const NavBar = () => {
         )
       }
     }>CAREER</button>
-    <button className='btnnavbar' style = {{marginRight: '30px'}}>CONTACT</button>
+    <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+      () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
+        root.render(
+          <Contact/>
+        )
+      }
+    }>CONTACT</button>
     <button className='btnnavbar' style = {{marginLeft: '', marginBottom: '0px', float: 'right'}}>OUR TEAM</button>
 </div>
 </>
