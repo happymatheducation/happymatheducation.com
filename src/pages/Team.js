@@ -13,7 +13,7 @@ const Team = () => {
     <>
     <NavBar/>
 
-    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '550%'}}>Dr. Di Xu</h1>
+    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Di Xu</h1>
     <div style = {{display: 'flex'}}>
         <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
             <img alt = 'xu' src={Xu} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
@@ -28,7 +28,7 @@ const Team = () => {
         </div>
     </div>
 
-    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '550%'}}>Dr. Sherry P.-Y Zhou</h1>
+    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Sherry P.-Y Zhou</h1>
     <div style = {{display: 'flex'}}>
         <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
             <img alt = 'zhou' src={Zhou} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
@@ -44,7 +44,7 @@ const Team = () => {
         </div>
     </div>
 
-    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '550%'}}>Dr. Michael Hook</h1>
+    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Michael Hook</h1>
     <div style = {{display: 'flex'}}>
         <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
             <img alt = 'hook' src={Hook} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>

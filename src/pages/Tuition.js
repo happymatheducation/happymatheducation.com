@@ -3,9 +3,7 @@ import {NavBar, Copyright, backToTop, BackToTopButton} from '../App';
 function Tuition() {
 
   function scroll(page) {
-    document.getElementById(page).scrollIntoView({
-      behavior: "smooth"
-    });  
+    window.scrollTo({ top: 2500, behavior: 'smooth' });
   };
 
   window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
@@ -20,7 +18,7 @@ function Tuition() {
       View Policy
     </button>
 
-    <h1 style = {{marginTop: '20px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '120px', textAlign: 'center'}}>Tuition</h1>
+    <h1 style = {{marginTop: '20px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '8vw', textAlign: 'center'}}>Tuition</h1>
     <h1 style = {{color: '#748DA6', fontSize: '30px', textAlign: 'center', marginTop: '-20px'}}>
       {'All classes are held online\u00A0'}
       <i class="bi bi-person-workspace"></i>    
@@ -130,7 +128,7 @@ function Tuition() {
       </div>
     </div>
     
-    <h1 id = 'policypart' style = {{marginTop: '0px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '120px', textAlign: 'center'}}>Policy</h1>
+    <h1 id = 'policypart' style = {{marginTop: '0px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '8vw', textAlign: 'center'}}>Policy</h1>
     <div className = 'container'style = {{width: '80%', marginBottom: '0'}}><h1 style = {{fontSize: '25px'}}>
     
     1. Tuitions are paid before each term starts. If the student quits before the end of the term, no refund will be issued.

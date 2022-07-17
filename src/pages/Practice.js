@@ -8,7 +8,7 @@ function Practice() {
     <>    
     <NavBar/>
 
-    <h1 style = {{marginTop: '20px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '120px', textAlign: 'center'}}>Ultimate Practice</h1>
+    <h1 style = {{marginTop: '20px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '8vw', textAlign: 'center'}}>Ultimate Practice</h1>
 
     <div className = 'container' style = {{width: '80%'}}>
       <div style = {{justifyContent: 'space-between'}}>
