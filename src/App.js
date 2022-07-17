@@ -13,7 +13,7 @@ import Team from './pages/Team';
 
 export function BackToTopButton() {
   return(
-    <button id = 'backtotop' className = 'btn' style = {{position: 'sticky', bottom: '30px', left: '89%', marginBottom: '-30px', marginTop: '30px'}} onClick = {
+    <button id = 'backtotop' className = 'btn' style = {{position: 'sticky', bottom: '30px', left: '89%', marginBottom: '-30px', marginTop: '30px', display: 'none'}} onClick = {
       () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         // document.documentElement.scrollTop = 0;  For Chrome, Firefox, IE and Opera
@@ -30,66 +30,26 @@ export function backToTop(mybutton) {
   }
 }
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
-
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  return windowDimensions;
-}
-
-
 export const NavBar = () => {
-  const { height, width } = useWindowDimensions();
-
-  // let home = 'HOME ';
-  // let tuition = 'TUITION & POLICY ';
-  // let practice = 'ULTIMATE PRACTICE ';
-  // let contests = 'MATH CONTESTS ';
-  // let careers = 'CAREERS ';
-  // let contact = 'CONTACT ';
-  // let team = 'OUR TEAM ';  
-
-  // if (width <= 600) {
-  //   let home = () => {return ( <i class="bi bi-house-door-fill"></i> )}
-  //   // let home = () => {return ( <i class="bi bi-house-door-fill"></i> )}
-  // }
 
   return(
   <>
-  <img src = {logo} alt = 'logo' style = {{display: 'block', marginLeft: 'auto', marginTop: '5px', marginRight: 'auto'}}></img>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <img src = {logo} alt = 'logo' style = {{width: '20%', display: 'block', marginLeft: 'auto', marginTop: '5px', marginRight: 'auto'}}></img>
   <div className="topnav" style = {{zIndex: '6969', position: 'sticky', top: -1, backgroundColor: '#51557E', marginTop: '5px', padding: '5px 10px', marginBottom: '5px', borderWidth: '3px', borderColor: '#51557E', borderStyle: 'solid', borderRadius: '0px'}}>
   
-    <button className='btnnavbar' style = {{padding: '', justifySelf: 'center', marginRight: '30px'}} onClick = {
+    <button className='btnnavbar' style = {{padding: '', justifySelf: 'center'}} onClick = {
       () => {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
         root.render(
           <App/>
         )
-        console.log(width)
-        // if (width < 600)
       }
     }>{'HOME '}
-      {/* <i class="bi bi-house-fill"></i> */}
     </button>
     
-    <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+    <button className='btnnavbar' onClick = {
       () => {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
@@ -99,7 +59,7 @@ export const NavBar = () => {
       }    
     }>TUITION & POLICY</button>
    
-    <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+    <button className='btnnavbar' onClick = {
       () => {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
@@ -109,7 +69,7 @@ export const NavBar = () => {
       }
     }>ULTIMATE PRACTICE</button>
 
-    <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+    <button className='btnnavbar' onClick = {
       () => {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
@@ -118,7 +78,7 @@ export const NavBar = () => {
         )
       }
     }>MATH CONTESTS</button>
-    <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+    <button className='btnnavbar' onClick = {
       () => {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
@@ -127,7 +87,7 @@ export const NavBar = () => {
         )
       }
     }>CAREERS</button>
-    <button className='btnnavbar' style = {{marginRight: '30px'}} onClick = {
+    <button className='btnnavbar' onClick = {
       () => {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
@@ -136,7 +96,7 @@ export const NavBar = () => {
         )
       }
     }>CONTACT</button>
-    <button className='btnnavbar' style = {{marginLeft: '', marginBottom: '0px', float: 'right'}} onClick = {
+    <button className='btnnavbar' style = {{marginRight: '0px', marginBottom: '0px', float: 'right'}} onClick = {
       () => {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
@@ -152,17 +112,19 @@ export const NavBar = () => {
 
 export const Copyright = () => {
   return (
+    <footer>
     <div className = 'container' style = {{backgroundColor: '#51557E',marginTop: '70px', display: 'flex', justifyContent: 'space-between', width: '100%', borderRadius: '0px', marginBottom: '0px'}}>
-      <h1 style = {{display: 'inline', color: '#fff', fontSize: '30px', justifyContent: 'left'}}>
+      <h1 style = {{display: 'inline', color: '#fff', fontSize: '2vw', justifyContent: 'left'}}>
         Copyright © 2022: Jeffrey Zang
       </h1>
-      <button hover = {{background: '#51557E', color: '#fff'}} className = 'btn' style = {{fontSize: '25px', borderWidth: '3px', borderColor: '#fff', marginTop: '0px'}} onClick = {
+      <button hover = {{background: '#51557E', color: '#fff'}} className = 'btn' style = {{borderColor: '#fff', marginTop: '0px'}} onClick = {
         () => {window.open('https://github.com/jeffrey-zang/happy-math-education')}
       }>
         {'Source '}
-        <i class={'bi bi-github'} style={{ fontSize: 25 }}></i>
+        <i class={'bi bi-github'} style={{ fontSize: '2vw' }}></i>
       </button>
-  </div>
+    </div>
+    </footer>
   )
 }
 
@@ -188,7 +150,7 @@ function App() {
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
       <h1 style = {{ color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
-      <button className = 'btn' style = {{height: '0%', fontSize: '30px', marginTop: '20px'}} onClick = {
+      <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
           document.body.scrollTop = 0; // For Safari
           document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
@@ -196,7 +158,7 @@ function App() {
             <Tuition/>
           )
         }}>{'View Details '}
-      <i class={'bi bi-text-left'} style={{ fontSize: 30 }}></i>
+      <i class={'bi bi-text-left'} style={{ fontSize: '2vw' }}></i>
       </button>
       </div>
       <h1 style = {{fontSize: '2vw', color: ''}}>Hourly rates for math contest, CCC, and private lessons</h1>
@@ -205,7 +167,7 @@ function App() {
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
       <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Career</h1>
-      <button className = 'btn' style = {{height: '0%', fontSize: '30px', marginTop: '20px'}} onClick = {
+      <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
           root.render (
             <Career/>
@@ -214,7 +176,7 @@ function App() {
           document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
         }
       }>{'View Opportunities '}
-      <i class={'bi bi-clipboard-check'} style={{ fontSize: 30 }}></i>
+      <i class={'bi bi-clipboard-check'} style={{ fontSize: '2vw' }}></i>
       </button>
       </div>
       <h1 style = {{fontSize: '2vw', color: ''}}>Opportunities for full-time, part-time, co-op, and volunteering</h1>
@@ -223,11 +185,19 @@ function App() {
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
       <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Our Team</h1>
-      <button className = 'btn' style = {{height: '0%', fontSize: '30px', marginTop: '20px'}}>{'Meet the Team '}
+      <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
+        () => {
+          root.render (
+            <Team/>
+          )
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
+        }
+      }>{'Meet the Team '}
       <i class={'bi bi-person-circle'} style= {{}}></i>
       </button>
       </div>
-      <h1 style = {{fontSize: '30px', color: ''}}>Our trusted employees and their experience</h1>
+      <h1 style = {{fontSize: '2vw', color: ''}}>Our trusted employees and their experience</h1>
     </div>
 
     <Copyright/>

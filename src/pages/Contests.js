@@ -354,8 +354,7 @@ function Contests() {
       </div>
     </div>
 
-    <BackToTopButton/>
-
+    <BackToTopButton style = {{display: 'none'}}></BackToTopButton>
     <Copyright/>
     </>
   );

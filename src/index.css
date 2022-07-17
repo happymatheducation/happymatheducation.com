@@ -22,6 +22,12 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .btnnavbar {
+    display: none;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   border-radius: 3px;
@@ -115,11 +121,11 @@ body {
 }
 
 .container {
-  margin: 30px auto;
+  margin: 2vw auto;
   background-color: #D6EFED;
-  width: 60%;
+  width: 80%;
   /* max-height: auto; */
-  padding: 30px;
+  padding: 2vw;
   border-radius: 10px;
 }
 
@@ -161,31 +167,13 @@ body {
   /* margin-bottom: 20px; */
 }
 
-/* .btn {
-  background: #000;
-  color: #ffffff;
-  border: hsl(207, 54%, 27%);
-  border-style: solid;
-  border-width: 0px;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  float: right;
-  justify-content: flex-end;
-  align-items: right;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: inherit;
-} */
-
 .btn {
   /* display: inline-block; */
   background: #fff;
   color: #51557E;
   /* border: steelblue; */
-  padding: 4px 8px;
-  margin: 5px;
+  padding: 0.25vw 0.5vw;
+  margin: 0px;
   border-width: 3px;
   border: #51557E;
   border-style: solid;
@@ -193,7 +181,7 @@ body {
   cursor: pointer;
   /* float: right; */
   text-decoration: none;
-  font-size: 22px;
+  font-size: 2vw;
   font-family: inherit;
   transition: color 0.3s;
   transition: background 0.3s;
@@ -205,9 +193,10 @@ body {
 .btnnavbar {
     background: #fff;
     color: #51557E;
-    padding: 4px 8px;
+    padding: 0.25vw 0.5vw;
     display: inline;
     margin: 5px;
+    margin-right: 1vw;
     border-width: 3px;
     border: #fff;
     border-style: solid;
@@ -216,7 +205,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 1.5vw;
     font-family: inherit;
     float: left;
     transition: color 0.3s;
