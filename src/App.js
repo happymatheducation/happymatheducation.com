@@ -1,7 +1,7 @@
 import logo from './logo.png';
 import background2 from './background2.png';
 
-import {React} from "react";
+import {React, useEffect, useState} from "react";
 import root from './index.js';
 
 import Tuition from './pages/Tuition';
@@ -11,7 +11,64 @@ import Career from './pages/Career'
 import Contact from './pages/Contact';
 import Team from './pages/Team';
 
+export function BackToTopButton() {
+  return(
+    <button id = 'backtotop' className = 'btn' style = {{position: 'sticky', bottom: '30px', left: '89%', marginBottom: '-30px', marginTop: '30px'}} onClick = {
+      () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // document.documentElement.scrollTop = 0;  For Chrome, Firefox, IE and Opera
+    }   
+    }>Back to Top</button>
+  )
+}
+
+export function backToTop(mybutton) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
+
+
 export const NavBar = () => {
+  const { height, width } = useWindowDimensions();
+
+  // let home = 'HOME ';
+  // let tuition = 'TUITION & POLICY ';
+  // let practice = 'ULTIMATE PRACTICE ';
+  // let contests = 'MATH CONTESTS ';
+  // let careers = 'CAREERS ';
+  // let contact = 'CONTACT ';
+  // let team = 'OUR TEAM ';  
+
+  // if (width <= 600) {
+  //   let home = () => {return ( <i class="bi bi-house-door-fill"></i> )}
+  //   // let home = () => {return ( <i class="bi bi-house-door-fill"></i> )}
+  // }
 
   return(
   <>
@@ -25,6 +82,8 @@ export const NavBar = () => {
         root.render(
           <App/>
         )
+        console.log(width)
+        // if (width < 600)
       }
     }>{'HOME '}
       {/* <i class="bi bi-house-fill"></i> */}
@@ -115,9 +174,11 @@ function App() {
     <div style = {{position: 'relative', textAlign: 'center'}}>
       <img src = {background2} alt = 'background' style = {{ border: '0px solid #51557E', borderRadius: '0px', width: '100%', display: 'block', marginLeft: 'auto', marginTop: '-10px', marginRight: 'auto'}}></img>
       <div class='centered' style = {{textAlign: 'center'}}>
-        <h1 style = {{animationName: 'fadeIn', animationDuration: '3s', marginTop: '150px', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '700%'}}>Happy Math Education</h1>
-        <h1 style = {{fontWeight: 'lighter', animationName: 'slideUp', animationDuration: '2s', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '80px', lineHeight: '80px'}}>
-          Our mission: to help<br></br>kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: '80px'}}>enjoy</h1> maths
+        <h1 style = {{animationName: 'fadeIn', animationDuration: '3s', marginTop: '10%', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '8vw'}}>
+          Happy Math Education
+        </h1>
+        <h1 style = {{fontWeight: 'lighter', animationName: 'slideUp', animationDuration: '2s', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '5vw', lineHeight: '110%'}}>
+          Our mission: to help<br></br>kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: '5vw'}}>enjoy</h1> maths
         </h1>
       </div>
     </div>
@@ -126,7 +187,7 @@ function App() {
 
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
-      <h1 style = {{ color: '#51557E', fontSize: '60px', display: 'block', justifyContent: 'center'}}>Tuition</h1>
+      <h1 style = {{ color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '30px', marginTop: '20px'}} onClick = {
         () => {
           document.body.scrollTop = 0; // For Safari
@@ -138,12 +199,12 @@ function App() {
       <i class={'bi bi-text-left'} style={{ fontSize: 30 }}></i>
       </button>
       </div>
-      <h1 style = {{fontSize: '25px', color: ''}}>Hourly rates for math contest, CCC, and private lessons</h1>
+      <h1 style = {{fontSize: '2vw', color: ''}}>Hourly rates for math contest, CCC, and private lessons</h1>
     </div>
 
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
-      <h1 style = {{color: '#51557E', fontSize: '60px', display: 'block', justifyContent: 'center'}}>Career</h1>
+      <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Career</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '30px', marginTop: '20px'}} onClick = {
         () => {
           root.render (
@@ -156,17 +217,17 @@ function App() {
       <i class={'bi bi-clipboard-check'} style={{ fontSize: 30 }}></i>
       </button>
       </div>
-      <h1 style = {{fontSize: '25px', color: ''}}>Opportunities for full-time, part-time, co-op, and volunteering</h1>
+      <h1 style = {{fontSize: '2vw', color: ''}}>Opportunities for full-time, part-time, co-op, and volunteering</h1>
     </div>
 
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
-      <h1 style = {{color: '#51557E', fontSize: '60px', display: 'block', justifyContent: 'center'}}>Our Team</h1>
+      <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Our Team</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '30px', marginTop: '20px'}}>{'Meet the Team '}
-      <i class={'bi bi-person-circle'} style={{ fontSize: 30 }}></i>
+      <i class={'bi bi-person-circle'} style= {{}}></i>
       </button>
       </div>
-      <h1 style = {{fontSize: '25px', color: ''}}>Our trusted employees and their experience</h1>
+      <h1 style = {{fontSize: '30px', color: ''}}>Our trusted employees and their experience</h1>
     </div>
 
     <Copyright/>

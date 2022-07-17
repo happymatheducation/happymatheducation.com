@@ -1,11 +1,14 @@
 import React from 'react'
-import {NavBar, Copyright} from '../App'
+import {NavBar, Copyright, backToTop, BackToTopButton} from '../App'
 
 import Xu from '../portraits/xu.jpg';
 import Hook from '../portraits/hook.jpg';
 import Zhou from '../portraits/zhou.jpg';
 
 const Team = () => {
+
+  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
+
   return (
     <>
     <NavBar/>
@@ -13,7 +16,7 @@ const Team = () => {
     <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '550%'}}>Dr. Di Xu</h1>
     <div style = {{display: 'flex'}}>
         <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
-            <img src={Xu} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
+            <img alt = 'xu' src={Xu} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
         </div>
         <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
             <h1 style = {{color: '#51557E', fontSize: '60px',  display: 'flex', justifyContent: 'center'}}>Principal</h1>
@@ -28,7 +31,7 @@ const Team = () => {
     <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '550%'}}>Dr. Sherry P.-Y Zhou</h1>
     <div style = {{display: 'flex'}}>
         <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
-            <img src={Zhou} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
+            <img alt = 'zhou' src={Zhou} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
         </div>
         <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
             <h1 style = {{color: '#51557E', fontSize: '60px',  display: 'flex', justifyContent: 'center'}}>Vice Principal</h1>
@@ -44,7 +47,7 @@ const Team = () => {
     <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '550%'}}>Dr. Michael Hook</h1>
     <div style = {{display: 'flex'}}>
         <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
-            <img src={Hook} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
+            <img alt = 'hook' src={Hook} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
         </div>
         <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
             <h1 style = {{color: '#51557E', fontSize: '60px',  display: 'flex', justifyContent: 'center'}}>Teacher</h1>
@@ -56,6 +59,8 @@ const Team = () => {
             </h1>
         </div>
     </div>
+
+    <BackToTopButton/>
 
     <Copyright/>
     </>

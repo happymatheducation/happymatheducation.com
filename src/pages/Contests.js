@@ -1,8 +1,9 @@
-import {NavBar, Copyright} from '../App';
+import {NavBar, Copyright, backToTop, BackToTopButton} from '../App';
 
 function Contests() {
 
   let things = []
+  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
 
   return (
     <>    
@@ -352,6 +353,8 @@ function Contests() {
         </h1>
       </div>
     </div>
+
+    <BackToTopButton/>
 
     <Copyright/>
     </>

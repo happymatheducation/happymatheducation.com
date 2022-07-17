@@ -1,6 +1,8 @@
-import {NavBar, Copyright} from '../App';
+import {NavBar, Copyright, BackToTopButton, backToTop} from '../App';
 
 function Practice() {
+
+  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
 
   return (
     <>    
@@ -157,6 +159,8 @@ function Practice() {
         </h1>
       </div>
     </div>
+
+    <BackToTopButton/>
 
     <Copyright/>
     </>

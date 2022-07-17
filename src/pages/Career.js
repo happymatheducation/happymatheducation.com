@@ -1,7 +1,10 @@
 import React from 'react'
-import {NavBar, Copyright} from '../App'
+import {NavBar, Copyright, backToTop, BackToTopButton} from '../App'
 
 const Career = () => {
+
+  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
+
   return (
     <>
     <NavBar/>
@@ -79,6 +82,8 @@ const Career = () => {
         {'To prepare "The ultimate practice" sets of problems. Need to know how to use Latex. Training will be provided.\u00A0'}
       </h1>
     </div>  
+
+    <BackToTopButton/>
 
     <Copyright/>
     </>

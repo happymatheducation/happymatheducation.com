@@ -1,15 +1,14 @@
-import {NavBar, Copyright} from '../App';
-import {useRef} from 'react';
+import {NavBar, Copyright, backToTop, BackToTopButton} from '../App';
 
 function Tuition() {
-
-  const ref = useRef(null);
 
   function scroll(page) {
     document.getElementById(page).scrollIntoView({
       behavior: "smooth"
     });  
   };
+
+  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
 
   return (
     <>    
@@ -118,7 +117,7 @@ function Tuition() {
     </div>
 
     <div className = 'container'>
-      <h1 style = {{color: '#51557E', fontSize: '60px', textAlign: 'center'}}>One-on-one private tutoring</h1>
+      <h1 style = {{color: '#51557E', fontSize: '60px', textAlign: 'center'}}>One-on-One private tutoring</h1>
       <div style = {{justifyContent: 'space-between'}}>
       <h1 style = {{color: '#748DA6', fontSize: '30px', textAlign: 'center'}}>
           {'\u00A0120$/$150/hour/student\u00A0'}
@@ -132,7 +131,7 @@ function Tuition() {
     </div>
     
     <h1 id = 'policypart' style = {{marginTop: '0px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '120px', textAlign: 'center'}}>Policy</h1>
-    <div className = 'container'style = {{width: '80%'}}><h1 style = {{fontSize: '25px'}}>
+    <div className = 'container'style = {{width: '80%', marginBottom: '0'}}><h1 style = {{fontSize: '25px'}}>
     
     1. Tuitions are paid before each term starts. If the student quits before the end of the term, no refund will be issued.
     <br></br><br></br>2. Each student joining the zoom class should use the same name as during registration. If the instructor sees a name that is not on the class list, the student will be removed from the zoom meeting. 
@@ -141,6 +140,8 @@ function Tuition() {
     <br></br><br></br>5. The instructor will encourage the students to be on time, take notes during the lesson, and submit homework. However, the instructor takes no responsibility if a student comes late, doesn't take notes, or doesn't submit homework. 
     
     </h1></div>
+
+    <BackToTopButton/>
 
     <Copyright/>
     </>
