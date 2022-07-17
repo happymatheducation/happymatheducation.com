@@ -34,8 +34,17 @@ export const NavBar = () => {
 
   return(
   <>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <img src = {logo} alt = 'logo' style = {{width: '20%', display: 'block', marginLeft: 'auto', marginTop: '5px', marginRight: 'auto'}}></img>
+  <button style = {{all: 'unset', userSelect: 'none', WebkitUserSelect: 'none', cursor: 'pointer', width: '20%', display: 'block', marginLeft: 'auto', marginTop: '5px', marginRight: 'auto'}} onClick = {
+    () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
+      root.render(
+        <App/>
+      )
+    }    
+  }>
+    <img src = {logo} alt = 'logo' style = {{}}></img>
+  </button>
   <div className="topnav" style = {{zIndex: '6969', position: 'sticky', top: -1, backgroundColor: '#51557E', marginTop: '5px', padding: '5px 10px', marginBottom: '5px', borderWidth: '3px', borderColor: '#51557E', borderStyle: 'solid', borderRadius: '0px'}}>
   
     <button className='btnnavbar' style = {{padding: '', justifySelf: 'center'}} onClick = {
@@ -117,11 +126,11 @@ export const Copyright = () => {
       <h1 style = {{display: 'inline', color: '#fff', fontSize: '2vw', justifyContent: 'left'}}>
         Copyright © 2022: Jeffrey Zang
       </h1>
-      <button hover = {{background: '#51557E', color: '#fff'}} className = 'btn' style = {{borderColor: '#fff', marginTop: '0px'}} onClick = {
+      <button hover = {{background: '#51557E', color: '#fff'}} className = 'btn' style = {{borderColor: '#fff', marginTop: '0px', fontSize: '1.75vw'}} onClick = {
         () => {window.open('https://github.com/jeffrey-zang/happy-math-education')}
       }>
         {'Source '}
-        <i class={'bi bi-github'} style={{ fontSize: '2vw' }}></i>
+        <i class={'bi bi-github'} style={{ fontSize: '1.75vw' }}></i>
       </button>
     </div>
     </footer>
@@ -134,7 +143,7 @@ function App() {
     <NavBar/>
 
     <div style = {{position: 'relative', textAlign: 'center'}}>
-      <img src = {background2} alt = 'background' style = {{ border: '0px solid #51557E', borderRadius: '0px', width: '100%', display: 'block', marginLeft: 'auto', marginTop: '-10px', marginRight: 'auto'}}></img>
+      <img src = {background2} alt = 'background' style = {{ buserSelect: 'none', WebkitUserSelect: 'none', border: '0px solid #51557E', borderRadius: '0px', width: '100%', display: 'block', marginLeft: 'auto', marginTop: '-10px', marginRight: 'auto'}}></img>
       <div class='centered' style = {{textAlign: 'center'}}>
         <h1 style = {{animationName: 'fadeIn', animationDuration: '3s', marginTop: '10%', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '8vw'}}>
           Happy Math Education
