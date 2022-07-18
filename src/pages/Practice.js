@@ -102,7 +102,7 @@ function Practice() {
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/binomial_theorem_answers.pdf'>Answers</a>
           </div>
           <div style = {{display: 'flex', justifyContent: 'space-between'}}>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/logarithm_with_quadratic_equations.pdf'>Logaritm with Quadratic Equations</a>
+            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/logarithm_with_quadratic_equations.pdf'>Logarithm with Quadratic Equations</a>
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/logarithm_with_quadratic_equations_answers.pdf'>Answers</a>
           </div>
           <div style = {{display: 'flex', justifyContent: 'space-between'}}>
