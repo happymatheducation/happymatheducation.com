@@ -1,10 +1,22 @@
+![image](https://user-images.githubusercontent.com/66485719/179431098-1b79965a-833d-4d40-a733-94bca64b57fc.png)
+
 # Happy Math Education
+Website for Happy Math Education
 
-Beta website for Happy Math Education, a tutoring business designed for math contests.
+Our Mission: To help kids enjoy maths
 
-This new website features new styling, features, and responsiveness. It has pages for tuition, math contests, career, and staff.
+## Dependencies
+- React
+- Bootstrap Icons
 
-The current website can be found here:
-https://www.happymatheducation.com/
+## Authors
+Jeffrey Zang
 
-This project was made with React.
+## Version History
+0.1
+Initial Release
+
+## License
+This project is licensed under the BSD-3 Clause License - see the LICENSE file for details
+
+Previous website: https://www.happymatheducation.com/
