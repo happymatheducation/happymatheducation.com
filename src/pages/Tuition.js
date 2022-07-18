@@ -52,7 +52,7 @@ function Tuition() {
       <h1 style = {{display: 'inline', fontSize: '25px', color: ''}}>
         {'This class will study the following contests: '}
         <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions' rel = 'noreferrer' target = '_blank'>AMC10</a>{', '}
-        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html' rel = 'noreferrer' target = '_blank'>Pascal/CayLey</a>{', '}
+        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html' rel = 'noreferrer' target = '_blank'>Pascal/Cayley</a>{', '}
         <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html' rel = 'noreferrer' target = '_blank'>CIMC</a>{', and '}
         <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html' rel = 'noreferrer' target = '_blank'>Fermat/Galois</a>
       </h1>
@@ -122,7 +122,7 @@ function Tuition() {
           <i class="bi bi-person-fill"></i>    
       </h1>
       <h1  style = {{display: 'inline', fontSize: '25px', color: ''}}>
-        1. Scheduled (fixed time every week) : $120 / hour, paid 7 days before the first class of each month. If the student fails to attend the scheduled class, half of the fees for the missed class will be refunded. If the teacher cancels a class, full refund for that class will be issued.
+        1. Scheduled (fixed time every week) : $120 / hour, paid 7 days before the first class of each month. If the student fails to attend the scheduled class, half of the fees for the missed class will be refunded. If the teacher cancels a class, a full refund for that class will be issued.
         <br></br>2. Casual (Booked at least 3 days ahead): $150 / hour, can be paid right before each class.
       </h1>
       </div>
