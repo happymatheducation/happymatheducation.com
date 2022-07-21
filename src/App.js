@@ -122,7 +122,7 @@ export const NavBar = () => {
 export const Copyright = () => {
   return (
     <footer>
-    <div className = 'container' style = {{backgroundColor: '#51557E',marginTop: '70px', display: 'flex', justifyContent: 'space-between', width: '100%', borderRadius: '0px', marginBottom: '0px'}}>
+    <div className = 'container' style = {{position: 'sticky', marginBottom: '-99999px', backgroundColor: '#51557E',marginTop: '70px', display: 'flex', justifyContent: 'space-between', width: '100%', borderRadius: '0px', marginBottom: '0px'}}>
       <h1 style = {{display: 'inline', color: '#fff', fontSize: '2vw', justifyContent: 'left'}}>
         Copyright © 2022: Jeffrey Zang
       </h1>

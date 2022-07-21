@@ -9,18 +9,18 @@ const Career = () => {
     <>
     <NavBar/>
 
-    <h1 style = {{color: '#748DA6', fontSize: '30px', display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
+    <h1 style = {{color: '#748DA6', fontSize: '2vw', display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
         {'To apply to any position, please send your resume to xudiwaterloo@gmail.com.\u00A0'}
     </h1>
 
     <h1 style = {{color: '#898AA6', display: 'flex', justifyContent: 'center', fontSize: '8vw'}}>Career Opportunities</h1>
     
-    <div className = 'container' style = {{backgroundColor: '#D6EFED',width: '800px',}}>
-      <h1 style = {{color: '#51557E', fontSize: '80px', display: 'flex', justifyContent: 'center'}}>Teacher</h1>
-      <h1 style = {{color: '#748DA6', fontSize: '30px', display: 'flex', justifyContent: 'center'}}>
+    <div className = 'container' style = {{backgroundColor: '#D6EFED',width: '50vw'}}>
+      <h1 style = {{color: '#51557E', fontSize: '5vw', display: 'flex', justifyContent: 'center'}}>Teacher</h1>
+      <h1 style = {{color: '#748DA6', fontSize: '2vw', display: 'flex', justifyContent: 'center'}}>
         {'Part-time opportunity\u00A0'}
         <i class="bi bi-clock-history"></i>      
-        <h1 style = {{color: '#748DA6', fontSize: '30px', display: 'flex', justifyContent: 'center', display: 'inline'}}>
+        <h1 style = {{color: '#748DA6', fontSize: '2vw', display: 'flex', justifyContent: 'center', display: 'inline'}}>
           {'\u00A0Starts at $50/hour\u00A0'}
         </h1>
       </h1>
@@ -28,12 +28,12 @@ const Career = () => {
         {'To deliver classes. Training will be provided.\u00A0'}
       </h1>
     </div>
-    <div className = 'container' style = {{backgroundColor: '#D6EFED', width: '800px'}}>
-      <h1 style = {{color: '#51557E', fontSize: '80px',  display: 'flex', justifyContent: 'center'}}>Software Enginner</h1>
-      <h1 style = {{color: '#748DA6', fontSize: '30px',  display: 'flex', justifyContent: 'center'}}>
+    <div className = 'container' style = {{backgroundColor: '#D6EFED', width: '50vw'}}>
+      <h1 style = {{color: '#51557E', fontSize: '5vw',  display: 'flex', justifyContent: 'center'}}>Software Enginner</h1>
+      <h1 style = {{color: '#748DA6', fontSize: '2vw',  display: 'flex', justifyContent: 'center'}}>
         {'Part-time opportunity\u00A0'}
         <i class="bi bi-clock-history"></i>      
-        <h1 style = {{color: '#748DA6', fontSize: '30px',  display: 'flex', justifyContent: 'center', display: 'inline'}}>
+        <h1 style = {{color: '#748DA6', fontSize: '2vw',  display: 'flex', justifyContent: 'center', display: 'inline'}}>
           {'\u00A01 opening\u00A0'}
         </h1>
       </h1>
@@ -41,12 +41,12 @@ const Career = () => {
         {'Website development. Training will be provided. \u00A0'}
       </h1>
     </div>
-    <div className = 'container' style = {{backgroundColor: '#D6EFED', width: '800px'}}>
-      <h1 style = {{color: '#51557E', fontSize: '80px',  display: 'flex', justifyContent: 'center'}}>Secretary</h1>
-      <h1 style = {{color: '#748DA6', fontSize: '30px',  display: 'flex', justifyContent: 'center'}}>
+    <div className = 'container' style = {{backgroundColor: '#D6EFED', width: '50vw'}}>
+      <h1 style = {{color: '#51557E', fontSize: '5vw',  display: 'flex', justifyContent: 'center'}}>Secretary</h1>
+      <h1 style = {{color: '#748DA6', fontSize: '2vw',  display: 'flex', justifyContent: 'center'}}>
         {'Full-time opportunity\u00A0'}
         <i class="bi bi-clock-fill"></i>      
-        <h1 style = {{color: '#748DA6', fontSize: '30px',  display: 'flex', justifyContent: 'center', display: 'inline'}}>
+        <h1 style = {{color: '#748DA6', fontSize: '2vw',  display: 'flex', justifyContent: 'center', display: 'inline'}}>
           {'\u00A01 opening\u00A0'}
         </h1>
       </h1>
@@ -54,12 +54,12 @@ const Career = () => {
         {"To work closely with the director. Tasks include marketing, coordinating, documenting, answering parents' questions, sending notifications, maintaining social media pages and book stores, write various documents, helping run events, organizing math contests, etc. Training will be provided.  \u00A0"}
       </h1>
     </div>
-    <div className = 'container' style = {{backgroundColor: '#D6EFED', width: '800px'}}>
-      <h1 style = {{color: '#51557E', fontSize: '70px',  display: 'flex', justifyContent: 'center'}}>Teaching Assistance</h1>
-      <h1 style = {{color: '#748DA6', fontSize: '30px',  display: 'flex', justifyContent: 'center'}}>
+    <div className = 'container' style = {{backgroundColor: '#D6EFED', width: '50vw'}}>
+      <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Teaching Assistance</h1>
+      <h1 style = {{color: '#748DA6', fontSize: '2vw',  display: 'flex', justifyContent: 'center'}}>
         {'Temporary co-op opportunity\u00A0'}
         <i class="bi bi-clock-history"></i>      
-        <h1 style = {{color: '#748DA6', fontSize: '30px',  display: 'flex', justifyContent: 'center',}}>
+        <h1 style = {{color: '#748DA6', fontSize: '2vw',  display: 'flex', justifyContent: 'center',}}>
           {'\u00A01 opening\u00A0'}
         </h1>
       </h1>
@@ -68,13 +68,13 @@ const Career = () => {
       </h1>
     </div>    
 
-    <h1 style = {{color: '#898AA6', display: 'flex', justifyContent: 'center', fontSize: '7vw'}}>Volunteering Opportunities</h1>
-    <div className = 'container' style = {{backgroundColor: '#D6EFED', width: '800px'}}>
-    <h1 style = {{color: '#51557E', fontSize: '80px',  display: 'flex', justifyContent: 'center'}}>Problem Designer</h1>
-      <h1 style = {{color: '#748DA6', fontSize: '30px',  display: 'flex', justifyContent: 'center'}}>
+    <h1 style = {{color: '#898AA6', display: 'flex', justifyContent: 'center', fontSize: '5vw'}}>Volunteering Opportunities</h1>
+    <div className = 'container' style = {{backgroundColor: '#D6EFED', width: '50vw'}}>
+    <h1 style = {{color: '#51557E', fontSize: '5vw',  display: 'flex', justifyContent: 'center'}}>Problem Designer</h1>
+      <h1 style = {{color: '#748DA6', fontSize: '2vw',  display: 'flex', justifyContent: 'center'}}>
         {'Part-time opportunity\u00A0'}
         <i class="bi bi-clock-history"></i>      
-        <h1 style = {{color: '#748DA6', fontSize: '30px',  display: 'flex', justifyContent: 'center',}}>
+        <h1 style = {{color: '#748DA6', fontSize: '2vw',  display: 'flex', justifyContent: 'center',}}>
           {'\u00A01 opening\u00A0'}
         </h1>
       </h1>

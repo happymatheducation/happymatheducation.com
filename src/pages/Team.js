@@ -19,8 +19,8 @@ const Team = () => {
             <img alt = 'xu' src={Xu} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
         </div>
         <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
-            <h1 style = {{color: '#51557E', fontSize: '60px',  display: 'flex', justifyContent: 'center'}}>Principal</h1>
-            <h1>
+            <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Principal</h1>
+            <h1 style = {{fontSize: '2vw'}}>
                 {'- UWaterloo PhD, PostDoc\n'}
                 <br></br>
                 - Holding two meritorious awards of The Math Contest in Modelling
@@ -34,8 +34,8 @@ const Team = () => {
             <img alt = 'zhou' src={Zhou} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
         </div>
         <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
-            <h1 style = {{color: '#51557E', fontSize: '60px',  display: 'flex', justifyContent: 'center'}}>Vice Principal</h1>
-            <h1>
+            <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Vice Principal</h1>
+            <h1 style = {{fontSize: '2vw'}}>
                 {'- The Hong Kong Polytechnic University Computer Science PhD, Master\n'}
                 <br></br>
                 - UWaterloo Computer Science Master, PostDoc<br></br>
@@ -50,8 +50,8 @@ const Team = () => {
             <img alt = 'hook' src={Hook} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
         </div>
         <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
-            <h1 style = {{color: '#51557E', fontSize: '60px',  display: 'flex', justifyContent: 'center'}}>Teacher</h1>
-            <h1>
+            <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Teacher</h1>
+            <h1 style = {{fontSize: '2vw'}}>
                 {'- UWaterloo Engineering Ph.D., Science Master, Mathematics Bachelor\n'}
                 <br></br>
                 - Euclid Gold Medalist<br></br>

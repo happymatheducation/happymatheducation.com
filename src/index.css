@@ -191,6 +191,12 @@ body {
   /* transition: scale 0.3s; */
 }
 
+@media screen and (max-width: 1000px) {
+  .btnnavbar {
+    font-size: 15px !important;
+  }
+}
+
 .btnnavbar {
     background: #fff;
     color: #51557E;
