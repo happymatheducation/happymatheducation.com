@@ -1,5 +1,6 @@
 import React from 'react'
-import {NavBar, Copyright, backToTop, BackToTopButton} from '../App'
+import { Copyright, backToTop, BackToTopButton} from '../App'
+import NavBar from '../NavBar.js';
 
 import Xu from '../portraits/xu.jpg';
 import Hook from '../portraits/hook.jpg';

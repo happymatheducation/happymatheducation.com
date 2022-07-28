@@ -1,0 +1,84 @@
+import React from 'react'
+import background2 from '../background2.png';
+import root from '../index.js';
+import Tuition from './Tuition';
+import Career from './Career'
+import Team from './Team';
+
+import NavBar from '../NavBar.js';
+import Copyright from'../App.js'
+
+const Home = () => {
+  return (
+    <>
+    <div style = {{position: 'relative', textAlign: 'center'}}>
+      <img src = {background2} alt = 'background' style = {{ buserSelect: 'none', WebkitUserSelect: 'none', border: '0px solid #51557E', borderRadius: '0px', width: '100%', display: 'block', marginLeft: 'auto', marginTop: '-10px', marginRight: 'auto'}}></img>
+      <div class='centered' style = {{textAlign: 'center'}}>
+        <h1 style = {{animationName: 'fadeIn', animationDuration: '3s', marginTop: '10%', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '8vw'}}>
+          Happy Math Education
+        </h1>
+        <h1 style = {{fontWeight: 'lighter', animationName: 'slideUp', animationDuration: '2s', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '5vw', lineHeight: '110%'}}>
+          Our mission: to help<br></br>kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: '5vw'}}>enjoy</h1> maths
+        </h1>
+      </div>
+    </div>
+
+    <div className = 'container' style = {{}}>
+      <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
+      <h1 style = {{ color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
+      <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
+        () => {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
+          root.render (
+            <Tuition/>
+          )
+        }}>{'View Details '}
+      <i class={'bi bi-text-left'} style={{ fontSize: '2vw' }}></i>
+      </button>
+      </div>
+      <h1 style = {{fontSize: '2vw', color: ''}}>Hourly rates for math contest, CCC, and private lessons</h1>
+    </div>
+
+    <div className = 'container' style = {{}}>
+      <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
+      <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Careers</h1>
+      <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
+        () => {
+          root.render (
+            <Career/>
+          )
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
+        }
+      }>{'View Opportunities '}
+      <i class={'bi bi-clipboard-check'} style={{ fontSize: '2vw' }}></i>
+      </button>
+      </div>
+      <h1 style = {{fontSize: '2vw', color: ''}}>Opportunities for full-time, part-time, co-op, and volunteering</h1>
+    </div>
+
+    <div className = 'container' style = {{}}>
+      <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
+      <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Our Team</h1>
+      <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
+        () => {
+          root.render (
+            <Team/>
+          )
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
+        }
+      }>{'Meet the Team '}
+      <i class={'bi bi-person-circle'} style= {{}}></i>
+      </button>
+      </div>
+      <h1 style = {{fontSize: '2vw', color: ''}}>Our trusted employees and their experience</h1>
+    </div>
+
+    <Copyright/>
+    </>
+  )
+}
+
+export default Home

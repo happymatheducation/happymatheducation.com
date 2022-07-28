@@ -1,5 +1,6 @@
 import React from 'react'
-import {NavBar, Copyright} from '../App'
+import { Copyright} from '../App'
+import NavBar from '../NavBar.js';
 
 const Contact = () => {
   return (

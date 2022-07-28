@@ -1,4 +1,5 @@
-import {NavBar, Copyright, BackToTopButton, backToTop} from '../App';
+import { Copyright, BackToTopButton, backToTop} from '../App';
+import NavBar from '../NavBar.js';
 
 function Practice() {
 
