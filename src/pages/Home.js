@@ -28,7 +28,7 @@ const Home = () => {
       <h1 style = {{ color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
-          navigate('/tuition')
+          navigate('/happy-math-education/tuition')
         }}>{'View Details '}
       <i class={'bi bi-text-left'} style={{ fontSize: '2vw' }}></i>
       </button>
@@ -41,7 +41,7 @@ const Home = () => {
       <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Careers</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
-          navigate('/careers')
+          navigate('/happy-math-education/careers')
         }
       }>{'View Opportunities '}
       <i class={'bi bi-clipboard-check'} style={{ fontSize: '2vw' }}></i>
@@ -55,7 +55,7 @@ const Home = () => {
       <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Our Team</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
-          navigate('/team')
+          navigate('/happy-math-education/team')
         }
       }>{'Meet the Team '}
       <i class={'bi bi-person-circle'} style= {{}}></i>
