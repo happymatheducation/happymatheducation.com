@@ -1,13 +1,8 @@
-import { Copyright, BackToTopButton, backToTop} from '../App';
-import NavBar from '../NavBar.js';
 
 function Practice() {
 
-  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
-
   return (
     <>    
-    <NavBar/>
 
     <h1 style = {{marginTop: '20px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '8vw', textAlign: 'center'}}>Ultimate Practice</h1>
 
@@ -160,10 +155,6 @@ function Practice() {
         </h1>
       </div>
     </div>
-
-    <BackToTopButton/>
-
-    <Copyright/>
     </>
   );
 }

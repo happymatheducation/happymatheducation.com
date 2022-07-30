@@ -274,6 +274,9 @@ nav {
   gap: 2rem;
   padding: 0px 1rem;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav ul {
@@ -285,16 +288,15 @@ nav ul {
 
 nav a, .navlink {
   color: #fff;
-  font-size: max(2vw, 30px);
-  font-weight: bold;
+  font-size: max(1.5vw, 20px);
+  font-weight: normal;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .navspacer {
   color: #fff;
-  font-size: max(2vw, 30px);
-  font-weight: bold;
+  font-size: max(1.5vw, 20px);
   text-decoration: none;
 }
 
@@ -303,6 +305,11 @@ nav a:hover, .navlink:hover {
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
+  width: 100%;
+  background-color: #506491;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
 }

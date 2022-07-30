@@ -1,5 +1,5 @@
 
-import logo from './logo.png';
+import logo from './logo/favicon.ico';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 
 const NavBar = () => {
@@ -8,10 +8,12 @@ const NavBar = () => {
     <nav> 
 
         <ul>
-          <li>
-              <CustomLink to = '/home'>Home</CustomLink>
-          </li>
-          <p className = 'navspacer'>{' | '}</p>
+            <li>
+              <CustomLink to = '/'>Home</CustomLink>
+            </li>
+        </ul>
+
+        <ul>
           <li>
               <CustomLink to = './tuition'>Tuition and Policy</CustomLink>
           </li>
@@ -21,7 +23,7 @@ const NavBar = () => {
           </li>
           <p className = 'navspacer'>{' | '}</p>
           <li>
-              <CustomLink to = './contest'>Math Contests</CustomLink>
+              <CustomLink to = './contests'>Math Contests</CustomLink>
           </li>
           <p className = 'navspacer'>{' | '}</p>
           <li>

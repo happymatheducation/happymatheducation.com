@@ -5,10 +5,9 @@ import Tuition from './Tuition';
 import Career from './Career'
 import Team from './Team';
 
-import NavBar from '../NavBar.js';
-import Copyright from'../App.js'
-
 const Home = () => {
+
+  
   return (
     <>
     <div style = {{position: 'relative', textAlign: 'center'}}>
@@ -76,7 +75,6 @@ const Home = () => {
       <h1 style = {{fontSize: '2vw', color: ''}}>Our trusted employees and their experience</h1>
     </div>
 
-    <Copyright/>
     </>
   )
 }

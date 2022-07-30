@@ -1,14 +1,10 @@
 import React from 'react'
-import { Copyright, backToTop, BackToTopButton} from '../App'
-import NavBar from '../NavBar.js';
 
 const Career = () => {
 
-  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
 
   return (
     <>
-    <NavBar/>
 
     <h1 style = {{color: '#748DA6', fontSize: '2vw', display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
         {'To apply to any position, please send your resume to xudiwaterloo@gmail.com.\u00A0'}
@@ -83,10 +79,6 @@ const Career = () => {
         {'To prepare "The ultimate practice" sets of problems. Need to know how to use Latex. Training will be provided.\u00A0'}
       </h1>
     </div>  
-
-    <BackToTopButton/>
-
-    <Copyright/>
     </>
   )
 }

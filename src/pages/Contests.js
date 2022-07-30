@@ -1,14 +1,10 @@
-import { Copyright, backToTop, BackToTopButton} from '../App';
-import NavBar from '../NavBar.js';
 
 function Contests() {
 
   let things = []
-  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
 
   return (
     <>    
-    <NavBar/>
 
     <h1 style = {{marginTop: '20px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '8vw', textAlign: 'center'}}>Math Contests</h1>
     {/* <h1 style = {{color: '#748DA6', fontSize: '40px', textAlign: 'center', marginTop: '-20px'}}>Recommended math contests for students every year, based on grade</h1> */}
@@ -355,8 +351,6 @@ function Contests() {
       </div>
     </div>
 
-    <BackToTopButton style = {{display: 'none'}}></BackToTopButton>
-    <Copyright/>
     </>
   );
 }

@@ -1,5 +1,3 @@
-import { Copyright, backToTop, BackToTopButton} from '../App';
-import NavBar from '../NavBar.js';
 
 function Tuition() {
 
@@ -7,11 +5,8 @@ function Tuition() {
     window.scrollTo({ top: 2500, behavior: 'smooth' });
   };
 
-  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
-
   return (
     <>    
-    <NavBar/>
 
     <button className = 'btn' onClick={
       () => {scroll('policypart')}
@@ -140,9 +135,6 @@ function Tuition() {
     
     </h1></div>
 
-    <BackToTopButton/>
-
-    <Copyright/>
     </>
   );
 }

@@ -1,6 +1,4 @@
 import React from 'react'
-import { Copyright, backToTop, BackToTopButton} from '../App'
-import NavBar from '../NavBar.js';
 
 import Xu from '../portraits/xu.jpg';
 import Hook from '../portraits/hook.jpg';
@@ -8,11 +6,8 @@ import Zhou from '../portraits/zhou.jpg';
 
 const Team = () => {
 
-  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
-
   return (
     <>
-    <NavBar/>
 
     <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Di Xu</h1>
     <div style = {{display: 'flex'}}>
@@ -60,10 +55,6 @@ const Team = () => {
             </h1>
         </div>
     </div>
-
-    <BackToTopButton/>
-
-    <Copyright/>
     </>
   )
 }

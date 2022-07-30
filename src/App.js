@@ -34,28 +34,27 @@ export function backToTop(mybutton) {
 export const Copyright = () => {
   return (
     <footer>
-    <div className = 'container' style = {{position: 'sticky', marginBottom: '-99999px', backgroundColor: '#51557E',marginTop: '70px', display: 'flex', justifyContent: 'space-between', width: '100%', borderRadius: '0px', marginBottom: '0px'}}>
-      <h1 style = {{display: 'inline', color: '#fff', fontSize: '2vw', justifyContent: 'left'}}>
+      <h1 style = {{display: 'inline', color: '#fff', fontSize: '1.2vw', justifyContent: 'left', fontWeight: 'lighter'}}>
         Copyright © 2022: Jeffrey Zang
       </h1>
-      <button hover = {{background: '#51557E', color: '#fff'}} className = 'btn' style = {{borderColor: '#fff', marginTop: '0px', fontSize: '1.75vw'}} onClick = {
-        () => {window.open('https://github.com/jeffrey-zang/happy-math-education')}
-      }>
-        {'Source '}
-        <i class={'bi bi-github'} style={{ fontSize: '1.75vw' }}></i>
-      </button>
-    </div>
+      <a href = 'https://github.com/jeffrey-zang/happy-math-education' target = '_blank' style = {{fontSize: '1.2vw', textDecoration: 'none', color: '#fff', fontWeight: 'lighter'}}>
+        <i class='bi bi-github'></i>
+        {' Source'}
+      </a>
     </footer>
   )
 }
 
 const App = () => {
+
+  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
+
   return (
     <>    
     <NavBar/>
 
     <Routes>
-      <Route path = '/home' element = {<Home/>}/>
+      <Route path = '/' element = {<Home/>}/>
       <Route path = '/tuition' element = {<Tuition/>}/>
       <Route path = '/practice' element = {<Practice/>}/>
       <Route path = '/contests' element = {<Contests/>}/>
@@ -63,6 +62,9 @@ const App = () => {
       <Route path = '/contact' element = {<Contact/>}/>
       <Route path = '/team' element = {<Team/>}/>
     </Routes>
+
+    <BackToTopButton/>
+    <Copyright/>
 
     </>
   );
