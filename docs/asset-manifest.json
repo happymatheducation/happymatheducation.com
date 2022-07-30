@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/happy-math-education/static/css/main.fb8b75e5.css",
-    "main.js": "/happy-math-education/static/js/main.7f10541d.js",
+    "main.js": "/happy-math-education/static/js/main.c982a072.js",
     "static/js/787.b104852e.chunk.js": "/happy-math-education/static/js/787.b104852e.chunk.js",
     "static/media/background2.png": "/happy-math-education/static/media/background2.fe3088a34dedbbfaf837.png",
     "static/media/bootstrap-icons.woff?": "/happy-math-education/static/media/bootstrap-icons.7ff3ca6fa798de3f8ac2.woff",
@@ -12,11 +12,11 @@
     "static/media/favicon.ico": "/happy-math-education/static/media/favicon.1caeb8554f83fbfad399.ico",
     "index.html": "/happy-math-education/index.html",
     "main.fb8b75e5.css.map": "/happy-math-education/static/css/main.fb8b75e5.css.map",
-    "main.7f10541d.js.map": "/happy-math-education/static/js/main.7f10541d.js.map",
+    "main.c982a072.js.map": "/happy-math-education/static/js/main.c982a072.js.map",
     "787.b104852e.chunk.js.map": "/happy-math-education/static/js/787.b104852e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb8b75e5.css",
-    "static/js/main.7f10541d.js"
+    "static/js/main.c982a072.js"
   ]
 }

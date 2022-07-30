@@ -54,13 +54,13 @@ const App = () => {
     <NavBar/>
 
     <Routes>
-      <Route path = '/' element = {<Home/>}/>
-      <Route path = '/tuition' element = {<Tuition/>}/>
-      <Route path = '/practice' element = {<Practice/>}/>
-      <Route path = '/contests' element = {<Contests/>}/>
-      <Route path = '/careers' element = {<Career/>}/>
-      <Route path = '/contact' element = {<Contact/>}/>
-      <Route path = '/team' element = {<Team/>}/>
+      <Route path = '/happy-math-education/' element = {<Home/>}/>
+      <Route path = '/happy-math-education/tuition' element = {<Tuition/>}/>
+      <Route path = '/happy-math-education/practice' element = {<Practice/>}/>
+      <Route path = '/happy-math-education/contests' element = {<Contests/>}/>
+      <Route path = '/happy-math-education/careers' element = {<Career/>}/>
+      <Route path = '/happy-math-education/contact' element = {<Contact/>}/>
+      <Route path = '/happy-math-education/team' element = {<Team/>}/>
     </Routes>
 
     <BackToTopButton/>

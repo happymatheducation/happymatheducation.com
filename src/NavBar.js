@@ -9,33 +9,33 @@ const NavBar = () => {
 
         <ul>
             <li>
-              <CustomLink to = '/'>Home</CustomLink>
+              <CustomLink to = '/happy-math-education/'>Home</CustomLink>
             </li>
         </ul>
 
         <ul>
           <li>
-              <CustomLink to = './tuition'>Tuition and Policy</CustomLink>
+              <CustomLink to = './happy-math-education/tuition'>Tuition and Policy</CustomLink>
           </li>
           <p className = 'navspacer'>{' | '}</p>
           <li>
-              <CustomLink to = './practice'>Ultimate Practice</CustomLink>
+              <CustomLink to = './happy-math-education/practice'>Ultimate Practice</CustomLink>
           </li>
           <p className = 'navspacer'>{' | '}</p>
           <li>
-              <CustomLink to = './contests'>Math Contests</CustomLink>
+              <CustomLink to = './happy-math-education/contests'>Math Contests</CustomLink>
           </li>
           <p className = 'navspacer'>{' | '}</p>
           <li>
-              <CustomLink to = './careers'>Careers</CustomLink>
+              <CustomLink to = './happy-math-education/careers'>Careers</CustomLink>
           </li>
           <p className = 'navspacer'>{' | '}</p>
           <li>
-              <CustomLink to = './contact'>Contact</CustomLink>
+              <CustomLink to = './happy-math-education/contact'>Contact</CustomLink>
           </li>
           <p className = 'navspacer'>{' | '}</p>
           <li>
-              <CustomLink to = './team'>Our Team</CustomLink>
+              <CustomLink to = './happy-math-education/team'>Our Team</CustomLink>
           </li>
         </ul>
 
