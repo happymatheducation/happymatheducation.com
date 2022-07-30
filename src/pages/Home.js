@@ -1,13 +1,14 @@
 import React from 'react'
 import background2 from '../background2.png';
 import root from '../index.js';
-import Tuition from './Tuition';
 import Career from './Career'
 import Team from './Team';
 
+import { useNavigate } from 'react-router-dom';
+
 const Home = () => {
 
-  
+  let navigate = useNavigate();
   return (
     <>
     <div style = {{position: 'relative', textAlign: 'center'}}>
@@ -27,11 +28,7 @@ const Home = () => {
       <h1 style = {{ color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
-          document.body.scrollTop = 0; // For Safari
-          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
-          root.render (
-            <Tuition/>
-          )
+          navigate('/tuition')
         }}>{'View Details '}
       <i class={'bi bi-text-left'} style={{ fontSize: '2vw' }}></i>
       </button>
@@ -44,11 +41,7 @@ const Home = () => {
       <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Careers</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
-          root.render (
-            <Career/>
-          )
-          document.body.scrollTop = 0; // For Safari
-          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
+          navigate('/careers')
         }
       }>{'View Opportunities '}
       <i class={'bi bi-clipboard-check'} style={{ fontSize: '2vw' }}></i>
@@ -62,11 +55,7 @@ const Home = () => {
       <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Our Team</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
-          root.render (
-            <Team/>
-          )
-          document.body.scrollTop = 0; // For Safari
-          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera        
+          navigate('/team')
         }
       }>{'Meet the Team '}
       <i class={'bi bi-person-circle'} style= {{}}></i>
