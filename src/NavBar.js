@@ -6,7 +6,11 @@ const NavBar = () => {
 
     return(
     <>
-    <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
+    <li style = {{listStyle: 'none'}}>
+    <CustomLink to = '/happy-math-education/'>
+        <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
+    </CustomLink>
+    </li>
 
     <nav className = 'nav' id = 'myTopnav'> 
 
