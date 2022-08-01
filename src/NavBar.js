@@ -8,13 +8,11 @@ const NavBar = () => {
     <>
     <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
 
-    <nav> 
+    <nav className = 'nav' id = 'myTopnav'> 
 
-        <ul>
-            <li>
-              <CustomLink to = '/happy-math-education/'>Home</CustomLink>
-            </li>
-        </ul>
+        <li style = {{listStyle: 'none'}}>
+            <CustomLink to = '/happy-math-education/'>Home</CustomLink>
+        </li>
 
         <ul>
           <li>
@@ -36,6 +34,19 @@ const NavBar = () => {
               <CustomLink to = './happy-math-education/team'>Our Team</CustomLink>
           </li>
         </ul>
+
+        <a class="icon" onClick={
+            () => {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "nav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "nav";
+                }              
+            }
+        }>
+            <i class="bi bi-arrow-bar-left"></i>
+        </a>
 
     </nav>
     </>

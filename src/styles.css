@@ -226,7 +226,7 @@ body {
   top: 0;
 }
 
-nav {
+.nav {
   background-color: #D6EFED;
   color: #506491;
   display: flex;
@@ -236,19 +236,46 @@ nav {
   align-items: center;
   position: sticky;
   top: 0;
+  overflow: hidden;
   z-index: 10;
 }
 
-nav ul {
+.nav ul {
   list-style: none;
   margin: 0;
   display: flex;
   gap: 1rem;
 }
 
-nav a, .navlink {
+.nav .icon {
+  display: none;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .nav ul:not(:first-child) {
+    display: none;
+  }
+  .nav .icon {
+    display: inherit;
+    cursor: pointer;
+  }
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive ul {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.nav a, .navlink {
   color: #506491;
-  font-size: max(1.5vw, 20px);
+  font-size: 25px;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s;
@@ -260,7 +287,7 @@ nav a, .navlink {
   text-decoration: none;
 }
 
-nav a:hover, .navlink:hover {
+.nav a:hover, .navlink:hover {
   color: #A78DAD;
 }
 
