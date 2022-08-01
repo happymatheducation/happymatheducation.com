@@ -1,10 +1,13 @@
 
-import logo from './logo/favicon.ico';
+import logo from './logo.png';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 
 const NavBar = () => {
 
     return(
+    <>
+    <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
+
     <nav> 
 
         <ul>
@@ -15,31 +18,27 @@ const NavBar = () => {
 
         <ul>
           <li>
-              <CustomLink to = './happy-math-education/tuition'>Tuition and Policy</CustomLink>
+              <CustomLink to = './happy-math-education/tuition'>Tuition</CustomLink>
           </li>
-          <p className = 'navspacer'>{' | '}</p>
           <li>
               <CustomLink to = './happy-math-education/practice'>Ultimate Practice</CustomLink>
           </li>
-          <p className = 'navspacer'>{' | '}</p>
           <li>
               <CustomLink to = './happy-math-education/contests'>Math Contests</CustomLink>
           </li>
-          <p className = 'navspacer'>{' | '}</p>
           <li>
               <CustomLink to = './happy-math-education/careers'>Careers</CustomLink>
           </li>
-          <p className = 'navspacer'>{' | '}</p>
           <li>
               <CustomLink to = './happy-math-education/contact'>Contact</CustomLink>
           </li>
-          <p className = 'navspacer'>{' | '}</p>
           <li>
               <CustomLink to = './happy-math-education/team'>Our Team</CustomLink>
           </li>
         </ul>
 
     </nav>
+    </>
     )
   }
 

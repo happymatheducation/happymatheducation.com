@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
     <div style = {{position: 'relative', textAlign: 'center'}}>
-      <img src = {background2} alt = 'background' style = {{ buserSelect: 'none', WebkitUserSelect: 'none', border: '0px solid #51557E', borderRadius: '0px', width: '100%', display: 'block', marginLeft: 'auto', marginTop: '-10px', marginRight: 'auto'}}></img>
+      <img src = {background2} alt = 'background' style = {{ buserSelect: 'none', WebkitUserSelect: 'none', border: '0px solid #7e94c4', borderRadius: '0px', width: '100%', display: 'block', marginLeft: 'auto', marginTop: '-10px', marginRight: 'auto'}}></img>
       <div class='centered' style = {{textAlign: 'center'}}>
         <h1 style = {{animationName: 'fadeIn', animationDuration: '3s', marginTop: '10%', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '8vw'}}>
           Happy Math Education
@@ -25,7 +25,7 @@ const Home = () => {
 
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
-      <h1 style = {{ color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
+      <h1 style = {{ color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
           navigate('/happy-math-education/tuition')
@@ -38,7 +38,7 @@ const Home = () => {
 
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
-      <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Careers</h1>
+      <h1 style = {{color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Careers</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
           navigate('/happy-math-education/careers')
@@ -52,7 +52,7 @@ const Home = () => {
 
     <div className = 'container' style = {{}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
-      <h1 style = {{color: '#51557E', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Our Team</h1>
+      <h1 style = {{color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Our Team</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
           navigate('/happy-math-education/team')
