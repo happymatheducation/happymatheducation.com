@@ -23,20 +23,20 @@ const Home = () => {
       </div>
     </div>
 
-    <div className = 'container' style = {{}}>
+    <div className = 'container' style = {{width: '100%'}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
-      <h1 style = {{ color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
-      <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
-        () => {
-          navigate('/happy-math-education/tuition')
-        }}>{'View Details '}
-      <i class={'bi bi-text-left'} style={{ fontSize: '2vw' }}></i>
-      </button>
+        <h1 style = {{ color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
+        <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
+          () => {
+            navigate('/happy-math-education/tuition')
+          }}>{'View Details '}
+          <i class={'bi bi-text-left'} style={{ fontSize: '2vw' }}></i>
+        </button>
       </div>
-      <h1 style = {{fontSize: '2vw', color: ''}}>Hourly rates for math contest, CCC, and private lessons</h1>
+      <h1 style = {{fontSize: '2vw', width: '100%'}}>Hourly rates for math contest, CCC, and private lessons</h1>
     </div>
 
-    <div className = 'container' style = {{}}>
+    <div className = 'container' style = {{width: '100%'}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
       <h1 style = {{color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Careers</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
@@ -50,7 +50,7 @@ const Home = () => {
       <h1 style = {{fontSize: '2vw', color: ''}}>Opportunities for full-time, part-time, co-op, and volunteering</h1>
     </div>
 
-    <div className = 'container' style = {{}}>
+    <div className = 'container' style = {{width: '100%'}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
       <h1 style = {{color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Our Team</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
