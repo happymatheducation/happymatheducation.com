@@ -33,11 +33,11 @@ export function backToTop(mybutton) {
 
 export const Copyright = () => {
   return (
-    <footer>
-      <h1 style = {{display: 'inline', color: '#fff', fontSize: '1.2vw', justifyContent: 'left', fontWeight: 'lighter'}}>
+    <footer id = 'footer'>
+      <h1 style = {{display: 'inline', color: '#fff', fontSize: 'max(1.2vw, 12px)', justifyContent: 'left', fontWeight: 'lighter'}}>
         Copyright © 2022: Jeffrey Zang
       </h1>
-      <a href = 'https://github.com/jeffrey-zang/happy-math-education' target = '_blank' style = {{fontSize: '1.2vw', textDecoration: 'none', color: '#fff', fontWeight: 'lighter'}}>
+      <a href = 'https://github.com/jeffrey-zang/happy-math-education' target = '_blank' style = {{fontSize: 'max(1.2vw, 12px)', textDecoration: 'none', color: '#fff', fontWeight: 'lighter'}}>
         <i class='bi bi-github'></i>
         {' Source'}
       </a>

@@ -35,17 +35,19 @@ const NavBar = () => {
           </li>
         </ul>
 
-        <a class="icon" onClick={
+        <a id = 'icon' class="icon" onClick={
             () => {
                 var x = document.getElementById("myTopnav");
                 if (x.className === "nav") {
                   x.className += " responsive";
+                  document.getElementById("icon").innerHTML = "<i class='bi bi-x'></i>"
                 } else {
                   x.className = "nav";
+                  document.getElementById("icon").innerHTML = "<i class='bi bi-arrow-bar-left'></i>"
                 }              
             }
         }>
-            <i class="bi bi-arrow-bar-left"></i>
+            <i class='bi bi-arrow-bar-left'></i>
         </a>
 
     </nav>
