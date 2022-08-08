@@ -12,17 +12,6 @@ import Career from './pages/Career'
 import Contact from './pages/Contact';
 import Team from './pages/Team';
 
-export function BackToTopButton() {
-  return(
-    <button id = 'backtotop' className = 'btn' style = {{position: 'sticky', bottom: '30px', left: '89%', marginBottom: '-30px', marginTop: '30px', display: 'none'}} onClick = {
-      () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        // document.documentElement.scrollTop = 0;  For Chrome, Firefox, IE and Opera
-    }   
-    }>Back to Top</button>
-  )
-}
-
 export function backToTop(mybutton) {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
@@ -34,10 +23,17 @@ export function backToTop(mybutton) {
 export const Copyright = () => {
   return (
     <footer id = 'footer'>
-      <h1 style = {{display: 'inline', color: '#fff', fontSize: 'max(1.2vw, 12px)', justifyContent: 'left', fontWeight: 'lighter'}}>
+      <p>
         Copyright © 2022: Jeffrey Zang
-      </h1>
-      <a href = 'https://github.com/jeffrey-zang/happy-math-education' target = '_blank' style = {{fontSize: 'max(1.2vw, 12px)', textDecoration: 'none', color: '#fff', fontWeight: 'lighter'}}>
+      </p>
+
+      <a id = 'backtotop' style = {{cursor: 'pointer'}} onClick = {
+          () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }   
+      }>Back to Top</a>
+
+      <a href = 'https://github.com/jeffrey-zang/happy-math-education' target = '_blank'>
         <i class='bi bi-github'></i>
         {' Source'}
       </a>
@@ -63,7 +59,6 @@ const App = () => {
       <Route path = '/happy-math-education/team' element = {<Team/>}/>
     </Routes>
 
-    <BackToTopButton/>
     <Copyright/>
 
     </>
