@@ -7,7 +7,7 @@ const NavBar = () => {
     return(
     <>
     <li style = {{listStyle: 'none'}}>
-    <CustomLink to = '/happy-math-education/'>
+    <CustomLink to = '/'>
         <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
     </CustomLink>
     </li>

@@ -1,8 +1,5 @@
 import React from 'react'
 import background2 from '../background2.png';
-import root from '../index.js';
-import Career from './Career'
-import Team from './Team';
 
 import { useNavigate } from 'react-router-dom';
 
