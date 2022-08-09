@@ -8,6 +8,9 @@
   font-weight: bold;
 }
 
+$darkblue: #5566df;
+$lightblue: #23d7a5;
+
 @keyframes fadeIn {
   from {opacity: 0}
   to {opacity: 1}
@@ -263,7 +266,7 @@ body {
 
 .nav a, .navlink {
   color: #000;
-  background-image: linear-gradient(90deg, red, blue);
+  background-image: linear-gradient(90deg, $lightblue 0%, $darkblue 100%);
   background-size: 0% 3px;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -282,13 +285,12 @@ footer {
   margin-top: 50px;
   text-align: center;
   width: 100%;
-  font-size: max(1.2vw, 15px);
+  font-size: max(1.3vw, 15px);
   text-decoration: none !important;
-  background-color: #7e94c4;
-  color: #fff;
-  padding: 10px;
-  font-weight: lighter;
-  display: flex;
-  justify-content: space-between;
+  background-color: #D6EFED;
+  color: #000;
+  padding-top: 30px;
+  display: block;
+  line-height: max(2.5vw, 20px);
   margin-bottom: -1000%;
 }
