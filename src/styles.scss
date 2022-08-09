@@ -8,6 +8,9 @@
   font-weight: bold;
 }
 
+$darkblue: #7E94C4;
+$lightblue: #D6EFED;
+
 @keyframes fadeIn {
   from {opacity: 0}
   to {opacity: 1}
@@ -282,13 +285,12 @@ footer {
   margin-top: 50px;
   text-align: center;
   width: 100%;
-  font-size: max(1.2vw, 15px);
+  font-size: max(1.3vw, 15px);
   text-decoration: none !important;
-  background-color: #7e94c4;
-  color: #fff;
-  padding: 10px;
-  font-weight: lighter;
-  display: flex;
-  justify-content: space-between;
+  background-color: #D6EFED;
+  color: #000;
+  padding-top: 30px;
+  display: block;
+  line-height: 40px;
   margin-bottom: -1000%;
 }
