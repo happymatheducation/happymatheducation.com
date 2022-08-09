@@ -15,27 +15,27 @@ const NavBar = () => {
     <nav className = 'nav' id = 'myTopnav'> 
 
         <li style = {{listStyle: 'none'}}>
-            <CustomLink to = '/happy-math-education/'>Home</CustomLink>
+            <CustomLink to = '/'>Home</CustomLink>
         </li>
 
         <ul>
           <li>
-              <CustomLink to = './happy-math-education/tuition'>Tuition</CustomLink>
+              <CustomLink to = '/tuition'>Tuition</CustomLink>
           </li>
           <li>
-              <CustomLink to = './happy-math-education/practice'>Ultimate Practice</CustomLink>
+              <CustomLink to = '/practice'>Ultimate Practice</CustomLink>
           </li>
           <li>
-              <CustomLink to = './happy-math-education/contests'>Math Contests</CustomLink>
+              <CustomLink to = '/contests'>Math Contests</CustomLink>
           </li>
           <li>
-              <CustomLink to = './happy-math-education/careers'>Careers</CustomLink>
+              <CustomLink to = '/careers'>Careers</CustomLink>
           </li>
           <li>
-              <CustomLink to = './happy-math-education/contact'>Contact</CustomLink>
+              <CustomLink to = '/contact'>Contact</CustomLink>
           </li>
           <li>
-              <CustomLink to = './happy-math-education/team'>Our Team</CustomLink>
+              <CustomLink to = '/team'>Our Team</CustomLink>
           </li>
         </ul>
 

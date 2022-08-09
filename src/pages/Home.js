@@ -25,10 +25,10 @@ const Home = () => {
 
     <div className = 'container' style = {{width: '100%'}}>
       <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '-10px'}}>
-        <h1 style = {{ color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
+        <h1 style = {{ color: '#000', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Tuition</h1>
         <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
           () => {
-            navigate('/happy-math-education/tuition')
+            navigate('/tuition')
           }}>{'View Details '}
           <i class={'bi bi-text-left'} style={{ fontSize: '2vw' }}></i>
         </button>
@@ -41,7 +41,7 @@ const Home = () => {
       <h1 style = {{color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Careers</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
-          navigate('/happy-math-education/careers')
+          navigate('/careers')
         }
       }>{'View Opportunities '}
       <i class={'bi bi-clipboard-check'} style={{ fontSize: '2vw' }}></i>
@@ -55,7 +55,7 @@ const Home = () => {
       <h1 style = {{color: '#7e94c4', fontSize: '4vw', display: 'block', justifyContent: 'center'}}>Our Team</h1>
       <button className = 'btn' style = {{height: '0%', fontSize: '2vw', marginTop: '1.5vw'}} onClick = {
         () => {
-          navigate('/happy-math-education/team')
+          navigate('/team')
         }
       }>{'Meet the Team '}
       <i class={'bi bi-person-circle'} style= {{}}></i>
