@@ -8,8 +8,8 @@
   font-weight: bold;
 }
 
-$darkblue: #7E94C4;
-$lightblue: #D6EFED;
+$darkblue: #5566df;
+$lightblue: #23d7a5;
 
 @keyframes fadeIn {
   from {opacity: 0}
@@ -266,7 +266,7 @@ body {
 
 .nav a, .navlink {
   color: #000;
-  background-image: linear-gradient(90deg, red, blue);
+  background-image: linear-gradient(90deg, $lightblue 0%, $darkblue 100%);
   background-size: 0% 3px;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -291,6 +291,6 @@ footer {
   color: #000;
   padding-top: 30px;
   display: block;
-  line-height: 40px;
+  line-height: max(2.5vw, 20px);
   margin-bottom: -1000%;
 }

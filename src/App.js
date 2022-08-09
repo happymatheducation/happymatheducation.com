@@ -29,7 +29,7 @@ export const Copyright = () => {
 
       <div style = {{display: 'flex', justifyContent: 'space-between', padding: '0vw 10vw 0vw 10vw'}}>
         <div>
-          <img src = {Logo} alt = 'footerlogo'></img>
+          <img src = {Logo} alt = 'footerlogo' style = {{width: 'max(15vw, 150px)'}}></img>
           <Link to = '/license' style = {{display: 'block'}}>
             License
           </Link>
