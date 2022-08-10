@@ -12,18 +12,13 @@ $darkblue: #5566df;
 $lightblue: #23d7a5;
 
 @keyframes fadeIn {
-  from {opacity: 0}
-  to {opacity: 1}
-}
-
-@keyframes slideUp {
   from {
     opacity: 0;
-    line-height: 200px;
-}
+    margin-left: -10%;
+  }
   to {
     opacity: 1;
-    line-height: 80px;
+    margin-left: inherit;
   }
 }
 

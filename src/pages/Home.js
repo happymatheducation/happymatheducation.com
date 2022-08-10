@@ -11,10 +11,10 @@ const Home = () => {
     <div style = {{position: 'relative', textAlign: 'center'}}>
       <img src = {background2} alt = 'background' style = {{ buserSelect: 'none', WebkitUserSelect: 'none', border: '0px solid #7e94c4', borderRadius: '0px', width: '100%', display: 'block', marginLeft: 'auto', marginTop: '-10px', marginRight: 'auto'}}></img>
       <div class='centered' style = {{textAlign: 'center'}}>
-        <h1 style = {{animationName: 'fadeIn', animationDuration: '3s', marginTop: '10%', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '8vw'}}>
+        <h1 style = {{animationName: 'fadeIn', animationDuration: '2s', marginTop: '10%', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: 'max(8vw, 30px)'}}>
           Happy Math Education
         </h1>
-        <h1 style = {{fontWeight: 'lighter', animationName: 'slideUp', animationDuration: '2s', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: '5vw', lineHeight: '110%'}}>
+        <h1 style = {{fontWeight: 'lighter', animationName: 'fadeIn', animationDuration: '2s', color: '#fff', whiteSpace: 'nowrap', textAlign: 'center', fontSize: 'max(5vw, 30px)', lineHeight: '110%'}}>
           Our mission: to help<br></br>kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: '5vw'}}>enjoy</h1> maths
         </h1>
       </div>
