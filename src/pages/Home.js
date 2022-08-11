@@ -42,7 +42,7 @@ const Home = () => {
       <div>
       <h1 style = {{ fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>About Us</h1>
       <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
-        Happy Math Education is a tutoring service specializing in math and coding contests
+        Happy Math Education is a tutoring service specializing in math and coding contests. We offer classes from grades 8 to 12, taught online.
       </h1>
       </div>
       <img src = {teaching} alt = 'teaching' className = 'homeimg'></img>
