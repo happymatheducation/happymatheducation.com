@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.27665dc6.css",
-    "main.js": "/static/js/main.8ef77459.js",
+    "main.css": "/static/css/main.1a03e4bf.css",
+    "main.js": "/static/js/main.41fce24a.js",
     "static/js/787.b104852e.chunk.js": "/static/js/787.b104852e.chunk.js",
-    "static/media/background2.png": "/static/media/background2.fe3088a34dedbbfaf837.png",
+    "static/media/home.png": "/static/media/home.cf55a11a8ec7c7926fdb.png",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.7ff3ca6fa798de3f8ac2.woff",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.f2539a501be3a673de05.woff2",
     "static/media/xu.jpg": "/static/media/xu.65106a14d45ce8924244.jpg",
     "static/media/zhou.jpg": "/static/media/zhou.c3e822bccca4ce76d02a.jpg",
     "static/media/hook.jpg": "/static/media/hook.16fe0926bb71b0bfc89b.jpg",
+    "static/media/learning.svg": "/static/media/learning.03eb8aa878932b0011bc0d526c271541.svg",
+    "static/media/teacher.svg": "/static/media/teacher.a033035e04c99966b1f521c964f111d2.svg",
+    "static/media/teaching.svg": "/static/media/teaching.a62ef174eb311054c309258dc2c582b8.svg",
     "static/media/logo.png": "/static/media/logo.7ef237da561ece48f392.png",
+    "static/media/math.svg": "/static/media/math.c8e70400a0d3daedbb230486789e366f.svg",
     "index.html": "/index.html",
-    "main.27665dc6.css.map": "/static/css/main.27665dc6.css.map",
-    "main.8ef77459.js.map": "/static/js/main.8ef77459.js.map",
+    "main.1a03e4bf.css.map": "/static/css/main.1a03e4bf.css.map",
+    "main.41fce24a.js.map": "/static/js/main.41fce24a.js.map",
     "787.b104852e.chunk.js.map": "/static/js/787.b104852e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.27665dc6.css",
-    "static/js/main.8ef77459.js"
+    "static/css/main.1a03e4bf.css",
+    "static/js/main.41fce24a.js"
   ]
 }
