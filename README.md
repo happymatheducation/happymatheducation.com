@@ -23,3 +23,4 @@ Initial Release
 This project is licensed under the BSD-3 Clause License - see the LICENSE file for details
 
 Previous website: https://www.happymatheducation.com/
+Icons: https://iconscout.com/illustrations/
