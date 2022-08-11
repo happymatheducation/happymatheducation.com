@@ -1,6 +1,8 @@
-
 import {React} from "react";
 import { Route, Routes } from 'react-router-dom'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 import NavBar from './NavBar.js';
 
@@ -71,6 +73,7 @@ export const Copyright = () => {
           }   
       }>Back to Top</a>
 
+      <br></br>
       <a href = 'https://github.com/jeffrey-zang/happy-math-education' target = '_blank'>
         <i class='bi bi-github'></i>
         {' Source'}
@@ -81,7 +84,7 @@ export const Copyright = () => {
 
 const App = () => {
 
-  window.onscroll = function() {backToTop(document.getElementById('backtotop'))};
+  AOS.init();
 
   return (
     <>    
