@@ -9,7 +9,8 @@
 }
 
 $darkblue: #6271e2;
-$lightblue: #23d7a5;
+$cyan: #23d7a5;
+$lightblue: #D6EFED;
 $hover: #8590e1;
 
 @keyframes fadeInLeft {
@@ -153,7 +154,7 @@ body {
 
 .gradient {
   /* color: rgb(2,0,36); */
-  background: linear-gradient(90deg, $darkblue, $lightblue 100%);
+  background: linear-gradient(90deg, $darkblue, $cyan 100%);
   font-weight: 'bold';
   background-clip: text;
   -webkit-background-clip: text;
@@ -293,7 +294,7 @@ body {
 
 .nav a, .navlink {
   color: #000;
-  background-image: linear-gradient(90deg, $lightblue 0%, $darkblue 100%);
+  background-image: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
   background-size: 0% 3px;
   background-repeat: no-repeat;
   background-position: left bottom;

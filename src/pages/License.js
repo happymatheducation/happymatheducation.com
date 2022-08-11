@@ -8,7 +8,7 @@ const License = () => {
             License
         </h1>
         <p>
-        Copyright (c) 2022 Happy Math Education
+        Copyright (c) 2022 Jeffrey Zang
 <br></br>
 <br></br>
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:

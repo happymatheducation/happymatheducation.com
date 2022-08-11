@@ -20,13 +20,17 @@ const Home = () => {
     <>
     <div className = 'homediv' style = {{animationName: 'fadeInLeft', animationDuration: '2s', animationTimingFunction: 'ease'}}>
       <div style = {{marginTop: '10vh'}}>
-      <h1 style = {{color: '#000', whiteSpace: 'nowrap', fontSize: 'max(4.5vw, 40px)'}}>
+      <h1 style = {{whiteSpace: 'nowrap', fontSize: 'max(4.5vw, 40px)'}}>
         Happy Math Education
       </h1>
-      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', color: '#000', wordWrap: 'auto', whiteSpace: 'nowrap', fontSize: 'max(2.5vw, 25px)'}}>
+      <h1 style = {{width: '100%', fontWeight: 'lighter', wordWrap: 'auto', whiteSpace: 'nowrap', fontSize: 'max(2.5vw, 25px)'}}>
         Our mission: to help kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: 'inherit'}}>enjoy</h1> maths
       </h1>
-      <button className = 'btn'>
+      <button className = 'btn' onClick = {
+        () => {
+          navigate('/getstarted')
+        }
+      }>
         <i class = 'bi bi-person-fill'></i>
         {' Get Started'}
       </button>
@@ -36,8 +40,8 @@ const Home = () => {
     
     <div data-aos = 'fade-up' className = 'homediv' style = {{marginTop: '20%'}}>
       <div>
-      <h1 style = {{ color: '#000', fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>About Us</h1>
-      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', color: '#000', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
+      <h1 style = {{ fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>About Us</h1>
+      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
         Happy Math Education is a tutoring service specializing in math and coding contests
       </h1>
       </div>
@@ -46,8 +50,8 @@ const Home = () => {
       
     <div data-aos = 'fade-up' className = 'homediv' style = {{marginTop: '20%'}}>
       <div>
-      <h1 style = {{color: '#000', fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>Tuition</h1>
-      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', color: '#000', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
+      <h1 style = {{fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>Tuition</h1>
+      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
         Cost options for math, coding, and private lessons
       </h1>
       <button className = 'btn' onClick = {
@@ -64,8 +68,8 @@ const Home = () => {
 
     <div data-aos = 'fade-up' className = 'homediv' style = {{marginTop: '20%'}}>
       <div>
-      <h1 style = {{ color: '#000', fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>Our Team</h1>
-      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', color: '#000', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
+      <h1 style = {{ fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>Our Team</h1>
+      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
         Our trusted professors and their experience
       </h1>
       <button className = 'btn' onClick = {
@@ -83,7 +87,7 @@ const Home = () => {
     <div data-aos = 'fade-up' className = 'homediv' style = {{marginTop: '20%', textAlign: 'center', display: 'block'}}>
       <img src = {math} alt = 'teaching' className = 'homeimg'></img>
       <div>
-      <h1 style = {{ color: '#000', fontSize: 'max(3vw, 20px)', display: 'block', justifyContent: 'center'}}>Propel your math to the next level</h1>
+      <h1 style = {{ fontSize: 'max(3vw, 20px)', display: 'block', justifyContent: 'center'}}>Propel your math to the next level</h1>
       <button className = 'btn' onClick = {
         () => {
           navigate('/getstarted')

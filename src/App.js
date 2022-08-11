@@ -35,6 +35,10 @@ export const Copyright = () => {
           <Link to = '/license' style = {{display: 'block'}}>
             License
           </Link>
+          <a href = 'https://github.com/jeffrey-zang/happy-math-education' target = '_blank'>
+            <i class='bi bi-github'></i>
+            {' Source'}
+          </a>
         </div>
 
         <div style = {{display: 'block', textAlign: 'left'}}>
@@ -53,18 +57,17 @@ export const Copyright = () => {
           <p style = {{color: '#7E94C4', textAlign: 'center'}}>
             Company
           </p>
-          <Link to = '/tuition'>Tuition</Link>
+          <Link to = '/'>Home</Link>
           <br></br>
-          <Link to = '/practice'>Ultimate Practice</Link>
+          <Link to = '/careers'>Careers</Link>
           <br></br>
-          <Link to = '/contests'>Math Contests</Link>
-          <br></br>
+          <Link to = '/team'>Our Team</Link>
         </div>
 
       </div>
 
       <p style = {{marginTop: '40px'}}>
-        Copyright © 2022: Happy Math Education
+        Copyright © 2022: <a href = 'https://jeffrey-zang.github.io/' target = '_blank'>Jeffrey Zang</a>
       </p>
 
       <a id = 'backtotop' style = {{cursor: 'pointer'}} onClick = {
@@ -74,10 +77,6 @@ export const Copyright = () => {
       }>Back to Top</a>
 
       <br></br>
-      <a href = 'https://github.com/jeffrey-zang/happy-math-education' target = '_blank'>
-        <i class='bi bi-github'></i>
-        {' Source'}
-      </a>
     </footer>
   )
 }
