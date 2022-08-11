@@ -67,10 +67,11 @@ $hover: #8590e1;
   .homediv {
     display: block;
     text-align: center !important;
-    line-height: 50px;
+    line-height: 60px;
   }
   .homeimg {
     width: 50%;
+    margin-top: 0% !important;
   }
 }
 
@@ -78,10 +79,10 @@ $hover: #8590e1;
   .homediv {
     display: block;
     text-align: center;
-    line-height: 50px;
+    line-height: 60px;
   }
   .homeimg {
-    width: 80%;
+    margin-top: 5% !important;
   }
 }
 
@@ -211,14 +212,14 @@ body {
   background: $darkblue;
   color: #fff;
   /* border: steelblue; */
-  padding: 0.3vw 0.6vw;
+  padding: 10px 20px;
   margin: 0px;
   border-width: 0px;
   border-radius: 5px;
   cursor: pointer;
   /* float: right; */
   text-decoration: none;
-  font-size: max(2vw, 30px);
+  font-size: max(2vw, 20px);
   font-family: inherit;
   transition: color 0.3s;
   transition: background 0.3s;
@@ -268,7 +269,7 @@ body {
   font-weight: bold;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
   .nav ul:not(:first-child) {
     display: none;
   }
@@ -286,6 +287,7 @@ body {
     float: none;
     display: block;
     text-align: left;
+    line-height: 35px;
   }
 }
 

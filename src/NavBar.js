@@ -1,5 +1,5 @@
 
-import logo from './logo.png';
+import logo from './logo/logo.png';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 
 const NavBar = () => {
@@ -35,7 +35,7 @@ const NavBar = () => {
               <CustomLink to = '/team'>Our Team</CustomLink>
           </li>
           <li>
-              <CustomLink to = '/contact' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Get Started</CustomLink>
+              <CustomLink to = '/getstarted' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Get Started</CustomLink>
           </li>
         </ul>
 

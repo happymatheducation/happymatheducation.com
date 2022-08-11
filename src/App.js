@@ -1,5 +1,5 @@
-import {React} from "react";
-import { Route, Routes } from 'react-router-dom'
+import {React, useEffect} from "react";
+import { Route, Routes, useLocation } from 'react-router-dom'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -15,7 +15,7 @@ import Contact from './pages/Contact';
 import Team from './pages/Team';
 import License from './pages/License';
 import { Link } from 'react-router-dom'
-import Logo from './logo.png'
+import Logo from './logo/logo.png';
 
 export function backToTop(mybutton) {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -82,12 +82,23 @@ export const Copyright = () => {
   )
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const App = () => {
 
   AOS.init();
 
   return (
     <>    
+    <ScrollToTop />
     <NavBar/>
 
     <Routes>
@@ -97,7 +108,7 @@ const App = () => {
       <Route path = '/contests' element = {<Contests/>}/>
       <Route path = '/license' element = {<License/>}/>
       <Route path = '/careers' element = {<Career/>}/>
-      <Route path = '/contact' element = {<Contact/>}/>
+      <Route path = '/getstarted' element = {<Contact/>}/>
       <Route path = '/team' element = {<Team/>}/>
     </Routes>
 
