@@ -5,7 +5,7 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 const NavBar = () => {
 
     return(
-    <>
+    <div style = {{backgroundColor:'#fff'}}>
     <li style = {{listStyle: 'none'}}>
     <CustomLink to = '/'>
         <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
@@ -32,10 +32,10 @@ const NavBar = () => {
               <CustomLink to = '/careers'>Careers</CustomLink>
           </li>
           <li>
-              <CustomLink to = '/contact'>Contact</CustomLink>
+              <CustomLink to = '/team'>Our Team</CustomLink>
           </li>
           <li>
-              <CustomLink to = '/team'>Our Team</CustomLink>
+              <CustomLink to = '/contact' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Get Started</CustomLink>
           </li>
         </ul>
 
@@ -55,7 +55,7 @@ const NavBar = () => {
         </a>
 
     </nav>
-    </>
+    </div>
     )
   }
 

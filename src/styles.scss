@@ -8,12 +8,13 @@
   font-weight: bold;
 }
 
-$darkblue: #5566df;
+$darkblue: #6271e2;
 $lightblue: #23d7a5;
+$hover: #8590e1;
 
-@keyframes fadeIn {
+@keyframes fadeInLeft {
   from {
-    opacity: 0;
+    opacity: 0.2;
     margin-left: -10%;
   }
   to {
@@ -46,6 +47,42 @@ $lightblue: #23d7a5;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #8E91AF;
+}
+
+.homediv {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 5% 0% 5%;
+  line-height: 80px; 
+  margin-top: 5vh;
+}
+
+.homeimg {
+  margin-top: -8%;
+  width: 40%;
+}
+
+@media screen and (max-width: 1000px) {
+  .homediv {
+    display: block;
+    text-align: center !important;
+    line-height: 50px;
+  }
+  .homeimg {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homediv {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+  }
+  .homeimg {
+    width: 80%;
+  }
 }
 
 .dropbtn {
@@ -109,13 +146,13 @@ $lightblue: #23d7a5;
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
+  background-color: #F4F4F4;
   min-height: 100%;
 }
 
 .gradient {
   /* color: rgb(2,0,36); */
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(224,219,42,1) 0%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, $darkblue, $lightblue 100%);
   font-weight: 'bold';
   background-clip: text;
   -webkit-background-clip: text;
@@ -171,29 +208,23 @@ body {
 
 .btn {
   /* display: inline-block; */
-  background: #fff;
-  color: #7e94c4;
+  background: $darkblue;
+  color: #fff;
   /* border: steelblue; */
-  padding: 0.25vw 0.5vw;
+  padding: 0.3vw 0.6vw;
   margin: 0px;
-  border-width: 3px;
-  border: #7e94c4;
-  border-style: solid;
+  border-width: 0px;
   border-radius: 5px;
   cursor: pointer;
   /* float: right; */
   text-decoration: none;
-  font-size: 2vw;
+  font-size: max(2vw, 30px);
   font-family: inherit;
   transition: color 0.3s;
   transition: background 0.3s;
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
   /* transition: scale 0.3s; */
-}
-
-.btn:focus {
-  outline: rgb(239, 239, 239);
 }
 
 .centered {
@@ -204,12 +235,11 @@ body {
 }
 
 .btn:hover {
-  background: #7e94c4;
-  color: #fff;
+  background: $hover;
 }
 
 .btn:active {
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 
 .nav {
