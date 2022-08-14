@@ -244,7 +244,23 @@ body {
   }  
 }
 
-.collapsiblecontent {
+.cactive, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.cactive:after {
+  content: "\2212";
+}
+
+.content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
@@ -256,10 +272,6 @@ body {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-a {
-  color: #000;
 }
 
 .nav {
@@ -292,6 +304,7 @@ a {
     background-size: 0% 3px;
     background-repeat: no-repeat;
     background-position: left bottom;
+    color: #000;
   
     font-size: 27px;
     text-decoration: none;

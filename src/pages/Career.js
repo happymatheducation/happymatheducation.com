@@ -1,23 +1,35 @@
 import React from 'react'
+import Careers from '../assets/careers.json'
 
 const Career = () => {
 
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
+  var CareerList = []
 
-  // for (i = 0; i < coll.length; i++) {
-  //   coll[i].addEventListener("click", function() {
-  //     this.classList.toggle("active");
-  //     var content = document.getElementById(this.id + 'content')
-  //     console.log(content.style.display)
-  //     if (content.style.display === "block") {
-  //       content.style.display = "none";
-  //     } else {
-  //       content.style.display = "block";
-  //     }
-  //   });
-  // }
+  for (let item in Careers) {
+    let itemname = Careers[item].name
+    let itemdesc = Careers[item].description
 
+    CareerList.push(  
+      <>
+      <button className="collapsible" id = {itemname} onClick = {
+        () => {
+          var me = document.getElementById(itemname)
+          me.classList.toggle('cactive')
+          var content = me.nextElementSibling;
+          if (content.style.display === 'none' || !content.style.display){
+            content.style.display = 'block';
+          } else {
+            content.style.display = 'none';
+          } 
+        }
+      }>{itemname}</button>
+      <div className="content">
+        <p>{itemdesc}</p>
+      </div>  
+      </>
+    )
+  }
+  
   return (
     <>
 
@@ -26,10 +38,8 @@ const Career = () => {
         {'To apply to any position, please send your resume to xudiwaterloo@gmail.com.\u00A0'}
     </h1>
     
-    <button className="collapsible" id = 'teachercollapsible'>Open Collapsible</button>
-    <div className="collapsiblecontent" id = 'teachercollapsiblecontent'>
-      <p>Lorem ipsum... AAAAAAAA</p>
-    </div>
+    <h1 style = {{marginTop: '25px'}}>Part time opportunities</h1>
+    {CareerList}
     </>
   )
 }
