@@ -1,5 +1,5 @@
 import React from 'react'
-import Careers from '../assets/careers.json'
+import Careers from '../assets/careers'
 
 const Career = () => {
 
@@ -16,15 +16,15 @@ const Career = () => {
           var me = document.getElementById(itemname)
           me.classList.toggle('cactive')
           var content = me.nextElementSibling;
-          if (content.style.display === 'none' || !content.style.display){
-            content.style.display = 'block';
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
           } else {
-            content.style.display = 'none';
-          } 
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
         }
       }>{itemname}</button>
       <div className="content">
-        <p>{itemdesc}</p>
+        {itemdesc}
       </div>  
       </>
     )
@@ -38,7 +38,7 @@ const Career = () => {
         {'To apply to any position, please send your resume to xudiwaterloo@gmail.com.\u00A0'}
     </h1>
     
-    <h1 style = {{marginTop: '25px'}}>Part time opportunities</h1>
+    <div style = {{height: '25px'}}></div>
     {CareerList}
     </>
   )

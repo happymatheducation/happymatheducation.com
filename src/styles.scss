@@ -229,15 +229,18 @@ body {
 }
 
 .collapsible {
-  background-color: #eee;
+  margin-top: 5px;
+  background-color: rgb(227, 224, 224);
   color: #444;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
   border: none;
+  border-bottom: 3px solid $cyan;
+  width: 100%;
   text-align: left;
-  outline: none;
-  font-size: 15px;
+  align-items: center !important;
+  font-size: 20px;
+  transition: background-color 0.2s ease;
 
   &:hover {
     background-color: #ccc;
@@ -261,10 +264,12 @@ body {
 }
 
 .content {
-  padding: 0 18px;
-  display: none;
+  padding: 3px 18px;
+  background-color: white;
+  max-height: 0;
+  white-space:pre-wrap;
   overflow: hidden;
-  background-color: #f1f1f1;
+  transition: max-height 0.2s ease-out;
 }
 
 .centered {
