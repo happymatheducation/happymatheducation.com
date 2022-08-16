@@ -1,21 +1,22 @@
-import {React, useEffect} from "react";
+import {React, useEffect, lazy, Suspense} from "react";
 import { Route, Routes, useLocation } from 'react-router-dom'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 import NavBar from './NavBar.js';
-
-import Tuition from './pages/Tuition';
-import Home from './pages/Home';
-import Practice from './pages/Practice';
-import Contests from './pages/Contests';
-import Career from './pages/Career'
-import Contact from './pages/Contact';
-import Team from './pages/Team';
-import License from './pages/License';
 import { Link } from 'react-router-dom'
 import Logo from './logo/logo.png';
+
+const Tuition = lazy(() => import("./pages/Tuition.js"))
+const Home = lazy(() => import("./pages/Home.js"))
+const Practice = lazy(() => import("./pages/Practice.js"))
+const Contests = lazy(() => import("./pages/Contests.js"))
+const Career = lazy(() => import("./pages/Career.js"))
+const Contact = lazy(() => import("./pages/Contact.js"))
+const Team = lazy(() => import("./pages/Team.js"))
+const License = lazy(() => import("./pages/License.js"))
+
 
 export function backToTop(mybutton) {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -99,7 +100,8 @@ const App = () => {
     <>    
     <ScrollToTop />
     <NavBar/>
-
+    
+    <Suspense fallback={<div className="lazy-preloader"></div>}>
     <Routes>
       <Route path = '/' element = {<Home/>}/>
       <Route path = '/tuition' element = {<Tuition/>}/>
@@ -110,6 +112,7 @@ const App = () => {
       <Route path = '/getstarted' element = {<Contact/>}/>
       <Route path = '/team' element = {<Team/>}/>
     </Routes>
+    </Suspense>
 
     <Copyright/>
 

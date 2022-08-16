@@ -1,5 +1,6 @@
-import React from 'react'
-import teacher from '../assets/teacher.svg'
+import {React, lazy, Suspense} from 'react'
+
+const teacher = lazy(() => import('../assets/teacher.svg')) 
 
 const Contact = () => {
   return (
