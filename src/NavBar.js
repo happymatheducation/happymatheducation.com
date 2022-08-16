@@ -23,7 +23,7 @@ const NavBar = () => {
             <CustomLink to = '/contests'>Math Contests</CustomLink>
             <CustomLink to = '/careers'>Careers</CustomLink>
             <CustomLink to = '/team'>Our Team</CustomLink>
-            <CustomLink to = '/getstarted' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Get Started</CustomLink>
+            <CustomLink to = '/getstarted' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Apply</CustomLink>
         </ul>
 
         <a id = 'icon' class="icon" onClick={

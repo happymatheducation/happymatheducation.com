@@ -35,7 +35,7 @@ const Career = () => {
 
     <h1 style = {{textAlign: 'center', marginTop: '20px', fontSize: 'max(5vw, 40px)'}}>Career Opportunities</h1>
     <h1 style = {{textAlign: 'center', fontSize: 'max(2vw, 25px)'}}>
-        {'To apply to any position, please send your resume to xudiwaterloo@gmail.com.\u00A0'}
+        To apply to any position, please send your resume to <a href = "mailto: xudiwaterloo@gmail.com">xudiwaterloo@gmail.com</a>.
     </h1>
     
     <div style = {{height: '25px'}}></div>

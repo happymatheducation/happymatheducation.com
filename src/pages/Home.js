@@ -32,7 +32,7 @@ const Home = () => {
         }
       }>
         <i class = 'bi bi-person-fill'></i>
-        {' Get Started'}
+        {' Apply'}
       </button>
       </div>
       <img className = 'homeimg' src = {homeimg} alt = 'homeimg'></img>
@@ -93,7 +93,7 @@ const Home = () => {
           navigate('/getstarted')
         }
       }>
-        {'Get Started '}
+        {'Apply '}
         <i class = 'bi bi-arrow-right'></i>
       </button>
       </div>

@@ -1,13 +1,13 @@
-import {React, lazy, Suspense} from 'react'
+import {React} from 'react'
 
-const teacher = lazy(() => import('../assets/teacher.svg')) 
+import teacher from '../assets/teacher.svg' 
 
 const Contact = () => {
   return (
     <>
 
       <div className = 'homediv' style = {{textAlign: 'center', display: 'block'}}>
-        <h1 style = {{fontSize: 'max(4.5vw, 40px)'}}>Get Started</h1>
+        <h1 style = {{fontSize: 'max(4.5vw, 40px)'}}>Apply</h1>
         <h1 style = {{width: '100%', fontWeight: 'lighter', wordWrap: 'auto', fontSize: 'max(2.5vw, 25px)', lineHeight: '50px'}}>
           To apply to any of our <a href = '/tuition'>courses</a>, please contact Dr. Xu using one of the following methods:
           <br></br>
