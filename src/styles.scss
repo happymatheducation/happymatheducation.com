@@ -312,7 +312,6 @@ body {
   justify-content: space-between;
   gap: 2rem;
   padding: 10px 1rem;
-  align-items: center;
   position: sticky;
   top: 0;
   overflow: hidden;
@@ -341,6 +340,7 @@ body {
     font-size: 27px;
     text-decoration: none;
     transition: color 0.3s, background-size 0.5s ease;
+    
     &:hover {
       background-size: 100% 3px;
     }
@@ -362,6 +362,9 @@ body {
     .icon {
       display: inherit;
       cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;  
     }
   }
   .nav.responsive {position: sticky;}

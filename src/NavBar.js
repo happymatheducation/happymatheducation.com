@@ -13,7 +13,7 @@ const NavBar = () => {
 
     <nav className = 'nav' id = 'myTopnav'> 
 
-        <ul style = {{listStyle: 'none'}}>
+        <ul>
             <CustomLink to = '/'>Home</CustomLink>
         </ul>
 
