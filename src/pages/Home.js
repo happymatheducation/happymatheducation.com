@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <>
-    <div className = 'homediv' style = {{animationName: 'fadeInLeft', animationDuration: '2s', animationTimingFunction: 'ease'}}>
+    <div className = 'homediv' style = {{animationName: 'fadeInLeft', animationDuration: '1.5ss', animationTimingFunction: 'ease'}}>
       <div style = {{marginTop: '10vh'}}>
       <h1 style = {{whiteSpace: 'nowrap', fontSize: 'max(4.5vw, 40px)'}}>
         Happy Math Education

@@ -313,8 +313,8 @@ body {
   gap: 2rem;
   padding: 10px 1rem;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
-  overflow: hidden;
   z-index: 10;
   transition: background-color 0.3s ease;
 
@@ -367,7 +367,6 @@ body {
       top: 0;  
     }
   }
-  .nav.responsive {position: sticky;}
   .nav.responsive .icon {
     position: absolute;
     right: 0;

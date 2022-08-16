@@ -2,9 +2,9 @@
 function Practice() {
 
   return (
-    <>    
+    <>
 
-    <h1 style = {{marginTop: '20px', color: '#898AA6', display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '8vw', textAlign: 'center'}}>Ultimate Practice</h1>
+    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(5vw, 40px)'}}>Ultimate Practice</h1>
 
     <div className = 'container' style = {{width: '80%'}}>
       <div style = {{justifyContent: 'space-between'}}>

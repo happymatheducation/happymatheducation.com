@@ -9,52 +9,62 @@ const Team = () => {
   return (
     <>
 
-    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Di Xu</h1>
-    <div style = {{display: 'flex'}}>
-        <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
-            <img alt = 'xu' src={Xu} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
-        </div>
-        <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
-            <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Principal</h1>
-            <h1 style = {{fontSize: '2vw'}}>
-                {'- UWaterloo PhD, PostDoc\n'}
-                <br></br>
-                - Holding two meritorious awards of The Math Contest in Modelling
-            </h1>
-        </div>
+    <h1 style = {{textAlign: 'center', fontSize: 'max(5vw, 40px)', }}>Our Team</h1>
+    <h1 style = {{marginBottom: '30px', width: '100%', fontWeight: 'lighter', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', textAlign: 'center'}}>
+        Our trusted professors and their experience
+    </h1>
+
+    <img alt = 'xu' src={Xu} style = {{width: '35%', border: '10px #6271e2 solid', borderRadius: '140px', marginLeft: '32.5%'}}></img>
+
+    <h1 style = {{textAlign: 'center', fontSize: 'max(5vw, 40px)'}}>Dr. Di Xu</h1>
+    <h1 style = {{color: '#51557E', fontSize: 'max(3vw, 30px)',  textAlign: 'center'}}>Principal</h1>
+    <h1 style = {{fontSize: '2vw', textAlign: 'center', marginTop: '10px'}}>
+        {'- UWaterloo PhD, PostDoc\n'}
+        <br></br>
+        - Holding two meritorious awards of The Math Contest in Modelling
+        <br></br>
+        <br></br>
+        <a href = 'https://www.linkedin.com/in/di-xu-ph-d-052b3b96/'>
+            <i class = 'bi bi-linkedin'></i>
+            {' LinkedIn'}
+        </a>
+    </h1>
+
+
+    <div style = {{display: 'flex', justifyContent: 'space-between', marginTop: '30px'}}>
+
+    <div style = {{width: '50vw'}}>
+        <img alt = 'xu' src={Zhou} style = {{width: '60%', border: '10px #6271e2 solid', borderRadius: '140px', marginLeft: '20%'}}></img>
+
+        <h1 style = {{textAlign: 'center', fontSize: 'max(5vw, 40px)'}}>Dr. Sherry P.-Y Zhou</h1>
+        <h1 style = {{color: '#51557E', fontSize: 'max(3vw, 30px)',  textAlign: 'center'}}>Vice Principal</h1>
+        <h1 style = {{fontSize: '2vw', textAlign: 'center', marginTop: '10px'}}>
+            The Hong Kong Polytechnic University Computer Science PhD, Master
+            UWaterloo Computer Science Master, PostDoc
+            Second class award winner of Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)
+        </h1>
     </div>
 
-    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Sherry P.-Y Zhou</h1>
-    <div style = {{display: 'flex'}}>
-        <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
-            <img alt = 'zhou' src={Zhou} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
-        </div>
-        <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
-            <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Vice Principal</h1>
-            <h1 style = {{fontSize: '2vw'}}>
-                {'- The Hong Kong Polytechnic University Computer Science PhD, Master\n'}
-                <br></br>
-                - UWaterloo Computer Science Master, PostDoc<br></br>
-                - Second class award winner of Contemporary Undergraduate Mathematical Contest in Modeling<br></br>
-            </h1>
-        </div>
+    <div style = {{width: '50vw'}}>
+        <img alt = 'xu' src={Hook} style = {{width: '60%', border: '10px #6271e2 solid', borderRadius: '140px', marginLeft: '20%'}}></img>
+
+        <h1 style = {{textAlign: 'center', fontSize: 'max(5vw, 40px)'}}>Dr. Di Xu</h1>
+        <h1 style = {{color: '#51557E', fontSize: 'max(3vw, 30px)',  textAlign: 'center'}}>Principal</h1>
+        <h1 style = {{fontSize: '2vw', textAlign: 'center', marginTop: '10px'}}>
+            {'- UWaterloo PhD, PostDoc\n'}
+            <br></br>
+            - Holding two meritorious awards of The Math Contest in Modelling
+            <br></br>
+            <br></br>
+            <a href = 'https://www.linkedin.com/in/di-xu-ph-d-052b3b96/'>
+                <i class = 'bi bi-linkedin'></i>
+                {' LinkedIn'}
+            </a>
+        </h1>
     </div>
 
-    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Michael Hook</h1>
-    <div style = {{display: 'flex'}}>
-        <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
-            <img alt = 'hook' src={Hook} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
-        </div>
-        <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
-            <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Teacher</h1>
-            <h1 style = {{fontSize: '2vw'}}>
-                {'- UWaterloo Engineering Ph.D., Science Master, Mathematics Bachelor\n'}
-                <br></br>
-                - Euclid Gold Medalist<br></br>
-                - Teaching assistant for 10 undergraduate courses in math, physics, and engineering at the UWaterloo<br></br>
-            </h1>
-        </div>
     </div>
+
     </>
   )
 }
