@@ -18,14 +18,17 @@ const Home = () => {
 
   return (
     <>
-    <div className = 'homediv' style = {{animationName: 'fadeInLeft', animationDuration: '1.5ss', animationTimingFunction: 'ease'}}>
-      <div style = {{marginTop: '10vh'}}>
-      <h1 style = {{whiteSpace: 'nowrap', fontSize: 'max(4.5vw, 40px)'}}>
+    <div className = 'home'>
+
+    <div style = {{animationName: 'fadeInLeft', animationDuration: '1.5ss', animationTimingFunction: 'ease', marginTop: '-3%'}}>
+
+      <div className = 'textblock'>
+      <h1>
         Happy Math Education
       </h1>
-      <h1 style = {{width: '100%', fontWeight: 'lighter', wordWrap: 'auto', whiteSpace: 'nowrap', fontSize: 'max(2.5vw, 25px)'}}>
+      <p>
         Our mission: to help kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: 'inherit'}}>enjoy</h1> maths
-      </h1>
+      </p>
       <button className = 'btn' onClick = {
         () => {
           navigate('/getstarted')
@@ -35,25 +38,29 @@ const Home = () => {
         {' Apply'}
       </button>
       </div>
-      <img className = 'homeimg' src = {homeimg} alt = 'homeimg'></img>
+
+      <img src = {homeimg} alt = 'homeimg'></img>
     </div>
     
-    <div data-aos = 'fade-up' className = 'homediv' style = {{marginTop: '20%'}}>
-      <div>
-      <h1 style = {{ fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>About Us</h1>
-      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
+    <div data-aos = 'fade-up'>
+
+      <div className = 'textblock'>
+      <h1>About Us</h1>
+      <p>
         Happy Math Education is a tutoring service specializing in math and coding contests. We offer classes from grades 8 to 12, taught online.
-      </h1>
+      </p>
       </div>
-      <img src = {teaching} alt = 'teaching' className = 'homeimg'></img>
+
+      <img src = {teaching} alt = 'teaching' ></img>
+
     </div>
       
-    <div data-aos = 'fade-up' className = 'homediv' style = {{marginTop: '20%'}}>
-      <div>
-      <h1 style = {{fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>Tuition</h1>
-      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
+    <div data-aos = 'fade-up'>
+      <div className = 'textblock'>
+      <h1>Tuition</h1>
+      <p>
         Cost options for math, coding, and private lessons
-      </h1>
+      </p>
       <button className = 'btn' onClick = {
         () => {
           navigate('/tuition')
@@ -63,15 +70,15 @@ const Home = () => {
         {' Explore'}
       </button>
       </div>
-      <img src = {learning} alt = 'teaching' className = 'homeimg'></img>
+      <img src = {learning} alt = 'teaching' ></img>
     </div>
 
-    <div data-aos = 'fade-up' className = 'homediv' style = {{marginTop: '20%'}}>
-      <div>
-      <h1 style = {{ fontSize: 'max(4vw, 25px)', display: 'block', justifyContent: 'center'}}>Our Team</h1>
-      <h1 style = {{width: '100%', fontWeight: 'lighter', animationDuration: '2s', wordWrap: 'normal', fontSize: 'max(2.5vw, 25px)', lineHeight: '105%'}}>
+    <div data-aos = 'fade-up'>
+      <div className = 'textblock'>
+      <h1>Our Team</h1>
+      <p>
         Our trusted professors and their experience
-      </h1>
+      </p>
       <button className = 'btn' onClick = {
         () => {
           navigate('/team')
@@ -81,13 +88,13 @@ const Home = () => {
         {' View'}
       </button>
       </div>
-      <img src = {teaching} alt = 'teaching' className = 'homeimg'></img>
+      <img src = {teaching} alt = 'teaching' ></img>
     </div>
 
-    <div data-aos = 'fade-up' className = 'homediv' style = {{marginTop: '20%', textAlign: 'center', display: 'block'}}>
-      <img src = {math} alt = 'teaching' className = 'homeimg'></img>
-      <div>
-      <h1 style = {{ fontSize: 'max(3vw, 20px)', display: 'block', justifyContent: 'center'}}>Propel your math to the next level</h1>
+    <div data-aos = 'fade-up' style = {{textAlign: 'center', display: 'block'}}>
+      <img src = {math} alt = 'teaching'></img>
+
+      <h1 style = {{ fontSize: 'max(3vw, 20px)', display: 'block', textAlign: 'center'}}>Propel your math to the next level</h1>
       <button className = 'btn' onClick = {
         () => {
           navigate('/getstarted')
@@ -97,6 +104,7 @@ const Home = () => {
         <i class = 'bi bi-arrow-right'></i>
       </button>
       </div>
+
     </div>
 
     </>

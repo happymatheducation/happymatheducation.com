@@ -77,40 +77,59 @@ $hover: lighten($darkblue, 10%);
   background: #8E91AF;
 }
 
-.homediv {
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  padding: 0% 5% 0% 5%;
-  line-height: 80px; 
-  margin-top: 5vh;
-}
+.home {
 
-.homeimg {
-  margin-top: -8%;
-  width: 40%;
+  div {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 3% 0% 3%;
+    line-height: 100px; 
+    margin-top: 20%;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .textblock {
+    display: block;
+    margin-top: 10vh;
+  }
+
+  img {
+    width: 40%;
+
+    &.team {
+      width: 30%;
+      border-radius: 100px;
+      border: 10px solid $darkblue;
+    }
+  }
+
+  h1 {
+    white-space: nowrap;
+    font-size: max(4.5vw, 30px);
+  }
+
+  p {
+    width: 100%;
+    font-weight: lighter;
+    overflow-wrap: normal;
+    font-size: max(2.5vw, 20px);
+    line-height: 40px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
-  .homediv {
+  .home {
+    div {
     display: block;
     text-align: center !important;
-    line-height: 60px;
+    line-height: 50px;
   }
-  .homeimg {
-    width: 50%;
-    margin-top: 0% !important;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .homediv {
-    display: block;
-    text-align: center;
-    line-height: 60px;
-  }
-  .homeimg {
-    margin-top: 5% !important;
+    img {
+      width: 50%;
+      margin-top: 5%;
+    }
   }
 }
 
@@ -304,6 +323,18 @@ body {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.teamdiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .teamdiv {
+    display: block;
+  }
 }
 
 .nav {
