@@ -8,8 +8,8 @@ import NavBar from './NavBar.js';
 import { Link } from 'react-router-dom'
 import Logo from './logo/logo.png';
 
+import Home from './pages/Home.js'
 const Tuition = lazy(() => import("./pages/Tuition.js"))
-const Home = lazy(() => import("./pages/Home.js"))
 const Practice = lazy(() => import("./pages/Practice.js"))
 const Contests = lazy(() => import("./pages/Contests.js"))
 const Career = lazy(() => import("./pages/Career.js"))
@@ -109,7 +109,7 @@ const App = () => {
       <Route path = '/contests' element = {<Contests/>}/>
       <Route path = '/license' element = {<License/>}/>
       <Route path = '/careers' element = {<Career/>}/>
-      <Route path = '/getstarted' element = {<Contact/>}/>
+      <Route path = '/apply' element = {<Contact/>}/>
       <Route path = '/team' element = {<Team/>}/>
     </Routes>
     </Suspense>

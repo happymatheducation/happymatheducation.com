@@ -9,7 +9,7 @@ function Contests() {
     <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(5vw, 40px)', textAlign: 'center'}}>Math Contests</h1>
     <h1 style = {{fontSize: 'max(2vw, 20px)', textAlign: 'center', marginBottom: 'max(2vw, 20px)'}}>Recommended math contests for students every year, based on grade</h1>
     
-    <h1 style = {{color: '$darkblue', fontSize: 'max(3vw, max(2vw, 20px))', textAlign: 'center', marginTop: '20px', marginBottom: '210px'}}>
+    <h1 style = {{color: '$darkblue', fontSize: 'max(3vw, max(2vw, 20px))', textAlign: 'center', marginTop: '20px'}}>
       {'Select your\u00A0'}
       <div class="dropdown">
         <button style = {{fontSize: 'max(3vw, max(2vw, 20px))'}} class="dropbtn">grade</button>

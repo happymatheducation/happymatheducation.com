@@ -20,7 +20,7 @@ const Home = () => {
     <>
     <div className = 'home'>
 
-    <div style = {{animationName: 'fadeInLeft', animationDuration: '1.5ss', animationTimingFunction: 'ease', marginTop: '-3%'}}>
+    <div style = {{animationName: 'fadeInLeft', animationDuration: '1.5s', animationTimingFunction: 'ease', marginTop: '-3%'}}>
 
       <div className = 'textblock'>
       <h1>

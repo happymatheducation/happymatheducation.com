@@ -21,11 +21,11 @@ const NavBar = () => {
 
             <ul>
                 <CustomLink to = '/tuition'>Tuition</CustomLink>
-                <CustomLink to = '/practice'>Ultimate Practice</CustomLink>
+                <CustomLink to = '/practice'>Our Publications</CustomLink>
                 <CustomLink to = '/contests'>Math Contests</CustomLink>
                 <CustomLink to = '/careers'>Careers</CustomLink>
                 <CustomLink to = '/team'>Our Team</CustomLink>
-                <CustomLink to = '/getstarted' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Apply</CustomLink>
+                <CustomLink to = '/apply' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Apply</CustomLink>
             </ul>
 
             <a id = 'icon' class="icon" onClick={

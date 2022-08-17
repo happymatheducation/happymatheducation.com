@@ -139,10 +139,8 @@ $hover: lighten($darkblue, 10%);
 
 .dropbtn {
   background-color: #fff;
-  color: #748DA6;
   padding: 5px 10px;
   border-width: 3px;
-  border: #748DA6;
   border-style: solid;
   border-radius: 5px;
   cursor: pointer;
@@ -160,10 +158,6 @@ $hover: lighten($darkblue, 10%);
   &:hover .dropdown-content {
       display: block;
   }
-  &:hover .dropbtn {
-    background-color: #748DA6;
-    color: #fff;
-  }
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -179,7 +173,6 @@ $hover: lighten($darkblue, 10%);
   -webkit-user-select: none; /* Safari */
 
   a {
-    color: #748DA6;
     font-size: 30px;
     padding: 4px 5px;
     text-decoration: none;
@@ -276,6 +269,12 @@ body {
   &:active {
     transform: scale(0.95);
   }
+}
+
+.practicediv {
+  display: flex;
+  justify-content: space-between;
+  font-size: max(2vw, 17px);
 }
 
 .collapsible {
