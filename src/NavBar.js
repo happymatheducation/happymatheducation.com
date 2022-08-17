@@ -1,61 +1,50 @@
-
 import logo from './logo/logo.png';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 
 const NavBar = () => {
 
     return(
-    <div style = {{backgroundColor:'#fff'}}>
-    <li style = {{listStyle: 'none'}}>
-    <CustomLink to = '/'>
-        <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
-    </CustomLink>
-    </li>
+        <>
+        <div style = {{backgroundColor:'#fff'}}>
+            <ul style = {{listStyle: 'none'}}>
+            <CustomLink to = '/'>
+                <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
+            </CustomLink>
+            </ul>
+        </div>
 
-    <nav className = 'nav' id = 'myTopnav'> 
+        <nav className = 'nav stickytop' id = 'myTopnav'> 
 
-        <li style = {{listStyle: 'none'}}>
-            <CustomLink to = '/'>Home</CustomLink>
-        </li>
+            <ul>
+                <CustomLink to = '/'>Home</CustomLink>
+            </ul>
 
-        <ul>
-          <li>
-              <CustomLink to = '/tuition'>Tuition</CustomLink>
-          </li>
-          <li>
-              <CustomLink to = '/practice'>Ultimate Practice</CustomLink>
-          </li>
-          <li>
-              <CustomLink to = '/contests'>Math Contests</CustomLink>
-          </li>
-          <li>
-              <CustomLink to = '/careers'>Careers</CustomLink>
-          </li>
-          <li>
-              <CustomLink to = '/team'>Our Team</CustomLink>
-          </li>
-          <li>
-              <CustomLink to = '/getstarted' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Get Started</CustomLink>
-          </li>
-        </ul>
+            <ul>
+                <CustomLink to = '/classes'>Classes</CustomLink>
+                <CustomLink to = '/practice'>Our Publications</CustomLink>
+                <CustomLink to = '/contests'>Math Contests</CustomLink>
+                <CustomLink to = '/careers'>Careers</CustomLink>
+                <CustomLink to = '/team'>Our Team</CustomLink>
+                <CustomLink to = '/apply' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Apply</CustomLink>
+            </ul>
 
-        <a id = 'icon' class="icon" onClick={
-            () => {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "nav") {
-                  x.className += " responsive";
-                  document.getElementById("icon").innerHTML = "<i class='bi bi-x'></i>"
-                } else {
-                  x.className = "nav";
-                  document.getElementById("icon").innerHTML = "<i class='bi bi-arrow-bar-left'></i>"
-                }              
-            }
-        }>
-            <i class='bi bi-arrow-bar-left'></i>
-        </a>
+            <a id = 'icon' class="icon" onClick={
+                () => {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "nav") {
+                    x.className += " responsive";
+                    document.getElementById("icon").innerHTML = "<i class='bi bi-x'></i>"
+                    } else {
+                    x.className = "nav";
+                    document.getElementById("icon").innerHTML = "<i class='bi bi-arrow-bar-left'></i>"
+                    }              
+                }
+            }>
+                <i class='bi bi-arrow-bar-left'></i>
+            </a>
 
-    </nav>
-    </div>
+        </nav>
+        </>
     )
   }
 

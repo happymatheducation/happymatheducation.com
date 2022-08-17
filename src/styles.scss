@@ -11,7 +11,7 @@
 $darkblue: #6271e2;
 $cyan: #23d7a5;
 $lightblue: #D6EFED;
-$hover: #8590e1;
+$hover: lighten($darkblue, 10%);
 
 @keyframes fadeInLeft {
   from {
@@ -27,6 +27,33 @@ $hover: #8590e1;
 @media only screen and (max-width: 600px) {
   .btnnavbar {
     display: none;
+  }
+}
+
+.lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  transform-origin: 50%;
+  box-sizing: border-box;
+  border: 4px solid $darkblue;
+  border-radius: 50%;
+  border-top-color: transparent;
+  background: none;
+  animation: preloader-spin 1s infinite linear;
+}
+
+@keyframes preloader-spin {
+  0% {
+  transform: rotate(0deg);
+  }
+  100% {
+  transform: rotate(360deg);
   }
 }
 
@@ -50,49 +77,74 @@ $hover: #8590e1;
   background: #8E91AF;
 }
 
-.homediv {
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  padding: 0% 5% 0% 5%;
-  line-height: 80px; 
-  margin-top: 5vh;
+.home {
+
+  div {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 3% 0% 3%;
+    line-height: 100px; 
+    margin-top: 20%;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .textblock {
+    display: block;
+    margin-top: 5vh;
+  }
+
+  img {
+    width: 40%;
+    min-width: 200px;
+
+    &.team {
+      width: 30%;
+      border-radius: 100px;
+      border: 10px solid $darkblue;
+    }
+  }
+
+  h1 {
+    white-space: nowrap;
+    font-size: max(4.5vw, 30px);
+  }
+
+  p {
+    width: 100%;
+    font-weight: lighter;
+    overflow-wrap: normal;
+    font-size: max(2vw, 20px);
+    line-height: 40px;
+  }
 }
 
-.homeimg {
-  margin-top: -8%;
-  width: 40%;
+h1 {
+  font-size: max(4.5vw, 30px);
 }
 
 @media screen and (max-width: 1000px) {
-  .homediv {
-    display: block;
-    text-align: center !important;
-    line-height: 60px;
-  }
-  .homeimg {
-    width: 50%;
-    margin-top: 0% !important;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .homediv {
-    display: block;
-    text-align: center;
-    line-height: 60px;
-  }
-  .homeimg {
-    margin-top: 5% !important;
+  .home {
+    div {
+      display: block;
+      text-align: center !important;
+      line-height: 60px;
+    }
+    img {
+      width: 50%;
+      margin-top: 5%;
+    }
+    p {
+      line-height: 30px;
+    }
   }
 }
 
 .dropbtn {
   background-color: #fff;
-  color: #748DA6;
   padding: 5px 10px;
   border-width: 3px;
-  border: #748DA6;
   border-style: solid;
   border-radius: 5px;
   cursor: pointer;
@@ -107,6 +159,9 @@ $hover: #8590e1;
 .dropdown {
   position: relative;
   display: inline-block;
+  &:hover .dropdown-content {
+      display: block;
+  }
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -120,31 +175,15 @@ $hover: #8590e1;
   cursor: pointer;
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
+
+  a {
+    font-size: 30px;
+    padding: 4px 5px;
+    text-decoration: none;
+    display: block;
+    &:hover {background-color: #f1f1f1}
+  }
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: #748DA6;
-  font-size: 30px;
-  padding: 4px 5px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #748DA6;
-  color: #fff;
-}
-
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -227,6 +266,63 @@ body {
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
   /* transition: scale 0.3s; */
+
+  &:hover {
+    background: $hover;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.practicediv {
+  display: flex;
+  justify-content: space-between;
+  font-size: max(2vw, 17px);
+}
+
+.collapsible {
+  margin-top: 5px;
+  background-color: rgb(227, 224, 224);
+  color: #444;
+  cursor: pointer;
+  padding: 18px 25px 18px 25px;
+  border: none;
+  border-bottom: 3px solid $darkblue;
+  width: 100%;
+  text-align: left;
+  align-items: center !important;
+  font-size: 20px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #ccc;
+  }  
+}
+
+.cactive, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.cactive:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 3px 18px;
+  background-color: white;
+  max-height: 0;
+  white-space:pre-wrap;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 .centered {
@@ -236,12 +332,16 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.btn:hover {
-  background: $hover;
+.teamdiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 
-.btn:active {
-  transform: scale(0.95);
+@media screen and (max-width: 900px) {
+  .teamdiv {
+    display: block;
+  }
 }
 
 .nav {
@@ -250,35 +350,61 @@ body {
   justify-content: space-between;
   gap: 2rem;
   padding: 10px 1rem;
-  align-items: center;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
-  overflow: hidden;
   z-index: 10;
   transition: background-color 0.3s ease;
-}
 
-.nav ul {  
-  list-style: none;
-  margin: 0;
-  display: flex;
-  gap: 1rem;
-}
+  ul {  
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+  }
 
-.nav .icon {
-  display: none;
-  font-weight: bold;
+  .icon {
+    display: none;
+    font-weight: bold;
+  }
+
+  a, .navlink {
+    background-image: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    color: #000;
+  
+    font-size: 27px;
+    text-decoration: none;
+    transition: color 0.3s, background-size 0.5s ease;
+    
+    &:hover {
+      background-size: 100% 3px;
+    }
+  }
+
+  li.active {
+    background-image: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
 }
 
 @media screen and (max-width: 1100px) {
-  .nav ul:not(:first-child) {
-    display: none;
+  .nav {
+    ul:not(:first-child) {
+      display: none;
+    }
+    .icon {
+      display: inherit;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;  
+    }
   }
-  .nav .icon {
-    display: inherit;
-    cursor: pointer;
-  }
-  .nav.responsive {position: sticky;}
   .nav.responsive .icon {
     position: absolute;
     right: 0;
@@ -290,23 +416,6 @@ body {
     text-align: left;
     line-height: 35px;
   }
-}
-
-.nav a, .navlink {
-  color: #000;
-  background-image: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
-  background-size: 0% 3px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-
-  font-size: 27px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s, background-size 0.5s ease;
-}
-
-.nav a:hover, .navlink:hover {
-  background-size: 100% 3px;
 }
 
 footer {

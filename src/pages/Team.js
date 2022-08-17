@@ -9,52 +9,53 @@ const Team = () => {
   return (
     <>
 
-    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Di Xu</h1>
-    <div style = {{display: 'flex'}}>
-        <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
-            <img alt = 'xu' src={Xu} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
-        </div>
-        <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
-            <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Principal</h1>
-            <h1 style = {{fontSize: '2vw'}}>
-                {'- UWaterloo PhD, PostDoc\n'}
-                <br></br>
-                - Holding two meritorious awards of The Math Contest in Modelling
-            </h1>
-        </div>
-    </div>
+    <div className='home'>
 
-    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Sherry P.-Y Zhou</h1>
-    <div style = {{display: 'flex'}}>
-        <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
-            <img alt = 'zhou' src={Zhou} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
-        </div>
-        <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
-            <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Vice Principal</h1>
-            <h1 style = {{fontSize: '2vw'}}>
-                {'- The Hong Kong Polytechnic University Computer Science PhD, Master\n'}
-                <br></br>
-                - UWaterloo Computer Science Master, PostDoc<br></br>
-                - Second class award winner of Contemporary Undergraduate Mathematical Contest in Modeling<br></br>
-            </h1>
-        </div>
-    </div>
+        <div style = {{marginTop: '20px'}}>
 
-    <h1 style = {{color: '#51557E', textAlign: 'center', fontSize: '6vw'}}>Dr. Michael Hook</h1>
-    <div style = {{display: 'flex'}}>
-        <div className = 'container' style = {{width : '39%', marginLeft: '10%'}}>
-            <img alt = 'hook' src={Hook} style = {{width: '100%', border: '10px #51557E solid', borderRadius: '5px'}}></img>
+            <div className = 'textblock'>
+              <h1>Dr. Di Xu</h1>
+              <p>
+                Principal<br></br><br></br>
+                Dr. Xu is the founder and principal of Happy Math Education. He has a PhD at the University of Waterloo. 
+                <br></br>Pictured holding two meritorious awards of The Math Contest in Modelling
+              </p>
+            </div>
+
+            <img className='homeimg team' src = {Xu} alt = 'xu' style = {{marginTop: '30px'}}></img>
+
         </div>
-        <div className = 'container' style = {{width : '39%', marginRight: '10%', float: 'right'}}>
-            <h1 style = {{color: '#51557E', fontSize: '4vw',  display: 'flex', justifyContent: 'center'}}>Teacher</h1>
-            <h1 style = {{fontSize: '2vw'}}>
-                {'- UWaterloo Engineering Ph.D., Science Master, Mathematics Bachelor\n'}
-                <br></br>
-                - Euclid Gold Medalist<br></br>
-                - Teaching assistant for 10 undergraduate courses in math, physics, and engineering at the UWaterloo<br></br>
-            </h1>
+
+        <div style = {{marginTop: '20vh'}}>
+
+          <div className = 'textblock'>
+            <h1>Dr. Sherry P.-Y Zhou</h1>
+            <p>
+              Vice Principal<br></br><br></br>
+              Dr. Zhou graduated from The Hong Kong Polytechnic University with a PhD in Computer Science. She also has a Master's degree in Computer Science at the University of Waterloo, PostDoc. She is the second class award winner of Contemporary Undergraduate Mathematical Contest in Modelling.
+            </p>
+          </div>
+
+          <img className='homeimg team' src = {Zhou} alt = 'zhou'></img>
+
         </div>
-    </div>
+
+        <div style = {{marginTop: '20vh'}}>
+
+          <div className = 'textblock'>
+            <h1>Dr. Michael Hook</h1>
+            <p>
+              Professor<br></br><br></br>
+              Dr. Hook is a UWaterloo Engineering Ph.D., Science Master, and Mathematics Bachelor. He is an Euclid Gold Medalist and a teaching assistant for 10 undergraduate courses in math, physics, and engineering at the UWaterloo.
+            </p>
+          </div>
+
+          <img className='homeimg team' src = {Hook} alt = 'hook'></img>
+
+          </div>
+
+      </div>
+
     </>
   )
 }
