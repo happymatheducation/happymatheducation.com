@@ -32,7 +32,7 @@ const Home = () => {
       </p>
       <button className = 'btn' onClick = {
         () => {
-          navigate('/getstarted')
+          navigate('/apply')
         }
       }>
         <i class = 'bi bi-person-fill'></i>
@@ -64,7 +64,7 @@ const Home = () => {
       </p>
       <button className = 'btn' onClick = {
         () => {
-          navigate('/tuition')
+          navigate('/classes')
         }
       }>
         <i class = 'bi bi-search'></i>
@@ -97,7 +97,7 @@ const Home = () => {
       <div style = {{marginTop: '0%'}}>
         <img src = {math2} alt = 'math2'></img>
         <div className = 'textblock'>
-          <h1 style = {{fontSize: 'max(3vw, 20px)', textAlign: 'center'}}>Jay Ren, Grade 10</h1>
+          <h1 style = {{fontSize: 'max(3vw, 20px)', textAlign: 'center'}}>Jay Ren, Grade 12</h1>
           <p> Happy Math is a great resource for learning contest math! It's really hard to prepare for contests by yourself, so I'm glad that I decided to take lessons here. It's a really efficient way to improve my skills.</p>
         </div>
       </div>
@@ -130,7 +130,7 @@ const Home = () => {
           navigate('/apply')
         }
       }>
-        {'Apply '}
+        {'Apply Now '}
         <i class = 'bi bi-arrow-right'></i>
       </button>
       </div>

@@ -155,7 +155,7 @@ function Practice() {
     </div>
 
     <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(4vw, 30px)'}}>Mock Contests</h1>
-    <h1 style = {{textAlign: 'center'}}>Coming Soon!</h1>
+    <p style = {{textAlign: 'center', fontSize: 'max(2vw, 20px)'}}>Coming Soon!</p>
 
     </>
   );

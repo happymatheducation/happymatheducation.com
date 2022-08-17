@@ -395,19 +395,18 @@ body {
       cursor: pointer;
       position: absolute;
       right: 0;
-      top: 0;  
+      top: 10;  
     }
   }
   .nav.responsive .icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 10;
   }
   .nav.responsive ul {
     float: none;
     display: block;
     text-align: left;
-    line-height: 35px;
   }
 }
 
