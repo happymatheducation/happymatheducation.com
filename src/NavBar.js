@@ -20,7 +20,7 @@ const NavBar = () => {
             </ul>
 
             <ul>
-                <CustomLink to = '/tuition'>Tuition</CustomLink>
+                <CustomLink to = '/classes'>Classes</CustomLink>
                 <CustomLink to = '/practice'>Our Publications</CustomLink>
                 <CustomLink to = '/contests'>Math Contests</CustomLink>
                 <CustomLink to = '/careers'>Careers</CustomLink>

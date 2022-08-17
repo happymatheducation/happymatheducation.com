@@ -46,9 +46,9 @@ export const Copyright = () => {
           <p style = {{color: '#7E94C4', textAlign: 'center'}}>
             Maths
           </p>
-          <Link to = '/tuition'>Tuition</Link>
+          <Link to = '/classes'>Classes</Link>
           <br></br>
-          <Link to = '/practice'>Ultimate Practice</Link>
+          <Link to = '/practice'>Our Publications</Link>
           <br></br>
           <Link to = '/contests'>Math Contests</Link>
           <br></br>
@@ -104,7 +104,7 @@ const App = () => {
     <Suspense fallback={<div className="lazy-preloader"></div>}>
     <Routes>
       <Route path = '/' element = {<Home/>}/>
-      <Route path = '/tuition' element = {<Tuition/>}/>
+      <Route path = '/classes' element = {<Tuition/>}/>
       <Route path = '/practice' element = {<Practice/>}/>
       <Route path = '/contests' element = {<Contests/>}/>
       <Route path = '/license' element = {<License/>}/>

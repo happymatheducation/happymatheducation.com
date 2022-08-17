@@ -57,9 +57,9 @@ const Home = () => {
       
     <div data-aos = 'fade-up'>
       <div className = 'textblock'>
-      <h1>Tuition</h1>
+      <h1>Classes</h1>
       <p>
-        Cost options for math, coding, and private lessons
+        Tuition and information for math, coding, and private lessons
       </p>
       <button className = 'btn' onClick = {
         () => {
@@ -97,7 +97,7 @@ const Home = () => {
       <h1 style = {{ fontSize: 'max(3vw, 20px)', display: 'block', textAlign: 'center'}}>Propel your math to the next level</h1>
       <button className = 'btn' onClick = {
         () => {
-          navigate('/getstarted')
+          navigate('/apply')
         }
       }>
         {'Apply '}
