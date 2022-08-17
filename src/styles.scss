@@ -92,11 +92,12 @@ $hover: lighten($darkblue, 10%);
   
   .textblock {
     display: block;
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
 
   img {
     width: 40%;
+    min-width: 200px;
 
     &.team {
       width: 30%;
@@ -114,7 +115,7 @@ $hover: lighten($darkblue, 10%);
     width: 100%;
     font-weight: lighter;
     overflow-wrap: normal;
-    font-size: max(2.5vw, 20px);
+    font-size: max(2vw, 20px);
     line-height: 40px;
   }
 }
@@ -122,13 +123,16 @@ $hover: lighten($darkblue, 10%);
 @media screen and (max-width: 1000px) {
   .home {
     div {
-    display: block;
-    text-align: center !important;
-    line-height: 50px;
-  }
+      display: block;
+      text-align: center !important;
+      line-height: 60px;
+    }
     img {
       width: 50%;
       margin-top: 5%;
+    }
+    p {
+      line-height: 30px;
     }
   }
 }
