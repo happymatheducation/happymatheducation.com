@@ -13,10 +13,10 @@ This website is the new and improved website for Happy Math Education, a tutorin
 - Bootstrap Icons
 
 ## Roadmap
-- Student testimonials
-- Info about mock contests
-- Page to apply directly
-- Practice contest generator
+- [x] Student testimonials
+- [x] Info about mock contests
+- [x] Page to apply directly
+- [ ] Practice contest generator
 
 ## Authors
 Jeffrey Zang
