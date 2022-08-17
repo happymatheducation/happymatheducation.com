@@ -16,6 +16,7 @@ const Career = lazy(() => import("./pages/Career.js"))
 const Contact = lazy(() => import("./pages/Contact.js"))
 const Team = lazy(() => import("./pages/Team.js"))
 const License = lazy(() => import("./pages/License.js"))
+const Notfound = lazy(() => import("./pages/Notfound.js"))
 
 
 export function backToTop(mybutton) {
@@ -103,14 +104,15 @@ const App = () => {
     
     <Suspense fallback={<div className="lazy-preloader"></div>}>
     <Routes>
-      <Route path = '/' element = {<Home/>}/>
-      <Route path = '/classes' element = {<Tuition/>}/>
-      <Route path = '/practice' element = {<Practice/>}/>
-      <Route path = '/contests' element = {<Contests/>}/>
-      <Route path = '/license' element = {<License/>}/>
-      <Route path = '/careers' element = {<Career/>}/>
-      <Route path = '/apply' element = {<Contact/>}/>
-      <Route path = '/team' element = {<Team/>}/>
+      <Route exact path = '/' element = {<Home/>}/>
+      <Route exact path = '/classes' element = {<Tuition/>}/>
+      <Route exact path = '/practice' element = {<Practice/>}/>
+      <Route exact path = '/contests' element = {<Contests/>}/>
+      <Route exact path = '/license' element = {<License/>}/>
+      <Route exact path = '/careers' element = {<Career/>}/>
+      <Route exact path = '/apply' element = {<Contact/>}/>
+      <Route exact path = '/team' element = {<Team/>}/>
+      <Route exact path = '/*' element = {<Notfound/>}/>
     </Routes>
     </Suspense>
 

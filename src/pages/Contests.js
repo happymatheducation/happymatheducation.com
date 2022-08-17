@@ -6,7 +6,7 @@ function Contests() {
   return (
     <>    
 
-    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(5vw, 40px)', textAlign: 'center'}}>Math Contests</h1>
+    <h1 style = {{textAlign: 'center', marginBottom: '10px', fontSize: 'max(4vw, 40px)', textAlign: 'center'}}>Math Contests</h1>
     <h1 style = {{fontSize: 'max(2vw, 20px)', textAlign: 'center', marginBottom: 'max(2vw, 20px)'}}>Recommended math contests for students every year, based on grade</h1>
     
     <h1 style = {{color: '$darkblue', fontSize: 'max(3vw, max(2vw, 20px))', textAlign: 'center', marginTop: '20px'}}>
