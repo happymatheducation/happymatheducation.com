@@ -332,16 +332,9 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.teamdiv {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
-@media screen and (max-width: 900px) {
-  .teamdiv {
-    display: block;
-  }
+.swiper-slide {
+  text-align: center;
+  background: #fff;
 }
 
 .nav {
