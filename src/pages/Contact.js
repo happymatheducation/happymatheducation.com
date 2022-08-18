@@ -9,7 +9,7 @@ const Contact = () => {
       <div style = {{textAlign: 'center', display: 'block', marginTop: '0px'}}>
         <h1>Apply</h1>
         <p>
-          To apply to any of our <a href = '/tuition'>courses</a>, please contact Dr. Xu using one of the following methods:
+          To apply to any of our <a href = '/classes'>courses</a>, please contact Dr. Xu using one of the following methods:
           <br></br>
           <br></br>
           <p style = {{fontWeight: 'bold', fontSize: 'max(2.5vw, 25px)'}}>Phone: 519-729-5631</p>
