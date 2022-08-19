@@ -2,10 +2,6 @@ import Classes from '../assets/classes'
 
 function Tuition() {
 
-  function scroll(page) {
-    window.scrollTo({ top: 2500, behavior: 'smooth' });
-  };
-
   var ClassList = []
 
   for (let item in Classes) {

@@ -90,7 +90,7 @@ const Home = () => {
       <div style = {{marginTop: '0%'}}>
         <div className = 'textblock'>
           <h1 style = {{fontSize: 'max(3vw, 20px)', textAlign: 'center'}}>Jeffrey Zang, Grade 10</h1>
-          <p>Not only did Happy Math help me feel more confident in my math skills, it allowed me to understand math in a different way than before. I started to approach problems with a different mindset. Taking classes at Happy Math allowed me to score in the Top 25% of participants in the Pascal Math Contest, 2022.</p>
+          <p>Not only did Happy Math help me feel more confident in my math skills, it allowed me to understand math in a different way than before. I started to approach problems with a different mindset. Taking classes at Happy Math helped me score higher in contests overall.</p>
         </div>
       </div>
 
