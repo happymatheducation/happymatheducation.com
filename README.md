@@ -22,6 +22,8 @@ This website is the new and improved website for Happy Math Education, a tutorin
 Jeffrey Zang
 
 ## Version History
+2.0 
+Better stuff<br/>
 1.0
 Initial Release
 
