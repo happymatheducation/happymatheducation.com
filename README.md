@@ -11,6 +11,7 @@ This website is the new and improved website for Happy Math Education, a tutorin
 ## Dependencies
 - React
 - Bootstrap Icons
+- Animate on Scroll
 
 ## Roadmap
 - [x] Student testimonials
