@@ -410,16 +410,32 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #footerdiv {
+    display: block !important;
+    div {
+      text-align: center;
+      margin-top: 20px;
+    }
+}
+}
+
 footer {
   margin-top: 50px;
   text-align: center;
   width: 100%;
   font-size: max(1.3vw, 15px);
   text-decoration: none !important;
-  background-color: #D6EFED;
   color: #000;
+  background-color: #fff;
   padding-top: 30px;
   display: block;
   line-height: max(2.5vw, 20px);
   margin-bottom: -1000%;
+
+  #footerdiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8vw 0 8vw;
+  }
 }

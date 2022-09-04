@@ -31,7 +31,7 @@ export const Copyright = () => {
   return (
     <footer id = 'footer'>
 
-      <div style = {{display: 'flex', justifyContent: 'space-between', padding: '0vw 10vw 0vw 10vw'}}>
+      <div id = 'footerdiv'>
         <div>
           <img src = {Logo} alt = 'footerlogo' style = {{width: 'max(15vw, 100px)'}}></img>
           <Link to = '/license' style = {{display: 'block'}}>
@@ -43,7 +43,7 @@ export const Copyright = () => {
           </a>
         </div>
 
-        <div style = {{display: 'block', textAlign: 'left'}}>
+        <div>
           <p style = {{color: '#7E94C4', textAlign: 'center'}}>
             Maths
           </p>
@@ -55,7 +55,7 @@ export const Copyright = () => {
           <br></br>
         </div>
 
-        <div style = {{display: 'block', textAlign: 'left'}}>
+        <div>
           <p style = {{color: '#7E94C4', textAlign: 'center'}}>
             Company
           </p>
