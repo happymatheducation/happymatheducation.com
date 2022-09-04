@@ -23,13 +23,15 @@ const Home = () => {
 
     <div style = {{animationName: 'fadeInLeft', animationDuration: '1.5s', animationTimingFunction: 'ease', marginTop: '-3%'}}>
 
-      <div className = 'textblock'>
-      <h1>
+      <div className = 'textblock' style = {{lineHeight: 'max(5.5vw, 50px)'}}>
+      {/* <h1>
         Happy Math Education
+      </h1> */}
+      <h1 style = {{fontSize: 'max(3vw, 25px'}}>
+        Our mission: 
+        <br></br>
+        To help kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: 'inherit'}}>enjoy</h1> maths
       </h1>
-      <p>
-        Our mission: to help kids <h1 className = 'gradient' style = {{display: 'inline', fontWeight: 900, fontSize: 'inherit'}}>enjoy</h1> maths
-      </p>
       <button className = 'btn' onClick = {
         () => {
           navigate('/apply')
@@ -125,14 +127,6 @@ const Home = () => {
       <img src = {math} alt = 'teaching'></img>
 
       <h1 style = {{ fontSize: 'max(3vw, 20px)', display: 'block', textAlign: 'center'}}>Propel your math to the next level</h1>
-      <button className = 'btn' onClick = {
-        () => {
-          navigate('/apply')
-        }
-      }>
-        {'Apply Now '}
-        <i class = 'bi bi-arrow-right'></i>
-      </button>
       </div>
 
     </div>

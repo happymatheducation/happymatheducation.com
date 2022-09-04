@@ -337,16 +337,19 @@ body {
   background: #fff;
 }
 
+#navsticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10;
+}
+
 .nav {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   padding: 10px 1rem;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  z-index: 10;
   transition: background-color 0.3s ease;
 
   ul {  

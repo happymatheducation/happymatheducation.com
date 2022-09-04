@@ -4,10 +4,10 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 const NavBar = () => {
 
     return(
-        <>
+        <div id = 'navsticky'>
         <div style = {{backgroundColor:'#fff'}}>
             <ul style = {{listStyle: 'none'}}>
-            <CustomLink to = '/'>
+            <CustomLink to = '/' id = 'navlogo'>
                 <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
             </CustomLink>
             </ul>
@@ -44,7 +44,7 @@ const NavBar = () => {
             </a>
 
         </nav>
-        </>
+        </div>
     )
   }
 
