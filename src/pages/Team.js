@@ -18,7 +18,7 @@ const Team = () => {
               <p>
                 Principal<br></br><br></br>
                 Dr. Xu is the founder and principal of Happy Math Education. He has a PhD at the University of Waterloo. 
-                <br></br>Pictured holding two meritorious awards of The Math Contest in Modelling
+                <br></br>Pictured holding his PhD diploma.
               </p>
             </div>
 
