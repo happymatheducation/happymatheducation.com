@@ -181,7 +181,7 @@ h1 {
   -webkit-user-select: none; /* Safari */
 
   a {
-    font-size: 30px;
+    font-size: max(1.5vw, 15px);
     padding: 4px 5px;
     text-decoration: none;
     display: block;
@@ -367,6 +367,7 @@ body {
   .icon {
     display: none;
     font-weight: bold;
+    background-image: none;
   }
 
   a, .navlink {
@@ -395,15 +396,12 @@ body {
   #navresponsivelogo, #navul {
     display: none;
     background-image: none;
-    min-width: none;
-    width: 25px
   }
 }
 
 @media screen and (max-width: 800px) {
   #navlogo {
     display: none;
-
   }
   .nav {
     #navresponsivelogo, #navul {

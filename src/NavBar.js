@@ -36,12 +36,12 @@ const NavBar = () => {
             <a id = 'icon' class="icon" onClick={
                 () => {
                     var x = document.getElementById("myTopnav");
-                    if (x.className === "nav") {
-                    x.className += " responsive";
-                    document.getElementById("icon").innerHTML = "<i class='bi bi-x'></i>"
+                    if (x.className == "nav stickytop") {
+                        x.className += " responsive";
+                        document.getElementById("icon").innerHTML = "<i class='bi bi-x'></i>"
                     } else {
-                    x.className = "nav";
-                    document.getElementById("icon").innerHTML = "<i class='bi bi-arrow-bar-left'></i>"
+                        x.className = "nav stickytop";
+                        document.getElementById("icon").innerHTML = "<i class='bi bi-arrow-bar-left'></i>"
                     }              
                 }
             }>

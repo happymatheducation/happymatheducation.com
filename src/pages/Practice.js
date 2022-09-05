@@ -6,20 +6,6 @@ function Practice() {
 
     <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)'}}>Ultimate Practice</h1>
 
-    <div width = '60%' style = {{padding: '0vw 7vw 0vw 7vw'}}>
-      <div style = {{justifyContent: 'space-between'}}>
-        <h1 style = {{display: 'inline', fontSize: 'max(15px, 1.5vw)'}}>
-          Below are some topic based problems created by Happy Math Education (a.k.a Blessed Eduloo before 2021). If the creator is a volunteering student, then the name of the volunteer appears on the top right in each page.
-          <br></br><br></br>Each set is designed to be a THOROUGH practice on that specific topic, therefore:
-          <br></br><br></br>1. There are many problems in each set;
-          <br></br><br></br>2. The level of difficulty may change drastically between different problems in the same set;
-          <br></br><br></br>3. There is no need to FINISH a set of problems. Usually, finishing 10% of a set of problems is good enough to make you an expert on that topic;
-          <br></br><br></br>4. If you really want to finish a set, don't expect to finish it in one sitting.
-          <br></br><br></br>This list of problems, including the answers and online quizzes are constantly being updated. 
-        </h1>
-      </div>
-    </div>
-
     <div className = 'container' style = {{}}>
       <h1 style = {{fontSize: 'max(3vw, 15px)', textAlign: 'center'}}>Fundamentals</h1>
       <div style = {{justifyContent: 'space-between'}}>
@@ -150,6 +136,20 @@ function Practice() {
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'>Logarithm from Contests</a>
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/logarithm.pdf'>Answers</a>
           </div>
+        </h1>
+      </div>
+    </div>
+
+    <div width = '60%' style = {{padding: '0vw 7vw 0vw 7vw'}}>
+      <div style = {{justifyContent: 'space-between'}}>
+        <h1 style = {{display: 'inline', fontSize: 'max(10px, 1vw)'}}>
+          Above are some topic based problems created by Happy Math Education (a.k.a Blessed Eduloo before 2021). If the creator is a volunteering student, then the name of the volunteer appears on the top right in each page.
+          <br></br><br></br>Each set is designed to be a THOROUGH practice on that specific topic, therefore:
+          <br></br><br></br>1. There are many problems in each set;
+          <br></br><br></br>2. The level of difficulty may change drastically between different problems in the same set;
+          <br></br><br></br>3. There is no need to FINISH a set of problems. Usually, finishing 10% of a set of problems is good enough to make you an expert on that topic;
+          <br></br><br></br>4. If you really want to finish a set, don't expect to finish it in one sitting.
+          <br></br><br></br>This list of problems, including the answers and online quizzes are constantly being updated. 
         </h1>
       </div>
     </div>
