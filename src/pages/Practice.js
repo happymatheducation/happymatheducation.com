@@ -4,7 +4,7 @@ function Practice() {
   return (
     <>
 
-    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(4vw, 30px)'}}>Ultimate Practice</h1>
+    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 15px)'}}>Ultimate Practice</h1>
 
     <div width = '60%' style = {{padding: '0vw 7vw 0vw 7vw'}}>
       <div style = {{justifyContent: 'space-between'}}>
@@ -21,7 +21,7 @@ function Practice() {
     </div>
 
     <div className = 'container' style = {{}}>
-      <h1 style = {{fontSize: 'max(4vw, 30px)', textAlign: 'center'}}>Fundamentals</h1>
+      <h1 style = {{fontSize: 'max(3vw, 15px)', textAlign: 'center'}}>Fundamentals</h1>
       <div style = {{justifyContent: 'space-between'}}>
           <div className = 'practicediv'>
             <a style = {{display: 'inline'}} href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/arithmetic_sequence.pdf'>Arithmetic Sequence</a>
@@ -69,9 +69,9 @@ function Practice() {
     </div>
 
     <div className = 'container'>
-      <h1 style = {{fontSize: 'max(4vw, 30px)', textAlign: 'center'}}>Intermediate</h1>
+      <h1 style = {{fontSize: 'max(3vw, 15px)', textAlign: 'center'}}>Intermediate</h1>
       <div style = {{justifyContent: 'space-between'}}>
-        <h1 style = {{display: 'inline', fontSize: '25px', color: '',}}>
+        <h1 style = {{display: 'inline', fontSize: '10px', color: '',}}>
           <div className = 'practicediv'>
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials.pdf'>Prime Factorization For Factorials</a>
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'>Answers</a>
@@ -123,9 +123,9 @@ function Practice() {
     </div>
 
     <div className = 'container'>
-      <h1 style = {{fontSize: 'max(4vw, 30px)', textAlign: 'center'}}>Advanced</h1>
+      <h1 style = {{fontSize: 'max(3vw, 15px)', textAlign: 'center'}}>Advanced</h1>
       <div style = {{justifyContent: 'space-between'}}>
-        <h1 style = {{display: 'inline', fontSize: '25px', color: '',}}>
+        <h1 style = {{display: 'inline', fontSize: '10px', color: '',}}>
           <div className = 'practicediv'>
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/simple_trig_inequality.pdf'>Simple Trig Inequality</a>
             <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'>Answers</a>
@@ -154,7 +154,7 @@ function Practice() {
       </div>
     </div>
 
-    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(4vw, 30px)'}}>Mock Contests</h1>
+    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 15px)'}}>Mock Contests</h1>
     <p style = {{textAlign: 'center', fontSize: 'max(2vw, 20px)'}}>Coming Soon!</p>
 
     </>
