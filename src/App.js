@@ -37,7 +37,7 @@ export const Copyright = () => {
           <Link to = '/license' style = {{display: 'block'}}>
             License
           </Link>
-          <a href = 'https://github.com/jeffrey-zang/happy-math-education' target = '_blank'>
+          <a href = 'https://github.com/happymatheducation/happymatheducation.com' target = '_blank'>
             <i class='bi bi-github'></i>
             {' Source'}
           </a>

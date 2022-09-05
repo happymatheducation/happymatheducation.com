@@ -105,30 +105,6 @@ const Home = () => {
       </div>
     </div>
 
-    <div data-aos = 'fade-up'>
-      <div className = 'textblock'>
-      <h1>Our Team</h1>
-      <p>
-        Our trusted professors and their experience
-      </p>
-      <button className = 'btn' onClick = {
-        () => {
-          navigate('/team')
-        }
-      }>
-        <i class = 'bi bi-people-fill'></i>
-        {' View'}
-      </button>
-      </div>
-      <img src = {teaching} alt = 'teaching' ></img>
-    </div>
-
-    <div data-aos = 'fade-up' style = {{textAlign: 'center', display: 'block'}}>
-      <img src = {math} alt = 'teaching'></img>
-
-      <h1 style = {{ fontSize: 'max(3vw, 20px)', display: 'block', textAlign: 'center'}}>Propel your math to the next level</h1>
-      </div>
-
     </div>
 
     </>
