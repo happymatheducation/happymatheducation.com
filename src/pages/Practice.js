@@ -4,11 +4,11 @@ function Practice() {
   return (
     <>
 
-    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 15px)'}}>Ultimate Practice</h1>
+    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)'}}>Ultimate Practice</h1>
 
     <div width = '60%' style = {{padding: '0vw 7vw 0vw 7vw'}}>
       <div style = {{justifyContent: 'space-between'}}>
-        <h1 style = {{display: 'inline', fontSize: 'max(17px, 1.5vw)'}}>
+        <h1 style = {{display: 'inline', fontSize: 'max(15px, 1.5vw)'}}>
           Below are some topic based problems created by Happy Math Education (a.k.a Blessed Eduloo before 2021). If the creator is a volunteering student, then the name of the volunteer appears on the top right in each page.
           <br></br><br></br>Each set is designed to be a THOROUGH practice on that specific topic, therefore:
           <br></br><br></br>1. There are many problems in each set;
@@ -154,7 +154,7 @@ function Practice() {
       </div>
     </div>
 
-    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 15px)'}}>Mock Contests</h1>
+    <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)'}}>Mock Contests</h1>
     <p style = {{textAlign: 'center', fontSize: 'max(2vw, 20px)'}}>Coming Soon!</p>
 
     </>

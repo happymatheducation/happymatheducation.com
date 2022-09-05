@@ -355,6 +355,7 @@ body {
   gap: 2rem;
   padding: 10px 1rem;
   transition: background-color 0.3s ease;
+  line-height: 25px;
 
   ul {  
     list-style: none;
@@ -375,7 +376,7 @@ body {
     background-position: left bottom;
     color: #000;
   
-    font-size: max(1.6vw, 20px);
+    font-size: max(1.5vw, 15px);
     text-decoration: none;
     transition: color 0.3s, background-size 0.5s ease;
     
@@ -394,6 +395,8 @@ body {
   #navresponsivelogo, #navul {
     display: none;
     background-image: none;
+    min-width: none;
+    width: 25px
   }
 }
 
@@ -416,6 +419,7 @@ body {
       position: absolute;
       right: 10px;
       top: 25px;  
+      font-size: 25px;
     }
   }
   .nav.responsive .icon {
@@ -427,6 +431,7 @@ body {
     float: none;
     display: block;
     text-align: left;
+    margin-right: 10vw;
   }
   #homelink {
     display: none;
