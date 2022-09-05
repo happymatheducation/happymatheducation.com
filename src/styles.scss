@@ -393,12 +393,14 @@ body {
 
   #navresponsivelogo, #navul {
     display: none;
+    background-image: none;
   }
 }
 
 @media screen and (max-width: 800px) {
   #navlogo {
     display: none;
+
   }
   .nav {
     #navresponsivelogo, #navul {
