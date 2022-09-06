@@ -108,7 +108,7 @@ $hover: lighten($darkblue, 10%);
 
   h1 {
     white-space: nowrap;
-    font-size: max(4.5vw, 30px);
+    font-size: max(3vw, 20px);
   }
 
   p {
@@ -414,6 +414,12 @@ body {
       top: 25px;  
       font-size: 25px;
     }
+    a, navlink {
+      &:hover {
+        background-size: 0% 3px;
+
+      }
+    }
   }
   .nav.responsive .icon {
     position: absolute;
@@ -425,6 +431,9 @@ body {
     display: block;
     text-align: left;
     margin-right: 10vw;
+    &:hover {
+      background-size: 0% 3px;
+    }
   }
   #homelink {
     display: none;

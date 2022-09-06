@@ -32,7 +32,7 @@ function Tuition() {
   return (
     <>    
 
-    <h1 style = {{textAlign: 'center'}}>Classes</h1>
+    <h1 style = {{textAlign: 'center', fontSize: 'max(3vw, 20px)'}}>Classes</h1>
     <h1 style = {{fontSize: 'max(2vw, 20px)', textAlign: 'center'}}>
       {'All classes are held online\u00A0'}
       <i class="bi bi-person-workspace"></i>    
@@ -40,7 +40,7 @@ function Tuition() {
     
     {ClassList}
     
-    <h1 id = 'policypart' style = {{textAlign: 'center'}}>Policy</h1>
+    <h1 id = 'policypart' style = {{textAlign: 'center', fontSize: 'max(3vw, 20px)'}}>Policy</h1>
     <div style = {{width: '100%', padding: '0vw 8vw 0vw 8vw'}}>
 
       <h1 style = {{fontSize: 'max(1.5vw, 15px)'}}>
