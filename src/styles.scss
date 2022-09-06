@@ -69,12 +69,12 @@ $hover: lighten($darkblue, 10%);
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #51557E;
+  background: $darkblue;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #8E91AF;
+  background: lighten($darkblue, 10%);
 }
 
 .home {
@@ -287,25 +287,20 @@ body {
 
 .collapsible {
   margin-top: 5px;
-  background-color: rgb(227, 224, 224);
-  color: #444;
+  color: black;
   cursor: pointer;
   padding: 18px 25px 18px 25px;
   border: none;
-  border-bottom: 3px solid $darkblue;
+  background-image: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  // border-bottom: 3px solid;
+  // border-bottom-color: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
   width: 100%;
   text-align: left;
   align-items: center !important;
   font-size: 20px;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: #ccc;
-  }  
-}
-
-.cactive, .collapsible:hover {
-  background-color: #ccc;
 }
 
 .collapsible:after {
@@ -326,7 +321,7 @@ body {
   max-height: 0;
   white-space:pre-wrap;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.4s ease-out;
 }
 
 .centered {
