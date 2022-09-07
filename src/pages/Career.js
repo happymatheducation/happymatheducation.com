@@ -34,7 +34,7 @@ const Career = () => {
     <>
 
     <h1 style = {{textAlign: 'center', fontSize: 'max(3vw, 30px)'}}>Career Opportunities</h1>
-    <h1 style = {{textAlign: 'center', fontSize: 'max(1.5vw, 15px)'}}>
+    <h1 style = {{textAlign: 'center', fontSize: 'max(1.5vw, 15px)', padding: '0vw 3vw 0vw 3vw'}}>
         To apply to any position, please send your resume to <a href = "mailto: xudiwaterloo@gmail.com">xudiwaterloo@gmail.com</a>.
     </h1>
     
