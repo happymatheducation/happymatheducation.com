@@ -64,7 +64,7 @@ $hover: lighten($darkblue, 10%);
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fff;
+  background: #F4F4F4;
 }
 
 /* Handle */
@@ -317,7 +317,7 @@ body {
 
 .content {
   padding: 3px 18px;
-  background-color: white;
+  background-color: #F4F4F4;
   max-height: 0;
   white-space:pre-wrap;
   overflow: hidden;

@@ -32,7 +32,16 @@ function Contests() {
       <div className = 'container' style = {{width: '80%', marginLeft: 'auto', marginRight: 'auto'}}>
         <h1 style = {{color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left'}}><i class="bi bi-thermometer-low"></i>November</h1>
         <h1 style = {{textAlign: 'left', fontSize: 'max(1.5vw, 15px)'}}>
-          <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a>
+          <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a><br></br>
+          
+          <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a>
+        </h1>
+      </div>
+
+      <div className = 'container' style = {{width: '80%', marginLeft: 'auto', marginRight: 'auto'}}>
+        <h1 style = {{color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left'}}> <i class="bi bi-thermometer-snow"></i>January</h1>
+        <h1 style = {{fontSize: 'max(1.5vw, 15px)'}}>{'Start of new year\n'}
+          <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a>
         </h1>
       </div>
 
@@ -81,13 +90,14 @@ function Contests() {
       <div className = 'container' style = {{width: '80%', marginLeft: 'auto', marginRight: 'auto'}}>
         <h1 style = {{color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left'}}><i class="bi bi-thermometer-low"></i>November</h1>
         <h1 style = {{textAlign: 'left', fontSize: 'max(1.5vw, 15px)'}}>
-          <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a>
+          <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a><br></br>
+          <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a>
         </h1>
       </div>
 
       <div className = 'container' style = {{width: '80%', marginLeft: 'auto', marginRight: 'auto'}}>
         <h1 style = {{color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left'}}> <i class="bi bi-thermometer-snow"></i>January</h1>
-        <h1 style = {{fontSize: 'max(1.5vw, 15px)'}}>{'Start of new year\n'}<br></br>
+        <h1 style = {{fontSize: 'max(1.5vw, 15px)'}}>{'Start of new year\n'}
           <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a>
         </h1>
       </div>
