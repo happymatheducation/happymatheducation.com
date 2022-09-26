@@ -85,8 +85,8 @@ function Practice() {
             <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab_answers.pdf'>Quadratic Diophantine Equations</a>
-            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type_answer.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab.pdf'>Quadratic Diophantine Equations Type ab</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
             <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type.pdf'>Quadratic Diophantine Equations - Simple Square Type</a>
