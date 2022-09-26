@@ -21,37 +21,37 @@ function Practice() {
       <div className="content">
         <div style = {{justifyContent: 'space-between'}}>
         <div className = 'practicediv'>
-          <a style = {{display: 'inline'}} href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/arithmetic_sequence.pdf'>Arithmetic Sequence</a>
+          <a style = {{display: 'inline'}} href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/arithmetic_sequence.pdf'>Arithmetic Sequence</a>
         </div>
         <div className = 'practicediv'>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/mental_math_with_basic_algebra.pdf'>Mental Math with Basic Algebra</a>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/mental_math_with_basic_algebra_answers.pdf'>Answers</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/mental_math_with_basic_algebra.pdf'>Mental Math with Basic Algebra</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/mental_math_with_basic_algebra_answers.pdf'>Answers</a>
         </div>
         <div className = 'practicediv'>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/basic_similar_triangles.pdf'>Basic Similar Triangles</a>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/basic_similar_triangles_answers.pdf'>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/basic_similar_triangles.pdf'>Basic Similar Triangles</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/basic_similar_triangles_answers.pdf'>
             Answers | 
             <a href = 'https://docs.google.com/forms/d/e/1FAIpQLSf2WGf-a9iet44p39-1qwCV46k9zlgduDHmXTuVlJ4nnuUB_w/viewform'> Quiz</a>
           </a>
         </div>
         <div className = 'practicediv'>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/two_line_intersection.pdf'>Two Line Intersection</a>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/two_line_intersection_answers.pdf'>Answers</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/two_line_intersection.pdf'>Two Line Intersection</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/two_line_intersection_answers.pdf'>Answers</a>
         </div>
         <div className = 'practicediv'>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/line_through_two_points.pdf'>Line Through Two Points</a>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/line_through_two_points_answers.pdf'>Answers</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/line_through_two_points.pdf'>Line Through Two Points</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/line_through_two_points_answers.pdf'>Answers</a>
         </div>
         <div className = 'practicediv'>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/number_of_factors.pdf'>Number of Factors</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/number_of_factors.pdf'>Number of Factors</a>
         </div>
         <div className = 'practicediv'>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/rolling_dice.pdf'>Rolling Dice</a>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/rolling_dice_answers.pdf'>Answers</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice.pdf'>Rolling Dice</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice_answers.pdf'>Answers</a>
         </div>
         <div className = 'practicediv'>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/quadratic_equations.pdf'>Quadratic Equations</a>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/quadratic_equations_answers.pdf'>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations.pdf'>Quadratic Equations</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations_answers.pdf'>
             Answers | 
             <a href = 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfcdJKsv7isFVYJ-5ZyZ1SiyLQiN5nkV7QqBO4oAaBBqmzSxw/viewform?usp=send_form'> Quiz 1 | </a>
             <a href = 'https://docs.google.com/forms/d/e/1FAIpQLScEd7YVm1x1v_jEhjzw9kyc0EM_BBsseqXsaZn1_QoGLSq7Vg/viewform'> Quiz 2 </a>
@@ -59,8 +59,8 @@ function Practice() {
           </a>
         </div>
         <div className = 'practicediv'>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/euclid_theorem.pdf'>Euclid Theorem</a>
-          <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/euclid_theorem_answers.pdf'>Answers</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/euclid_theorem.pdf'>Euclid Theorem</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/euclid_theorem_answers.pdf'>Answers</a>
         </div>
     </div>
   </div>
@@ -81,42 +81,42 @@ function Practice() {
         <div style = {{justifyContent: 'space-between'}}>
         <h1 style = {{display: 'inline', fontSize: '10px', color: '',}}>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials.pdf'>Prime Factorization For Factorials</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials.pdf'>Prime Factorization For Factorials</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab_answers.pdf'>Quadratic Diophantine Equations</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type_answer.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab_answers.pdf'>Quadratic Diophantine Equations</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type_answer.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type.pdf'>Quadratic Diophantine Equations - Simple Square Type</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type_answer.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type.pdf'>Quadratic Diophantine Equations - Simple Square Type</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type_answer.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/trigs_of_special_angles.pdf'>Trigs of Special Angles</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/trigs_of_special_angles.pdf'>Trigs of Special Angles</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/remainder.pdf'>Find Remainders</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/remainder_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/remainder.pdf'>Find Remainders</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/remainder_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/binomial_theorem.pdf'>Binomial Theorem</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/binomial_theorem_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/binomial_theorem.pdf'>Binomial Theorem</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/binomial_theorem_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/logarithm_with_quadratic_equations.pdf'>Logarithm with Quadratic Equations</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/logarithm_with_quadratic_equations_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/logarithm_with_quadratic_equations.pdf'>Logarithm with Quadratic Equations</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/logarithm_with_quadratic_equations_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/starts_and_bars.pdf'>Stars and Bars</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/starts_and_bars_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/starts_and_bars.pdf'>Stars and Bars</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/starts_and_bars_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/chinese_remainder_theorem.pdf'>Chinese Remainder Theorem</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/chinese_remainder_theorem.pdf'>Chinese Remainder Theorem</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/magic_squares_3x3.pdf'>Magic Squares</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/magic_squares_3x3_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/magic_squares_3x3.pdf'>Magic Squares</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/magic_squares_3x3_answers.pdf'>Answers</a>
           </div>
         </h1>
     </div>
@@ -138,28 +138,28 @@ function Practice() {
       <div style = {{justifyContent: 'space-between'}}>
         <h1 style = {{display: 'inline', fontSize: '10px', color: '',}}>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/simple_trig_inequality.pdf'>Simple Trig Inequality</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/simple_trig_inequality.pdf'>Simple Trig Inequality</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/brahmagupta%E2%80%99s_formula.pdf'>Brahmagupta's Formula</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/brahmagupta%E2%80%99s_formula_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/brahmagupta%E2%80%99s_formula.pdf'>Brahmagupta's Formula</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/brahmagupta%E2%80%99s_formula_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/linear_diophantine_equations.pdf'>Linear Diophantine Equations</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/linear_diophantine_equations_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/linear_diophantine_equations.pdf'>Linear Diophantine Equations</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/linear_diophantine_equations_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/polynomial_factorization.pdf'>Polynomial Factorization</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/polynomial_factorization_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/polynomial_factorization.pdf'>Polynomial Factorization</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/polynomial_factorization_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'>De Moivres Formula</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/de_moivres_formula_answers.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'>De Moivres Formula</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula_answers.pdf'>Answers</a>
           </div>
           <div className = 'practicediv'>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'>Logarithm from Contests</a>
-            <a href = 'https://www.happymatheducation.com/uploads/1/3/6/4/136474762/logarithm.pdf'>Answers</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'>Logarithm from Contests</a>
+            <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/logarithm.pdf'>Answers</a>
           </div>
         </h1>
     </div>
