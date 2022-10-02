@@ -324,6 +324,10 @@ body {
   transition: max-height 0.4s ease-out;
 }
 
+.practicecollapsible {
+  max-height: 100%;
+}
+
 .centered {
   position: absolute;
   top: 30%;

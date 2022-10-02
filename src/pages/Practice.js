@@ -1,10 +1,10 @@
-
 function Practice() {
 
   return (
     <>
 
     <h1 style = {{marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)'}}>Ultimate Practice</h1>
+
 
     <button className="collapsible" id = 'fundamentals' onClick = {
         () => {
@@ -15,10 +15,11 @@ function Practice() {
             content.style.maxHeight = null;
           } else {
             content.style.maxHeight = content.scrollHeight + "px";
+            console.log(me.id, content.scrollHeight)
           }
         }
       }>Fundamentals</button>
-      <div className="content">
+      <div className="content" style = {{maxHeight: '208px'}}>
         <div style = {{justifyContent: 'space-between'}}>
         <div className = 'practicediv'>
           <a style = {{display: 'inline'}} href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/arithmetic_sequence.pdf'>Arithmetic Sequence</a>
@@ -74,10 +75,11 @@ function Practice() {
             content.style.maxHeight = null;
           } else {
             content.style.maxHeight = content.scrollHeight + "px";
+            console.log(me.id, content.scrollHeight)
           }
         }
       }>Intermediate</button>
-      <div className="content">
+      <div className="content" style = {{maxHeight: '230px'}}>
         <div style = {{justifyContent: 'space-between'}}>
         <h1 style = {{display: 'inline', fontSize: '10px', color: '',}}>
           <div className = 'practicediv'>
@@ -131,10 +133,11 @@ function Practice() {
             content.style.maxHeight = null;
           } else {
             content.style.maxHeight = content.scrollHeight + "px";
+            console.log(me.id, content.scrollHeight)
           }
         }
       }>Advanced</button>
-      <div className="content">
+      <div className="content" style = {{maxHeight: '140px'}}>
       <div style = {{justifyContent: 'space-between'}}>
         <h1 style = {{display: 'inline', fontSize: '10px', color: '',}}>
           <div className = 'practicediv'>
