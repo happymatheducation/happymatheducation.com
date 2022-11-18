@@ -66,6 +66,7 @@ export const Copyright = () => {
           <Link to = '/team'>Our Team</Link>
           <br></br>
           <Link to = '/Practice/Quadratic_Equations'>Try me</Link>
+          <br></br>
         </div>
 
       </div>
