@@ -51,7 +51,9 @@ function Practice() {
           <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice_answers.pdf'>Answers</a>
         </div>
         <div className = 'practicediv'>
-          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations.pdf'>Quadratic Equations</a>
+          <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations.pdf'>Quadratic Equations
+            <a href = '/Practice/Quadratic_Equation'> Try this </a>
+            </a>
           <a href = 'https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations_answers.pdf'>
             Answers | 
             <a href = 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfcdJKsv7isFVYJ-5ZyZ1SiyLQiN5nkV7QqBO4oAaBBqmzSxw/viewform?usp=send_form'> Quiz 1 | </a>
