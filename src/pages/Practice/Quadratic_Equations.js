@@ -1,4 +1,4 @@
-function Practice() {
+function Quadratic_Equations() {
 
   return (
     <>
@@ -135,4 +135,4 @@ function Practice() {
   );
 }
 
-export default Practice;
+export default Quadratic_Equations;
