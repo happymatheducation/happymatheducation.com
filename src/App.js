@@ -51,7 +51,7 @@ export const Copyright = () => {
           <br></br>
           <Link to = '/practice'>Our Publications</Link>
           <br></br>
-          <Link to = '/contests'>Math Contests</Link>
+          <Link to = '/contests'>Math Contests(Test)</Link>
           <br></br>
         </div>
 
