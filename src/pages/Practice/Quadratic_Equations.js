@@ -1,138 +1,148 @@
+import { MathComponent } from "mathjax-react";
+import ReactDOM from 'react-dom';
+
+let passedTime = 0;
+
 function Quadratic_Equations() {
 
-  return (
-    <>
-    <div style= "width: 70%; background-color: #EEFFEE; padding: 20px; margin: auto; border: 3px solid #000000; ">
-        <style>
-            table, td, th {
-                text-align: left;
-            }
+    let x1;
+    let x2;
+    let a = 1;
+    let b;
+    let c;
+    let firstTerm;
+    let secondTerm = '';
+    let thirdTerm = '';
+    let question;
+    let userx1;
+    let userx2;
 
-            table {
-                border-collapse: collapse;
-            }
+    return (
+        <>
+            <div style={{ width: '70%', backgroundColor: '#EEFFEE', padding: '20px', margin: 'auto', border: '3px solid #000000'}}>
+                <table style={{ textAlign: 'left', borderCollapse: 'collapse' }}>
+                    <tr>
+                        <th style={{ textAlign: 'left'}}>Attempted:</th>
+                        <td id="attemptedNumber" style={{ textAlign: 'left', width:'30%' }}>0</td>
+                        <th style={{ textAlign: 'left' }}>Correct:</th>
+                        <td id="correctNumber" style={{ textAlign: 'left', width: '30%' }}>0</td>
+                        <th style={{ textAlign: 'left' }}>Time:</th>
+                        <td id="timer" style={{ textAlign: 'left', width: '30%' }}>0h 0m 0s</td>
+                    </tr>
+                </table>
 
-            td {
-                width: 30%
-            }
-        </style>
+                <br />
+                <br />
+                <div style={{ textAlign: 'center'}} >
 
-        <table>
-            <tr>
-                <th>Attempted:</th>
-                <td id="attemptedNumber">0</td>
-                <th>Correct:</th>
-                <td id="correctNumber">0</td>
-                <th>Time:</th>
-                <td id="timer">0h 0m 0s</td>
-            </tr>
-        </table>
+                    <p id="quadraticEquation">The quadratic equation will appear here.</p>
+                    <p id="correctOrNot">&nbsp;</p>
 
-        <br />
-        <br />
-        <div style="text-align: center;">
+                    <br />
 
-            <p id="quadraticEquation">The quadratic equation will appear here.</p>
-            <p id="correctOrNot">&nbsp;</p>
+                    <form id="Responses">
+                        <MathComponent tex={String.raw`x_1=`} display={false} /><input type="number" id="userx1"></input><br></br>
+                        <MathComponent tex={String.raw`x_2=`} display={false} /><input type="number" id="userx2"></input><br></br><br></br>
+                        <input id="submitButton" type="button" value="Submit" style={{ display: 'none' }} onClick={
+                            () => {
+                                userx1 = document.getElementById("userx1").value;
+                                userx2 = document.getElementById("userx2").value;
+                                if ((userx1 == x1 && userx2 == x2) || (userx1 == x2 && userx2 == x1)) {
+                                    document.getElementById("correctOrNot").innerHTML = "Correct!";
+                                    var correctNumber = Number(document.getElementById("correctNumber").innerHTML);
+                                    correctNumber += 1;
+                                    document.getElementById("correctNumber").innerHTML = correctNumber;
+                                }
+                                else {
+                                    document.getElementById("correctOrNot").innerHTML = "Wrong! The answers are " + x1 + " and " + x2 + ".";
+                                }
+                                document.getElementById("submitButton").style.display = "none";
+                                document.getElementById("nextButton").style.display = "inline";
+                                var attemptedNumber = Number(document.getElementById("attemptedNumber").innerHTML);
+                                attemptedNumber += 1;
+                                document.getElementById("attemptedNumber").innerHTML = attemptedNumber;
+                            }
+                        } ></input>
+                        <input id="startButton" type="button" value="Start" onClick={
+                            () => {
+                                x1 = Math.floor(Math.random() * 25) - 12;
+                                x2 = Math.floor(Math.random() * 25) - 12;
+                                b = -a * (x1 + x2);
+                                c = a * x1 * x2;
 
-            <br />
+                                firstTerm = `x^2`;
 
-            <form id="Responses">
-                $x_1=$ <input type="number" id="userx1"><br>
-                $x_2=$ <input type="number" id="userx2"><br><br>
-                <input id="submitButton" type="button" onclick="checkAnswer()" value="Submit">
-                <input id="startButton" type="button" onclick="startPractice()" value="Start">
-                <input id="nextButton" type="button" onclick="loadQuestion()" value="Next">
-            </form>
+                                if (b > 1) { secondTerm = `+${b}x` }
+                                else if (b == 1) { secondTerm = `+x` }
+                                else if (b == 0) { secondTerm = `` }
+                                else if (b == -1) { secondTerm = `-x` }
+                                else { secondTerm = `${b}x` }
 
-            <script>let x1;
-                let x2;
-                let a = 1;
-                let b;
-                let c;
-                let firstTerm;
-                let secondTerm;
-                let thirdTerm;
-                let question;
-                let userx1;
-                let userx2;
-                let passedTime = 0;
+                                if (c > 0) { thirdTerm = `+${c}` }
+                                else if (c == 0) { thirdTerm = `` }
+                                else { thirdTerm = `${c}` }
 
-                window.onload = function init() {
-                    document.getElementById("submitButton").style.display = "none";
-                    document.getElementById("nextButton").style.display = "none";
-                }
+                                question = firstTerm.concat(secondTerm, thirdTerm, `=0`);
 
+                                var quadraticEquation = document.getElementById("quadraticEquation");
 
-                function startPractice() {
-                    loadQuestion();
-                    setInterval(showTimer, 1000);
-                }
+                                ReactDOM.render(<MathComponent tex={ question } />, quadraticEquation);
 
-                function showTimer() {
-                    ++passedTime;
-                    var seconds = passedTime % 60;
-                    var minutes = Math.floor(passedTime / 60) % 60;
-                    var hours = Math.floor(passedTime / 3600);
-                    document.getElementById("timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
-                }
+                                document.getElementById("submitButton").style.display = "inline";
+                                document.getElementById("startButton").style.display = "none";
+                                document.getElementById("nextButton").style.display = "none";
+                                document.getElementById("correctOrNot").innerHTML = "&nbsp;";
+                                document.getElementById("userx1").value = "";
+                                document.getElementById("userx2").value = "";
 
-                function loadQuestion() {
+                                setInterval(showTimer, 1000);
+                                function showTimer() {
+                                    passedTime = passedTime + 1;
+                                    var seconds = passedTime % 60;
+                                    var minutes = Math.floor(passedTime / 60) % 60;
+                                    var hours = Math.floor(passedTime / 3600);
+                                    document.getElementById("timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+                                }
+                            }
+                        }></input>
+                        <input id="nextButton" type="button" value="Next" style={{ display: 'none' }} onClick={
+                            () => {
+                                x1 = Math.floor(Math.random() * 25) - 12;
+                                x2 = Math.floor(Math.random() * 25) - 12;
+                                b = -a * (x1 + x2);
+                                c = a * x1 * x2;
 
-                    x1 = Math.floor(Math.random() * 25) - 12;
-                    x2 = Math.floor(Math.random() * 25) - 12;
-                    b = -a * (x1 + x2);
-                    c = a * x1 * x2;
+                                firstTerm = `x^2`;
 
-                    firstTerm = `x^2`;
+                                if (b > 1) { secondTerm = `+${b}x` }
+                                else if (b == 1) { secondTerm = `+x` }
+                                else if (b == 0) { secondTerm = `` }
+                                else if (b == -1) { secondTerm = `-x` }
+                                else { secondTerm = `${b}x` }
 
-                    if (b > 1) { secondTerm = `+${b}x`; }
-                    else if (b == 1) { secondTerm = `+x`; }
-                    else if (b == 0) { secondTerm = ``; }
-                    else if (b == -1) { secondTerm = `-x`; }
-                    else { secondTerm = `${b}x`; }
+                                if (c > 0) { thirdTerm = `+${c}` }
+                                else if (c == 0) { thirdTerm = `` }
+                                else { thirdTerm = `${c}` }
 
-                    if (c > 0) { thirdTerm = `+${c}`; }
-                    else if (c == 0) { thirdTerm = ``; }
-                    else { thirdTerm = `${c}`;; }
+                                question = firstTerm.concat(secondTerm, thirdTerm, `=0`);
 
-                    question = firstTerm.concat(secondTerm, thirdTerm, `=0`);
+                                var quadraticEquation = document.getElementById("quadraticEquation");
 
-                    katex.render(question, quadraticEquation, {
-                        throwOnError: false
-                    });
+                                ReactDOM.render(<MathComponent tex={question} />, quadraticEquation);
 
-                    document.getElementById("submitButton").style.display = "inline";
-                    document.getElementById("startButton").style.display = "none";
-                    document.getElementById("nextButton").style.display = "none";
-                    document.getElementById("correctOrNot").innerHTML = "&nbsp;";
-                    document.getElementById("userx1").value = "";
-                    document.getElementById("userx2").value = "";
-                }
-
-                function checkAnswer() {
-                    userx1 = document.getElementById("userx1").value;
-                    userx2 = document.getElementById("userx2").value;
-                    if ((userx1 == x1 && userx2 == x2) || (userx1 == x2 && userx2 == x1)) {
-                        document.getElementById("correctOrNot").innerHTML = "Correct!";
-                        var correctNumber = Number(document.getElementById("correctNumber").innerHTML);
-                        correctNumber += 1;
-                        document.getElementById("correctNumber").innerHTML = correctNumber;
-                    }
-                    else {
-                        document.getElementById("correctOrNot").innerHTML = "Wrong! The answers are " + x1 + " and " + x2 + ".";
-                    }
-                    document.getElementById("submitButton").style.display = "none";
-                    document.getElementById("nextButton").style.display = "inline";
-                    var attemptedNumber = Number(document.getElementById("attemptedNumber").innerHTML);
-                    attemptedNumber += 1;
-                    document.getElementById("attemptedNumber").innerHTML = attemptedNumber;
-                }</script>
-        </div>
-    </div>
-              
+                                document.getElementById("submitButton").style.display = "inline";
+                                document.getElementById("startButton").style.display = "none";
+                                document.getElementById("nextButton").style.display = "none";
+                                document.getElementById("correctOrNot").innerHTML = "&nbsp;";
+                                document.getElementById("userx1").value = "";
+                                document.getElementById("userx2").value = "";
+                                }
+                            } ></input>
+                    </form>
+                </div>
+            </div>
     </>
-  );
+    );
 }
 
 export default Quadratic_Equations;

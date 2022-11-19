@@ -7,7 +7,6 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import NavBar from './NavBar.js';
 import { Link } from 'react-router-dom'
 import Logo from './logo/logo.png';
-
 import Home from './pages/Home.js'
 const Tuition = lazy(() => import("./pages/Tuition.js"))
 const Practice = lazy(() => import("./pages/Practice.js"))
@@ -51,7 +50,7 @@ export const Copyright = () => {
           <br></br>
           <Link to = '/practice'>Our Publications</Link>
           <br></br>
-          <Link to = '/contests'>Math Contests tests</Link>
+          <Link to = '/contests'>Math Contests</Link>
           <br></br>
         </div>
 
@@ -64,8 +63,6 @@ export const Copyright = () => {
           <Link to = '/careers'>Careers</Link>
           <br></br>
           <Link to = '/team'>Our Team</Link>
-          <br></br>
-          <Link to = '/Practice/Quadratic_Equations'>Try me</Link>
           <br></br>
         </div>
 
@@ -115,7 +112,7 @@ const App = () => {
       <Route exact path = '/careers' element = {<Career/>}/>
       <Route exact path = '/apply' element = {<Contact/>}/>
       <Route exact path = '/team' element = {<Team/>}/>
-      <Route exact path = '/Practice/Quadratic_Equations' element = {<Quadratic_Equations/>}/>
+      <Route exact path = '/Practice/Quadratic_Equations' element = {<Quadratic_Equations />} />
       <Route exact path = '/*' element = {<Notfound/>}/>
     </Routes>
     </Suspense>
