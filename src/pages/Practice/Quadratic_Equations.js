@@ -19,6 +19,9 @@ function Quadratic_Equations() {
 
     return (
         <>
+            <br />
+            <br />
+
             <div style={{ width: '70%', backgroundColor: '#EEFFEE', padding: '20px', margin: 'auto', border: '3px solid #000000'}}>
                 <table style={{ textAlign: 'left', borderCollapse: 'collapse' }}>
                     <tr>
