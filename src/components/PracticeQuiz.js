@@ -41,16 +41,17 @@ class PracticeQuiz extends Component {
 
   next = () => {
     const message = this.props.checkAnswer();
-    this.setState({ attemptedNumber: this.state.attemptedNumber + 1 });
+    this.state.attemptedNumber++;
     if (message === true) {
-      this.setState({ correctNumber: this.state.correctNumber + 1, correctMessage: "Correct!" });
+      this.state.correctNumber++;
+      this.state.correctMessage = "Correct!";
     } else {
-      this.setState({ correctMessage: message });
+      this.state.correctMessage = message;
       setTimeout(() => {
-        if (this.state.correctMessage === message) this.setState({ correctMessage: "" })
+        if (this.state.correctMessage === message) this.state.correctMessage = ""
       }, 5000);
     }
-    this.setState({ currentQuestion: this.props.generateQuestion() });
+    this.state.currentQuestion = this.props.generateQuestion();
     this.props.clearAnswerForm();
   }
 

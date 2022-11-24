@@ -54,7 +54,7 @@ class Quadratic_Equations extends Component {
   }
 
   checkAnswer = () => {
-    if (this.state.ansX1 == this.state.x1 && this.state.ansX2 == this.state.x2) {
+    if (this.state.ansX1 === this.state.x1 && this.state.ansX2 === this.state.x2) {
       return true;
     } else {
       return `Incorrect! The correct answers are ${this.state.x1} and ${this.state.x2}.`;
