@@ -60,7 +60,6 @@ class Quadratic_Equations extends Component {
         const x2 = this.state.x2;
         const ansX1 = parseInt(this.state.ansX1);
         const ansX2 = parseInt(this.state.ansX2);
-        console.log(x1, x2, ansX1, ansX2);
     if ((ansX1 === x1 && ansX2 === x2) || (ansX1 === x2 && ansX2 === x1)) {
       return true;
     } else {

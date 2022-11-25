@@ -90,7 +90,7 @@ class PracticeQuiz extends Component {
 
         <div style={{ textAlign: 'center' }}>
           <br/>
-          <p>{this.state.currentQuestion}</p>
+          <>{this.state.currentQuestion}</>
         <>{this.state.correctMessage}</>
         <br />
             <br />              

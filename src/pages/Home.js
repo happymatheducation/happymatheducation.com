@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import homeimg from '../assets/home.png'
 import teaching from '../assets/teaching.svg'
 import learning from '../assets/learning.svg'
-import math from '../assets/math.svg'
+//import math from '../assets/math.svg'
 import math2 from '../assets/math2.svg'
 import appreciation from '../assets/appreciation.svg'
 

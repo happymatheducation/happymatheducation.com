@@ -8,7 +8,7 @@ const NavBar = () => {
         <div style = {{backgroundColor:'#fff'}}>
             <ul style = {{listStyle: 'none'}}>
             <CustomLink to = '/' id = 'navlogo'>
-                <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
+                <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}} alt=''></img>
             </CustomLink>
             </ul>
         </div>
@@ -17,7 +17,7 @@ const NavBar = () => {
             
             <ul id = 'navul'>
                 <CustomLink to = '/' id = 'navresponsivelogo'>
-                    <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}}></img>
+                    <img src = {logo} className = 'center' style = {{width: 'max(15vw, 150px)'}} alt=''></img>
                 </CustomLink>
             </ul>
             <ul id = 'homelink'>
@@ -33,10 +33,10 @@ const NavBar = () => {
                 {/* <CustomLink to = '/apply' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Apply</CustomLink> */}
             </ul>
 
-            <a id = 'icon' class="icon" onClick={
+            <a id = 'icon' className="icon" onClick={
                 () => {
                     var x = document.getElementById("myTopnav");
-                    if (x.className == "nav stickytop") {
+                    if (x.className === "nav stickytop") {
                         x.className += " responsive";
                         document.getElementById("icon").innerHTML = "<i class='bi bi-x'></i>"
                     } else {
@@ -45,7 +45,7 @@ const NavBar = () => {
                     }              
                 }
             }>
-                <i class='bi bi-arrow-bar-left'></i>
+                <i className='bi bi-arrow-bar-left'></i>
             </a>
 
         </nav>

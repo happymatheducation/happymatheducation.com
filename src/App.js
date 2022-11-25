@@ -36,8 +36,8 @@ export const Copyright = () => {
           <Link to='/license' style={{ display: 'block' }}>
             License
           </Link>
-          <a href='https://github.com/happymatheducation/happymatheducation.com' target='_blank'>
-            <i class='bi bi-github'></i>
+          <a href='https://github.com/happymatheducation/happymatheducation.com' target='_blank' rel='noreferrer'>
+            <i className='bi bi-github'></i>
             {' Source'}
           </a>
         </div>
@@ -69,7 +69,7 @@ export const Copyright = () => {
       </div>
 
       <p style={{ marginTop: '40px' }}>
-        Copyright © 2022: <a href='https://jeffrey-zang.github.io/' target='_blank'>Jeffrey Zang</a>
+              Copyright © 2022: <a href='https://jeffrey-zang.github.io/' target='_blank' rel='noreferrer'>Jeffrey Zang</a>
       </p>
 
       <a id='backtotop' style={{ cursor: 'pointer' }} onClick={
