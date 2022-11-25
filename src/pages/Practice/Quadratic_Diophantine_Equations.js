@@ -10,6 +10,8 @@ class Quadratic_Diophantine_Equations extends Component {
       userPosIntSolns: "",
       userIntSolns: "",
       allSolns: [],
+      askingPosIntSolns: false,
+      factoredQuestion: <MathComponent tex={ 'x^2' }/>,
   };
 
     linearTerm(rawCoef, variable) {
@@ -28,34 +30,41 @@ class Quadratic_Diophantine_Equations extends Component {
         };
         return linearTerm;
     }
+    factored(variable, coef) {
+        if (coef === 0) {
+            return variable;
+        } else if (coef < 0) {
+            return '(' + variable + coef + ')';
+        } else {
+            return '(' + variable + '+' + coef + ')';
+        }
+    }
 
     generateQuestion = () => {
-        // ab + ua + vb = t
-        // (a+v)(b+u) = t + uv
-        // p = t + uv
-        // (a+v)(b+u) = p
+        // xy + ax + by = t
+        // (x+b)(y+a) = t + ab
+        // p = t + ab
+        // (x+b)(y+a) = p
         let allSolns = [];
-
-        const twos = Math.floor(Math.random() * 3)
-        const threes = Math.floor(Math.random() * 3);
-        const fives = Math.floor(Math.random() * 2);
-        const sevens = (twos + threes + fives) < 3 ? 1 : 0;
-        const p = 2 ** twos * 3 ** threes * 5 ** fives * 7 ** sevens;
-
-        const u = Math.floor(Math.random() * 13) - 6;
-        const v = Math.floor(Math.random() * 13) - 6;
-
         let correctPosIntSolns = 0;
-        for (let i = 0; i <= twos; i++) {
-            for (let j = 0; j <= threes; j++) {
-                for (let k = 0; k <= fives; k++) {
-                    for (let l = 0; l <= sevens; l++) {
-                        const aPlusV = 2 ** i * 3 ** j * 5 ** k * 7 ** l;
-                        const bPlusU = p / aPlusV;
-                        allSolns.push({ a: aPlusV - v, b: bPlusU - u });
-                        allSolns.push({ a: -aPlusV - v, b: -bPlusU - u });
-                        aPlusV - v > 0 && bPlusU - u > 0 && correctPosIntSolns++;
-                    }
+
+        const p = Math.ceil(Math.random() * 100);
+        const a = Math.floor(Math.random() * 19) - 9;
+        const b = Math.floor(Math.random() * 19) - 9;
+        const t = p - a * b;
+
+        for (let factorOne = 1; factorOne <= Math.sqrt(p); factorOne++) {
+            let factorTwo = p / factorOne;
+            if (Number.isInteger(factorTwo) ) {
+                allSolns.push({ x: factorOne - b, y: factorTwo - a });
+                allSolns.push({ x: -factorOne - b, y: -factorTwo - a });
+                factorOne - b > 0 && factorTwo - a > 0 && correctPosIntSolns++;
+                -factorOne - b > 0 && -factorTwo - a > 0 && correctPosIntSolns++;
+                if (factorOne !== factorTwo) {
+                    allSolns.push({ x: factorTwo - b, y: factorOne - a });
+                    allSolns.push({ x: -factorTwo - b, y: -factorOne - a });
+                    factorOne - a > 0 && factorTwo - b > 0 && correctPosIntSolns++;
+                    -factorOne - a > 0 && -factorTwo - b > 0 && correctPosIntSolns++;
                 }
             }
         }
@@ -65,42 +74,58 @@ class Quadratic_Diophantine_Equations extends Component {
             correctIntSolns: allSolns.length
         });
 
-    const t = p - u * v;
+        this.setState(Math.random() < 0.5 ? { askingPosIntSolns: true } : { askingPosIntSolns: false });
 
-      const term1 = "ab";
-      let term2 = this.linearTerm(u, "a");
-      let term3 = this.linearTerm(v, "b");
-    return (<MathComponent tex={`${term1}${term2}${term3} = ${t}`} />);
+        let factoredQuestion = this.factored('x', b) + this.factored('y', a) + '=' + p;
+        this.setState({ factoredQuestion: <MathComponent tex={factoredQuestion} display={false} /> });
+
+        const term1 = "xy";
+        let term2 = this.linearTerm(a, "x");
+        let term3 = this.linearTerm(b, "y");
+        return (<MathComponent tex={`${term1}${term2}${term3} = ${t}`} />);
   }
 
   clearAnswerForm = () => {
     this.setState({ userPosIntSolns: '', userIntSolns: '' });
   }
 
-  checkAnswer = () => {
-    if (parseInt(this.state.userPosIntSolns) === this.state.correctPosIntSolns && parseInt(this.state.correctIntSolns) === this.state.correctIntSolns) {
-      return true;
-    } else {
-      return `Incorrect! The correct answers are ${this.state.correctPosIntSolns} and ${this.state.correctIntSolns}.`;
+    checkAnswer = () => {
+        let correctAnswer;
+        if (!this.state.askingPosIntSolns) {
+            if (parseInt(this.state.userIntSolns) === this.state.correctIntSolns) {
+                return true;
+            } else {
+                correctAnswer = this.state.correctIntSolns;
+            }
+        } else {
+            if (parseInt(this.state.userPosIntSolns) === this.state.correctPosIntSolns) {
+                return true;
+            } else {
+                correctAnswer = this.state.correctPosIntSolns;
+            }
+        }
+        return (<>Incorrect! Answer: {correctAnswer}. Hint: {this.state.factoredQuestion}</>);
     }
-  }
 
-  render() {
+    render() {
+
+        let answerForm;
+        this.state.askingPosIntSolns ? 
+        answerForm = (<>
+            Number of positive integer solutions = <input type="number" value={this.state.userPosIntSolns}
+                onChange={e => this.setState({ userPosIntSolns: e.target.value })}></input><br /><br />
+            </>)
+            :
+        answerForm = (<>
+                Number of integer solutions = <input type="number" value={this.state.userIntSolns}
+                    onChange={e => this.setState({ userIntSolns: e.target.value })}></input><br /><br />
+            </>)
     return (
       <PracticeQuiz
-        checkAnswer={this.checkAnswer}
-        generateQuestion={this.generateQuestion}
-
+            checkAnswer={this.checkAnswer}
+            generateQuestion={this.generateQuestion}
             clearAnswerForm={this.clearAnswerForm}
-
-            answerForm={(
-            <>
-            Number of positive integer solutions = <input type="number" value={this.state.userPosIntSolns}
-              onChange={e => this.setState({ userPosIntSolns: e.target.value })}></input><br/>
-            Number of integer solutions = <input type="number" value={this.state.userIntSolns}
-              onChange={e => this.setState({ userIntSolns: e.target.value })}></input><br/><br/>
-            </>
-        )}
+            answerForm={answerForm}
       />
     );
   }

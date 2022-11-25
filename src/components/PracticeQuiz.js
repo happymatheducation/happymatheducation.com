@@ -63,7 +63,7 @@ class PracticeQuiz extends Component {
       <br/><br/>
       <div style={{
         width: '70%',
-        backgroundColor: '#EEFFEE',
+        backgroundColor: '#DDEEFF',
         padding: '20px',
         margin: 'auto',
         border: '3px solid #000000'
@@ -94,7 +94,7 @@ class PracticeQuiz extends Component {
         <>{this.state.correctMessage}</>
         <br />
             <br />              
-        <>{this.props.answerForm}</>
+                      <>{this.state.started && this.props.answerForm}</>
 
           {
             this.state.paused &&
