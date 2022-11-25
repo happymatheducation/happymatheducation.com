@@ -7,7 +7,7 @@ import { Component } from "react";
 
 /**
  * @callback generateQuestionCallback
- * @return {Component | string} a component displaying the next question
+ * @return {Component | string} a component displaying the checkAnswer question
  */
 
 class PracticeQuiz extends Component {
@@ -27,6 +27,7 @@ class PracticeQuiz extends Component {
     attemptedNumber: 0,
     correctNumber: 0,
     started: false,
+    paused: false,
 
     currentQuestion: "The question will appear here. Click start to begin!",
     correctMessage: "",
@@ -39,19 +40,23 @@ class PracticeQuiz extends Component {
     setInterval(() => this.setState({ timeElapsed: this.state.timeElapsed + 1 }), 1000);
   }
 
-  next = () => {
+  checkAnswer = () => {
     const message = this.props.checkAnswer();
     this.setState({ attemptedNumber: this.state.attemptedNumber + 1 });
     if (message === true) {
       this.setState({ correctNumber: this.state.correctNumber + 1, correctMessage: "Correct!" });
     } else {
       this.setState({ correctMessage: message });
-      setTimeout(() => {
-        if (this.state.correctMessage === message) this.setState({ correctMessage: "" })
-      }, 5000);
     }
-    this.setState({ currentQuestion: this.props.generateQuestion() });
     this.props.clearAnswerForm();
+    this.setState({ paused: true });
+  }
+
+  next = () => {
+    this.setState({
+      paused: false,
+      currentQuestion: this.props.generateQuestion()
+    });
   }
 
   render = () => {
@@ -84,19 +89,30 @@ class PracticeQuiz extends Component {
         </table>
 
         <div style={{ textAlign: 'center' }}>
-
-          <br/>
-          <p>{this.state.correctMessage}</p>
           <br/>
           <p>{this.state.currentQuestion}</p>
           <br/>
+          {
+            this.state.paused &&
+            (<>
+              <p>{this.state.correctMessage}</p>
+              <br/>
+              <button onClick={this.next}>Next</button>
+            </>)
+          }
 
-          {this.state.started && this.props.answerForm}
+          {
+            !this.state.paused &&
+            (<>
 
-          {this.state.started ?
-            <button className="checkAnswerButton" onClick={this.next}>Check Answer</button>
-            :
-            <button className="startButton" onClick={this.start}>Start</button>
+              {this.state.started && this.props.answerForm}
+
+              {this.state.started ?
+                <button className="checkAnswerButton" onClick={this.checkAnswer}>Check Answer</button>
+                :
+                <button className="startButton" onClick={this.start}>Start</button>
+              }
+            </>)
           }
         </div>
       </div>
