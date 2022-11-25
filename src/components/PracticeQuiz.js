@@ -42,9 +42,10 @@ class PracticeQuiz extends Component {
 
   checkAnswer = () => {
     const message = this.props.checkAnswer();
-    this.setState({ attemptedNumber: this.state.attemptedNumber + 1 });
+    this.state.attemptedNumber++;
     if (message === true) {
-      this.setState({ correctNumber: this.state.correctNumber + 1, correctMessage: "Correct!" });
+      this.state.correctNumber++;
+      this.state.correctMessage = "Correct!";
     } else {
       this.setState({ correctMessage: message });
     }
