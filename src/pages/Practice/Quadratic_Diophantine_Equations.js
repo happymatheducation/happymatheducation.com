@@ -1,5 +1,6 @@
 import { Component } from "react";
 import PracticeQuiz from "../../components/PracticeQuiz";
+import { MathComponent } from "mathjax-react";
 
 class Quadratic_Diophantine_Equations extends Component {
 
