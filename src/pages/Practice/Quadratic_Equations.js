@@ -46,7 +46,7 @@ class Quadratic_Equations extends Component {
 
     question = firstTerm.concat(secondTerm, thirdTerm, `=0`);
 
-    return question;
+    return (<MathComponent tex={question}/>);
   }
 
   clearAnswerForm = () => {
@@ -54,7 +54,7 @@ class Quadratic_Equations extends Component {
   }
 
   checkAnswer = () => {
-    if (this.state.ansX1 === this.state.x1 && this.state.ansX2 === this.state.x2) {
+    if ((this.state.ansX1 == this.state.x1 && this.state.ansX2 == this.state.x2) || (this.state.ansX1 == this.state.x2 && this.state.ansX2 == this.state.x1)) {
       return true;
     } else {
       return `Incorrect! The correct answers are ${this.state.x1} and ${this.state.x2}.`;
