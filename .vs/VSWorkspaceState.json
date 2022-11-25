@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\components",
     "\\src\\pages",
     "\\src\\pages\\Practice"
   ],
-  "SelectedNode": "\\src\\pages\\Team.js",
+  "SelectedNode": "\\src\\pages\\Practice\\Quadratic_Diophantine_Equations.js",
   "PreviewInSolutionExplorer": false
 }

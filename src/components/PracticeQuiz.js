@@ -19,10 +19,6 @@ class PracticeQuiz extends Component {
    * answerForm: Component |
    * clearAnswerForm: Function} props Properties for the practice quiz, including callbacks for running the quiz
    */
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     attemptedNumber: 0,
     correctNumber: 0,
@@ -42,12 +38,12 @@ class PracticeQuiz extends Component {
 
   checkAnswer = () => {
     const message = this.props.checkAnswer();
-    this.state.attemptedNumber++;
+      this.setState({ attemptedNumber: this.state.attemptedNumber + 1 });
     if (message === true) {
-      this.state.correctNumber++;
-      this.state.correctMessage = "Correct!";
+        this.setState({ correctNumber: this.state.correctNumber + 1 });
+        this.setState({ correctMessage: "Correct!" });
     } else {
-      this.setState({ correctMessage: message });
+        this.setState({ correctMessage: message });
     }
     this.setState({ paused: true });
   }
