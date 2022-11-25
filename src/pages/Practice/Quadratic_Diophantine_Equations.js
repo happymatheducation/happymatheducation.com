@@ -57,7 +57,7 @@ class Quadratic_Diophantine_Equations extends Component {
     if (v != 0) {
       term3 = `${v > 0 ? "+" : ""}${v}b`;
     }
-    return `${term1}${term2}${term3} = ${t}`;
+    return (<MathComponent tex={`${term1}${term2}${term3} = ${t}`} />);
   }
 
   clearAnswerForm = () => {
@@ -82,9 +82,9 @@ class Quadratic_Diophantine_Equations extends Component {
         answerForm={(
           <>
             # of positive integer solutions=<input type="number" value={this.state.posIntSolns}
-                                                   onChange={e => this.setState({ posIntSolns: e.target.value })}></input><br></br>
+              onChange={e => this.setState({ posIntSolns: e.target.value })}></input><br></br>
             # of integer solutions = <input type="number" value={this.state.intSolns}
-                                            onChange={e => this.setState({ intSolns: e.target.value })}></input><br></br><br></br>
+              onChange={e => this.setState({ intSolns: e.target.value })}></input><br></br><br></br>
           </>
         )}
       />
