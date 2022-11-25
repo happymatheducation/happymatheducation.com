@@ -49,19 +49,22 @@ class PracticeQuiz extends Component {
     } else {
       this.setState({ correctMessage: message });
     }
-    this.props.clearAnswerForm();
     this.setState({ paused: true });
   }
 
   next = () => {
     this.setState({
       paused: false,
-      currentQuestion: this.props.generateQuestion()
+        currentQuestion: this.props.generateQuestion(),
+        correctMessage: ""
     });
+    this.props.clearAnswerForm();
   }
 
   render = () => {
-    return (
+      return (
+      <div>
+      <br/><br/>
       <div style={{
         width: '70%',
         backgroundColor: '#EEFFEE',
@@ -92,12 +95,14 @@ class PracticeQuiz extends Component {
         <div style={{ textAlign: 'center' }}>
           <br/>
           <p>{this.state.currentQuestion}</p>
-          <br/>
+        <>{this.state.correctMessage}</>
+        <br />
+            <br />              
+        <>{this.props.answerForm}</>
+
           {
             this.state.paused &&
             (<>
-              <p>{this.state.correctMessage}</p>
-              <br/>
               <button onClick={this.next}>Next</button>
             </>)
           }
@@ -105,20 +110,17 @@ class PracticeQuiz extends Component {
           {
             !this.state.paused &&
             (<>
-
-              {this.state.started && this.props.answerForm}
-
               {this.state.started ?
                 <button className="checkAnswerButton" onClick={this.checkAnswer}>Check Answer</button>
                 :
                 <button className="startButton" onClick={this.start}>Start</button>
               }
             </>)
-          }
+            }
+            <br />
         </div>
       </div>
-
-
+      </div>
     )
   }
 }

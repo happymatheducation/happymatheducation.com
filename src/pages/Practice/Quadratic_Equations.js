@@ -19,7 +19,7 @@ class Quadratic_Equations extends Component {
     const b = -a * (this.state.x1 + this.state.x2);
     const c = a * this.state.x1 * this.state.x2;
 
-    const firstTerm = `x²`;
+    const firstTerm = `x^2`;
     let secondTerm = '';
     let thirdTerm = '';
     let question = '';
@@ -53,8 +53,12 @@ class Quadratic_Equations extends Component {
     this.setState({ ansX1: '', ansX2: '' });
   }
 
-  checkAnswer = () => {
-    if ((this.state.ansX1 == this.state.x1 && this.state.ansX2 == this.state.x2) || (this.state.ansX1 == this.state.x2 && this.state.ansX2 == this.state.x1)) {
+    checkAnswer = () => {
+        const x1 = this.state.x1;
+        const x2 = this.state.x2;
+        const ansX1 = this.state.ansX1;
+        const ansX2 = this.state.ansX2;
+    if ((ansX1 == x1 && ansX2 == x2) || (ansX1 == x2 && ansX2 == x1)) {
       return true;
     } else {
       return `Incorrect! The correct answers are ${this.state.x1} and ${this.state.x2}.`;
