@@ -40,10 +40,7 @@ function Practice() {
               Similar Triangles</a>
             <a
               href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/basic_similar_triangles_answers.pdf'>
-              Answers |
-              <a
-                href='https://docs.google.com/forms/d/e/1FAIpQLSf2WGf-a9iet44p39-1qwCV46k9zlgduDHmXTuVlJ4nnuUB_w/viewform'> Quiz</a>
-            </a>
+              Answers</a>
           </div>
           <div className='practicediv'>
             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/two_line_intersection.pdf'>Two Line
@@ -72,14 +69,7 @@ function Practice() {
               <a href='/Practice/Quadratic_Equations'>App</a>
             </a>
             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations_answers.pdf'>
-              Answers |
-              <a
-                href='https://docs.google.com/forms/u/1/d/e/1FAIpQLSfcdJKsv7isFVYJ-5ZyZ1SiyLQiN5nkV7QqBO4oAaBBqmzSxw/viewform?usp=send_form'> Quiz
-                1 | </a>
-              <a
-                href='https://docs.google.com/forms/d/e/1FAIpQLScEd7YVm1x1v_jEhjzw9kyc0EM_BBsseqXsaZn1_QoGLSq7Vg/viewform'> Quiz
-                2 </a>
-
+              Answers
             </a>
           </div>
           <div className='practicediv'>
@@ -118,14 +108,14 @@ function Practice() {
             <div className='practicediv'>
               <a
                 href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab.pdf'>Quadratic
-                Diophantine Equations Type ab | <a href='/Practice/Quadratic_Diophantine_Equations'>App</a></a>
+                Diophantine Equations Type ab | <a href='/Practice/Quadratic_Diophantine_Equations_Type_ab'>App</a></a>
               <a
                 href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab_answers.pdf'>Answers</a>
             </div>
             <div className='practicediv'>
               <a
                 href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type.pdf'>Quadratic
-                Diophantine Equations - Simple Square Type</a>
+                              Diophantine Equations - Simple Square Type | <a href='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type'>App</a></a>
               <a
                 href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type_answer.pdf'>Answers</a>
             </div>

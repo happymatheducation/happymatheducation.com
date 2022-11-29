@@ -282,16 +282,16 @@ body {
 .practicediv {
   display: flex;
   justify-content: space-between;
-  font-size: max(1.5vw, 10px);
+  font-size: max(1.5vw, 14px);
 }
 
 .collapsible {
   margin-top: 5px;
-  color: black;
+  color: white;
   cursor: pointer;
-  padding: 18px 25px 18px 25px;
+  padding: 10px 25px 10px 25px;
   border: none;
-  background-image: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
+  background-image: linear-gradient(90deg, #000000, #333344);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: left bottom;

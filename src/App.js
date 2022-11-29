@@ -15,8 +15,9 @@ const Contact = lazy(() => import("./pages/Contact.js"))
 const Team = lazy(() => import("./pages/Team.js"))
 const License = lazy(() => import("./pages/License.js"))
 const Notfound = lazy(() => import("./pages/Notfound.js"))
-const Quadratic_Equations = lazy(() => import("./pages/Practice/Quadratic_Equations.js"))
-const Quadratic_Diophantine_Equations = lazy(() => import("./pages/Practice/Quadratic_Diophantine_Equations.js"))
+const QuadraticEquations = lazy(() => import("./pages/Practice/Quadratic_Equations.js"))
+const QuadraticDiophantineEquationsTypeAB = lazy(() => import("./pages/Practice/Quadratic_Diophantine_Equations_Type_ab.js"))
+const QuadraticDiophantineEquationsSimpleSquareType = lazy(() => import("./pages/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type.js"))
 
 export function backToTop(mybutton) {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -112,8 +113,9 @@ const App = () => {
           <Route exact path='/careers' element={<Career/>}/>
           <Route exact path='/apply' element={<Contact/>}/>
           <Route exact path='/team' element={<Team/>}/>
-          <Route exact path='/Practice/Quadratic_Equations' element={<Quadratic_Equations/>}/>
-          <Route exact path='/Practice/Quadratic_Diophantine_Equations' element={<Quadratic_Diophantine_Equations/>}/>
+          <Route exact path='/Practice/Quadratic_Equations' element={<QuadraticEquations/>}/>
+                  <Route exact path='/Practice/Quadratic_Diophantine_Equations_Type_ab' element={<QuadraticDiophantineEquationsTypeAB/>}/>
+                  <Route exact path='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type' element={<QuadraticDiophantineEquationsSimpleSquareType />} />
           <Route exact path='/*' element={<Notfound/>}/>
         </Routes>
       </Suspense>

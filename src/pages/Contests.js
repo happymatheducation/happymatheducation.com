@@ -1,12 +1,10 @@
 
 function Contests() {
 
-  let things = []
-
   return (
     <>    
 
-    <h1 style = {{textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)', textAlign: 'center'}}>Math Contests</h1>
+    <h1 style = {{textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)'}}>Math Contests</h1>
     
     <button className="collapsible" id = 'seven' onClick = {
       () => {
