@@ -304,15 +304,15 @@ body {
 }
 
 .collapsible:after {
-  content: '\002B';
-  color: black;
+  content: '+';
+  color: white;
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
 
 .cactive:after {
-  content: "\2212";
+  content: "-"; 
 }
 
 .content {

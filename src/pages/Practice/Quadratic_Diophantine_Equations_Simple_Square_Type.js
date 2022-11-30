@@ -77,7 +77,7 @@ class Quadratic_Diophantine_Equations_Simple_Square_Type extends Component {
             <>In the equation below, &nbsp;
                 <MathComponent display={false} tex={`x`} />&nbsp;
                 and <MathComponent display={false} tex={`y`} />&nbsp;
-                are positive integers.
+                are non-negative integers.
                 <MathComponent tex={`x^2-y^2=${p}`} />
             </>);
     }
@@ -94,43 +94,44 @@ class Quadratic_Diophantine_Equations_Simple_Square_Type extends Component {
 
     checkAnswer = () => {
         let correctAnswer;
-        if (this.state.asking === 0) {
-            if (parseInt(this.state.userSolnsCount) === this.state.correctSolnsCount) {
-                return true;
-            } else {
-                correctAnswer = this.state.correctSolnsCount;
-            }
-        }
-        else if (this.state.asking === 1) {
-            if (parseInt(this.state.userXMax) === this.state.xMax) {
-                return true;
-            } else {
-                correctAnswer = this.state.xMax;
-            }
-        }
-        else if (this.state.asking === 2) {
-            if (parseInt(this.state.userXMin) === this.state.xMin) {
-                return true;
-            } else {
-                correctAnswer = this.state.xMin;
-            }
-        }
-        else if (this.state.asking === 3) {
-            if (parseInt(this.state.userYMax) === this.state.yMax) {
-                return true;
-            } else {
-                correctAnswer = this.state.yMax;
-            }
-        }
-        else if (this.state.asking === 4) {
-            if (parseInt(this.state.userYMin) === this.state.yMin) {
-                return true;
-            } else {
-                correctAnswer = this.state.yMin;
-            }
-        }
-        else {
-            console.log('this.state.asking is' + this.state.asking);
+        switch (this.state.asking) {
+            case 0: 
+                if (parseInt(this.state.userSolnsCount) === this.state.correctSolnsCount) {
+                    return true;
+                } else {
+                    correctAnswer = this.state.correctSolnsCount;
+                }
+                break;
+            case 1:
+                if (parseInt(this.state.userXMax) === this.state.xMax) {
+                    return true;
+                } else {
+                    correctAnswer = this.state.xMax;
+                }
+                break;
+            case 2:
+                if (parseInt(this.state.userXMin) === this.state.xMin) {
+                    return true;
+                } else {
+                    correctAnswer = this.state.xMin;
+                }
+                break;
+            case 3:
+                if (parseInt(this.state.userYMax) === this.state.yMax) {
+                    return true;
+                } else {
+                    correctAnswer = this.state.yMax;
+                }
+                break;
+            case 4:
+                if (parseInt(this.state.userYMin) === this.state.yMin) {
+                    return true;
+                } else {
+                    correctAnswer = this.state.yMin;
+                }
+                break;
+            default:
+                console.log('this.state.asking is' + this.state.asking);
         }
         return (<>Incorrect! Answer: {correctAnswer}. Hint: {this.state.factoredQuestion}</>);
     }
@@ -138,35 +139,38 @@ class Quadratic_Diophantine_Equations_Simple_Square_Type extends Component {
     render() {
 
         let answerForm;
-        if (this.state.asking === 0) {
-            answerForm = (<>
-                Number of solutions = <input type="number" value={this.state.userSolnsCount}
-                    onChange={e => this.setState({ userSolnsCount: e.target.value })}></input><br /><br />
-            </>)
-        }
-        else if (this.state.asking === 1) {
-            answerForm = (<>
-                Maximum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMax}
-                    onChange={e => this.setState({ userXMax: e.target.value })}></input><br /><br />
-            </>)
-        }
-        else if (this.state.asking === 2) {
-            answerForm = (<>
-                Minimum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMin}
-                    onChange={e => this.setState({ userXMin: e.target.value })}></input><br /><br />
-            </>)
-        }
-        else if (this.state.asking === 3) {
-            answerForm = (<>
-                Maximum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMax}
-                    onChange={e => this.setState({ userYMax: e.target.value })}></input><br /><br />
-            </>)
-        }
-        else if (this.state.asking === 4) {
-            answerForm = (<>
-                Minimum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMin}
-                    onChange={e => this.setState({ userYMin: e.target.value })}></input><br /><br />
-            </>)
+        switch (this.state.asking) {
+            case 0:
+                answerForm = (<>
+                    Number of solutions = <input type="number" value={this.state.userSolnsCount}
+                        onChange={e => this.setState({ userSolnsCount: e.target.value })}></input><br /><br />
+                </>);
+                break;
+            case 1:
+                answerForm = (<>
+                    Maximum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMax}
+                        onChange={e => this.setState({ userXMax: e.target.value })}></input><br /><br />
+                </>);
+                break;
+            case 2:
+                answerForm = (<>
+                    Minimum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMin}
+                        onChange={e => this.setState({ userXMin: e.target.value })}></input><br /><br />
+                </>);
+                break;
+            case 3:
+                answerForm = (<>
+                    Maximum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMax}
+                        onChange={e => this.setState({ userYMax: e.target.value })}></input><br /><br />
+                </>);
+                break;
+            case 4:
+                answerForm = (<>
+                    Minimum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMin}
+                        onChange={e => this.setState({ userYMin: e.target.value })}></input><br /><br />
+                </>);
+                break;
+            default:
         }
         return (
             <PracticeQuiz
