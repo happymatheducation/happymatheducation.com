@@ -7,7 +7,7 @@ import NavBar from './NavBar.js';
 import Logo from './logo/logo.png';
 import Home from './pages/Home.js'
 
-const Tuition = lazy(() => import("./pages/Tuition.js"))
+const Classes = lazy(() => import("./pages/Classes.js"))
 const Practice = lazy(() => import("./pages/Practice.js"))
 const Contests = lazy(() => import("./pages/Contests.js"))
 const Career = lazy(() => import("./pages/Career.js"))
@@ -109,7 +109,7 @@ const App = () => {
             <Suspense fallback={<div className="lazy-preloader"></div>}>
                 <Routes>
                     <Route exact path='/' element={<Home />} />
-                    <Route exact path='/classes' element={<Tuition />} />
+                    <Route exact path='/classes' element={<Classes />} />
                     <Route exact path='/practice' element={<Practice />} />
                     <Route exact path='/contests' element={<Contests />} />
                     <Route exact path='/license' element={<License />} />

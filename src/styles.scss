@@ -193,6 +193,8 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #F4F4F4;
   min-height: 100%;
+  max-width: 960px;
+  margin:auto;
 }
 
 .gradient {
@@ -338,26 +340,27 @@ body {
 }
 
 .collapsible {
-  margin-top: 5px;
-  color: white;
-  cursor: pointer;
-  padding: 10px 25px 10px 25px;
-  border: none;
-  background-image: linear-gradient(90deg, #000000, #333344);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  // border-bottom: 3px solid;
-  // border-bottom-color: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
-  width: 100%;
-  text-align: left;
-  align-items: center !important;
-  font-size: 20px;
+    margin-top: 5px;
+    color: black;
+    cursor: pointer;
+    padding: 10px 50px 10px 50px;
+    border: none;
+    background-image: linear-gradient(90deg, #A4DBE8, #A4DBE8);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    // border-bottom: 3px solid;
+    // border-bottom-color: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
+    width: 100%;
+    text-align: left;
+    align-items: center !important;
+    font-size: 20px;
+    border-radius: 15px;
 }
 
 .collapsible:after {
   content: '+';
-  color: white;
+  color: black;
   font-weight: bold;
   float: right;
   margin-left: 5px;
