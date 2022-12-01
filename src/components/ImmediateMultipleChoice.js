@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { MathComponent } from "mathjax-react";
 
 /**
  * @callback checkAnswerCallback
@@ -10,14 +11,15 @@ import { Component } from "react";
  * @return {Component | string} a component displaying the checkAnswer question
  */
 
-class PracticeQuiz extends Component {
+class ImmediateMultipleChoice extends Component {
     /**
      *
      * @param {component: Component |
-     * checkAnswer: checkAnswerCallback |
+     * userChoiceID: userChoiceIDCallback |
+     * clearForm: clearFormCallback |
      * generateQuestion: generateQuestionCallback |
-     * answerForm: Component |
-     * clearAnswerForm: Function} props Properties for the practice quiz, including callbacks for running the quiz
+     * checkAnswer: checkAnswerCallback |
+     * answerForm: Component} props Properties for the practice quiz, including callbacks for running the quiz
      */
     state = {
         attemptedNumber: 0,
@@ -28,6 +30,8 @@ class PracticeQuiz extends Component {
         currentQuestion: "The question will appear here. Click start to begin!",
         correctMessage: "",
 
+        userChoiceID: '',
+
         timeElapsed: 0,
     };
 
@@ -36,20 +40,38 @@ class PracticeQuiz extends Component {
         setInterval(() => this.setState({ timeElapsed: this.state.timeElapsed + 1 }), 1000);
     }
 
-    checkAnswer = () => {
-        const message = this.props.checkAnswer();
+    checkAnswer = (userChoiceID) => {
         this.setState({ attemptedNumber: this.state.attemptedNumber + 1 });
-        if (message === true) {
+        this.setState({ userChoiceID: userChoiceID });
+        let correctChoiceButton = document.getElementById(this.props.correctChoiceID);
+        correctChoiceButton.className = "correctchoice";
+        if (userChoiceID === this.props.correctChoiceID) {
             this.setState({ correctNumber: this.state.correctNumber + 1 });
-            this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700'}}>Correct! Great job!!!</span> });
+            this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700' }}>Correct! Great job!!!</span> });
         } else {
-            this.setState({ correctMessage: <span style={{ color:'#990000'} }>{message}</span> });
+            let correctAnswer = <MathComponent
+                display={false}
+                tex={this.props.allChoices[this.props.correctChoiceID].tex}
+            />;
+            let userChoiceButton = document.getElementById(userChoiceID);
+            userChoiceButton.className = "wrongchoice";
+            this.setState({ correctMessage: <span style={{ color: '#990000' }}>Incorrect! The correct answer is {correctAnswer}.</span> });
         }
         this.setState({ paused: true });
     }
 
+    clearAnswerForm = () => {
+        let correctChoiceButton = document.getElementById(this.props.correctChoiceID);
+        correctChoiceButton.className = "choices";
+        let userChoiceButton = document.getElementById(this.state.userChoiceID);
+        userChoiceButton.className = "choices";
+        this.setState({
+            userChoiceID: '',
+        });
+    }
+
     next = () => {
-        this.props.clearAnswerForm();
+        this.clearAnswerForm();
         this.setState({
             paused: false,
             currentQuestion: this.props.generateQuestion(),
@@ -58,6 +80,16 @@ class PracticeQuiz extends Component {
     }
 
     render = () => {
+        let choiceButtons = [];
+        let allChoices = this.props.allChoices;
+        for (let i = 0; i < allChoices.length; i++) {
+            choiceButtons.push(
+                <button key={i} id={i} name='choices' className='choices'
+                    onClick={() => { this.checkAnswer(i) }}>
+                    <MathComponent tex={allChoices[i].tex} display={false} />
+                </button>);
+        }
+
         return (
             <div>
                 <br /><br />
@@ -84,28 +116,20 @@ class PracticeQuiz extends Component {
 
                     <div style={{ textAlign: 'center' }}>
                         <br />
-                        <>{this.state.currentQuestion}</>
-                        <>{this.state.correctMessage}</>
+                        {this.state.currentQuestion}
+                        {this.state.correctMessage}
                         <br />
                         <br />
-                        <>{this.state.started && this.props.answerForm}</>
+                        {this.state.started && <>{choiceButtons}<br /><br /></>}
 
-                        {
-                            this.state.paused &&
-                            (<>
-                                <button className="btn" onClick={this.next}>Next</button>
-                            </>)
-                        }
+                        {this.state.paused && <button className="btn" onClick={this.next}>Next</button>}
 
-                        {
-                            !this.state.paused &&
-                            (<>
-                                {this.state.started ?
-                                    <button className="btn" onClick={this.checkAnswer}>Check Answer</button>
-                                    :
-                                    <button className="btn" onClick={this.start}>Start</button>
+                        {!this.state.paused &&
+                            <>
+                            {!this.state.started &&
+                                <button className="btn" onClick={this.start}>Start</button>
                                 }
-                            </>)
+                            </>
                         }
                         <br />
                     </div>
@@ -115,4 +139,4 @@ class PracticeQuiz extends Component {
     }
 }
 
-export default PracticeQuiz;
+export default ImmediateMultipleChoice;
