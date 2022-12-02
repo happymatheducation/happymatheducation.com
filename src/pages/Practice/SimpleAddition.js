@@ -1,26 +1,35 @@
 import { Component } from "react";
-import PracticeQuiz from "../../components/PracticeQuiz";
+import SimpleBlank from "../../components/SimpleBlank";
 import { MathComponent } from "mathjax-react";
 
 class SimpleAddition extends Component {
 
     state = {
         sum: '',
-        userSum:''
+        userSum: '',
+        question: '',
+        points:'',
     };
 
     generateQuestion = () => {
-        const x1 = Math.floor(Math.random() * 25);
-        const x2 = Math.floor(Math.random() * 25);
-//        const x1 = Math.floor(Math.random() * 5)+6;
-//        const x2 = Math.floor(Math.random() * 5)+1;
+        const oneToN = 24;
+        const x1 = Math.ceil(Math.random() * oneToN);
+        const x2 = Math.ceil(Math.random() * oneToN);
         this.setState({ sum: x1+x2 });
 
         let question = '';
+        question = x1 + '+' + x2 + '=~';
+        this.setState({ question: question });
 
-        question = x1 + '+' + x2 + '=?';
+        const minSum = 2;
+        const maxSum = oneToN * 2;
+        let points = 0;
+        points = Math.ceil((x1 + x2 - minSum + 1) / (maxSum - minSum + 1) * 5) * 10;
+        this.setState({ points: points });
+    }
 
-        return (<MathComponent tex={question} />);
+    getPoints = () => {
+        return this.state.points;
     }
 
     clearAnswerForm = () => {
@@ -38,14 +47,15 @@ class SimpleAddition extends Component {
 
     render() {
         return (
-            <PracticeQuiz
+            <SimpleBlank
                 checkAnswer={this.checkAnswer}
                 generateQuestion={this.generateQuestion}
+                getPoints={this.getPoints}
 
                 clearAnswerForm={this.clearAnswerForm}
                 answerForm={(
                     <>
-                        <input type="number" value={this.state.userSum}
+                        <MathComponent tex={this.state.question} display={false} /><input type="number" value={this.state.userSum} style={{ width: '50px' }}
                             onChange={e => this.setState({ userSum: e.target.value })}></input><br></br><br></br>
                     </>
                 )}

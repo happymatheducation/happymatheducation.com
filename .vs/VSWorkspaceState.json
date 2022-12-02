@@ -3,8 +3,9 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\pages"
+    "\\src\\pages",
+    "\\src\\pages\\Practice"
   ],
-  "SelectedNode": "\\public\\index.html",
+  "SelectedNode": "\\src\\pages\\Practice\\SimpleMultiplication.js",
   "PreviewInSolutionExplorer": false
 }
