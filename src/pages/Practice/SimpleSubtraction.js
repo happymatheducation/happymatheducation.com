@@ -55,7 +55,7 @@ class SimpleSubtraction extends Component {
                 clearAnswerForm={this.clearAnswerForm}
                 answerForm={(
                     <>
-                        <MathComponent tex={this.state.question} display={false} /><input type='number' value={this.state.userDifference} style={{ width: '50px' }}
+                        <MathComponent tex={this.state.question} display={false} /><input autofocus type='number' value={this.state.userDifference} style={{ width: '50px' }}
                             onChange={e => this.setState({ userDifference: e.target.value })}></input><br></br><br></br>
                     </>
                 )}
