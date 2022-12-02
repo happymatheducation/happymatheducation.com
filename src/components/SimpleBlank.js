@@ -46,6 +46,7 @@ class SimpleBlank extends Component {
 
                     <div style={{ textAlign: 'center' }}>
                         <br />
+                        <>{!this.state.started && <p>Push "start" to begin. Have fun!</p>}</>
                         <>{this.state.started && this.props.answerForm}</>
                         <>{this.state.correctMessage}</>
                         <br />
