@@ -10,8 +10,8 @@ class SimpleMultiplication extends Component {
     };
 
     generateQuestion = () => {
-        const x1 = Math.ceil(Math.random() * 10);
-        const x2 = Math.ceil(Math.random() * 10);
+        const x1 = Math.ceil(Math.random() * 8)+2;
+        const x2 = Math.ceil(Math.random() * 8)+2;
         this.setState({ product: x1*x2 });
 
         let question = '';
