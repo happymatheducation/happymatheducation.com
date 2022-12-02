@@ -3,7 +3,7 @@ import { Component } from "react";
 class SimpleBlank extends Component {
 
     state = {
-        correctNumber: 0,
+        score: 0,
         started: false,
         paused: false,
 
@@ -20,7 +20,7 @@ class SimpleBlank extends Component {
         let pointsPerProblem = this.props.getPoints();
         const message = this.props.checkAnswer();
         if (message === true) {
-            this.setState({ correctNumber: this.state.correctNumber + pointsPerProblem });
+            this.setState({ score: this.state.score + pointsPerProblem });
             this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700' }}>Correct! Great job! +{pointsPerProblem} points!</span> });
         } else {
             this.setState({ correctMessage: <span style={{ color:'#990000'} }>{message}</span> });
@@ -42,7 +42,7 @@ class SimpleBlank extends Component {
             <div>
                 <br /><br />
                 <div className='practicequiz' >
-                    Score:&nbsp;<span id="correctNumber">{this.state.correctNumber}</span>
+                    <span id="score" className="score" >Score:&nbsp;{this.state.score}</span>
 
                     <div style={{ textAlign: 'center' }}>
                         <br />

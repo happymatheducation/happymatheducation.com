@@ -77,11 +77,11 @@ export const Copyright = () => {
                 Copyright © 2022: <a href='https://jeffrey-zang.github.io/' target='_blank' rel='noreferrer'>Jeffrey Zang</a>
             </p>
 
-            <a id='backtotop' style={{ cursor: 'pointer' }} onClick={
+            <button id='backtotop' className='backtotop' style={{ cursor: 'pointer' }} onClick={
                 () => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
-            }>Back to Top</a>
+            }>Back to Top</button>
 
             <br></br>
         </footer>

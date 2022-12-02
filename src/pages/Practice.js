@@ -18,7 +18,7 @@ function Practice() {
                         console.log(me.id, content.scrollHeight)
                     }
                 }
-            }>Introduction (Click to view)
+            }>Introduction (Click)
             </button>
             <div width='60%' className="content" style={{ marginTop: '10px', marginBottom: '10px' }}>
                 <div style={{ justifyContent: 'space-between' }}>
@@ -259,7 +259,7 @@ function Practice() {
                         console.log(me.id, content.scrollHeight)
                     }
                 }
-            }>Playground (For developers)
+            }>Playground
             </button>
             <div className="content" style={{ maxHeight: '500px' }}>
                 <div className='practicediv'>

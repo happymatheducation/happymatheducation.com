@@ -3,9 +3,10 @@
     "",
     "\\public",
     "\\src",
+    "\\src\\components",
     "\\src\\pages",
     "\\src\\pages\\Practice"
   ],
-  "SelectedNode": "\\src\\pages\\Practice\\SimpleMultiplication.js",
+  "SelectedNode": "\\src\\pages\\Classes.js",
   "PreviewInSolutionExplorer": false
 }
