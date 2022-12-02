@@ -6,6 +6,37 @@ function Practice() {
             <h1 style={{ marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)' }}>Ultimate
                 Practice</h1>
 
+            <button className="collapsible" id='introduction' onClick={
+                () => {
+                    var me = document.getElementById('introduction')
+                    me.classList.toggle('cactive')
+                    var content = me.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        console.log(me.id, content.scrollHeight)
+                    }
+                }
+            }>Introduction (Click to view)
+            </button>
+            <div width='60%' className="content" style={{ marginTop: '10px', marginBottom: '10px' }}>
+                <div style={{ justifyContent: 'space-between' }}>
+                    <h1 style={{ display: 'inline', fontSize: 'max(13px, 1.3vw)' }}>
+                        Below are some topic based problems created by Happy Math Education (a.k.a Blessed Eduloo before 2021). If
+                        the creator is a volunteering student, then the name of the volunteer appears on the top right in each page.
+                        <br /><br />Each set is designed to be a THOROUGH practice on that specific topic, therefore:
+                        <br />1. There are many problems in each set;
+                        <br />2. The level of difficulty may change drastically between different problems in the same
+                        set;
+                        <br />3. There is no need to FINISH a set of problems. Usually, finishing 10% of a set of
+                        problems is good enough to make you an expert on that topic;
+                        <br />4. If you really want to finish a set, don't expect to finish it in one sitting.
+                        <br /><br />This list of problems, including the answers and practice apps are constantly being
+                        updated.
+                    </h1>
+                </div>
+            </div>
 
             <button className="collapsible" id='fundamentals' onClick={
                 () => {
@@ -216,28 +247,35 @@ function Practice() {
                 </div>
             </div>
 
-            <div width='60%' style={{ padding: '0vw 7vw 0vw 7vw', marginTop: '25px' }}>
-                <div style={{ justifyContent: 'space-between' }}>
-                    <h1 style={{ display: 'inline', fontSize: 'max(10px, 1vw)' }}>
-                        Above are some topic based problems created by Happy Math Education (a.k.a Blessed Eduloo before 2021). If
-                        the creator is a volunteering student, then the name of the volunteer appears on the top right in each page.
-                        <br/><br/>Each set is designed to be a THOROUGH practice on that specific topic, therefore:
-                        <br/><br/>1. There are many problems in each set;
-                        <br/><br/>2. The level of difficulty may change drastically between different problems in the same
-                        set;
-                        <br/><br/>3. There is no need to FINISH a set of problems. Usually, finishing 10% of a set of
-                        problems is good enough to make you an expert on that topic;
-                        <br/><br/>4. If you really want to finish a set, don't expect to finish it in one sitting.
-                        <br/><br/>This list of problems, including the answers and online quizzes are constantly being
-                        updated.
-                    </h1>
+            <button className="collapsible" id='playground' onClick={
+                () => {
+                    var me = document.getElementById('playground')
+                    me.classList.toggle('cactive')
+                    var content = me.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        console.log(me.id, content.scrollHeight)
+                    }
+                }
+            }>Playground (For developers)
+            </button>
+            <div className="content" style={{ maxHeight: '500px' }}>
+                <div className='practicediv'>
+                    <a href='/Practice/SimpleAddition'>Simple Addition</a>
+                </div>
+                <div className='practicediv'>
+                    <a href='/Practice/SimpleSubtraction'>Simple Subtraction</a>
+                </div>
+                <div className='practicediv'>
+                    <a href='/Practice/SimpleMultiplication'>Simple Multiplication</a>
                 </div>
             </div>
 
             <h1 style={{ marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)' }}>Mock
                 Contests</h1>
             <p style={{ textAlign: 'center', fontSize: 'max(2vw, 20px)' }}>Coming Soon!</p>
-            <a href='/Practice/SimpleAddition'>Simple Addition</a>
         </>
     );
 }

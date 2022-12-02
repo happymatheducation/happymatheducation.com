@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src\\components",
-    "\\src\\pages",
-    "\\src\\pages\\Practice"
+    "\\public",
+    "\\src",
+    "\\src\\pages"
   ],
+  "SelectedNode": "\\public\\index.html",
   "PreviewInSolutionExplorer": false
 }
