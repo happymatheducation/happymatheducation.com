@@ -55,7 +55,7 @@ class SimpleAddition extends Component {
                 clearAnswerForm={this.clearAnswerForm}
                 answerForm={(
                     <>
-                        <MathComponent tex={this.state.question} display={false} /><input type='number' value={this.state.userSum} style={{ width: '50px' }}
+                        <MathComponent tex={this.state.question} display={false} /><input autofocus type='number' value={this.state.userSum} style={{ width: '50px' }}
                             onChange={e => this.setState({ userSum: e.target.value })}></input><br></br><br></br>
                     </>
                 )}
