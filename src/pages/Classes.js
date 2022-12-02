@@ -34,7 +34,6 @@ function Classes() {
 
     return (
         <>
-
             {/*<h1 style={{ textAlign: 'center', fontSize: 'max(3vw, 20px)' }}>Classes</h1>*/}
             <h1 style={{ fontSize: 'max(2vw, 20px)', textAlign: 'center' }}>
                 {'All classes are held online\u00A0'}
