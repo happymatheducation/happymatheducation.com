@@ -4,9 +4,10 @@
     "\\public",
     "\\src",
     "\\src\\components",
+    "\\src\\logo",
     "\\src\\pages",
     "\\src\\pages\\Practice"
   ],
-  "SelectedNode": "\\src\\pages\\Classes.js",
+  "SelectedNode": "\\src\\logo\\logo.png",
   "PreviewInSolutionExplorer": false
 }

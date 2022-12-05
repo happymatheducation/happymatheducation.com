@@ -14,7 +14,7 @@ class SimpleMultiplication extends Component {
     generateQuestion = () => {
         const minX1 = 3;
         const minX2 = 3;
-        const maxX1 = 10;
+        const maxX1 = 20;
         const maxX2 = 10;
         const x1 = Math.floor(Math.random() * (maxX1 - minX1 + 1)) + minX1;
         const x2 = Math.floor(Math.random() * (maxX2 - minX2 + 1)) + minX1;
@@ -50,6 +50,7 @@ class SimpleMultiplication extends Component {
 
     render() {
         return (
+            <>
             <SimpleBlank
                 checkAnswer={this.checkAnswer}
                 generateQuestion={this.generateQuestion}
@@ -58,11 +59,18 @@ class SimpleMultiplication extends Component {
                 clearAnswerForm={this.clearAnswerForm}
                 answerForm={(
                     <>
-                        <MathComponent tex={this.state.question} display={false} /><input autoFocus type='number' value={this.state.userProduct} style={{ width:'50px' }}
-                            onChange={e => this.setState({ userProduct: e.target.value}) }></input><br></br><br></br>
+                        <MathComponent tex={this.state.question} display={false} />
+                        <input //ref={Form()}
+                            type='number'
+                            value={this.state.userProduct}
+                            style={{ width: '50px' }}
+                            onChange={e => this.setState({ userProduct: e.target.value })}>
+                        </input>
+                        <br/><br/>
                     </>
                 )}
-            />
+                />
+            </>
         );
     }
 }
