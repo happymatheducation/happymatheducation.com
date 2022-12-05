@@ -1,6 +1,14 @@
-import { Component } from "react";
+import React, { Component } from "react";
+import { MathComponent } from "mathjax-react";
+
+/* props: generateQuestion() = {question:'', pointsPerQuestion:0, correctAnswer:0} */
 
 class SimpleBlank extends Component {
+
+    constructor() {
+        super();
+        this.answerForm = React.createRef(); // to be used for auto focus.
+    }
 
     state = {
         score: 0,
@@ -8,33 +16,47 @@ class SimpleBlank extends Component {
         paused: false,
 
         correctMessage: "",
+        question: '',
+        correctAnswer: '',
+        pointsPerQuestion: '',
+        userAnswer: ''
     };
 
+    grabQuestion = () => {
+        const currentQuestion = this.props.generateQuestion();
+        this.setState({
+            question: currentQuestion.question,
+            pointsPerQuestion: currentQuestion.pointsPerQuestion,
+            correctAnswer: currentQuestion.correctAnswer
+        });
+    }
+
     start = () => {
-        this.props.generateQuestion();
+        this.grabQuestion();
         this.setState({ started: true });
-        setInterval(() => this.setState({ timeElapsed: this.state.timeElapsed + 1 }), 1000);
     }
 
     checkAnswer = () => {
-        let pointsPerProblem = this.props.getPoints();
-        const message = this.props.checkAnswer();
-        if (message === true) {
-            this.setState({ score: this.state.score + pointsPerProblem });
-            this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700' }}>Correct! Great job! +{pointsPerProblem} points!</span> });
+        const userAnswer = parseInt(this.state.userAnswer);
+        if (userAnswer === this.state.correctAnswer) {
+            const pointsPerQuestion = this.state.pointsPerQuestion;
+            this.setState({ score: this.state.score + pointsPerQuestion });
+            this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700' }}>Correct! Great job! +{pointsPerQuestion} points!</span> });
         } else {
-            this.setState({ correctMessage: <span style={{ color:'#990000'} }>{message}</span> });
+            const message = `Incorrect! The correct answer is ${this.state.correctAnswer}.`;
+            this.setState({ correctMessage: <span style={{ color: '#990000' }}>{message}</span> });
         }
         this.setState({ paused: true });
     }
 
     next = () => {
-        this.props.generateQuestion();
-        this.props.clearAnswerForm();
+        this.grabQuestion();
+        this.setState({ userAnswer: '' });
         this.setState({
             paused: false,
             correctMessage: ""
         });
+        this.answerForm.current.focus(); 
     }
 
     render = () => {
@@ -46,28 +68,41 @@ class SimpleBlank extends Component {
 
                     <div style={{ textAlign: 'center' }}>
                         <br />
-                        <>{!this.state.started && <p>Push "start" to begin. Have fun!</p>}</>
-                        <>{this.state.started && this.props.answerForm}</>
-                        <>{this.state.correctMessage}</>
+                        {!this.state.started && <p>Push "start" to begin. Have fun!</p>}
+                        {this.state.started &&
+                            <>
+                                <MathComponent tex={String.raw`\Huge` + this.state.question} display={false} />
+                                <input
+                                    ref={this.answerForm}
+                                    type='number'
+                                    value={this.state.userAnswer}
+                                    style={{ width: '100px', fontSize: '40px' }}
+                                    onChange={e => this.setState({ userAnswer: e.target.value })}
+                                    autoFocus>
+                                </input>
+                                <br /><br />
+                            </>
+                        }
+                        {this.state.correctMessage}
                         <br />
                         <br />
 
                         {
                             this.state.paused &&
-                            (<>
+                            <>
                                 <button className="btn" onClick={this.next}>Next</button>
-                            </>)
+                            </>
                         }
 
                         {
                             !this.state.paused &&
-                            (<>
+                            <>
                                 {this.state.started ?
                                     <button className="btn" onClick={this.checkAnswer}>Submit</button>
                                     :
                                     <button className="btn" onClick={this.start}>Start</button>
                                 }
-                            </>)
+                            </>
                         }
                         <br />
                     </div>
