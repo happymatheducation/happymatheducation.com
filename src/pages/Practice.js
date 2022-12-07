@@ -2,7 +2,6 @@ function Practice() {
 
     return (
         <>
-
             <h1 style={{ marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)' }}>Ultimate
                 Practice</h1>
 
@@ -85,7 +84,8 @@ function Practice() {
                     </div>
                     <div className='practicediv'>
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/number_of_factors.pdf'
-                        >Number of Factors</a>
+                        >Number of Factors</a> |
+                        <a href='/Practice/NumberOfFactors'>App</a>
                     </div>
                     <div className='practicediv'>
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice.pdf'
@@ -271,11 +271,10 @@ function Practice() {
                 <div className='practicediv'>
                     <a href='/Practice/SimpleMultiplication'>Simple Multiplication</a>
                 </div>
+                <div className='practicediv' style={{ display:'none' }}>
+                    Grade 10: <a href='/Practice/Adventure'>Adventure</a>
+                </div>
             </div>
-
-            <h1 style={{ marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)' }}>Mock
-                Contests</h1>
-            <p style={{ textAlign: 'center', fontSize: 'max(2vw, 20px)' }}>Coming Soon!</p>
         </>
     );
 }

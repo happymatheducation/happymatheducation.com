@@ -1,26 +1,14 @@
 import { Component } from "react";
 import { MathComponent } from "mathjax-react";
 
-/**
- * @callback checkAnswerCallback
- * @return {boolean | string} true if the answer is correct, or a string if the answer is incorrect
- */
-
-/**
- * @callback generateQuestionCallback
- * @return {Component | string} a component displaying the checkAnswer question
- */
-
 class ImmediateMultipleChoice extends Component {
-    /**
-     *
-     * @param {component: Component |
-     * userChoiceID: userChoiceIDCallback |
-     * clearForm: clearFormCallback |
-     * generateQuestion: generateQuestionCallback |
-     * checkAnswer: checkAnswerCallback |
-     * answerForm: Component} props Properties for the practice quiz, including callbacks for running the quiz
+
+    /* props:
+     * generateQuestion() = <MathComponent tex={question} />; (Callback)
+     * allChoices = [{tex:'',value:''}, {tex:'',value:''}];
+     * correctChoiceID = 0;
      */
+
     state = {
         attemptedNumber: 0,
         correctNumber: 0,
@@ -94,7 +82,6 @@ class ImmediateMultipleChoice extends Component {
             <div>
                 <br /><br />
                 <div className='practicequiz' >
-                    {/* Header */}
                     <table style={{ textAlign: 'left', borderCollapse: 'collapse' }}>
                         <tbody>
                             <tr>

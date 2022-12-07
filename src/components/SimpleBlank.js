@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import { MathComponent } from "mathjax-react";
 
-/* props: generateQuestion() = {question:'', pointsPerQuestion:0, correctAnswer:0} */
-
 class SimpleBlank extends Component {
+
+    /* props:
+     * generateQuestion() = {question:'', pointsPerQuestion:0, correctAnswer:0} (Callback)
+     * formSize = '0px' (example: '40px')
+     * texSize = '' (example:'\Huge')
+     */
 
     constructor() {
         super();
         this.answerForm = React.createRef(); // to be used for auto focus.
+    }
+
+    static defaultProps = {
+        texSize: ''
     }
 
     state = {
@@ -71,12 +79,12 @@ class SimpleBlank extends Component {
                         {!this.state.started && <p>Push "start" to begin. Have fun!</p>}
                         {this.state.started &&
                             <>
-                                <MathComponent tex={String.raw`\Huge` + this.state.question} display={false} />
+                                <MathComponent tex={this.props.texSize + this.state.question} display={false} />
                                 <input
                                     ref={this.answerForm}
                                     type='number'
                                     value={this.state.userAnswer}
-                                    style={{ width: '100px', fontSize: '40px' }}
+                                    style={{ width: '100px', fontSize: this.props.formSize }}
                                     onChange={e => this.setState({ userAnswer: e.target.value })}
                                     autoFocus>
                                 </input>

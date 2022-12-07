@@ -19,9 +19,12 @@ const QuadraticEquations = lazy(() => import("./pages/Practice/Quadratic_Equatio
 const QuadraticDiophantineEquationsTypeAB = lazy(() => import("./pages/Practice/Quadratic_Diophantine_Equations_Type_ab.js"))
 const QuadraticDiophantineEquationsSimpleSquareType = lazy(() => import("./pages/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type.js"))
 const TrigsOfSpeicalAngles = lazy(() => import("./pages/Practice/Trigs_Of_Special_Angles.js"))
+const NumberOfFactors = lazy(() => import("./pages/Practice/NumberOfFactors.js"))
+
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
 const SimpleMultiplication = lazy(() => import("./pages/Practice/SimpleMultiplication.js"))
+const Adventure = lazy(() => import("./pages/Practice/Adventure.js"))
 
 export function backToTop(mybutton) {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -120,10 +123,13 @@ const App = () => {
                     <Route exact path='/Practice/Quadratic_Equations' element={<QuadraticEquations />} />
                     <Route exact path='/Practice/Quadratic_Diophantine_Equations_Type_ab' element={<QuadraticDiophantineEquationsTypeAB />} />
                     <Route exact path='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type' element={<QuadraticDiophantineEquationsSimpleSquareType />} />
-                    <Route exact path='/Practice/Trigs_Of_Special_Angles' element={<TrigsOfSpeicalAngles/> } />
+                    <Route exact path='/Practice/Trigs_Of_Special_Angles' element={<TrigsOfSpeicalAngles />} />
+                    <Route exact path='/Practice/NumberOfFactors' element={<NumberOfFactors />} />
+
                     <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                     <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
                     <Route exact path='/Practice/SimpleMultiplication' element={<SimpleMultiplication />} />
+                    <Route exact path='/Practice/Adventure' element={<Adventure />} />
                     <Route exact path='/*' element={<Notfound />} />
                 </Routes>
             </Suspense>

@@ -10,7 +10,7 @@ import { Component } from "react";
  * @return {Component | string} a component displaying the checkAnswer question
  */
 
-class PracticeQuiz extends Component {
+class FillBlanks extends Component {
     /**
      *
      * @param {component: Component |
@@ -115,4 +115,4 @@ class PracticeQuiz extends Component {
     }
 }
 
-export default PracticeQuiz;
+export default FillBlanks;

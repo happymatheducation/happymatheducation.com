@@ -1,5 +1,5 @@
 import { Component } from "react";
-import PracticeQuiz from "../../components/PracticeQuiz";
+import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
 
 class Quadratic_Equations extends Component {
@@ -69,7 +69,7 @@ class Quadratic_Equations extends Component {
 
     render() {
         return (
-            <PracticeQuiz
+            <FillBlanks
                 checkAnswer={this.checkAnswer}
                 generateQuestion={this.generateQuestion}
 

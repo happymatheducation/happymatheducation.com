@@ -21,7 +21,7 @@ class SimpleAddition extends Component {
 
     render() {
         return (
-            <SimpleBlank generateQuestion={this.generateQuestion} />
+            <SimpleBlank generateQuestion={this.generateQuestion} formSize='40px' texSize='\Huge'/>
         );
     }
 }
