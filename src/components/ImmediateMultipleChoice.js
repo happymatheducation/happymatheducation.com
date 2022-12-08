@@ -82,15 +82,16 @@ class ImmediateMultipleChoice extends Component {
             <div>
                 <br /><br />
                 <div className='practicequiz' >
-                    <span id="timer" className='header'>
-                        Time: {Math.floor(this.state.timeElapsed / 3600) + 'h '
-                            + Math.floor(this.state.timeElapsed / 60) % 60 + 'm '
-                            + this.state.timeElapsed % 60 + 's'}
-                    </span>
-                    <span id="attemptedNumber" className='header'>Attempted: {this.state.attemptedNumber} </span>
-                    <span id="correctNumber" className='header'>Correct: {this.state.correctNumber} </span>
+                    <div className='practiceheader'>
+                        <span id="correctNumber" className='practiceheaderleft'>Correct: {this.state.correctNumber + '/' + this.state.attemptedNumber} </span>
+                        <span id="timer" className='practiceheaderright'>
+                            Time: {Math.floor(this.state.timeElapsed / 3600) + 'h '
+                                + Math.floor(this.state.timeElapsed / 60) % 60 + 'm '
+                                + this.state.timeElapsed % 60 + 's'}
+                        </span>
+                    </div>
 
-                    <div style={{ textAlign: 'center' }}>
+                    <div className='practicebody'>
                         <br />
                         {this.state.currentQuestion}
                         {this.state.correctMessage}

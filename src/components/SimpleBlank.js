@@ -72,9 +72,11 @@ class SimpleBlank extends Component {
             <div>
                 <br /><br />
                 <div className='practicequiz' >
-                    <span id="score" className="score" >Score:&nbsp;{this.state.score}</span>
+                    <div className='practiceheader'>
+                        <span id="score" className="practiceheaderright" >Score: {this.state.score}</span>
+                    </div>
 
-                    <div style={{ textAlign: 'center' }}>
+                    <div className='practicebody'>
                         <br />
                         {!this.state.started && <p>Push "start" to begin. Have fun!</p>}
                         {this.state.started &&

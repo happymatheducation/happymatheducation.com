@@ -343,10 +343,33 @@ body {
 
 .practicequiz {
     width: 70%;
-    background-color: #DDEEFF;
-    padding: 20px;
     margin: auto;
+    background-color: #DDEEFF;
     border: 3px solid #000000;
+
+    .practiceheader {
+        background-color: #D0E0F0;
+        text-align:right;
+
+        .practiceheaderleft {
+            display: inline-block;
+            white-space: nowrap;
+            width: max(50%, 120px);
+            text-align: center;
+        }
+
+        .practiceheaderright {
+            display: inline-block;
+            white-space: nowrap;
+            width: max(50%, 150px);
+            text-align: center;
+        }
+    }
+
+    .practicebody {
+        text-align: center;
+        padding: 20px;
+    }
 }
 
 .collapsible {
@@ -400,11 +423,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.score {
-    display: inline-block;
-    width: 90%;
-    text-align: right;
-}
 
 .swiper-slide {
     text-align: center;
@@ -423,12 +441,6 @@ body {
     background-image: none;
     border: none;
     background-color: #FFFFFF;
-}
-
-span.header {
-    display: inline-block;
-    width: max(33%, 8em);
-    text-align: center;
 }
 
 .nav {

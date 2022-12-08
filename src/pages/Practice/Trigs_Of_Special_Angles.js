@@ -72,7 +72,7 @@ class Trigs_Of_Special_Angles extends Component {
             correctAnswer = Math.round(Math.cos(angle / 180 * Math.PI) * 1000) / 1000;
         } else {
             trigTex = String.raw`\tan`;
-            angle % 180 === 90
+            Math.abs(angle % 180) === 90
                 ? correctAnswer = 999
                 : correctAnswer = Math.round(Math.tan(angle / 180 * Math.PI) * 1000) / 1000
         }

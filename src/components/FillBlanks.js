@@ -41,9 +41,9 @@ class FillBlanks extends Component {
         this.setState({ attemptedNumber: this.state.attemptedNumber + 1 });
         if (message === true) {
             this.setState({ correctNumber: this.state.correctNumber + 1 });
-            this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700'}}>Correct! Great job!!!</span> });
+            this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700' }}>Correct! Great job!!!</span> });
         } else {
-            this.setState({ correctMessage: <span style={{ color:'#990000'} }>{message}</span> });
+            this.setState({ correctMessage: <span style={{ color: '#990000' }}>{message}</span> });
         }
         this.setState({ paused: true });
     }
@@ -62,16 +62,16 @@ class FillBlanks extends Component {
             <div>
                 <br /><br />
                 <div className='practicequiz' >
-                    {/* Header */}
-                    <span id="timer" className='header'>
-                        Time: {Math.floor(this.state.timeElapsed / 3600) + 'h '
-                            + Math.floor(this.state.timeElapsed / 60) % 60 + 'm '
-                            + this.state.timeElapsed % 60 + 's'}
-                    </span>
-                    <span id="attemptedNumber" className='header'>Attempted: {this.state.attemptedNumber} </span>
-                    <span id="correctNumber" className='header'>Correct: {this.state.correctNumber} </span>
+                    <div className='practiceheader'>
+                        <span id="correctNumber" className='practiceheaderleft'>Correct: {this.state.correctNumber + '/' + this.state.attemptedNumber} </span>
+                        <span id="timer" className='practiceheaderright'>
+                            Time: {Math.floor(this.state.timeElapsed / 3600) + 'h '
+                                + Math.floor(this.state.timeElapsed / 60) % 60 + 'm '
+                                + this.state.timeElapsed % 60 + 's'}
+                        </span>
+                    </div>
 
-                    <div style={{ textAlign: 'center' }}>
+                    <div className='practicebody'>
                         <br />
                         <>{this.state.currentQuestion}</>
                         <>{this.state.correctMessage}</>
