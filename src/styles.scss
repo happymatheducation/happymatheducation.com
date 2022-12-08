@@ -425,6 +425,12 @@ body {
     background-color: #FFFFFF;
 }
 
+span.header {
+    display: inline-block;
+    width: max(33%, 8em);
+    text-align: center;
+}
+
 .nav {
     background-color: #fff;
     display: flex;

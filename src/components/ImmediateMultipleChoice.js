@@ -82,24 +82,13 @@ class ImmediateMultipleChoice extends Component {
             <div>
                 <br /><br />
                 <div className='practicequiz' >
-                    <table style={{ textAlign: 'left', borderCollapse: 'collapse' }}>
-                        <tbody>
-                            <tr>
-                                <th style={{ textAlign: 'left' }}>Attempted:&nbsp;</th>
-                                <td id="attemptedNumber" style={{ textAlign: 'left', width: '30%' }}>{this.state.attemptedNumber}</td>
-
-                                <th style={{ textAlign: 'left' }}>Correct:&nbsp;</th>
-                                <td id="correctNumber" style={{ textAlign: 'left', width: '30%' }}>{this.state.correctNumber}</td>
-
-                                <th style={{ textAlign: 'left' }}>Time:&nbsp;</th>
-                                <td id="timer" style={{ textAlign: 'left', width: '30%' }}>
-                                    {Math.floor(this.state.timeElapsed / 3600)}h&nbsp;
-                                    {Math.floor(this.state.timeElapsed / 60) % 60}m&nbsp;
-                                    {this.state.timeElapsed % 60}s&nbsp;
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <span id="timer" className='header'>
+                        Time: {Math.floor(this.state.timeElapsed / 3600) + 'h '
+                            + Math.floor(this.state.timeElapsed / 60) % 60 + 'm '
+                            + this.state.timeElapsed % 60 + 's'}
+                    </span>
+                    <span id="attemptedNumber" className='header'>Attempted: {this.state.attemptedNumber} </span>
+                    <span id="correctNumber" className='header'>Correct: {this.state.correctNumber} </span>
 
                     <div style={{ textAlign: 'center' }}>
                         <br />
