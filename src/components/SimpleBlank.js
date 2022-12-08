@@ -64,58 +64,54 @@ class SimpleBlank extends Component {
             paused: false,
             correctMessage: ""
         });
-        this.answerForm.current.focus(); 
+        this.answerForm.current.focus();
     }
 
     render = () => {
         return (
-            <div>
-                <br /><br />
-                <div className='practicequiz' >
-                    <div className='practiceheader'>
-                        <span id="score" className="practiceheaderright" >Score: {this.state.score}</span>
-                    </div>
+            <div className='practicequiz' >
+                <div className='practiceheader'>
+                    <span id="score" className="practiceheaderright" >Score: {this.state.score}</span>
+                </div>
 
-                    <div className='practicebody'>
-                        <br />
-                        {!this.state.started && <p>Push "start" to begin. Have fun!</p>}
-                        {this.state.started &&
-                            <>
-                                <MathComponent tex={this.props.texSize + this.state.question} display={false} />
-                                <input
-                                    ref={this.answerForm}
-                                    type='number'
-                                    value={this.state.userAnswer}
-                                    style={{ width: '100px', fontSize: this.props.formSize }}
-                                    onChange={e => this.setState({ userAnswer: e.target.value })}
-                                    autoFocus>
-                                </input>
-                                <br /><br />
-                            </>
-                        }
-                        {this.state.correctMessage}
-                        <br />
-                        <br />
+                <div className='practicebody'>
+                    <br />
+                    {!this.state.started && <p>Push "start" to begin. Have fun!</p>}
+                    {this.state.started &&
+                        <>
+                            <MathComponent tex={this.props.texSize + this.state.question} display={false} />
+                            <input
+                                ref={this.answerForm}
+                                type='number'
+                                value={this.state.userAnswer}
+                                style={{ width: '100px', fontSize: this.props.formSize }}
+                                onChange={e => this.setState({ userAnswer: e.target.value })}
+                                autoFocus>
+                            </input>
+                            <br /><br />
+                        </>
+                    }
+                    {this.state.correctMessage}
+                    <br />
+                    <br />
 
-                        {
-                            this.state.paused &&
-                            <>
-                                <button className="btn" onClick={this.next}>Next</button>
-                            </>
-                        }
+                    {
+                        this.state.paused &&
+                        <>
+                            <button className="btn" onClick={this.next}>Next</button>
+                        </>
+                    }
 
-                        {
-                            !this.state.paused &&
-                            <>
-                                {this.state.started ?
-                                    <button className="btn" onClick={this.checkAnswer}>Submit</button>
-                                    :
-                                    <button className="btn" onClick={this.start}>Start</button>
-                                }
-                            </>
-                        }
-                        <br />
-                    </div>
+                    {
+                        !this.state.paused &&
+                        <>
+                            {this.state.started ?
+                                <button className="btn" onClick={this.checkAnswer}>Submit</button>
+                                :
+                                <button className="btn" onClick={this.start}>Start</button>
+                            }
+                        </>
+                    }
                 </div>
             </div>
         )

@@ -59,45 +59,41 @@ class FillBlanks extends Component {
 
     render = () => {
         return (
-            <div>
-                <br /><br />
-                <div className='practicequiz' >
-                    <div className='practiceheader'>
-                        <span id="correctNumber" className='practiceheaderleft'>Correct: {this.state.correctNumber + '/' + this.state.attemptedNumber} </span>
-                        <span id="timer" className='practiceheaderright'>
-                            Time: {Math.floor(this.state.timeElapsed / 3600) + 'h '
-                                + Math.floor(this.state.timeElapsed / 60) % 60 + 'm '
-                                + this.state.timeElapsed % 60 + 's'}
-                        </span>
-                    </div>
+            <div className='practicequiz' >
+                <div className='practiceheader'>
+                    <span id="correctNumber" className='practiceheaderleft'>Correct: {this.state.correctNumber + '/' + this.state.attemptedNumber} </span>
+                    <span id="timer" className='practiceheaderright'>
+                        Time: {Math.floor(this.state.timeElapsed / 3600) + 'h '
+                            + Math.floor(this.state.timeElapsed / 60) % 60 + 'm '
+                            + this.state.timeElapsed % 60 + 's'}
+                    </span>
+                </div>
 
-                    <div className='practicebody'>
-                        <br />
-                        <>{this.state.currentQuestion}</>
-                        <>{this.state.correctMessage}</>
-                        <br />
-                        <br />
-                        <>{this.state.started && this.props.answerForm}</>
+                <div className='practicebody'>
+                    <br />
+                    <>{this.state.currentQuestion}</>
+                    <>{this.state.correctMessage}</>
+                    <br />
+                    <br />
+                    <>{this.state.started && this.props.answerForm}</>
 
-                        {
-                            this.state.paused &&
-                            (<>
-                                <button className="btn" onClick={this.next}>Next</button>
-                            </>)
-                        }
+                    {
+                        this.state.paused &&
+                        (<>
+                            <button className="btn" onClick={this.next}>Next</button>
+                        </>)
+                    }
 
-                        {
-                            !this.state.paused &&
-                            (<>
-                                {this.state.started ?
-                                    <button className="btn" onClick={this.checkAnswer}>Check Answer</button>
-                                    :
-                                    <button className="btn" onClick={this.start}>Start</button>
-                                }
-                            </>)
-                        }
-                        <br />
-                    </div>
+                    {
+                        !this.state.paused &&
+                        (<>
+                            {this.state.started ?
+                                <button className="btn" onClick={this.checkAnswer}>Check Answer</button>
+                                :
+                                <button className="btn" onClick={this.start}>Start</button>
+                            }
+                        </>)
+                    }
                 </div>
             </div>
         )

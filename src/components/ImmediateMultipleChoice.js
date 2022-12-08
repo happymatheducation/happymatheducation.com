@@ -79,37 +79,33 @@ class ImmediateMultipleChoice extends Component {
         }
 
         return (
-            <div>
-                <br /><br />
-                <div className='practicequiz' >
-                    <div className='practiceheader'>
-                        <span id="correctNumber" className='practiceheaderleft'>Correct: {this.state.correctNumber + '/' + this.state.attemptedNumber} </span>
-                        <span id="timer" className='practiceheaderright'>
-                            Time: {Math.floor(this.state.timeElapsed / 3600) + 'h '
-                                + Math.floor(this.state.timeElapsed / 60) % 60 + 'm '
-                                + this.state.timeElapsed % 60 + 's'}
-                        </span>
-                    </div>
+            <div className='practicequiz' >
+                <div className='practiceheader'>
+                    <span id="correctNumber" className='practiceheaderleft'>Correct: {this.state.correctNumber + '/' + this.state.attemptedNumber} </span>
+                    <span id="timer" className='practiceheaderright'>
+                        Time: {Math.floor(this.state.timeElapsed / 3600) + 'h '
+                            + Math.floor(this.state.timeElapsed / 60) % 60 + 'm '
+                            + this.state.timeElapsed % 60 + 's'}
+                    </span>
+                </div>
 
-                    <div className='practicebody'>
-                        <br />
-                        {this.state.currentQuestion}
-                        {this.state.correctMessage}
-                        <br />
-                        <br />
-                        {this.state.started && <>{choiceButtons}<br /><br /></>}
+                <div className='practicebody'>
+                    <br />
+                    {this.state.currentQuestion}
+                    {this.state.correctMessage}
+                    <br />
+                    <br />
+                    {this.state.started && <>{choiceButtons}<br /><br /></>}
 
-                        {this.state.paused && <button className="btn" onClick={this.next}>Next</button>}
+                    {this.state.paused && <button className="btn" onClick={this.next}>Next</button>}
 
-                        {!this.state.paused &&
-                            <>
+                    {!this.state.paused &&
+                        <>
                             {!this.state.started &&
                                 <button className="btn" onClick={this.start}>Start</button>
-                                }
-                            </>
-                        }
-                        <br />
-                    </div>
+                            }
+                        </>
+                    }
                 </div>
             </div>
         )

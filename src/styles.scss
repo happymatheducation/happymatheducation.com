@@ -342,8 +342,7 @@ body {
 }
 
 .practicequiz {
-    width: 70%;
-    margin: auto;
+    margin: 10px 10px 10px 10px;
     background-color: #DDEEFF;
     border: 3px solid #000000;
 
@@ -561,14 +560,14 @@ body {
 }
 
 footer {
-    margin-top: 50px;
+//    margin-top: 50px;
     text-align: center;
     width: 100%;
     font-size: max(1.3vw, 15px);
     text-decoration: none !important;
     color: #000;
     background-color: #fff;
-    padding-top: 30px;
+    padding-top: 30px+50px;
     display: block;
     line-height: max(2.5vw, 20px);
     margin-bottom: -1000%;
