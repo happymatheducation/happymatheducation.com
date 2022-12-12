@@ -31,6 +31,7 @@ class ImmediateMultipleChoice extends Component {
     checkAnswer = (userChoiceID) => {
         this.setState({ attemptedNumber: this.state.attemptedNumber + 1 });
         this.setState({ userChoiceID: userChoiceID });
+
         let correctChoiceButton = document.getElementById(this.props.correctChoiceID);
         correctChoiceButton.className = "correctchoice";
         if (userChoiceID === this.props.correctChoiceID) {
@@ -73,7 +74,7 @@ class ImmediateMultipleChoice extends Component {
         for (let i = 0; i < allChoices.length; i++) {
             choiceButtons.push(
                 <button key={i} id={i} name='choices' className='choices'
-                    onClick={() => { this.checkAnswer(i) }}>
+                    onClick={() => { !this.state.paused?this.checkAnswer(i):void(0)}}>
                     <MathComponent tex={allChoices[i].tex} display={false} />
                 </button>);
         }

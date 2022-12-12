@@ -260,7 +260,8 @@ function Practice() {
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'
                             >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula_answers.pdf'
-                            >Answers</a>
+                            >Answers</a> | 
+                            <a href='/Practice/De_Moivres_Formula'>App</a>
                         </div>
                         <div className='practicediv'>
                             Logarithm from Contests: &nbsp;&nbsp;
