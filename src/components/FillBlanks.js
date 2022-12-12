@@ -1,24 +1,12 @@
 import { Component } from "react";
 
-/**
- * @callback checkAnswerCallback
- * @return {boolean | string} true if the answer is correct, or a string if the answer is incorrect
- */
-
-/**
- * @callback generateQuestionCallback
- * @return {Component | string} a component displaying the checkAnswer question
- */
-
 class FillBlanks extends Component {
-    /**
-     *
-     * @param {component: Component |
-     * checkAnswer: checkAnswerCallback |
-     * generateQuestion: generateQuestionCallback |
-     * answerForm: Component |
-     * clearAnswerForm: Function} props Properties for the practice quiz, including callbacks for running the quiz
-     */
+/* props:
+*  (Callback) checkAnswer() = {boolean | string} true if the answer is correct, or a string if the answer is incorrect
+*  (Callback) generateQuestion() = {Component | string} displaying the question
+*  answerForm: Component |
+*  (Callback) clearAnswerForm
+*/
     state = {
         attemptedNumber: 0,
         correctNumber: 0,

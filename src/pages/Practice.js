@@ -54,56 +54,65 @@ function Practice() {
             <div className="content" style={{ maxHeight: '500px' }}>
                 <div style={{ justifyContent: 'space-between' }}>
                     <div className='practicediv'>
+                        Arithmetic Sequence:&nbsp;&nbsp;
                         <a style={{ display: 'inline' }}
                             href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/arithmetic_sequence.pdf'
-                        >Arithmetic Sequence</a>
+                        >pdf</a>
                     </div>
                     <div className='practicediv'>
+                        Mental Math with Basic Algebra: &nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/mental_math_with_basic_algebra.pdf'
-                        >Mental Math with Basic Algebra</a> | 
+                        >pdf</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/mental_math_with_basic_algebra_answers.pdf'
                         >Answers</a>
                     </div>
                     <div className='practicediv'>
+                        Basic Similar Triangles: &nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/basic_similar_triangles.pdf'
-                        >Basic Similar Triangles</a> | 
+                        >pdf</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/basic_similar_triangles_answers.pdf'
                         >Answers</a>
                     </div>
                     <div className='practicediv'>
+                        Two Line Intersection: &nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/two_line_intersection.pdf'
-                        >Two Line Intersection</a> | 
+                        >pdf</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/two_line_intersection_answers.pdf'
                         >Answers</a>
                     </div>
                     <div className='practicediv'>
+                        Line Through Two Points: &nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/line_through_two_points.pdf'
-                        >Line Through Two Points</a> | 
+                        >pdf</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/line_through_two_points_answers.pdf'
                         >Answers</a>
                     </div>
                     <div className='practicediv'>
+                        Number of Factors: &nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/number_of_factors.pdf'
-                        >Number of Factors</a> |
+                        >pdf</a> |
                         <a href='/Practice/NumberOfFactors'>App</a>
                     </div>
                     <div className='practicediv'>
+                        Rolling Dice: &nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice.pdf'
-                        >Rolling Dice</a> | 
+                        >pdf</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice_answers.pdf'
                         >Answers</a>
                     </div>
                     <div className='practicediv'>
+                        Quadratic Equations: &nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations.pdf'
-                        >Quadratic Equations</a> |                        
+                        >pdf</a> |                        
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations_answers.pdf'
                         >Answers</a> | 
                         <a href='/Practice/Quadratic_Equations'>App</a>
 
                     </div>
                     <div className='practicediv'>
+                        Euclid Theorem: &nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/euclid_theorem.pdf'
-                        >Euclid Theorem</a> | 
+                        >pdf</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/euclid_theorem_answers.pdf'
                         >Answers</a>
                     </div>
@@ -128,61 +137,72 @@ function Practice() {
                 <div style={{ justifyContent: 'space-between' }}>
                     <h1 style={{ display: 'inline', fontSize: '10px', color: '', }}>
                         <div className='practicediv'>
+                            Prime Factorization For Factorials: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials.pdf'
-                            >Prime Factorization For Factorials</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'
                             >Answers</a>
                         </div>
                         <div className='practicediv'>
+                            Quadratic Diophantine Equations Type ab: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab.pdf'
-                            >Quadratic Diophantine Equations Type ab</a> |
+                            >pdf</a> |
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab_answers.pdf'
                             >Answers</a> | 
                             <a href='/Practice/Quadratic_Diophantine_Equations_Type_ab'>App</a>
                         </div>
                         <div className='practicediv'>
+                            Quadratic Diophantine Equations - Simple Square Type: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type.pdf'
-                            >Quadratic Diophantine Equations - Simple Square Type</a> |
+                            >pdf</a> |
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type_answer.pdf'
                             >Answers</a> | 
                             <a href='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type'>App</a>
                         </div>
                         <div className='practicediv'>
+                            Trigs of Special Angles: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/trigs_of_special_angles.pdf'
-                            >Trigs of Special Angles</a> | 
+                            >pdf</a> | 
                             <a href='/Practice/Trigs_Of_Special_Angles'>App</a>
                         </div>
                         <div className='practicediv'>
+                            Find Remainders: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/remainder.pdf'
-                            >Find Remainders</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/remainder_answers.pdf'
-                            >Answers</a>
+                            >Answers</a> | 
+                            <a href='/Practice/Find_Remainders'>App</a>
                         </div>
                         <div className='practicediv'>
+                            Binomial Theorem: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/binomial_theorem.pdf'
-                            >Binomial Theorem</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/binomial_theorem_answers.pdf'
                             >Answers</a>
                         </div>
                         <div className='practicediv'>
+                            Logarithm with Quadratic Equations: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/logarithm_with_quadratic_equations.pdf'
-                            >Logarithm with Quadratic Equations</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/logarithm_with_quadratic_equations_answers.pdf'
                             >Answers</a>
                         </div>
                         <div className='practicediv'>
+                            Stars and Bars: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/starts_and_bars.pdf'
-                            >Stars and Bars</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/starts_and_bars_answers.pdf'
                             >Answers</a>
                         </div>
                         <div className='practicediv'>
+                            Chinese Remainder Theorem: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/chinese_remainder_theorem.pdf'
-                            >Chinese Remainder Theorem</a>
+                            >pdf</a>
                         </div>
                         <div className='practicediv'>
+                            Magic Squares: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/magic_squares_3x3.pdf'
-                            >Magic Squares</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/magic_squares_3x3_answers.pdf'
                             >Answers</a>
                         </div>
@@ -208,38 +228,44 @@ function Practice() {
                 <div style={{ justifyContent: 'space-between' }}>
                     <h1 style={{ display: 'inline', fontSize: '10px', color: '', }}>
                         <div className='practicediv'>
+                            Simple Trig Inequality: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/simple_trig_inequality.pdf'
-                            >Simple Trig Inequality</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'
                             >Answers</a>
                         </div>
                         <div className='practicediv'>
+                            Brahmagupta's Formula: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/brahmagupta%E2%80%99s_formula.pdf'
-                            >Brahmagupta's Formula</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/brahmagupta%E2%80%99s_formula_answers.pdf'
                             >Answers</a>
                         </div>
                         <div className='practicediv'>
+                            Linear Diophantine Equations: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/linear_diophantine_equations.pdf'
-                            >Linear Diophantine Equations</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/linear_diophantine_equations_answers.pdf'
                             >Answers</a>
                         </div>
                         <div className='practicediv'>
+                            Polynomial Factorization: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/polynomial_factorization.pdf'
-                            >Polynomial Factorization</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/polynomial_factorization_answers.pdf'
                             >Answers</a>
                         </div>
                         <div className='practicediv'>
+                            De Moivres Formula: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'
-                            >De Moivres Formula</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula_answers.pdf'
                             >Answers</a>
                         </div>
                         <div className='practicediv'>
+                            Logarithm from Contests: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'
-                            >Logarithm from Contests</a> | 
+                            >pdf</a> | 
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/logarithm.pdf'
                             >Answers</a>
                         </div>

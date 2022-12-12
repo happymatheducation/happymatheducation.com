@@ -26,8 +26,8 @@ const NavBar = () => {
 
                 <ul>
                     <CustomLink to='/classes'>Classes</CustomLink>
-                    <CustomLink to='/practice'>Our Publications</CustomLink>
-                    <CustomLink to='/contests'>Math Contests</CustomLink>
+                    <CustomLink to='/practice'>Practice</CustomLink>
+                    <CustomLink to='/contests'>Contests</CustomLink>
                     <CustomLink to='/careers'>Careers</CustomLink>
                     <CustomLink to='/team'>Our Team</CustomLink>
                     {/* <CustomLink to = '/apply' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Apply</CustomLink> */}
