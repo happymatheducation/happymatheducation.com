@@ -110,11 +110,12 @@ function Practice() {
 
                     </div>
                     <div className='practicediv'>
-                        Euclid Theorem: &nbsp;&nbsp;
+                        Euclids Theorem: &nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/euclid_theorem.pdf'
                         >pdf</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/euclid_theorem_answers.pdf'
-                        >Answers</a>
+                        >Answers</a> | 
+                        <a href='/Practice/Euclids_Theorem'>App</a>
                     </div>
                 </div>
             </div>

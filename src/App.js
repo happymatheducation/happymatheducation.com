@@ -22,6 +22,8 @@ const TrigsOfSpeicalAngles = lazy(() => import("./pages/Practice/Trigs_Of_Specia
 const NumberOfFactors = lazy(() => import("./pages/Practice/NumberOfFactors.js"))
 const FindRemainders = lazy(() => import("./pages/Practice/Find_Remainders.js"))
 const DeMoivresFormula = lazy(() => import("./pages/Practice/De_Moivres_Formula.js"))
+const EuclidsTheorem = lazy(() => import("./pages/Practice/Euclids_Theorem.js"))
+
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -129,6 +131,7 @@ const App = () => {
                     <Route exact path='/Practice/NumberOfFactors' element={<NumberOfFactors />} />
                     <Route exact path='/Practice/Find_Remainders' element={<FindRemainders />} />
                     <Route exact path='/Practice/De_Moivres_Formula' element={<DeMoivresFormula />} />
+                    <Route exact path='/Practice/Euclids_Theorem' element={<EuclidsTheorem />} />
 
                     <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                     <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
