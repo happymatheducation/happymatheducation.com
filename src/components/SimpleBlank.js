@@ -4,7 +4,7 @@ import { MathComponent } from "mathjax-react";
 class SimpleBlank extends Component {
 
     /* props:
-     * generateQuestion() = {question:'', pointsPerQuestion:0, correctAnswer:0} (Callback)
+     * generateQuestion() = {beforeBlank:'', afterBlank:'', pointsPerQuestion:0, correctAnswer:0} (Callback)
      * formSize = '0px' (example: '40px')
      * texSize = '' (example:'\Huge')
      */
@@ -24,7 +24,8 @@ class SimpleBlank extends Component {
         paused: false,
 
         correctMessage: "",
-        question: '',
+        beforeBlank: '',
+        afterBlank: '',
         correctAnswer: '',
         pointsPerQuestion: '',
         userAnswer: ''
@@ -33,7 +34,8 @@ class SimpleBlank extends Component {
     grabQuestion = () => {
         const currentQuestion = this.props.generateQuestion();
         this.setState({
-            question: currentQuestion.question,
+            beforeBlank: currentQuestion.beforeBlank,
+            afterBlank: currentQuestion.afterBlank,
             pointsPerQuestion: currentQuestion.pointsPerQuestion,
             correctAnswer: currentQuestion.correctAnswer
         });
@@ -79,7 +81,7 @@ class SimpleBlank extends Component {
                     {!this.state.started && <p>Push "start" to begin. Have fun!</p>}
                     {this.state.started &&
                         <>
-                            <MathComponent tex={this.props.texSize + this.state.question} display={false} />
+                            <MathComponent tex={this.props.texSize + this.state.beforeBlank} display={false} />
                             <input
                                 ref={this.answerForm}
                                 type='number'
@@ -88,6 +90,7 @@ class SimpleBlank extends Component {
                                 onChange={e => this.setState({ userAnswer: e.target.value })}
                                 autoFocus>
                             </input>
+                            <MathComponent tex={this.props.texSize + this.state.afterBlank} display={false} />
                             <br /><br />
                         </>
                     }

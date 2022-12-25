@@ -19,7 +19,7 @@ class SimpleMultiplication extends Component {
         let points = 0;
         points = Math.ceil((x1 + x2 - minSum + 1) / (maxSum - minSum + 1) * 5) * 10;
 
-        return { pointsPerQuestion: points, correctAnswer: x1 * x2, question: question };
+        return { pointsPerQuestion: points, correctAnswer: x1 * x2, beforeBlank: question, afterBlank:'' };
     }
 
     render() {

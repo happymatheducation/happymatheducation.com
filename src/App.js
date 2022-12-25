@@ -28,6 +28,7 @@ const EuclidsTheorem = lazy(() => import("./pages/Practice/Euclids_Theorem.js"))
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
 const SimpleMultiplication = lazy(() => import("./pages/Practice/SimpleMultiplication.js"))
+const OneStepEquation = lazy(() => import("./pages/Practice/OneStepEquation.js"))
 const Adventure = lazy(() => import("./pages/Practice/Adventure.js"))
 
 export function backToTop(mybutton) {
@@ -136,6 +137,7 @@ const App = () => {
                     <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                     <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
                     <Route exact path='/Practice/SimpleMultiplication' element={<SimpleMultiplication />} />
+                    <Route exact path='/Practice/OneStepEquation' element={<OneStepEquation />} />
                     <Route exact path='/Practice/Adventure' element={<Adventure />} />
                     <Route exact path='/*' element={<Notfound />} />
                 </Routes>
