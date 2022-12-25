@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { MathComponent } from "mathjax-react";
+import JSConfetti from 'js-confetti'
 
 class ImmediateMultipleChoice extends Component {
 
@@ -37,6 +38,8 @@ class ImmediateMultipleChoice extends Component {
         if (userChoiceID === this.props.correctChoiceID) {
             this.setState({ correctNumber: this.state.correctNumber + 1 });
             this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700' }}>Correct! Great job!!!</span> });
+            const jsConfetti = new JSConfetti()
+            jsConfetti.addConfetti()
         } else {
             let correctAnswer = <MathComponent
                 display={false}

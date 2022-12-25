@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import JSConfetti from 'js-confetti'
 import { MathComponent } from "mathjax-react";
 
 class SimpleBlank extends Component {
@@ -52,6 +53,8 @@ class SimpleBlank extends Component {
             const pointsPerQuestion = this.state.pointsPerQuestion;
             this.setState({ score: this.state.score + pointsPerQuestion });
             this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700' }}>Correct! Great job! +{pointsPerQuestion} points!</span> });
+            const jsConfetti = new JSConfetti();
+            jsConfetti.addConfetti()
         } else {
             const message = `Incorrect! The correct answer is ${this.state.correctAnswer}.`;
             this.setState({ correctMessage: <span style={{ color: '#990000' }}>{message}</span> });

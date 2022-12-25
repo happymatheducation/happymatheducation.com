@@ -1,4 +1,5 @@
 import { Component } from "react";
+import JSConfetti from 'js-confetti'
 
 class FillBlanks extends Component {
 /* props:
@@ -30,6 +31,8 @@ class FillBlanks extends Component {
         if (message === true) {
             this.setState({ correctNumber: this.state.correctNumber + 1 });
             this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700' }}>Correct! Great job!!!</span> });
+            const jsConfetti = new JSConfetti()
+            jsConfetti.addConfetti()
         } else {
             this.setState({ correctMessage: <span style={{ color: '#990000' }}>{message}</span> });
         }
