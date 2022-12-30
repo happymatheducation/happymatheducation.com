@@ -4,7 +4,7 @@ import SimpleBlank from "../../components/SimpleBlank";
 class SimpleSubtraction extends Component {
 
     generateQuestion = () => {
-        const oneToN = 5;
+        const oneToN = 10;
         const x1 = Math.ceil(Math.random() * oneToN) + oneToN;
         const x2 = Math.ceil(Math.random() * oneToN);
 
