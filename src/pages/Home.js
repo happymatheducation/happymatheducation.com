@@ -23,9 +23,9 @@ const Home = () => {
                 <div style={{ animationName: 'fadeInLeft', animationDuration: '1.5s', animationTimingFunction: 'ease', marginTop: '-3%' }}>
 
                     <div className='textblock' style={{ lineHeight: 'max(5.5vw, 50px)' }}>
-                        <h1 style={{ fontSize: 'max(3vw, 25px' }}>
+                        <h1>
                             Our mission:
-                            <br></br>
+                            <br/>
                             To help kids <span className='gradient' style={{ display: 'inline', fontWeight: 900, fontSize: 'inherit' }}>enjoy</span> maths
                         </h1>
                         <button className='btn' onClick={
@@ -46,7 +46,7 @@ const Home = () => {
                     <div className='textblock'>
                         <h1>About Us</h1>
                         <p>
-                            Happy Math Education is a tutoring service specializing in math and coding contests. We offer classes from grades 8 to 12, taught online.
+                            Online Math tutoring services for grades 8 to 12 students.
                         </p>
                     </div>
 
@@ -58,7 +58,7 @@ const Home = () => {
                     <div className='textblock'>
                         <h1>Classes</h1>
                         <p>
-                            Tuition and information for math, coding, and private lessons
+                            Tuition and Policy
                         </p>
                         <button className='btn' onClick={
                             () => {
@@ -73,11 +73,13 @@ const Home = () => {
                 </div>
 
                 <div data-aos='fade-right' style={{ display: 'block' }}>
-                    <h1 style={{ textAlign: 'center', marginTop: '20%' }}>Student Testimonials</h1>
+                    <div className='textblock'>
+                        <h1>Student Testimonials</h1>
+                    </div>
                     <div style={{ marginTop: '0%' }}>
 
                         <div className='textblock'>
-                            <h1 style={{ fontSize: 'max(3vw, 20px)' }}>Charles Zhang, Grade 12</h1>
+                            <h1 style={{ fontSize: 'max(2vw, 14px)' }}>Charles Zhang, Grade 12</h1>
                             <p>Before I started at Happy Math, I was much less interested in math as a whole. After starting, not only did I improve in writing contests, but I also became more passionate for learning math.</p>
                         </div>
 
@@ -87,7 +89,7 @@ const Home = () => {
 
                     <div style={{ marginTop: '0%' }}>
                         <div className='textblock'>
-                            <h1 style={{ fontSize: 'max(3vw, 20px)', textAlign: 'center' }}>Jeffrey Zang, Grade 10</h1>
+                            <h1 style={{ fontSize: 'max(2vw, 14px)', textAlign: 'center' }}>Jeffrey Zang, Grade 10</h1>
                             <p>Not only did Happy Math help me feel more confident in my math skills, it allowed me to understand math in a different way than before. I started to approach problems with a different mindset. Taking classes at Happy Math helped me score higher in contests overall.</p>
                         </div>
                     </div>
@@ -95,7 +97,7 @@ const Home = () => {
                     <div style={{ marginTop: '0%' }}>
                         <img src={math2} alt='math2'></img>
                         <div className='textblock'>
-                            <h1 style={{ fontSize: 'max(3vw, 20px)', textAlign: 'center' }}>Jay Ren, Grade 12</h1>
+                            <h1 style={{ fontSize: 'max(2vw, 14px)', textAlign: 'center' }}>Jay Ren, Grade 12</h1>
                             <p> Happy Math is a great resource for learning contest math! It's really hard to prepare for contests by yourself, so I'm glad that I decided to take lessons here. It's a really efficient way to improve my skills.</p>
                         </div>
                     </div>

@@ -60,13 +60,13 @@ $hover: lighten($darkblue, 10%);
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 14px;
     border-radius: 3px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #F4F4F4;
+    background: #E4E4E4;
 }
 
 /* Handle */
@@ -110,20 +110,20 @@ $hover: lighten($darkblue, 10%);
 
     h1 {
         white-space: nowrap;
-        font-size: max(3vw, 20px);
+        font-size: max(3vw, 21px);
     }
 
     p {
         width: 100%;
         font-weight: lighter;
         overflow-wrap: normal;
-        font-size: max(2vw, 20px);
-        line-height: 40px;
+        font-size: max(2vw, 14px);
+        line-height: max(4vw, 28px);
     }
 }
 
 h1 {
-    font-size: max(4.5vw, 30px);
+    font-size: max(4vw, 28px);
 }
 
 @media screen and (max-width: 1000px) {
@@ -137,10 +137,6 @@ h1 {
         img {
             width: 50%;
             margin-top: 5%;
-        }
-
-        p {
-            line-height: 30px;
         }
     }
 }
@@ -199,9 +195,9 @@ h1 {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F4F4F4;
+//    background-color: #F4F4F4;
     min-height: 100%;
-//    max-width: 960px;
+    //    max-width: 960px;
     margin: auto;
 }
 
@@ -404,7 +400,7 @@ body {
 
 .content {
     padding: 3px 18px;
-    background-color: #F4F4F4;
+//    background-color: #F4F4F4;
     max-height: 0;
     white-space: pre-wrap;
     overflow: hidden;
@@ -444,6 +440,7 @@ body {
 
 .nav {
     background-color: #fff;
+    border-bottom: 3px solid #EEEEEE;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
@@ -560,14 +557,16 @@ body {
 }
 
 footer {
-//    margin-top: 50px;
+    //    margin-top: 50px;
     text-align: center;
     width: 100%;
     font-size: max(1.3vw, 15px);
     text-decoration: none !important;
     color: #000;
     background-color: #fff;
-    padding-top: 30px+50px;
+    border-top: 3px solid #EEEEEE;
+    padding-top: 30px;
+    margin-top: 30px;
     display: block;
     line-height: max(2.5vw, 20px);
     margin-bottom: -1000%;
