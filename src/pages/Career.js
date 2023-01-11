@@ -33,12 +33,12 @@ const Career = () => {
     return (
         <>
             <h1 >Career Opportunities</h1>
-            <h1 style={{ textAlign: 'center', fontSize: 'max(2vw, 14px)', padding: '0vw 3vw 0vw 3vw' }}>
-                To apply to any position, please send your resume to <a href="mailto: xudiwaterloo@gmail.com">xudiwaterloo@gmail.com</a>.
-            </h1>
-
-            <div style={{ height: '25px' }}></div>
             {CareerList}
+            <br/>
+            <p style={{ fontSize: 'max(1.4vw, 14px)', padding: '0vw 3vw 0vw 3vw' }}>
+                To apply, please send your resume to <a href="mailto: xudiwaterloo@gmail.com">xudiwaterloo@gmail.com</a>.
+            </p>
+
         </>
     )
 }

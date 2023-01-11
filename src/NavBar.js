@@ -13,13 +13,14 @@ const NavBar = () => {
                 </ul>
             </div>
 
-            <nav className='nav stickytop' id='myTopnav'>
+            <nav className='nav' id='myTopnav'>
 
                 <ul id='navul'>
                     <CustomLink to='/' id='navresponsivelogo'>
                         <img src={logo} className='center' style={{ width: 'max(15vw, 150px)' }} alt=''></img>
                     </CustomLink>
                 </ul>
+
                 <ul id='homelink'>
                     <CustomLink to='/'>Home</CustomLink>
                 </ul>
@@ -36,11 +37,11 @@ const NavBar = () => {
                 <button id='icon' className="icon" onClick={
                     () => {
                         var x = document.getElementById("myTopnav");
-                        if (x.className === "nav stickytop") {
+                        if (x.className === "nav") {
                             x.className += " responsive";
                             document.getElementById("icon").innerHTML = "<i class='bi bi-x'></i>"
                         } else {
-                            x.className = "nav stickytop";
+                            x.className = "nav";
                             document.getElementById("icon").innerHTML = "<i class='bi bi-arrow-bar-left'></i>"
                         }
                     }

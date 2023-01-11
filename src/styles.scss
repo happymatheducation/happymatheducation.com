@@ -80,14 +80,14 @@ $hover: lighten($darkblue, 10%);
 }
 
 h1,h2 {
-    font-size: max(2vw, 28px);
-    line-height: max(6vw, 84px);
+    font-size: max(2vw, 20px);
+    line-height: max(6vw, 60px);
     text-align: center;
 }
 
 h3 {
-    font-size: max(1vw, 14px);
-    line-height: max(2vw, 28px);
+    font-size: max(1.4vw, 14px);
+    line-height: max(2.8vw, 28px);
     text-align: center;
 
     span {
@@ -133,19 +133,19 @@ body {
 
     h1 {
         white-space: nowrap;
-        font-size: max(3vw, 42px);
+        font-size: max(3vw, 30px);
         text-align: left;
-        margin-top: max(6vw, 84px);
+        margin-top: max(6vw, 60px);
         margin-bottom: 0;
-        line-height: max(4.5vw, 63px);
+        line-height: max(4.5vw, 45px);
     }
 
     p {
         width: 100%;
         font-weight: lighter;
         overflow-wrap: normal;
-        font-size: max(1vw, 14px);
-        line-height: max(2vw, 28px);
+        font-size: max(1.4vw, 14px);
+        line-height: max(2.8vw, 28px);
     }
 }
 
@@ -248,7 +248,7 @@ body {
     background-color: #D6EFED;
     width: max-content;
     /* max-height: auto; */
-    padding: max(2vw, 28px);
+    padding: max(2.8vw, 28px);
     border-radius: 10px;
 }
 
@@ -365,8 +365,8 @@ body {
 
 
 .practicediv {
-    font-size: max(1vw, 14px);
-    line-height: max(2vw, 28px);
+    font-size: max(1.4vw, 14px);
+    line-height: max(2.8vw, 28px);
 }
 
 .practicequiz {
@@ -414,7 +414,7 @@ body {
     width: 100%;
     text-align: left;
     align-items: center !important;
-    font-size: max(1.2vw, 16.8px);
+    font-size: max(1.6vw, 16px);
     border-radius: 15px;
 }
 
@@ -433,8 +433,8 @@ body {
 .content {
     padding: 3px 8vw;
     //    background-color: #F4F4F4;
-    font-size: max(1vw, 14px);
-    line-height: max(2vw, 28px);
+    font-size: max(1.4vw, 14px);
+    line-height: max(2.8vw, 28px);
     max-height: 0;
     white-space: pre-wrap;
     overflow: hidden;
@@ -594,7 +594,7 @@ footer {
     //    margin-top: 50px;
     text-align: center;
     width: 100%;
-    font-size: max(1.3vw, 15px);
+    font-size: max(1.4vw, 14px);
     text-decoration: none !important;
     color: #000;
     background-color: #fff;
@@ -602,7 +602,7 @@ footer {
     padding-top: 30px;
     margin-top: 30px;
     display: block;
-    line-height: max(2.5vw, 20px);
+    line-height: max(2.8vw, 28px);
     margin-bottom: -1000%;
 
     #footerdiv {
