@@ -79,6 +79,19 @@ $hover: lighten($darkblue, 10%);
     background: lighten($darkblue, 10%);
 }
 
+h1 {
+    font-size: max(2vw, 28px);
+    margin-top: max(1.5vw, 21px);
+    text-align: center;
+    margin-bottom: max(1.5vw, 21px);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100%;
+    margin: auto;
+}
+
 .home {
 
     div {
@@ -86,7 +99,7 @@ $hover: lighten($darkblue, 10%);
         display: flex;
         justify-content: space-between;
         padding: 0% 3% 0% 3%;
-        line-height: 100px;
+        line-height: max(9vw, 63px);
         margin-top: 20%;
         align-items: center;
         width: 100%;
@@ -94,7 +107,7 @@ $hover: lighten($darkblue, 10%);
 
     .textblock {
         display: block;
-        margin-top: 5vh;
+        margin-top: 0;
     }
 
     img {
@@ -111,6 +124,10 @@ $hover: lighten($darkblue, 10%);
     h1 {
         white-space: nowrap;
         font-size: max(3vw, 21px);
+        text-align: left;
+        margin-top: max(6vw, 42px);
+        margin-bottom: 0;
+        line-height: max(5.5vw, 38.5px);
     }
 
     p {
@@ -122,21 +139,21 @@ $hover: lighten($darkblue, 10%);
     }
 }
 
-h1 {
-    font-size: max(4vw, 28px);
-}
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     .home {
         div {
             display: block;
-            text-align: center !important;
-            line-height: 60px;
+            text-align: center;
         }
 
         img {
             width: 50%;
             margin-top: 5%;
+        }
+
+        h1 {
+            text-align: center;
         }
     }
 }
@@ -193,21 +210,27 @@ h1 {
     }
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-//    background-color: #F4F4F4;
-    min-height: 100%;
-    //    max-width: 960px;
+
+.page {
+    max-width: 90%;
     margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .page {
+        max-width: 100%;
+    }
 }
 
 .gradient {
     /* color: rgb(2,0,36); */
     background: linear-gradient(90deg, $darkblue, $cyan 100%);
-    font-weight: 'bold';
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+//    display: inline;
+//    font-weight: 900;
+//    font-size: inherit;
 }
 
 .container {
@@ -334,7 +357,8 @@ body {
 .practicediv {
     display: flex;
     //  justify-content: space-between;
-    font-size: max(1.5vw, 14px);
+    font-size: max(1vw, 14px);
+    line-height: max(2vw, 28px);
 }
 
 .practicequiz {
@@ -371,7 +395,7 @@ body {
     margin-top: 5px;
     color: black;
     cursor: pointer;
-    padding: 10px 50px 10px 50px;
+    padding: max(1vw, 10px) max(5vw, 50px) max(1vw, 10px) max(5vw, 50px);
     border: none;
     background-image: linear-gradient(90deg, #A4DBE8, #A4DBE8);
     background-size: 100% 100%;
@@ -382,7 +406,7 @@ body {
     width: 100%;
     text-align: left;
     align-items: center !important;
-    font-size: 20px;
+    font-size: max(1.2vw, 16.8px);
     border-radius: 15px;
 }
 
@@ -400,7 +424,9 @@ body {
 
 .content {
     padding: 3px 18px;
-//    background-color: #F4F4F4;
+    //    background-color: #F4F4F4;
+    font-size: max(1vw, 14px);
+    line-height: max(2vw, 28px);
     max-height: 0;
     white-space: pre-wrap;
     overflow: hidden;

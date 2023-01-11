@@ -22,11 +22,11 @@ const Home = () => {
 
                 <div style={{ animationName: 'fadeInLeft', animationDuration: '1.5s', animationTimingFunction: 'ease', marginTop: '-3%' }}>
 
-                    <div className='textblock' style={{ lineHeight: 'max(5.5vw, 50px)' }}>
+                    <div className='textblock'>
                         <h1>
                             Our mission:
                             <br/>
-                            To help kids <span className='gradient' style={{ display: 'inline', fontWeight: 900, fontSize: 'inherit' }}>enjoy</span> maths
+                            To help kids <span className='gradient'>enjoy</span> maths
                         </h1>
                         <button className='btn' onClick={
                             () => {
@@ -41,7 +41,7 @@ const Home = () => {
                     <img src={homeimg} alt='homeimg'></img>
                 </div>
 
-                <div data-aos='fade-up'>
+                <div data-aos='fade-right'>
 
                     <div className='textblock'>
                         <h1>About Us</h1>
@@ -54,7 +54,7 @@ const Home = () => {
 
                 </div>
 
-                <div data-aos='fade-up'>
+                <div data-aos='fade-right'>
                     <div className='textblock'>
                         <h1>Classes</h1>
                         <p>

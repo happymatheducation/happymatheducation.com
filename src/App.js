@@ -116,6 +116,7 @@ const App = () => {
             <NavBar />
 
             <Suspense fallback={<div className="lazy-preloader"></div>}>
+                <div className='page'>
                 <Routes>
                     <Route exact path='/' element={<Home />} />
                     <Route exact path='/classes' element={<Classes />} />
@@ -140,7 +141,8 @@ const App = () => {
                     <Route exact path='/Practice/OneStepEquation' element={<OneStepEquation />} />
                     <Route exact path='/Practice/Adventure' element={<Adventure />} />
                     <Route exact path='/*' element={<Notfound />} />
-                </Routes>
+                    </Routes>
+                </div>
             </Suspense>
 
             <Copyright />

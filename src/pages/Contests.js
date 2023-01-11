@@ -4,8 +4,8 @@ function Contests() {
     return (
         <>
 
-            <h1 style={{ textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)' }}>Math Contests</h1>
-            <h1 style={{ textAlign: 'center', marginBottom: '10px', fontSize: 'max(1.5vw, 14px)' }}>Click below to view</h1>
+            <h1 >Math Contests</h1>
+            <h1 style={{ textAlign: 'center', marginBottom: '10px', fontSize: 'max(2vw, 14px)' }}>Click below to view</h1>
 
             <button className="collapsible" id='seven' onClick={
                 () => {

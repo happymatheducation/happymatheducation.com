@@ -2,8 +2,7 @@ function Practice() {
 
     return (
         <>
-            <h1 style={{ marginTop: '20px', textAlign: 'center', marginBottom: '10px', fontSize: 'max(3vw, 20px)' }}>Ultimate
-                Practice</h1>
+            <h1 >Ultimate Practice</h1>
 
             <button className="collapsible" id='introduction' onClick={
                 () => {
@@ -21,7 +20,6 @@ function Practice() {
             </button>
             <div width='60%' className="content" style={{ marginTop: '10px', marginBottom: '10px' }}>
                 <div style={{ justifyContent: 'space-between' }}>
-                    <h1 style={{ display: 'inline', fontSize: 'max(13px, 1.3vw)' }}>
                         Below are some topic based problems created by Happy Math Education (a.k.a Blessed Eduloo before 2021). If
                         the creator is a volunteering student, then the name of the volunteer appears on the top right in each page.
                         <br /><br />Each set is designed to be a THOROUGH practice on that specific topic, therefore:
@@ -33,7 +31,6 @@ function Practice() {
                         <br />4. If you really want to finish a set, don't expect to finish it in one sitting.
                         <br /><br />This list of problems, including the answers and practice apps are constantly being
                         updated.
-                    </h1>
                 </div>
             </div>
 
@@ -51,7 +48,7 @@ function Practice() {
                 }
             }>Fundamentals
             </button>
-            <div className="content" style={{ maxHeight: '500px' }}>
+            <div className="content" style={{ maxHeight: '50000px' }}>
                 <div style={{ justifyContent: 'space-between' }}>
                     <div className='practicediv'>
                         Arithmetic Sequence:&nbsp;&nbsp;
@@ -134,9 +131,8 @@ function Practice() {
                 }
             }>Intermediate
             </button>
-            <div className="content" style={{ maxHeight: '500px' }}>
+            <div className="content" style={{ maxHeight: '50000px' }}>
                 <div style={{ justifyContent: 'space-between' }}>
-                    <h1 style={{ display: 'inline', fontSize: '10px', color: '', }}>
                         <div className='practicediv'>
                             Prime Factorization For Factorials: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials.pdf'
@@ -207,7 +203,6 @@ function Practice() {
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/magic_squares_3x3_answers.pdf'
                             >Answers</a>
                         </div>
-                    </h1>
                 </div>
             </div>
 
@@ -225,9 +220,8 @@ function Practice() {
                 }
             }>Advanced
             </button>
-            <div className="content" style={{ maxHeight: '500px' }}>
+            <div className="content" style={{ maxHeight: '50000px' }}>
                 <div style={{ justifyContent: 'space-between' }}>
-                    <h1 style={{ display: 'inline', fontSize: '10px', color: '', }}>
                         <div className='practicediv'>
                             Simple Trig Inequality: &nbsp;&nbsp;
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/simple_trig_inequality.pdf'
@@ -271,7 +265,6 @@ function Practice() {
                             <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/logarithm.pdf'
                             >Answers</a>
                         </div>
-                    </h1>
                 </div>
             </div>
 
