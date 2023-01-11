@@ -73,23 +73,21 @@ const Home = () => {
                 </div>
 
                 <div data-aos='fade-right' style={{ display: 'block' }}>
-                    <div className='textblock'>
+                    <div>
                         <h1>Student Testimonials</h1>
                     </div>
-                    <div style={{ marginTop: '0%' }}>
-
+                    <div style={{ marginTop: '5%' }}>
                         <div className='textblock'>
-                            <h1 style={{ fontSize: 'max(2vw, 14px)' }}>Charles Zhang, Grade 12</h1>
+                            <h2>Charles Zhang, Grade 12</h2>
                             <p>Before I started at Happy Math, I was much less interested in math as a whole. After starting, not only did I improve in writing contests, but I also became more passionate for learning math.</p>
                         </div>
 
                         <img src={appreciation} alt='yes'></img>
-
                     </div>
 
                     <div style={{ marginTop: '0%' }}>
                         <div className='textblock'>
-                            <h1 style={{ fontSize: 'max(2vw, 14px)', textAlign: 'center' }}>Jeffrey Zang, Grade 10</h1>
+                            <h2>Jeffrey Zang, Grade 10</h2>
                             <p>Not only did Happy Math help me feel more confident in my math skills, it allowed me to understand math in a different way than before. I started to approach problems with a different mindset. Taking classes at Happy Math helped me score higher in contests overall.</p>
                         </div>
                     </div>
@@ -97,7 +95,7 @@ const Home = () => {
                     <div style={{ marginTop: '0%' }}>
                         <img src={math2} alt='math2'></img>
                         <div className='textblock'>
-                            <h1 style={{ fontSize: 'max(2vw, 14px)', textAlign: 'center' }}>Jay Ren, Grade 12</h1>
+                            <h2>Jay Ren, Grade 12</h2>
                             <p> Happy Math is a great resource for learning contest math! It's really hard to prepare for contests by yourself, so I'm glad that I decided to take lessons here. It's a really efficient way to improve my skills.</p>
                         </div>
                     </div>

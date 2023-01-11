@@ -4,8 +4,8 @@ function Contests() {
     return (
         <>
 
-            <h1 >Math Contests</h1>
-            <h1 style={{ textAlign: 'center', marginBottom: '10px', fontSize: 'max(2vw, 14px)' }}>Click below to view</h1>
+            <h1 >Math Contests Timeline</h1>
+            {/*<h1 style={{ textAlign: 'center', marginBottom: '10px', fontSize: 'max(1vw, 14px)' }}>Click below to view</h1>*/}
 
             <button className="collapsible" id='seven' onClick={
                 () => {
@@ -21,48 +21,36 @@ function Contests() {
             }>Grade 7</button>
             <div className="content">
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}>
-                        <i class="bi bi-thermometer-half"></i>September</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of the school year<br></br><a href='https://cariboutests.com/'>Caribou Math Contests (year-round)</a>
-                    </h1>
+                <div className='container'>
+                    <h3>
+                        <span><i class="bi bi-thermometer-half"></i>September: </span>
+                        Start of G7<br />
+
+                        <a href='https://cariboutests.com/'>Caribou (year-round)</a><br />
+
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a><br />
+
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a><br />
+
+                        <span><i class="bi bi-thermometer-snow"></i>January: </span>
+                        New Year<br />
+
+                        <span><i class="bi bi-thermometer-snow"></i>January: </span>
+                        <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>March: </span>
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+
+                        <span><i class="bi bi-thermometer-sun"></i>May: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/gauss.html'>Gauss 7</a><br />
+
+                        <span><i class="bi bi-thermometer-sun"></i>June: </span>
+                        End of G7
+                    </h3>
                 </div>
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-low"></i>November</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a><br></br>
-
-                        <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a>
-                    </h1>
-                </div>
-
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-snow"></i>January</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>{'Start of new year\n'}
-                        <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a>
-                    </h1>
-                </div>
-
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>March</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo Math Contests</a>
-                    </h1>
-                </div>
-
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-sun"></i>May</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/gauss.html'>Gauss 7/8</a>
-                    </h1>
-                </div>
-
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-sun"></i>June</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>{'End of school year\n'}
-                    </h1>
-                </div>
 
             </div>
 
@@ -80,45 +68,34 @@ function Contests() {
             }>Grade 8</button>
             <div className="content">
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}>
-                        <i class="bi bi-thermometer-half"></i>September</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of the school year<br></br><a href='https://cariboutests.com/'>Caribou Math Contests (year-round)</a></h1>
-                </div>
+                <div className='container'>
+                    <h3>
+                        <span><i class="bi bi-thermometer-half"></i>September: </span>
+                        Start of G8<br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-low"></i>November</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a><br></br>
-                        <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a>
-                    </h1>
-                </div>
+                        <a href='https://cariboutests.com/'>Caribou (year-round)</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-snow"></i>January</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>{'Start of new year\n'}
-                        <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>March</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo Math Contests</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-sun"></i>May</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/gauss.html'>Gauss 7/8</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-snow"></i>January: </span>
+                        New Year<br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-sun"></i>June</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>{'End of school year\n'}
-                    </h1>
+                        <span><i class="bi bi-thermometer-snow"></i>January: </span>
+                        <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>March: </span>
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+
+                        <span><i class="bi bi-thermometer-sun"></i>May: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/gauss.html'>Gauss 8</a><br />
+
+                        <span><i class="bi bi-thermometer-sun"></i>June: </span>
+                        End of G8
+                    </h3>
                 </div>
             </div>
 
@@ -136,59 +113,42 @@ function Contests() {
             }>Grade 9</button>
             <div className="content">
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}>
-                        <i class="bi bi-thermometer-half"></i>September</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of the school year<br></br><a href='https://cariboutests.com/'>Caribou Math Contests (year-round)</a></h1>
+                <div className='container'>
+                    <h3>
+                        <span><i class="bi bi-thermometer-half"></i>September: </span>
+                        Start of G9<br />
+
+                        <a href='https://cariboutests.com/'>Caribou (year-round)</a><br />
+
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 9/10</a><br />
+
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a><br />
+
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a><br />
+
+                        <span><i class="bi bi-thermometer-snow"></i>January: </span>
+                        New Year<br />
+
+                        <span><i class="bi bi-thermometer-snow"></i>February: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Pascal</a><br />
+
+                        <span><i class="bi bi-thermometer-snow"></i>February: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>March: </span>
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>April: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Fryer</a><br />
+
+                        <span><i class="bi bi-thermometer-sun"></i>June: </span>
+                        End of G9
+                    </h3>
                 </div>
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-low"></i>November</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>Beaver Computing - Challenge 9/10</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a>
-                    </h1>
-                </div>
-
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-snow"></i>January</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of new year</h1>
-                </div>
-
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-snow"></i>February</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Pascal</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a>
-                    </h1>
-                </div>
-
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>March</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo Math Contests</a>
-                    </h1>
-                </div>
-
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>April</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Fryer</a>
-                    </h1>
-                </div>
-
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-sun"></i>June</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>{'End of school year\n'}
-                    </h1>
-                </div>
             </div>
 
             <button className="collapsible" id='ten' onClick={
@@ -205,61 +165,40 @@ function Contests() {
             }>Grade 10</button>
             <div className="content">
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}>
-                        <i class="bi bi-thermometer-half"></i>
-                        September
-                    </h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of the school year<br></br><a href='https://cariboutests.com/'>Caribou Math Contests (year-round)</a></h1>
-                </div>
+                <div className='container'>
+                    <h3>
+                        <span><i class="bi bi-thermometer-half"></i>September: </span>
+                        Start of G10<br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}>
-                        <i class="bi bi-thermometer-low"></i>November</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 9/10</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a>
-                    </h1>
-                </div>
+                        <a href='https://cariboutests.com/'>Caribou (year-round)</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-snow"></i>January</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of new year</h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 9/10</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-snow"></i>February</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Cayley</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>March</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo Math Contests</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>April</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Galois</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-snow"></i>January: </span>
+                        New Year<br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-sun"></i>June</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>{'End of school year\n'}
-                    </h1>
+                        <span><i class="bi bi-thermometer-snow"></i>February: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Cayley</a><br />
+
+                        <span><i class="bi bi-thermometer-snow"></i>February: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>March: </span>
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>April: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Galois</a><br />
+
+                        <span><i class="bi bi-thermometer-sun"></i>June: </span>
+                        End of G10
+                    </h3>
                 </div>
             </div>
 
@@ -277,65 +216,43 @@ function Contests() {
             }>Grade 11</button>
             <div className="content">
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}>
-                        <i class="bi bi-thermometer-half"></i>September</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of the school year<br></br><a href='https://cariboutests.com/'>Caribou Math Contests (year-round)</a></h1>
-                </div>
+                <div className='container'>
+                    <h3>
+                        <span><i class="bi bi-thermometer-half"></i>September: </span>
+                        Start of G11<br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-low"></i>October</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www2.cms.math.ca/Competitions/COMC/2021/'>Canadian Open Mathematics Challenge</a>
-                    </h1>
-                </div>
+                        <a href='https://cariboutests.com/'>Caribou (year-round)</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-low"></i>November</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>October: </span>
+                        <a href='https://cms.math.ca/competitions/comc/'>COMC</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-snow"></i>January</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of new year</h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>March</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo Math Contests</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-snow"></i>February</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Fermat</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-snow"></i>January: </span>
+                        New Year<br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>April</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Hypatia</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-snow"></i>February: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Fermat</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-sun"></i>June</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>{'End of school year\n'}
-                    </h1>
+                        <span><i class="bi bi-thermometer-snow"></i>February: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>March: </span>
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>April: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>April: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Hypatia</a><br />
+
+                        <span><i class="bi bi-thermometer-sun"></i>June: </span>
+                        End of G11
+                    </h3>
                 </div>
             </div>
 
@@ -353,59 +270,37 @@ function Contests() {
             }>Grade 12</button>
             <div className="content">
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}>
-                        <i class="bi bi-thermometer-half"></i>September</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of the school year<br></br><a href='https://cariboutests.com/'>Caribou Math Contests (year-round)</a></h1>
-                </div>
+                <div className='container'>
+                    <h3>
+                        <span><i class="bi bi-thermometer-half"></i>September: </span>
+                        Start of G12<br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-low"></i>October</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www2.cms.math.ca/Competitions/COMC/2021/'>Canadian Open Mathematics Challenge</a>
-                    </h1>
-                </div>
+                        <a href='https://cariboutests.com/'>Caribou (year-round)</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-low"></i>November</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a>
-                    </h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>October: </span>
+                        <a href='https://cms.math.ca/competitions/comc/'>COMC</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-snow"></i>January</h1>
-                    <h1 style={{ fontSize: 'max(1.5vw, 15px)' }}>Start of new year</h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-snow"></i>February</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-low"></i>November: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>March</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo Math Contests</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-snow"></i>January: </span>
+                        New Year<br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}><i class="bi bi-thermometer-half"></i>April</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a>
-                    </h1>
-                </div>
+                        <span><i class="bi bi-thermometer-snow"></i>February: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
 
-                <div className='container' style={{ width: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
-                    <h1 style={{ color: '#51557E', fontSize: 'max(2.5vw, 25px)', textAlign: 'left' }}> <i class="bi bi-thermometer-sun"></i>June</h1>
-                    <h1 style={{ textAlign: 'left', fontSize: 'max(1.5vw, 15px)' }}>{'End of school year\n'}
-                    </h1>
+                        <span><i class="bi bi-thermometer-half"></i>March: </span>
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+
+                        <span><i class="bi bi-thermometer-half"></i>April: </span>
+                        <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a><br />
+
+                        <span><i class="bi bi-thermometer-sun"></i>June: </span>
+                        End of G12
+                    </h3>
                 </div>
             </div>
 

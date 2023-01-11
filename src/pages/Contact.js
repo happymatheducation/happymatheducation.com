@@ -1,33 +1,22 @@
-import {React} from 'react'
-import { useNavigate } from 'react-router-dom'
-
-import teacher from '../assets/teacher.svg' 
+import { React } from 'react'
+import teacher from '../assets/teacher.svg'
 
 const Contact = () => {
-  let navigate = useNavigate();
 
-  return (
-    <div className = 'home'>
-
-      <div style = {{textAlign: 'center', display: 'block', marginTop: '0px'}}>
-        <h1>Apply</h1>
-        <p>
-          To apply to any of our <span onClick = {
-            () => {
-              navigate('/classes')
-            }
-          }>courses</span>, please contact Dr. Xu using one of the following methods:
-          <br></br>
-          <br></br>
-          <p style = {{fontWeight: 'bold', fontSize: 'max(2.5vw, 25px)'}}>Phone: 519-729-5631</p>
-          <p style = {{fontWeight: 'bold', fontSize: 'max(2.5vw, 25px)'}}>Email: xudiwaterloo@gmail.com</p>
-          <br></br>and include your name, age, and the course you will like to take.
-        </p>
-        <img src = {teacher} alt = 'teacherimg' style = {{marginTop: '5%'}}></img>
-      </div>
-
-    </div>
-  )
+    return (
+        <div className='home'>
+            <div style={{ animationName: 'fadeInLeft', animationDuration: '1.5s', animationTimingFunction: 'ease', marginTop: '-3%' }}>
+                <div className='textblock'>
+                    <h2>Contact</h2>
+                    <p> To apply to any of our <a href='/Classes'>course</a>, please email Dr. Xu directly:<br />
+                        <h2>xudiwaterloo@gmail.com</h2>
+                        including your name, grade level, and the course you would like to take. Please also list all the past math contest awards if any.
+                    </p>
+                </div>
+                <img src={teacher} alt='teacherimg'></img>
+            </div>
+        </div>
+    )
 }
 
 export default Contact

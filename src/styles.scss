@@ -79,12 +79,22 @@ $hover: lighten($darkblue, 10%);
     background: lighten($darkblue, 10%);
 }
 
-h1 {
+h1,h2 {
     font-size: max(2vw, 28px);
-    margin-top: max(1.5vw, 21px);
+    line-height: max(6vw, 84px);
     text-align: center;
-    margin-bottom: max(1.5vw, 21px);
 }
+
+h3 {
+    font-size: max(1vw, 14px);
+    line-height: max(2vw, 28px);
+    text-align: center;
+
+    span {
+        color: #51557E;
+    }
+}
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -99,8 +109,8 @@ body {
         display: flex;
         justify-content: space-between;
         padding: 0% 3% 0% 3%;
-        line-height: max(9vw, 63px);
-        margin-top: 20%;
+        line-height: 500%;
+        margin-top: 10%;
         align-items: center;
         width: 100%;
     }
@@ -123,19 +133,19 @@ body {
 
     h1 {
         white-space: nowrap;
-        font-size: max(3vw, 21px);
+        font-size: max(3vw, 42px);
         text-align: left;
-        margin-top: max(6vw, 42px);
+        margin-top: max(6vw, 84px);
         margin-bottom: 0;
-        line-height: max(5.5vw, 38.5px);
+        line-height: max(4.5vw, 63px);
     }
 
     p {
         width: 100%;
         font-weight: lighter;
         overflow-wrap: normal;
-        font-size: max(2vw, 14px);
-        line-height: max(4vw, 28px);
+        font-size: max(1vw, 14px);
+        line-height: max(2vw, 28px);
     }
 }
 
@@ -236,9 +246,9 @@ body {
 .container {
     margin: 2vw auto;
     background-color: #D6EFED;
-    width: 80%;
+    width: max-content;
     /* max-height: auto; */
-    padding: 2vw;
+    padding: max(2vw, 28px);
     border-radius: 10px;
 }
 
@@ -355,8 +365,6 @@ body {
 
 
 .practicediv {
-    display: flex;
-    //  justify-content: space-between;
     font-size: max(1vw, 14px);
     line-height: max(2vw, 28px);
 }
@@ -423,7 +431,7 @@ body {
 }
 
 .content {
-    padding: 3px 18px;
+    padding: 3px 8vw;
     //    background-color: #F4F4F4;
     font-size: max(1vw, 14px);
     line-height: max(2vw, 28px);
