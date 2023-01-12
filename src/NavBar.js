@@ -5,43 +5,39 @@ const NavBar = () => {
 
     return (
         <div id='navsticky'>
-            <div style={{ backgroundColor: '#fff' }}>
+{/*            <div style={{ backgroundColor: '#fff' }}>
                 <ul style={{ listStyle: 'none' }}>
                     <CustomLink to='/' id='navlogo'>
                         <img src={logo} className='center' style={{ width: 'max(15vw, 150px)' }} alt=''></img>
                     </CustomLink>
                 </ul>
             </div>
-
+*/}
             <nav className='nav' id='myTopnav'>
 
+                <CustomLink to='/'>
+                    <img src={logo} className='center' style={{ width: 'max(15vw, 150px)'}} alt=''></img>
+                </CustomLink>
+
                 <ul id='navul'>
-                    <CustomLink to='/' id='navresponsivelogo'>
-                        <img src={logo} className='center' style={{ width: 'max(15vw, 150px)' }} alt=''></img>
-                    </CustomLink>
-                </ul>
-
-                <ul id='homelink'>
                     <CustomLink to='/'>Home</CustomLink>
-                </ul>
-
-                <ul>
                     <CustomLink to='/classes'>Classes</CustomLink>
                     <CustomLink to='/practice'>Practice</CustomLink>
                     <CustomLink to='/contests'>Timeline</CustomLink>
                     <CustomLink to='/careers'>Career</CustomLink>
                     <CustomLink to='/team'>Our Team</CustomLink>
-                    {/* <CustomLink to = '/apply' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Apply</CustomLink> */}
+                    {/* <CustomLink to = '/apply' style = {{backgroundColor: '#6271e2', borderRadius: '5px', padding: '5px 10px 5px 10px', color: '#fff'}}>Apply</CustomLink> 
+                     */}
                 </ul>
 
                 <button id='icon' className="icon" onClick={
                     () => {
-                        var x = document.getElementById("myTopnav");
-                        if (x.className === "nav") {
-                            x.className += " responsive";
+                        var x = document.getElementById("navul");
+                        if (x.className === "") {
+                            x.className = "expanded";
                             document.getElementById("icon").innerHTML = "<i class='bi bi-x'></i>"
                         } else {
-                            x.className = "nav";
+                            x.className = "";
                             document.getElementById("icon").innerHTML = "<i class='bi bi-arrow-bar-left'></i>"
                         }
                     }
@@ -59,8 +55,13 @@ function CustomLink({ to, children, ...props }) {
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
     return (
-        <li className={isActive ? "active" : ""}>
-            <Link to={to} {...props}>
+        <li style={{ listStyle:'none' }}>
+            <Link to={to} {...props} className={isActive ? "navlink active" : "navlink"} onClick={
+                () => {
+                    document.getElementById("navul").className = "";
+                    document.getElementById("icon").innerHTML = "<i class='bi bi-arrow-bar-left'></i>"
+                }
+            }>
                 {children}
             </Link>
         </li>

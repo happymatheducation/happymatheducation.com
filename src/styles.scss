@@ -458,13 +458,6 @@ body {
     background: #fff;
 }
 
-#navsticky {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 10;
-}
-
 .backtotop {
     font-weight: bold;
     background-image: none;
@@ -472,21 +465,29 @@ body {
     background-color: #FFFFFF;
 }
 
-.nav {
-    background-color: #fff;
+#navsticky {
+    background-color: #FFFFFF;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 10;
     border-bottom: 3px solid #EEEEEE;
+}
+
+.nav {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
     padding: 10px 1rem;
-    transition: background-color 0.3s ease;
     line-height: 25px;
 
     ul {
-        list-style: none;
         margin: 0;
         display: flex;
         gap: 1rem;
+        position: absolute;
+        right:10px;
+        bottom: 10px;
     }
 
     .icon {
@@ -497,48 +498,40 @@ body {
         background-color: #FFFFFF;
     }
 
-
-    a, .navlink {
+    .navlink {
         background-image: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
         background-size: 0% 3px;
         background-repeat: no-repeat;
         background-position: left bottom;
-        color: #000;
+        color: #000000;
         font-size: max(1.5vw, 15px);
         text-decoration: none;
-        transition: color 0.3s, background-size 0.5s ease;
+        transition: background-size 0.5s ease;
 
         &:hover {
             background-size: 100% 3px;
         }
-    }
 
-    li.active {
-        background-image: linear-gradient(90deg, $cyan 0%, $darkblue 100%);
-        background-size: 100% 3px;
-        background-repeat: no-repeat;
-        background-position: left bottom;
-    }
-
-    #navresponsivelogo, #navul {
-        display: none;
-        background-image: none;
+        &.active {
+            background-size: 100% 3px;
+        }
     }
 }
 
 @media screen and (max-width: 800px) {
-    #navlogo {
-        display: none;
-    }
 
     .nav {
-        #navresponsivelogo, #navul {
-            display: inline;
-            width: max(2vw, 25px) !important;
-        }
 
-        ul:not(:first-child) {
+        ul {
             display: none;
+
+            &.expanded {
+                float: right;
+                display: block;
+                text-align: left;
+                margin-right: 10vw;
+                position: static;
+            }
         }
 
         .icon {
@@ -546,37 +539,11 @@ body {
             cursor: pointer;
             position: absolute;
             right: 10px;
-            top: 25px;
-            font-size: 25px;
-        }
-
-        a, navlink {
-            &:hover {
-                background-size: 0% 3px;
-            }
+            top: 10px;
+            font-size: 20px;
         }
     }
 
-    .nav.responsive .icon {
-        position: absolute;
-        right: 10px;
-        top: 25px;
-    }
-
-    .nav.responsive ul {
-        float: none;
-        display: block;
-        text-align: left;
-        margin-right: 10vw;
-
-        &:hover {
-            background-size: 0% 3px;
-        }
-    }
-
-    #homelink {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 600px) {
