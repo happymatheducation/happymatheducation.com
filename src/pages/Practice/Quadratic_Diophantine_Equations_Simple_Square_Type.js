@@ -143,31 +143,31 @@ class Quadratic_Diophantine_Equations_Simple_Square_Type extends Component {
             case 0:
                 answerForm = (<>
                     Number of solutions = <input type="number" value={this.state.userSolnsCount}
-                        onChange={e => this.setState({ userSolnsCount: e.target.value })}></input><br /><br />
+                        onChange={e => this.setState({ userSolnsCount: e.target.value })}></input><br />
                 </>);
                 break;
             case 1:
                 answerForm = (<>
                     Maximum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMax}
-                        onChange={e => this.setState({ userXMax: e.target.value })}></input><br /><br />
+                        onChange={e => this.setState({ userXMax: e.target.value })}></input><br />
                 </>);
                 break;
             case 2:
                 answerForm = (<>
                     Minimum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMin}
-                        onChange={e => this.setState({ userXMin: e.target.value })}></input><br /><br />
+                        onChange={e => this.setState({ userXMin: e.target.value })}></input><br />
                 </>);
                 break;
             case 3:
                 answerForm = (<>
                     Maximum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMax}
-                        onChange={e => this.setState({ userYMax: e.target.value })}></input><br /><br />
+                        onChange={e => this.setState({ userYMax: e.target.value })}></input><br />
                 </>);
                 break;
             case 4:
                 answerForm = (<>
                     Minimum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMin}
-                        onChange={e => this.setState({ userYMin: e.target.value })}></input><br /><br />
+                        onChange={e => this.setState({ userYMin: e.target.value })}></input><br />
                 </>);
                 break;
             default:

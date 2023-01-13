@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 import homeimg from '../assets/home.png'
 import teaching from '../assets/teaching.svg'
-import learning from '../assets/learning.svg'
+//import learning from '../assets/learning.svg'
 import math2 from '../assets/math2.svg'
 import appreciation from '../assets/appreciation.svg'
 
@@ -28,13 +28,23 @@ const Home = () => {
                             <br/>
                             To help kids <span className='gradient'>enjoy</span> maths
                         </h1>
+
                         <button className='btn' onClick={
                             () => {
-                                navigate('/apply')
+                                navigate('/classes')
+                            }
+                        }>
+                            <i className='bi bi-search'></i>
+                            {' Classes'}
+                        </button>
+
+                        <button className='btn' onClick={
+                            () => {
+                                navigate('/practice')
                             }
                         }>
                             <i className='bi bi-person-fill'></i>
-                            {' Apply'}
+                            {' Practice'}
                         </button>
                     </div>
 
@@ -52,24 +62,6 @@ const Home = () => {
 
                     <img src={teaching} alt='teaching' ></img>
 
-                </div>
-
-                <div data-aos='fade-right'>
-                    <div className='textblock'>
-                        <h1>Classes</h1>
-                        <p>
-                            Tuition and Policy
-                        </p>
-                        <button className='btn' onClick={
-                            () => {
-                                navigate('/classes')
-                            }
-                        }>
-                            <i className='bi bi-search'></i>
-                            {' Explore'}
-                        </button>
-                    </div>
-                    <img src={learning} alt='teaching' ></img>
                 </div>
 
                 <div data-aos='fade-right' style={{ display: 'block' }}>

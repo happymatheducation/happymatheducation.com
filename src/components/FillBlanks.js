@@ -2,12 +2,12 @@ import { Component } from "react";
 import JSConfetti from 'js-confetti'
 
 class FillBlanks extends Component {
-/* props:
-*  (Callback) checkAnswer() = {boolean | string} true if the answer is correct, or a string if the answer is incorrect
-*  (Callback) generateQuestion() = {Component | string} displaying the question
-*  answerForm: Component |
-*  (Callback) clearAnswerForm
-*/
+    /* props:
+    *  (Callback) checkAnswer() = {boolean | string} true if the answer is correct, or a string if the answer is incorrect
+    *  (Callback) generateQuestion() = {Component | string} displaying the question
+    *  answerForm: Component |
+    *  (Callback) clearAnswerForm
+    */
     state = {
         attemptedNumber: 0,
         correctNumber: 0,
@@ -62,28 +62,29 @@ class FillBlanks extends Component {
 
                 <div className='practicebody'>
                     <>{this.state.currentQuestion}</>
-                    <>{this.state.correctMessage}</>
-                    <br />
-                    <br />
-                    <>{this.state.started && this.props.answerForm}</>
+                    <div>
+                        <>{this.state.correctMessage}</>
+                        <br />
+                        <>{this.state.started && this.props.answerForm}</>
 
-                    {
-                        this.state.paused &&
-                        (<>
-                            <button className="btn" onClick={this.next}>Next</button>
-                        </>)
-                    }
+                        {
+                            this.state.paused &&
+                            (<>
+                                <button className="btn" onClick={this.next}>Next</button>
+                            </>)
+                        }
 
-                    {
-                        !this.state.paused &&
-                        (<>
-                            {this.state.started ?
-                                <button className="btn" onClick={this.checkAnswer}>Check Answer</button>
-                                :
-                                <button className="btn" onClick={this.start}>Start</button>
-                            }
-                        </>)
-                    }
+                        {
+                            !this.state.paused &&
+                            (<>
+                                {this.state.started ?
+                                    <button className="btn" onClick={this.checkAnswer}>Check Answer</button>
+                                    :
+                                    <button className="btn" onClick={this.start}>Start</button>
+                                }
+                            </>)
+                        }
+                    </div>
                 </div>
             </div>
         )

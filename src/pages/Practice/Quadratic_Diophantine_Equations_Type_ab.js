@@ -113,12 +113,12 @@ class Quadratic_Diophantine_Equations_Type_ab extends Component {
         this.state.askingPosIntSolns ?
             answerForm = (<>
                 Number of positive integer solutions = <input type="number" value={this.state.userPosIntSolns}
-                    onChange={e => this.setState({ userPosIntSolns: e.target.value })}></input><br /><br />
+                    onChange={e => this.setState({ userPosIntSolns: e.target.value })}></input><br />
             </>)
             :
             answerForm = (<>
                 Number of integer solutions = <input type="number" value={this.state.userIntSolns}
-                    onChange={e => this.setState({ userIntSolns: e.target.value })}></input><br /><br />
+                    onChange={e => this.setState({ userIntSolns: e.target.value })}></input><br />
             </>)
         return (
             <FillBlanks

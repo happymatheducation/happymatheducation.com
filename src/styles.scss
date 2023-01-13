@@ -295,8 +295,7 @@ body {
     color: #fff;
     /* border: steelblue; */
     padding: max(1vw, 10px) max(2vw, 20px);
-    margin: 0px;
-    margin-top: max(2vw, 20px);
+    margin: max(2vw, 20px);
     border-width: 0px;
     border-radius: max(1vw, 10px);
     cursor: pointer;
@@ -370,13 +369,25 @@ body {
 }
 
 .practicequiz {
-    margin: 10px 10px 10px 10px;
+    margin: max(3vw, 30px);
     background-color: #DDEEFF;
-    border: 3px solid #000000;
+    border: max(0.3vw, 3px) solid #000000;
+    font-size: max(1.8vw, 18px);
+    line-height: max(3.6vw, 36px);
+    overflow:auto;
+
+    input {
+        font-size: max(1.8vw, 18px);
+        width: max(8vw, 80px);
+    }
+
+    canvas {
+        float: left;
+    }
 
     .practiceheader {
         background-color: #D0E0F0;
-        text-align:right;
+        text-align: right;
 
         .practiceheaderleft {
             display: inline-block;
@@ -395,7 +406,15 @@ body {
 
     .practicebody {
         text-align: center;
-        padding: 20px;
+        padding: max(2vw, 20px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .practicequiz {
+        canvas {
+            float: none;
+        }
     }
 }
 
@@ -422,11 +441,12 @@ body {
         float: right;
         margin-left: 5px;
     }
+
+    &.cactive::after {
+        content: "-";
+    }
 }
 
-.cactive::after {
-    content: "-";
-}
 
 
 .content {
@@ -552,7 +572,7 @@ body {
 
         div {
             text-align: center;
-            margin-top: max(2vw, 20px);
+//            margin-top: max(2vw, 20px);
         }
     }
 }

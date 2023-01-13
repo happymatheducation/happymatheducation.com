@@ -59,7 +59,7 @@ class NumberOfFactors extends Component {
             primeFactorizationString: primeFactorizationString,
         })
 
-        return (<>How many positive factors does <MathComponent display={false} tex={questionString} /> have?<br /><br /></>);
+        return (<>How many positive factors does <MathComponent display={false} tex={questionString} /> have?</>);
     }
 
     clearAnswerForm = () => {
@@ -87,7 +87,7 @@ render() {
 
     let answerForm = (<>
         Your answer: <input type="number" value={this.state.userAnswer}
-            onChange={e => this.setState({ userAnswer: e.target.value })}></input><br /><br />
+            onChange={e => this.setState({ userAnswer: e.target.value })}></input><br />
     </>);
     return (
         <FillBlanks

@@ -44,8 +44,8 @@ class EuclidsTheorem extends Component {
         let xCenter = (xMax + xMin) / 2;
         let yCenter = (yMax + yMin) / 2;
         let textSize = 20;
-        let canvasWidth = width + textSize * 3;
-        let canvasHeight = height + textSize * 3;
+        let canvasWidth = width * 2;
+        let canvasHeight = height * 2;
         let xCorrection = canvasWidth / 2 - xCenter;
         let yCorrection = canvasHeight / 2 - yCenter;
         A.x += xCorrection;
@@ -110,7 +110,7 @@ class EuclidsTheorem extends Component {
             ctx.stroke();
 
             // Draw Points' labels;
-            ctx.font = textSize + "px TimesNewRome";
+            ctx.font = "max(" + textSize/10 + "vw, " + textSize + "px) TimesNewRome";
 
             ctx.textAlign = textAlignA;
             ctx.textBaseline = textBaselineA;
@@ -188,7 +188,7 @@ class EuclidsTheorem extends Component {
             <MathComponent display={false} tex={'~' + condition[1] + '~'} />
             what is the length of
             <MathComponent display={false} tex={'~' + question + '=?~'} /> (Diagram not to scale)
-        </p>{this.drawDiagram()}<br /></>);
+        </p>{this.drawDiagram()}</>);
     }
 
     clearAnswerForm = () => {
@@ -214,7 +214,7 @@ class EuclidsTheorem extends Component {
 
         let answerForm = (<>
             Your answer: <input type="number" value={this.state.userAnswer}
-                onChange={e => this.setState({ userAnswer: e.target.value })}></input><br /><br />
+                onChange={e => this.setState({ userAnswer: e.target.value })}></input><br />
         </>);
         return (
             <FillBlanks

@@ -48,7 +48,7 @@ class Quadratic_Equations extends Component {
 
         question = firstTerm.concat(secondTerm, thirdTerm, `=0`);
 
-        return (<MathComponent tex={question} />);
+        return (<MathComponent tex={question} display={false} />);
     }
 
     clearAnswerForm = () => {
@@ -76,10 +76,10 @@ class Quadratic_Equations extends Component {
                 clearAnswerForm={this.clearAnswerForm}
                 answerForm={(
                     <>
-                        <MathComponent tex="x_1=" display={false} /><input type="number" value={this.state.ansX1}
-                            onChange={e => this.setState({ ansX1: e.target.value })}></input><br></br>
-                        <MathComponent tex="x_2=" display={false} /><input type="number" value={this.state.ansX2}
-                            onChange={e => this.setState({ ansX2: e.target.value })}></input><br></br><br></br>
+                        <MathComponent tex="x_1=" display={false} /> <input type="number" value={this.state.ansX1}
+                            onChange={e => this.setState({ ansX1: e.target.value })}></input><br />
+                        <MathComponent tex="x_2=" display={false} /> <input type="number" value={this.state.ansX2}
+                            onChange={e => this.setState({ ansX2: e.target.value })}></input><br />
                     </>
                 )}
             />
