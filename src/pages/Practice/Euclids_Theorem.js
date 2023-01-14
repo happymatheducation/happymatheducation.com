@@ -43,7 +43,7 @@ class EuclidsTheorem extends Component {
         let height = yMax - yMin;
         let xCenter = (xMax + xMin) / 2;
         let yCenter = (yMax + yMin) / 2;
-        let textSize = Math.max(window.innerWidth / 100, 10) * 1.4;
+        let textSize = Math.max(window.innerWidth / 100, 10) * 2;
         console.log(window.innerWidth, textSize);
         let canvasWidth = width + 3 * textSize;
         let canvasHeight = height + 3 * textSize;
