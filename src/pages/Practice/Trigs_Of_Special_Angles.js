@@ -87,7 +87,7 @@ class Trigs_Of_Special_Angles extends Component {
             ? question = trigTex + angle + String.raw`^\circ` + questionEnd
             : question = trigTex + this.converToRadian(angle) + questionEnd
 
-        return (<MathComponent tex={question} />);
+        return (<MathComponent tex={question}/>);
     }
 
     render = () => {

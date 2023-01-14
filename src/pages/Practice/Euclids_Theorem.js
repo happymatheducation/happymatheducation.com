@@ -43,9 +43,10 @@ class EuclidsTheorem extends Component {
         let height = yMax - yMin;
         let xCenter = (xMax + xMin) / 2;
         let yCenter = (yMax + yMin) / 2;
-        let textSize = 20;
-        let canvasWidth = width * 2;
-        let canvasHeight = height * 2;
+        let textSize = Math.max(window.innerWidth / 100, 10) * 1.4;
+        console.log(window.innerWidth, textSize);
+        let canvasWidth = width + 3 * textSize;
+        let canvasHeight = height + 3 * textSize;
         let xCorrection = canvasWidth / 2 - xCenter;
         let yCorrection = canvasHeight / 2 - yCenter;
         A.x += xCorrection;
@@ -110,7 +111,7 @@ class EuclidsTheorem extends Component {
             ctx.stroke();
 
             // Draw Points' labels;
-            ctx.font = "max(" + textSize/10 + "vw, " + textSize + "px) TimesNewRome";
+            ctx.font = textSize + "px TimesNewRome";
 
             ctx.textAlign = textAlignA;
             ctx.textBaseline = textBaselineA;

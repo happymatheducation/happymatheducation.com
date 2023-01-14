@@ -5,10 +5,9 @@
     "\\src",
     "\\src\\assets",
     "\\src\\components",
-    "\\src\\logo",
     "\\src\\pages",
     "\\src\\pages\\Practice"
   ],
-  "SelectedNode": "\\src\\assets\\teaching.svg",
+  "SelectedNode": "\\src\\pages\\Practice\\Quadratic_Diophantine_Equations_Type_ab.js",
   "PreviewInSolutionExplorer": false
 }

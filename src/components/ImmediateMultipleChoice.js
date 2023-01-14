@@ -34,7 +34,7 @@ class ImmediateMultipleChoice extends Component {
         this.setState({ userChoiceID: userChoiceID });
 
         let correctChoiceButton = document.getElementById(this.props.correctChoiceID);
-        correctChoiceButton.className = "correctchoice";
+        correctChoiceButton.className += " correctchoice";
         if (userChoiceID === this.props.correctChoiceID) {
             this.setState({ correctNumber: this.state.correctNumber + 1 });
             this.setState({ correctMessage: <span style={{ fontSize: '20px', color: '#007700' }}>Correct! Great job!!!</span> });
@@ -46,7 +46,7 @@ class ImmediateMultipleChoice extends Component {
                 tex={this.props.allChoices[this.props.correctChoiceID].tex}
             />;
             let userChoiceButton = document.getElementById(userChoiceID);
-            userChoiceButton.className = "wrongchoice";
+            userChoiceButton.className += " wrongchoice";
             this.setState({ correctMessage: <span style={{ color: '#990000' }}>Incorrect! The correct answer is {correctAnswer}.</span> });
         }
         this.setState({ paused: true });
@@ -77,7 +77,7 @@ class ImmediateMultipleChoice extends Component {
         for (let i = 0; i < allChoices.length; i++) {
             choiceButtons.push(
                 <button key={i} id={i} name='choices' className='choices'
-                    onClick={() => { !this.state.paused?this.checkAnswer(i):void(0)}}>
+                    onClick={() => { !this.state.paused ? this.checkAnswer(i) : void (0) }}>
                     <MathComponent tex={allChoices[i].tex} display={false} />
                 </button>);
         }
@@ -94,22 +94,22 @@ class ImmediateMultipleChoice extends Component {
                 </div>
 
                 <div className='practicebody'>
-                    <br />
                     {this.state.currentQuestion}
                     {this.state.correctMessage}
                     <br />
-                    <br />
-                    {this.state.started && <>{choiceButtons}<br /><br /></>}
 
-                    {this.state.paused && <button className="btn" onClick={this.next}>Next</button>}
+                    {!this.state.started &&
+                        <button className="btn" onClick={this.start}>Start</button>
+                    }
 
-                    {!this.state.paused &&
-                        <>
-                            {!this.state.started &&
-                                <button className="btn" onClick={this.start}>Start</button>
-                            }
+                    {this.state.started &&
+                        <>{choiceButtons}<br />
+                        <button className="btn" onClick={this.next}
+                            style={this.state.paused ? {} : { visibility: 'hidden' }}
+                            >Next</button>
                         </>
                     }
+
                 </div>
             </div>
         )

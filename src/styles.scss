@@ -60,8 +60,7 @@ $hover: lighten($darkblue, 10%);
 }
 
 ::-webkit-scrollbar {
-    width: 1vw;
-    border-radius: 0.2vw;
+    border-radius:50%;
 }
 
 /* Track */
@@ -225,7 +224,7 @@ body {
     margin: auto;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .page {
         max-width: 100%;
     }
@@ -318,51 +317,6 @@ body {
     }
 }
 
-.choices {
-    background: $darkblue;
-    color: #fff;
-    padding: 5px 5px;
-    margin: 5px;
-    border-width: 1px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-    transition: background 0.3s;
-
-    &:hover {
-        background: $hover;
-    }
-
-    &:active {
-        transform: scale(0.95);
-    }
-}
-
-.correctchoice {
-    background: #007700;
-    color: #fff;
-    padding: 5px 5px;
-    margin: 5px;
-    border-width: 1px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-    transition: background 0.3s;
-}
-
-.wrongchoice {
-    background: #990000;
-    color: #fff;
-    padding: 5px 5px;
-    margin: 5px;
-    border-width: 1px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-    transition: background 0.3s;
-}
-
-
 .practicediv {
     font-size: max(1.4vw, 14px);
     line-height: max(2.8vw, 28px);
@@ -372,17 +326,24 @@ body {
     margin: max(3vw, 30px);
     background-color: #DDEEFF;
     border: max(0.3vw, 3px) solid #000000;
-    font-size: max(1.8vw, 18px);
-    line-height: max(3.6vw, 36px);
-    overflow:auto;
+    font-size: max(1.4vw, 14px);
+    line-height: max(2.8vw, 28px);
+    overflow: auto;
 
     input {
-        font-size: max(1.8vw, 18px);
+        font-size: max(1.4vw, 14px);
         width: max(8vw, 80px);
+    }
+
+    .btn {
+        font-size: max(1.4vw, 14px);
+        margin-bottom: 0;
     }
 
     canvas {
         float: left;
+        margin-left: max(2vw, 20px);
+        margin-right: max(2vw, 20px);
     }
 
     .practiceheader {
@@ -408,10 +369,42 @@ body {
         text-align: center;
         padding: max(2vw, 20px);
     }
+
+
+    .choices {
+        background: $darkblue;
+        font-size: max(1.4vw, 14px);
+        color: #fff;
+        padding: max(0.5vw, 5px);
+        margin: max(0.5vw, 5px);
+        border-width: max(0.14vw, 1.4px);
+        border-radius: max(0.7vw, 7px);
+        cursor: pointer;
+        transition: color 0.3s;
+        transition: background 0.3s;
+
+        &:hover {
+            background: $hover;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        &.correctchoice {
+            background: #007700;
+        }
+
+        &.wrongchoice {
+            background: #990000;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {
     .practicequiz {
+        margin: 0;
+
         canvas {
             float: none;
         }
@@ -446,8 +439,6 @@ body {
         content: "-";
     }
 }
-
-
 
 .content {
     padding: 3px 8vw;

@@ -82,7 +82,7 @@ class Quadratic_Diophantine_Equations_Type_ab extends Component {
         const term1 = "xy";
         let term2 = this.linearTerm(a, "x");
         let term3 = this.linearTerm(b, "y");
-        return (<MathComponent tex={`${term1}${term2}${term3} = ${t}`} />);
+        return (<MathComponent tex={`${term1}${term2}${term3} = ${t}`} display={false} />);
     }
 
     clearAnswerForm = () => {

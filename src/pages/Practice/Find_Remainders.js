@@ -63,7 +63,7 @@ class Find_Remainders extends Component {
         }
 
         this.setState({ correctAnswer: remainder });
-        return (<>What is the remainder for <MathComponent display={false} tex={questionString} /><br /><br /></>);
+        return (<>What is the remainder for <MathComponent display={false} tex={questionString} /></>);
     }
 
     clearAnswerForm = () => {
@@ -89,7 +89,7 @@ render() {
 
     let answerForm = (<>
         Your answer: <input type="number" value={this.state.userAnswer}
-            onChange={e => this.setState({ userAnswer: e.target.value })}></input><br /><br />
+            onChange={e => this.setState({ userAnswer: e.target.value })}></input><br />
     </>);
     return (
         <FillBlanks

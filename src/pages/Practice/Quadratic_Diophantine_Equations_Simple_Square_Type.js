@@ -74,11 +74,11 @@ class Quadratic_Diophantine_Equations_Simple_Square_Type extends Component {
         });
 
         return (
-            <>In the equation below, &nbsp;
+            <>Given &nbsp;
                 <MathComponent display={false} tex={`x`} />&nbsp;
                 and <MathComponent display={false} tex={`y`} />&nbsp;
-                are non-negative integers.
-                <MathComponent tex={`x^2-y^2=${p}`} />
+                are non-negative integers, and <br/>
+                <MathComponent tex={`x^2-y^2=${p}`} display={false} />
             </>);
     }
 
