@@ -1,6 +1,7 @@
 import { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
+import primeFactorize from "../../assets/myMath"; //example [{prime:2,power:3}, {prime:3, power:1}];
 
 class NumberOfFactors extends Component {
 
@@ -10,25 +11,6 @@ class NumberOfFactors extends Component {
         primeFactorizationString: '',
     };
 
-    primeFactorize = (number) => {
-        const allPrimes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
-        let primeFactorization = [];
-        let iCount;
-        for (let i in allPrimes) {
-            let currentPrime = allPrimes[i];
-            iCount = 0;
-            while (currentPrime <= number && number % currentPrime === 0) {
-                number = number / currentPrime;
-                iCount++;
-            }
-            if (iCount) {
-                primeFactorization.push({ prime: currentPrime, power: iCount });
-            }
-
-        }
-        return primeFactorization; //example [{prime:2,power:3}, {prime:3, power:1}];
-    }
-
     generateQuestion = () => {
 
         const x = Math.floor(Math.random() * 91) + 10; // 10~100;
@@ -36,7 +18,7 @@ class NumberOfFactors extends Component {
         const questionString = String.raw`${x}\times${y}`;
         const product = x * y;
 
-        let primeFactorization = this.primeFactorize(product);
+        let primeFactorization = primeFactorize(product);
         let numberOfFactors = 1;
         let primeFactorizationString = questionString + '=';
         for (let i = 0; i < primeFactorization.length; i++) {

@@ -136,7 +136,8 @@ function Practice() {
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials.pdf'
                         >pdf</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'
-                        >Answers</a>
+                        >Answers</a> |
+                        <a href='/Practice/PrimeFactorizationForFactorials'>App</a>
                     </div>
                     <div className='practicediv'>
                         Quadratic Diophantine Equations Type ab: <br />&nbsp;&nbsp;&nbsp;&nbsp;
