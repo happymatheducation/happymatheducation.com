@@ -27,7 +27,7 @@ class PrimeFactorizationForFactorials extends Component {
             potentialN.push(Math.floor(currentPower / term.power));
         }
         console.log(potentialN);
-        return Math.max(...potentialN);
+        return Math.min(...potentialN);
     }
 
     generateQuestion = () => {
