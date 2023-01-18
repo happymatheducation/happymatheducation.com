@@ -26,7 +26,6 @@ class PrimeFactorizationForFactorials extends Component {
             currentPower = this.powerOfP(m, term.prime);
             potentialN.push(Math.floor(currentPower / term.power));
         }
-        console.log(potentialN);
         return Math.min(...potentialN);
     }
 

@@ -53,7 +53,8 @@ function Practice() {
                     Arithmetic Sequence:<br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a style={{ display: 'inline' }}
                         href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/arithmetic_sequence.pdf'
-                    >pdf</a>
+                    >pdf</a> | 
+                    <a href='/Practice/ArithmeticSequence'>App</a>
                 </div>
                 <div className='practicediv'>
                     Mental Math with Basic Algebra: <br />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -259,10 +260,8 @@ function Practice() {
                     </div>
                     <div className='practicediv'>
                         Logarithm from Contests: <br />&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'
-                        >pdf</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/logarithm.pdf'
-                        >Answers</a>
+                        >pdf</a>
                     </div>
                 </div>
             </div>

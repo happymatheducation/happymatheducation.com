@@ -24,6 +24,7 @@ const FindRemainders = lazy(() => import("./pages/Practice/Find_Remainders.js"))
 const DeMoivresFormula = lazy(() => import("./pages/Practice/De_Moivres_Formula.js"))
 const EuclidsTheorem = lazy(() => import("./pages/Practice/Euclids_Theorem.js"))
 const PrimeFactorizationForFactorials = lazy(() => import("./pages/Practice/PrimeFactorizationForFactorials.js"))
+const ArithmeticSequence = lazy(() => import("./pages/Practice/ArithmeticSequence.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -117,31 +118,33 @@ const App = () => {
 
             <Suspense fallback={<div className="lazy-preloader"></div>}>
                 <div className='page'>
-                <Routes>
-                    <Route exact path='/' element={<Home />} />
-                    <Route exact path='/classes' element={<Classes />} />
-                    <Route exact path='/practice' element={<Practice />} />
-                    <Route exact path='/contests' element={<Contests />} />
-                    <Route exact path='/license' element={<License />} />
-                    <Route exact path='/careers' element={<Career />} />
-                    <Route exact path='/apply' element={<Contact />} />
-                    <Route exact path='/team' element={<Team />} />
-                    <Route exact path='/Practice/Quadratic_Equations' element={<QuadraticEquations />} />
-                    <Route exact path='/Practice/Quadratic_Diophantine_Equations_Type_ab' element={<QuadraticDiophantineEquationsTypeAB />} />
-                    <Route exact path='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type' element={<QuadraticDiophantineEquationsSimpleSquareType />} />
-                    <Route exact path='/Practice/Trigs_Of_Special_Angles' element={<TrigsOfSpeicalAngles />} />
-                    <Route exact path='/Practice/NumberOfFactors' element={<NumberOfFactors />} />
-                    <Route exact path='/Practice/Find_Remainders' element={<FindRemainders />} />
-                    <Route exact path='/Practice/De_Moivres_Formula' element={<DeMoivresFormula />} />
-                    <Route exact path='/Practice/PrimeFactorizationForFactorials' element={<PrimeFactorizationForFactorials />} />
-                    <Route exact path='/Practice/Euclids_Theorem' element={<EuclidsTheorem />} />
+                    <Routes>
+                        <Route exact path='/' element={<Home />} />
+                        <Route exact path='/classes' element={<Classes />} />
+                        <Route exact path='/practice' element={<Practice />} />
+                        <Route exact path='/contests' element={<Contests />} />
+                        <Route exact path='/license' element={<License />} />
+                        <Route exact path='/careers' element={<Career />} />
+                        <Route exact path='/apply' element={<Contact />} />
+                        <Route exact path='/team' element={<Team />} />
+                        <Route exact path='/Practice/Quadratic_Equations' element={<QuadraticEquations />} />
+                        <Route exact path='/Practice/Quadratic_Diophantine_Equations_Type_ab' element={<QuadraticDiophantineEquationsTypeAB />} />
+                        <Route exact path='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type' element={<QuadraticDiophantineEquationsSimpleSquareType />} />
+                        <Route exact path='/Practice/Trigs_Of_Special_Angles' element={<TrigsOfSpeicalAngles />} />
+                        <Route exact path='/Practice/NumberOfFactors' element={<NumberOfFactors />} />
+                        <Route exact path='/Practice/Find_Remainders' element={<FindRemainders />} />
+                        <Route exact path='/Practice/De_Moivres_Formula' element={<DeMoivresFormula />} />
+                        <Route exact path='/Practice/PrimeFactorizationForFactorials' element={<PrimeFactorizationForFactorials />} />
+                        <Route exact path='/Practice/Euclids_Theorem' element={<EuclidsTheorem />} />
+                        <Route exact path='/Practice/ArithmeticSequence' element={<ArithmeticSequence />} />
 
-                    <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
-                    <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
-                    <Route exact path='/Practice/SimpleMultiplication' element={<SimpleMultiplication />} />
-                    <Route exact path='/Practice/OneStepEquation' element={<OneStepEquation />} />
-                    <Route exact path='/Practice/Adventure' element={<Adventure />} />
-                    <Route exact path='/*' element={<Notfound />} />
+
+                        <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
+                        <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
+                        <Route exact path='/Practice/SimpleMultiplication' element={<SimpleMultiplication />} />
+                        <Route exact path='/Practice/OneStepEquation' element={<OneStepEquation />} />
+                        <Route exact path='/Practice/Adventure' element={<Adventure />} />
+                        <Route exact path='/*' element={<Notfound />} />
                     </Routes>
                 </div>
             </Suspense>
