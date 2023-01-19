@@ -1,7 +1,7 @@
 import { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
-import primeFactorize from "../../assets/myMath"; //example [{prime:2,power:3}, {prime:3, power:1}];
+import {primeFactorize} from "../../assets/myMath"; //example [{prime:2,power:3}, {prime:3, power:1}];
 
 class NumberOfFactors extends Component {
 

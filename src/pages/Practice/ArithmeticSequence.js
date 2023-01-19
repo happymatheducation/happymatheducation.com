@@ -1,19 +1,21 @@
 import { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
+import { sumArray } from "../../assets/myMath";
 
 class ArithmeticSequence extends Component {
 
     /* formulaIDs: 
-     1. a(n)=a(1)+(n-1)d;
-     2. s(n)=(a(1)+a(n))n/2;
-     3. a(m)-a(n)=d(m-n);
-     4. a(n)=s(n)-s(n-1);
+     1. a(n)=a(1)+(n-1)d; 4 variables
+     2. s(n)=(a(1)+a(n))n/2; 4 variable
+     3. a(m)-a(n)=d(m-n); 3 variables
+     4. a(n)=s(n)-s(n-1); 3 variables
 
-     5. a(n),a(n+k),a(n+2k) is arithmetic;
-     6. s(2n-1)=(2n-1)a(n);
-     7. s(n),s(2n)-s(n),s(3n)-s(2n) is arithmetic;
-     8. s(n) = (a(1+k) + a(n - k))n / 2;
+     5. a(n),a(n+k),a(n+2k) is arithmetic; 3 variables
+     6. s(2n-1)=(2n-1)a(n); 2 variables
+     7. s(n),s(2n)-s(n),s(3n)-s(2n) is arithmetic; 1 variable
+     8. s(n) = (a(1+k) + a(n - k))n / 2; 4 variables
+     Total variables = 4+4+3+3+3+2+1+4=24
      */
 
     state = {
@@ -24,8 +26,17 @@ class ArithmeticSequence extends Component {
     };
 
     generateQuestion = () => {
-
-        const formulaID = Math.ceil(Math.random() * 8); // 1~8;
+        const variablesPerFormula = [4, 4, 3, 3, 3, 2, 1, 4];
+        const totalVariableIDs = sumArray(variablesPerFormula);
+        const overallVariableID = Math.ceil(Math.random() * totalVariableIDs); // 1~24;
+        let variableID = overallVariableID;
+        console.log(variableID);
+        let formulaID = 1;
+        while (variableID > variablesPerFormula[formulaID - 1]) {
+            variableID -= variablesPerFormula[formulaID - 1];
+            formulaID++;
+        }
+        console.log(formulaID, variableID);
         this.setState({ formulaID: formulaID });
         let questionDescription;
         function sequenceDescription(d) {
@@ -52,11 +63,9 @@ class ArithmeticSequence extends Component {
         let sn = (a1 + an) * n / 2;
         const sn_1 = sn - an;
         const n_1 = n - 1;
-        let variableID;
         let sumDescription = <MathComponent display={false} tex={String.raw`S_n=a_1+a_2+\cdots+a_n,~`} />;
         switch (formulaID) {
             case 1: // 1. a(n)=a(1)+(n-1)d;
-                variableID = Math.ceil(Math.random() * 4); // 1~4;
                 switch (variableID) {
                     case 1: // a(n)
                         this.setState({ correctAnswer: an });
@@ -95,7 +104,6 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 2: // 2. s(n)=(a(1)+a(n))n/2;
-                variableID = Math.ceil(Math.random() * 4); // 1~4;
                 switch (variableID) {
                     case 1: // s(n)
                         this.setState({ correctAnswer: sn });
@@ -138,7 +146,6 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 3: // 3. a(m) - a(n)=d(m - n); a(m) and m are always given;
-                variableID = Math.ceil(Math.random() * 3); // 1~3;
                 switch (variableID) {
                     case 1: // a(n)
                         this.setState({ correctAnswer: an });
@@ -169,7 +176,6 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 4: // 4. a(n) = s(n) - s(n-1);
-                variableID = Math.ceil(Math.random() * 3); // 1~3;
                 switch (variableID) {
                     case 1: // a(n)
                         this.setState({ correctAnswer: an });
@@ -200,7 +206,6 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 5: // 5. a(n), a(n + k), a(n + 2k) is arithmetic;
-                variableID = Math.ceil(Math.random() * 3); // 1~3;
                 switch (variableID) {
                     case 1: // a(n)
                         this.setState({ correctAnswer: an });
@@ -231,7 +236,6 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 6: // 6. s(2n - 1) = (2n - 1)a(n);
-                variableID = Math.ceil(Math.random() * 2); // 1~2;
                 const Ssub = 2 * n - 1;
                 switch (variableID) {
                     case 1: // s(2n-1)
@@ -271,7 +275,6 @@ class ArithmeticSequence extends Component {
                 this.setState({ beforeBlank: 'S_{' + 3 * n + '}=~' });
                 break;
             case 8: // 8. s(n) = (a(1+k) + a(n - k))n / 2;
-                variableID = Math.ceil(Math.random() * 4); // 1~4;
                 k = Math.ceil(Math.random() * Math.floor(n/2-1)); // 1~(n/2-1);
                 const k1 = k + 1;
                 const ak1 = a1 + k * d;
