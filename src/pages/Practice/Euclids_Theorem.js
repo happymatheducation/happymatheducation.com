@@ -5,10 +5,16 @@ import { MathComponent } from "mathjax-react";
 
 class EuclidsTheorem extends Component {
 
+    constructor() {
+        super();
+        this.answerForm = React.createRef(); // to be used for auto focus.
+    }
+
     state = {
         correctAnswer: '',
         userAnswer: '',
-        question:'',
+        question: '',
+        difficulty:'',
     };
 
     unitVector = (A, B) => {
@@ -44,7 +50,6 @@ class EuclidsTheorem extends Component {
         let xCenter = (xMax + xMin) / 2;
         let yCenter = (yMax + yMin) / 2;
         let textSize = Math.max(window.innerWidth / 100, 10) * 2;
-        console.log(window.innerWidth, textSize);
         let canvasWidth = width + 3 * textSize;
         let canvasHeight = height + 3 * textSize;
         let xCorrection = canvasWidth / 2 - xCenter;
@@ -169,6 +174,14 @@ class EuclidsTheorem extends Component {
         let selectedConditionsRaw = segments[0].name + segments[1].name;
         if (selectedConditionsRaw === 'ABCH' || selectedConditionsRaw === 'CHAB') {
             segments[1] = segments[5];
+            selectedConditionsRaw = segments[0].name + segments[1].name;
+        }
+
+        if (selectedConditionsRaw === 'ACBH'
+            || selectedConditionsRaw === 'BHAC'
+            || selectedConditionsRaw === 'AHBC'
+            || selectedConditionsRaw === 'BCAH') {
+            this.setState({ difficulty:' (Hard)' })
         }
         
         condition[0] = segments[0].name + '=' + this.valueToString(segments[0].value);
@@ -187,15 +200,16 @@ class EuclidsTheorem extends Component {
             If
             <MathComponent display={false} tex={'~' + condition[0] + '~'} /> and
             <MathComponent display={false} tex={'~' + condition[1] + '~'} />
-            what is the length of
-            <MathComponent display={false} tex={'~' + question + '=?~'} /> (Diagram not to scale)
+            (Diagram not to scale)
         </p>{this.drawDiagram()}</>);
     }
 
     clearAnswerForm = () => {
         this.setState({
-            userAnswer: ''
+            userAnswer: '',
+            difficulty:''
         });
+        this.answerForm.current.focus();
     }
 
     checkAnswer = () => {
@@ -214,8 +228,9 @@ class EuclidsTheorem extends Component {
     render() {
 
         let answerForm = (<>
-            Your answer: <input type="number" value={this.state.userAnswer}
-                onChange={e => this.setState({ userAnswer: e.target.value })}></input><br />
+            <MathComponent display={false} tex={'~' + this.state.question + '=~'} />
+            <input type="number" value={this.state.userAnswer} ref={this.answerForm} autoFocus
+                onChange={e => this.setState({ userAnswer: e.target.value })}></input>{this.state.difficulty}<br />
         </>);
         return (
             <FillBlanks

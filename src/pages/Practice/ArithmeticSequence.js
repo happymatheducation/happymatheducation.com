@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
 import { sumArray } from "../../assets/myMath";
@@ -18,6 +18,11 @@ class ArithmeticSequence extends Component {
      Total variables = 4+4+3+3+3+2+1+4=24
      */
 
+    constructor() {
+        super();
+        this.answerForm = React.createRef(); // to be used for auto focus.
+    }
+
     state = {
         correctAnswer: '',
         userAnswer: '',
@@ -30,13 +35,11 @@ class ArithmeticSequence extends Component {
         const totalVariableIDs = sumArray(variablesPerFormula);
         const overallVariableID = Math.ceil(Math.random() * totalVariableIDs); // 1~24;
         let variableID = overallVariableID;
-        console.log(variableID);
         let formulaID = 1;
         while (variableID > variablesPerFormula[formulaID - 1]) {
             variableID -= variablesPerFormula[formulaID - 1];
             formulaID++;
         }
-        console.log(formulaID, variableID);
         this.setState({ formulaID: formulaID });
         let questionDescription;
         function sequenceDescription(d) {
@@ -64,8 +67,10 @@ class ArithmeticSequence extends Component {
         const sn_1 = sn - an;
         const n_1 = n - 1;
         let sumDescription = <MathComponent display={false} tex={String.raw`S_n=a_1+a_2+\cdots+a_n,~`} />;
+        let difficulty;
         switch (formulaID) {
             case 1: // 1. a(n)=a(1)+(n-1)d;
+                difficulty = '';
                 switch (variableID) {
                     case 1: // a(n)
                         this.setState({ correctAnswer: an });
@@ -104,6 +109,7 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 2: // 2. s(n)=(a(1)+a(n))n/2;
+                difficulty = '';
                 switch (variableID) {
                     case 1: // s(n)
                         this.setState({ correctAnswer: sn });
@@ -146,6 +152,7 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 3: // 3. a(m) - a(n)=d(m - n); a(m) and m are always given;
+                difficulty = '';
                 switch (variableID) {
                     case 1: // a(n)
                         this.setState({ correctAnswer: an });
@@ -176,6 +183,7 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 4: // 4. a(n) = s(n) - s(n-1);
+                difficulty = '';
                 switch (variableID) {
                     case 1: // a(n)
                         this.setState({ correctAnswer: an });
@@ -206,6 +214,7 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 5: // 5. a(n), a(n + k), a(n + 2k) is arithmetic;
+                difficulty = ' (Hard) ';
                 switch (variableID) {
                     case 1: // a(n)
                         this.setState({ correctAnswer: an });
@@ -236,6 +245,7 @@ class ArithmeticSequence extends Component {
                 }
                 break;
             case 6: // 6. s(2n - 1) = (2n - 1)a(n);
+                difficulty = ' (Hard) ';
                 const Ssub = 2 * n - 1;
                 switch (variableID) {
                     case 1: // s(2n-1)
@@ -263,6 +273,7 @@ class ArithmeticSequence extends Component {
             case 7: // 7. s(n), s(2n) - s(n), s(3n) - s(2n) is arithmetic;
                 // use the values of a(n), a(n+k), a(n+2k) to avoid too large numbers;
                 // not asking s(n) since it is a bit tedious. 
+                difficulty = ' (Super hard) ';
                 sn = an;
                 let s2n = sn + ank;
                 let s3n = s2n + an2k;
@@ -275,6 +286,7 @@ class ArithmeticSequence extends Component {
                 this.setState({ beforeBlank: 'S_{' + 3 * n + '}=~' });
                 break;
             case 8: // 8. s(n) = (a(1+k) + a(n - k))n / 2;
+                difficulty = ' (Super hard) ';
                 k = Math.ceil(Math.random() * Math.floor(n/2-1)); // 1~(n/2-1);
                 const k1 = k + 1;
                 const ak1 = a1 + k * d;
@@ -324,6 +336,7 @@ class ArithmeticSequence extends Component {
             default:
                 console.log('formulaID=' + formulaID);
         }
+        questionDescription = <>{questionDescription}{difficulty}</>
         return questionDescription;
     }
 
@@ -331,6 +344,7 @@ class ArithmeticSequence extends Component {
         this.setState({
             userAnswer: ''
         });
+        this.answerForm.current.focus();
     }
 
     checkAnswer = () => {
@@ -384,7 +398,7 @@ class ArithmeticSequence extends Component {
         let answerForm = (<>
             <MathComponent display={false}
                 tex={this.state.beforeBlank} />
-            <input type="number" value={this.state.userAnswer}
+            <input type="number" value={this.state.userAnswer} ref={this.answerForm} autoFocus 
                 onChange={e => this.setState({ userAnswer: e.target.value })}></input><br />
         </>);
         return (

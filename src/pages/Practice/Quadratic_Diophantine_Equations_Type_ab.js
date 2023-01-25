@@ -1,8 +1,13 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
 
 class Quadratic_Diophantine_Equations_Type_ab extends Component {
+
+    constructor() {
+        super();
+        this.answerForm = React.createRef(); // to be used for auto focus.
+    }
 
     state = {
         correctPosIntSolns: 0,
@@ -87,6 +92,7 @@ class Quadratic_Diophantine_Equations_Type_ab extends Component {
 
     clearAnswerForm = () => {
         this.setState({ userPosIntSolns: '', userIntSolns: '' });
+        this.answerForm.current.focus();
     }
 
     checkAnswer = () => {
@@ -112,12 +118,12 @@ class Quadratic_Diophantine_Equations_Type_ab extends Component {
         let answerForm;
         this.state.askingPosIntSolns ?
             answerForm = (<>
-                Number of positive integer solutions = <input type="number" value={this.state.userPosIntSolns}
+                Number of positive integer solutions = <input type="number" value={this.state.userPosIntSolns} ref={this.answerForm} autoFocus
                     onChange={e => this.setState({ userPosIntSolns: e.target.value })}></input><br />
             </>)
             :
             answerForm = (<>
-                Number of integer solutions = <input type="number" value={this.state.userIntSolns}
+                Number of integer solutions = <input type="number" value={this.state.userIntSolns} ref={this.answerForm} autoFocus
                     onChange={e => this.setState({ userIntSolns: e.target.value })}></input><br />
             </>)
         return (

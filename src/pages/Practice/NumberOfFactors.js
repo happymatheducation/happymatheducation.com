@@ -1,9 +1,14 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
 import {primeFactorize} from "../../assets/myMath"; //example [{prime:2,power:3}, {prime:3, power:1}];
 
 class NumberOfFactors extends Component {
+
+    constructor() {
+        super();
+        this.answerForm = React.createRef(); // to be used for auto focus.
+    }
 
     state = {
         correctAnswer: '',
@@ -48,6 +53,7 @@ class NumberOfFactors extends Component {
         this.setState({
             userAnswer: ''
         });
+        this.answerForm.current.focus();
     }
 
     checkAnswer = () => {
@@ -68,7 +74,7 @@ class NumberOfFactors extends Component {
 render() {
 
     let answerForm = (<>
-        Your answer: <input type="number" value={this.state.userAnswer}
+        Your answer: <input type="number" value={this.state.userAnswer} ref={this.answerForm} autoFocus
             onChange={e => this.setState({ userAnswer: e.target.value })}></input><br />
     </>);
     return (

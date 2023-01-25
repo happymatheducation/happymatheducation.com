@@ -1,8 +1,13 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
 
 class Find_Remainders extends Component {
+
+    constructor() {
+        super();
+        this.answerForm = React.createRef(); // to be used for auto focus.
+    }
 
     state = {
         correctAnswer: '',
@@ -70,6 +75,7 @@ class Find_Remainders extends Component {
         this.setState({
             userAnswer: ''
         });
+        this.answerForm.current.focus();
     }
 
     checkAnswer = () => {
@@ -88,7 +94,7 @@ class Find_Remainders extends Component {
 render() {
 
     let answerForm = (<>
-        Your answer: <input type="number" value={this.state.userAnswer}
+        Your answer: <input type="number" value={this.state.userAnswer} ref={this.answerForm} autoFocus
             onChange={e => this.setState({ userAnswer: e.target.value })}></input><br />
     </>);
     return (

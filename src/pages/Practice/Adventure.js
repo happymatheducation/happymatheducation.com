@@ -1,23 +1,25 @@
 import { Component } from "react";
 import ImmediateMultipleChoice from "../../components/ImmediateMultipleChoice";
 import { MathComponent } from "mathjax-react";
-import problems from "./Problems/allProblems";
+import Cayley from "../../assets/ContestPapers/Cayley";
 
 class Adventure extends Component {
 
     state = {
-        i: Math.floor(Math.random() * problems.length),
+        question: '',
     };
 
     generateQuestion = () => {
-        const i = Math.floor(Math.random() * problems.length);
-        console.log( problems[i]);        
+        const numOfPapers = Math.ceil(Math.random() * Cayley.length);
+        const selectedPaper = Cayley[Math.floor(Math.random() * numOfPapers)];
+        const currentQuestion = selectedPaper.question[1].problem;
+        return currentQuestion;
     }
 
     render = () => {
         return (
             <>
-                <MathComponent tex={problems[this.state.i].question} />
+                {this.generateQuestion()}
             </>
         );
     }

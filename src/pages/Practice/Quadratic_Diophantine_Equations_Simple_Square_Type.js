@@ -1,8 +1,13 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
 
 class Quadratic_Diophantine_Equations_Simple_Square_Type extends Component {
+
+    constructor() {
+        super();
+        this.answerForm = React.createRef(); // to be used for auto focus.
+    }
 
     state = {
         allSolns: [],
@@ -90,6 +95,7 @@ class Quadratic_Diophantine_Equations_Simple_Square_Type extends Component {
             userYMax: '',
             userYMin: '',
         });
+        this.answerForm.current.focus();
     }
 
     checkAnswer = () => {
@@ -142,31 +148,31 @@ class Quadratic_Diophantine_Equations_Simple_Square_Type extends Component {
         switch (this.state.asking) {
             case 0:
                 answerForm = (<>
-                    Number of solutions = <input type="number" value={this.state.userSolnsCount}
+                    Number of solutions = <input type="number" value={this.state.userSolnsCount} ref={this.answerForm} autoFocus
                         onChange={e => this.setState({ userSolnsCount: e.target.value })}></input><br />
                 </>);
                 break;
             case 1:
                 answerForm = (<>
-                    Maximum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMax}
+                    Maximum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMax} ref={this.answerForm} autoFocus
                         onChange={e => this.setState({ userXMax: e.target.value })}></input><br />
                 </>);
                 break;
             case 2:
                 answerForm = (<>
-                    Minimum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMin}
+                    Minimum value of <MathComponent display={false} tex={'x='} /> <input type="number" value={this.state.userXMin} ref={this.answerForm} autoFocus
                         onChange={e => this.setState({ userXMin: e.target.value })}></input><br />
                 </>);
                 break;
             case 3:
                 answerForm = (<>
-                    Maximum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMax}
+                    Maximum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMax} ref={this.answerForm} autoFocus
                         onChange={e => this.setState({ userYMax: e.target.value })}></input><br />
                 </>);
                 break;
             case 4:
                 answerForm = (<>
-                    Minimum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMin}
+                    Minimum value of <MathComponent display={false} tex={'y='} /> <input type="number" value={this.state.userYMin} ref={this.answerForm} autoFocus
                         onChange={e => this.setState({ userYMin: e.target.value })}></input><br />
                 </>);
                 break;

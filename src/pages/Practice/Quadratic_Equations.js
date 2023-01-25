@@ -1,8 +1,13 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
 
 class Quadratic_Equations extends Component {
+
+    constructor() {
+        super();
+        this.answerForm = React.createRef(); // to be used for auto focus.
+    }
 
     state = {
         x1: 0,
@@ -53,6 +58,7 @@ class Quadratic_Equations extends Component {
 
     clearAnswerForm = () => {
         this.setState({ ansX1: '', ansX2: '' });
+        this.answerForm.current.focus();
     }
 
     checkAnswer = () => {
@@ -77,6 +83,7 @@ class Quadratic_Equations extends Component {
                 answerForm={(
                     <>
                         <MathComponent tex="x_1=" display={false} /> <input type="number" value={this.state.ansX1}
+                            ref={this.answerForm} autoFocus
                             onChange={e => this.setState({ ansX1: e.target.value })}></input><br />
                         <MathComponent tex="x_2=" display={false} /> <input type="number" value={this.state.ansX2}
                             onChange={e => this.setState({ ansX2: e.target.value })}></input><br />
