@@ -333,6 +333,7 @@ body {
     input {
         font-size: max(1.4vw, 14px);
         width: max(8vw, 80px);
+        text-align: center;
     }
 
     .btn {
@@ -397,6 +398,12 @@ body {
 
         &.wrongchoice {
             background: #990000;
+        }
+    }
+    .fraction {
+        margin: auto;
+        .numerator {
+            border-bottom:max(0.1vw, 1px) solid black;
         }
     }
 }

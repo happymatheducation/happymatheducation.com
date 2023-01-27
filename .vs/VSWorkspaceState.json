@@ -1,12 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
     "\\src\\assets",
+    "\\src\\components",
     "\\src\\pages",
     "\\src\\pages\\Practice"
   ],
-  "SelectedNode": "\\src\\pages\\Practice\\Find_Remainders.js",
+  "SelectedNode": "\\src\\pages\\Practice\\Euclids_Theorem.js",
   "PreviewInSolutionExplorer": false
 }

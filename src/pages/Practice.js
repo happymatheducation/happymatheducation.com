@@ -95,7 +95,8 @@ function Practice() {
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice.pdf'
                     >pdf</a> |
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice_answers.pdf'
-                    >Answers</a>
+                    >Answers</a> | 
+                    <a href='/Practice/RollingDice'>App</a>
                 </div>
                 <div className='practicediv'>
                     Quadratic Equations: <br />&nbsp;&nbsp;&nbsp;&nbsp;

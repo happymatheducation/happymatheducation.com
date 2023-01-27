@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
         <div id='navsticky'>
             <CustomLink to='/'>
-                <img src={logo} className='center' style={{ width: 'max(15vw, 150px)' }} alt=''></img>
+                <img src={logo} className='center' style={{ width: 'max(8vw, 80px)' }} alt=''></img>
             </CustomLink>
 
             <ul id='navul'>

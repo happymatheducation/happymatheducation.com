@@ -15,6 +15,7 @@ const Contact = lazy(() => import("./pages/Contact.js"))
 const Team = lazy(() => import("./pages/Team.js"))
 const License = lazy(() => import("./pages/License.js"))
 const Notfound = lazy(() => import("./pages/Notfound.js"))
+
 const QuadraticEquations = lazy(() => import("./pages/Practice/Quadratic_Equations.js"))
 const QuadraticDiophantineEquationsTypeAB = lazy(() => import("./pages/Practice/Quadratic_Diophantine_Equations_Type_ab.js"))
 const QuadraticDiophantineEquationsSimpleSquareType = lazy(() => import("./pages/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type.js"))
@@ -25,6 +26,7 @@ const DeMoivresFormula = lazy(() => import("./pages/Practice/De_Moivres_Formula.
 const EuclidsTheorem = lazy(() => import("./pages/Practice/Euclids_Theorem.js"))
 const PrimeFactorizationForFactorials = lazy(() => import("./pages/Practice/PrimeFactorizationForFactorials.js"))
 const ArithmeticSequence = lazy(() => import("./pages/Practice/ArithmeticSequence.js"))
+const RollingDice = lazy(() => import("./pages/Practice/RollingDice.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -127,6 +129,7 @@ const App = () => {
                         <Route exact path='/careers' element={<Career />} />
                         <Route exact path='/apply' element={<Contact />} />
                         <Route exact path='/team' element={<Team />} />
+
                         <Route exact path='/Practice/Quadratic_Equations' element={<QuadraticEquations />} />
                         <Route exact path='/Practice/Quadratic_Diophantine_Equations_Type_ab' element={<QuadraticDiophantineEquationsTypeAB />} />
                         <Route exact path='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type' element={<QuadraticDiophantineEquationsSimpleSquareType />} />
@@ -137,7 +140,7 @@ const App = () => {
                         <Route exact path='/Practice/PrimeFactorizationForFactorials' element={<PrimeFactorizationForFactorials />} />
                         <Route exact path='/Practice/Euclids_Theorem' element={<EuclidsTheorem />} />
                         <Route exact path='/Practice/ArithmeticSequence' element={<ArithmeticSequence />} />
-
+                        <Route exact path='/Practice/RollingDice' element={<RollingDice />} />
 
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
