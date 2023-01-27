@@ -91,6 +91,11 @@ function Practice() {
                     <a href='/Practice/NumberOfFactors'>App</a>
                 </div>
                 <div className='practicediv'>
+                    Number Base Change: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/number_base_change.pdf'
+                    >pdf</a> 
+                </div>                
+                <div className='practicediv'>
                     Rolling Dice: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice.pdf'
                     >pdf</a> |
