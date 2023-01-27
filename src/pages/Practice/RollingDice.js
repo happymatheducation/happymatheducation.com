@@ -49,6 +49,7 @@ class RollingDice extends Component {
         // 15 operations + properties: {X+Y, |X-Y|, X*Y} is {even, odd, prime, composite, a perfect square}
         // 5 relationships: {X=Y, X>Y, X>=Y, X|Y, X!=Y}
         // 14 comparisons: X+Y{>=, <=}[3, 11], X-Y>=[1, 5]
+        // 16 values: X+Y=[2,12], X-Y=[1,5]
         // 6 three dice: X+Y+Z is {even, odd}; X*Y*Z is {even, odd, prime, composite}
 
         let X = <MathComponent display={false} tex={'X'} />;
@@ -57,7 +58,7 @@ class RollingDice extends Component {
 
         let diceDescription = <>Two standard dice are rolled with results {X} and {Y} respectively. </>;
 
-        const typeSelector = Math.ceil(Math.random() * 40);
+        const typeSelector = Math.ceil(Math.random() * 56);
         let total = 36;
         let count;
         const operations = ['X+Y', '|X-Y|', String.raw`X \times Y`];
@@ -65,39 +66,64 @@ class RollingDice extends Component {
         const relationships = ['=', '>', String.raw`\ge`, '|', String.raw`\neq`];
         let questionString;
         let operation, property, relationship;
-        if (typeSelector <= 15) {
+        let difficulty = '';
+        if (typeSelector <= 15) { 
+        // 15 operations + properties: {X+Y, |X-Y|, X*Y} is {even, odd, prime, composite, a perfect square}
             operation = operations[Math.floor((typeSelector - 1) / properties.length)];
             property = properties[Math.floor(typeSelector - 1) % properties.length];
             count = this.count(operation, property);
-            questionString = <><MathComponent display={false} tex={operation} /> is {property}?</>;
+            if (property !== 'odd' && property !== 'even') {
+                if (operation === '|X-Y|') { difficulty = ' (Super Hard)' }
+                else { difficulty = ' (Hard)' }
+            }
+            questionString = <><MathComponent display={false} tex={operation} /> is {property}?{difficulty}</>;
         } else if (typeSelector <= 15 + 5) {
+        // 5 relationships: {X=Y, X>Y, X>=Y, X|Y, X!=Y}
             let relationshipID = typeSelector - 16;
             relationship = relationships[relationshipID];
             count = [6, 15, 21, 14, 30][relationshipID];
-            questionString = <><MathComponent display={false} tex={String.raw`X ${relationship} Y`} />?</>;
-        } else if (typeSelector <= 15 + 5 + 14) { // 14 comparisons: X+Y{>=, <=}[3, 11], X-Y>=[1, 5]
+            difficulty = ' (Hard)'
+            if (relationship === '=') { difficulty = '' }
+            questionString = <><MathComponent display={false} tex={String.raw`X ${relationship} Y`} />?{difficulty}</>;
+        } else if (typeSelector <= 15 + 5 + 14) { 
+        // 14 comparisons: X+Y{>=, <=}[3, 11], X-Y>=[1, 5]
             if (typeSelector <= 15 + 5 + 9) {
                 let comparisonID = Math.floor(Math.random() * 2); // 0: >=; 1: <=;
                 let comparisonSymbol = [String.raw`\ge`, String.raw`\le`][comparisonID];
                 let number = typeSelector - (15 + 5) + 2; //[3, 11]
                 let counts = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]; //X+Y=2,3,...,12;
                 count = sumArray(comparisonID ? counts.slice(0, number - 1) : counts.slice(number - 13));
-                questionString = <><MathComponent display={false} tex={String.raw`X+Y ${comparisonSymbol} ${number}`} />?</>;
+                questionString = <><MathComponent display={false} tex={String.raw`X+Y ${comparisonSymbol} ${number}`} />? (Hard)</>;
             } else {
                 let number = typeSelector - (15 + 5 + 9);
                 let counts = [5, 4, 3, 2, 1]; //X-Y=1,2,3,4,5;
                 count = sumArray(counts.slice(number - 6));
-                questionString = <><MathComponent display={false} tex={String.raw`X-Y \ge ${number}`} />?</>;
+                questionString = <><MathComponent display={false} tex={String.raw`X-Y \ge ${number}`} />? (Hard)</>;
             }
-        } else { // 6 three dice: X+Y+Z is {even, odd}; X*Y*Z is {even, odd, prime, composite}
-            const localTypeID = typeSelector - (15 + 5 + 14);
+        } else if (typeSelector <= 15 + 5 + 14 + 16) {
+        // 16 values: X+Y=[2,12], X-Y=[1,5]
+            if (typeSelector <= 15 + 5 + 14 + 11) {
+                let number = typeSelector - (15 + 5 + 14) + 1; //[2, 12]
+                let counts = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]; //X+Y=2,3,...,12;
+                count = counts[number-2];
+                questionString = <><MathComponent display={false} tex={String.raw`X+Y= ${number}`} />?</>;
+            } else {
+                let number = typeSelector - (15 + 5 + 14 + 11); //[1, 5]
+                let counts = [5, 4, 3, 2, 1]; //X-Y=1,2,3,4,5;
+                count = counts[number-1];
+                questionString = <><MathComponent display={false} tex={String.raw`X-Y = ${number}`} />?</>;
+            }
+        } else { 
+        // 6 three dice: X+Y+Z is {even, odd}; X*Y*Z is {even, odd, prime, composite}
+            const localTypeID = typeSelector - (15 + 5 + 14 + 16);
             total = 216;
             let counts = [108, 108, 189, 27, 9, 206];
             count = counts[localTypeID - 1];
             let expression = localTypeID <= 2 ? 'X+Y+Z' : String.raw`X \times Y \times Z`;
             let property = ['even', 'odd', 'even', 'odd', 'prime', 'composite'][localTypeID - 1];
-            diceDescription = <>Three standard dice are rolled with results {X}, {Y} and {Z} respectively. </>;;
-            questionString = <><MathComponent display={false} tex={expression} /> is {property} ?</>;
+            if (localTypeID >= 5) { difficulty='(Super Hard)' }
+            diceDescription = <>Three standard dice are rolled with results {X}, {Y} and {Z} respectively. </>;
+            questionString = <><MathComponent display={false} tex={expression} /> is {property} ? {difficulty}</>;
         }
 
         let [numerator, denominator] = reduceFraction(count, total);
