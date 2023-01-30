@@ -1,12 +1,9 @@
 let allPrimes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
 
 export function primeFactorize(number) { //does not work for 101 ^ 2
-    let maxToCheck = Math.floor(Math.sqrt(number));
-    let allPrimesToCheck = allPrimes.filter(x => x <= maxToCheck);
     let primeFactorization = [];
     let iCount;
-    for (let i in allPrimesToCheck) {
-        let currentPrime = allPrimesToCheck[i];
+    for (let currentPrime of allPrimes) {
         iCount = 0;
         while (currentPrime <= number && number % currentPrime === 0) {
             number = number / currentPrime;
