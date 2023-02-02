@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
-import { sumArray } from "../../assets/myMath";
+import myMath from "../../assets/myMath";
 
 class ArithmeticSequence extends Component {
 
@@ -32,7 +32,7 @@ class ArithmeticSequence extends Component {
 
     generateQuestion = () => {
         const variablesPerFormula = [4, 4, 3, 3, 3, 2, 1, 4];
-        const totalVariableIDs = sumArray(variablesPerFormula);
+        const totalVariableIDs = myMath.sumArray(variablesPerFormula);
         const overallVariableID = Math.ceil(Math.random() * totalVariableIDs); // 1~24;
         let variableID = overallVariableID;
         let formulaID = 1;

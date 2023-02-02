@@ -82,7 +82,8 @@ function Practice() {
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/line_through_two_points.pdf'
                     >pdf</a> |
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/line_through_two_points_answers.pdf'
-                    >Answers</a>
+                    >Answers</a> |
+                    <a href='/Practice/LineThroughTwoPoints_SlopeOnly'>App(Slope)</a>
                 </div>
                 <div className='practicediv'>
                     Number of Factors: <br />&nbsp;&nbsp;&nbsp;&nbsp;

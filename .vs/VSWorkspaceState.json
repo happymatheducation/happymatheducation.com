@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\assets",
     "\\src\\components",
     "\\src\\pages",
     "\\src\\pages\\Practice"
   ],
-  "SelectedNode": "\\src\\assets\\myMath.js",
   "PreviewInSolutionExplorer": false
 }

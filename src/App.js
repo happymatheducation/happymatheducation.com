@@ -27,6 +27,7 @@ const EuclidsTheorem = lazy(() => import("./pages/Practice/Euclids_Theorem.js"))
 const PrimeFactorizationForFactorials = lazy(() => import("./pages/Practice/PrimeFactorizationForFactorials.js"))
 const ArithmeticSequence = lazy(() => import("./pages/Practice/ArithmeticSequence.js"))
 const RollingDice = lazy(() => import("./pages/Practice/RollingDice.js"))
+const LineThroughTwoPointsSlopeOnly = lazy(() => import("./pages/Practice/LineThroughTwoPoints_SlopeOnly.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -141,7 +142,8 @@ const App = () => {
                         <Route exact path='/Practice/Euclids_Theorem' element={<EuclidsTheorem />} />
                         <Route exact path='/Practice/ArithmeticSequence' element={<ArithmeticSequence />} />
                         <Route exact path='/Practice/RollingDice' element={<RollingDice />} />
-
+                        <Route exact path='/Practice/LineThroughTwoPoints_SlopeOnly' element={<LineThroughTwoPointsSlopeOnly />} />
+                        
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
                         <Route exact path='/Practice/SimpleMultiplication' element={<SimpleMultiplication />} />

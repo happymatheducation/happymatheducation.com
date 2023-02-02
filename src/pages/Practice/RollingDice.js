@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
-import { reduceFraction, isPrime, isComposite, sumArray, gcdOfTwo } from "../../assets/myMath";
+import myMath from "../../assets/myMath";
 
 class RollingDice extends Component {
     constructor() {
@@ -34,8 +34,8 @@ class RollingDice extends Component {
                 switch (propertyID) { //['even', 'odd', 'prime', 'composite', 'a perfect square']
                     case 0: if (result % 2 === 0) { count++ } break;
                     case 1: if (result % 2 === 1) { count++ } break;
-                    case 2: if (isPrime(result)) { count++ } break;
-                    case 3: if (isComposite(result)) { count++ } break;
+                    case 2: if (myMath.isPrime(result)) { count++ } break;
+                    case 3: if (myMath.isComposite(result)) { count++ } break;
                     case 4: if (Number.isInteger(Math.sqrt(result))) { count++ } break;
                     default: console.log('propertyID:' + propertyID);
                 }
@@ -92,12 +92,12 @@ class RollingDice extends Component {
                 let comparisonSymbol = [String.raw`\ge`, String.raw`\le`][comparisonID];
                 let number = typeSelector - (15 + 5) + 2; //[3, 11]
                 let counts = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]; //X+Y=2,3,...,12;
-                count = sumArray(comparisonID ? counts.slice(0, number - 1) : counts.slice(number - 13));
+                count = myMath.sumArray(comparisonID ? counts.slice(0, number - 1) : counts.slice(number - 13));
                 questionString = <><MathComponent display={false} tex={String.raw`X+Y ${comparisonSymbol} ${number}`} />? (Hard)</>;
             } else {
                 let number = typeSelector - (15 + 5 + 9);
                 let counts = [5, 4, 3, 2, 1]; //X-Y=1,2,3,4,5;
-                count = sumArray(counts.slice(number - 6));
+                count = myMath.sumArray(counts.slice(number - 6));
                 questionString = <><MathComponent display={false} tex={String.raw`X-Y \ge ${number}`} />? (Hard)</>;
             }
         } else if (typeSelector <= 15 + 5 + 14 + 16) {
@@ -126,7 +126,7 @@ class RollingDice extends Component {
             questionString = <><MathComponent display={false} tex={expression} /> is {property} ? {difficulty}</>;
         }
 
-        let [numerator, denominator] = reduceFraction(count, total);
+        let [numerator, denominator] = myMath.reduceFraction(count, total);
         this.setState({ correctNumerator: numerator, correctDenominator: denominator });
 
         return (<><p style={{ textAlign: 'left' }}> {diceDescription}
@@ -152,7 +152,7 @@ class RollingDice extends Component {
         }
         let reduceHint = '';
         if (userNumerator && userDenominator) {
-            if (gcdOfTwo(userNumerator, userDenominator) === 1) { }
+            if (myMath.gcdOfTwo(userNumerator, userDenominator) === 1) { }
             else {
                 reduceHint = <MathComponent display={false}
                     tex={String.raw`\text{. Please simply your fraction.}`} />

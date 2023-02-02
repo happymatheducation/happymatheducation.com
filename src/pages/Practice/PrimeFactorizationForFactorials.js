@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
-import { primeFactorize } from "../../assets/myMath"; //example [{prime:2,power:3}, {prime:3, power:1}];
+import myMath from "../../assets/myMath"; //example [{prime:2,power:3}, {prime:3, power:1}];
 
 class PrimeFactorizationForFactorials extends Component {
 
@@ -24,7 +24,7 @@ class PrimeFactorizationForFactorials extends Component {
 
     // m!/a^n, where a is 2-11 inclusive;
     findN = (m, a) => {
-        let primeFactorizeOfA = primeFactorize(a);
+        let primeFactorizeOfA = myMath.primeFactorize(a);
         let potentialN = [];
         let currentPower;
         for (let term of primeFactorizeOfA) {
