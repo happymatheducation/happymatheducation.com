@@ -148,7 +148,7 @@ class CompleteTheSquare extends Component {
                         this.state.hSign === '-' ? this.setState({ hSign: '+' }) : this.setState({ hSign: '-' });
                         this.inputH.current.focus();
                     }}
-                ><MathComponent tex={this.state.hSign} display={false} /></button>
+                ><MathComponent tex={`\\mathbf{ ${this.state.hSign}}`} display={false} /></button>
                 <input type="number" value={this.state.userH}
                     ref={this.inputH} autoFocus
                     onChange={e => this.setState({ userH: e.target.value })}></input>
@@ -158,7 +158,7 @@ class CompleteTheSquare extends Component {
                         this.state.kSign === '-' ? this.setState({ kSign: '+' }) : this.setState({ kSign: '-' });
                         this.inputK.current.focus();
                     }}
-                ><MathComponent tex={this.state.kSign} display={false} /></button>
+                ><MathComponent tex={`\\mathbf{ ${this.state.kSign}}`} display={false} /></button>
                 <input type="number" value={this.state.userK}
                     ref={this.inputK}
                     onChange={e => this.setState({ userK: e.target.value })}></input>
