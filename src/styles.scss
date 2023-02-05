@@ -332,8 +332,23 @@ body {
 
     input {
         font-size: max(1.4vw, 14px);
-        width: max(8vw, 80px);
+        width: max(5vw, 50px);
         text-align: center;
+    }
+
+    .sign {
+        width: max(2vw, 20px);
+        height: max(2vw, 20px);
+        margin-left: max(0.7vw, 7px);
+        margin-right: max(0.7vw, 7px);
+        border-width: max(0.07vw, 0.7px);
+        border-radius: 50%;
+        background-color: lightgray;
+
+
+        &:hover {
+            background-color: white;
+        }
     }
 
     .btn {
@@ -400,10 +415,12 @@ body {
             background: #990000;
         }
     }
+
     .fraction {
         margin: auto;
+
         .numerator {
-            border-bottom:max(0.1vw, 1px) solid black;
+            border-bottom: max(0.1vw, 1px) solid black;
         }
     }
 }

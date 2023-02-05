@@ -62,11 +62,12 @@ class FillBlanks extends Component {
 
                 <div className='practicebody'>
                     <>{this.state.currentQuestion}</>
+                    <br />
+                    <br />
                     <div>
+                        <>{this.state.started && this.props.answerForm}</>
                         <>{this.state.correctMessage}</>
                         <br />
-                        <>{this.state.started && this.props.answerForm}</>
-
                         {
                             this.state.paused &&
                             (<>

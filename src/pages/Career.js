@@ -10,7 +10,7 @@ const Career = () => {
         let itemdesc = Careers[item].description
 
         CareerList.push(
-            <>
+            <div key={itemname}>
                 <button className="collapsible" id={itemname} onClick={
                     () => {
                         var me = document.getElementById(itemname)
@@ -26,7 +26,7 @@ const Career = () => {
                 <div className="content">
                     {itemdesc}
                 </div>
-            </>
+            </div>
         )
     }
 

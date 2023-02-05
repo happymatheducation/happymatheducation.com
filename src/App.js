@@ -28,6 +28,7 @@ const PrimeFactorizationForFactorials = lazy(() => import("./pages/Practice/Prim
 const ArithmeticSequence = lazy(() => import("./pages/Practice/ArithmeticSequence.js"))
 const RollingDice = lazy(() => import("./pages/Practice/RollingDice.js"))
 const LineThroughTwoPointsSlopeOnly = lazy(() => import("./pages/Practice/LineThroughTwoPoints_SlopeOnly.js"))
+const CompleteTheSquare = lazy(() => import("./pages/Practice/CompleteTheSquare.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -143,6 +144,7 @@ const App = () => {
                         <Route exact path='/Practice/ArithmeticSequence' element={<ArithmeticSequence />} />
                         <Route exact path='/Practice/RollingDice' element={<RollingDice />} />
                         <Route exact path='/Practice/LineThroughTwoPoints_SlopeOnly' element={<LineThroughTwoPointsSlopeOnly />} />
+                        <Route exact path='/Practice/CompleteTheSquare' element={<CompleteTheSquare />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />

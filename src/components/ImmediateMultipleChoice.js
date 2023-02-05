@@ -95,15 +95,15 @@ class ImmediateMultipleChoice extends Component {
 
                 <div className='practicebody'>
                     {this.state.currentQuestion}
-                    {this.state.correctMessage}
                     <br />
-
                     {!this.state.started &&
                         <button className="btn" onClick={this.start}>Start</button>
                     }
 
                     {this.state.started &&
                         <>{choiceButtons}<br />
+                        {this.state.correctMessage}
+                        <br />
                         <button className="btn" onClick={this.next}
                             style={this.state.paused ? {} : { visibility: 'hidden' }}
                             >Next</button>
