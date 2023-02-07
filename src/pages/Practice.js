@@ -146,7 +146,8 @@ function Practice() {
                     <div className='practicediv'>
                         Chinese Remainder Theorem: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/chinese_remainder_theorem.pdf'
-                        >pdf</a>
+                        >pdf</a> | 
+                        <a href='/Practice/ChineseRemainderTheorem'>App</a>
                     </div>
                     <div className='practicediv'>
                         Find Remainders: <br />&nbsp;&nbsp;&nbsp;&nbsp;
