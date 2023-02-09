@@ -113,6 +113,10 @@ function Practice() {
                     <a href='/Practice/RollingDice'>App</a>
                 </div>
                 <div className='practicediv'>
+                    Simple Logarithm: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/SimpleLogarithm'>App</a>
+                </div>
+                <div className='practicediv'>
                     Two Line Intersection: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/two_line_intersection.pdf'
                     >pdf</a> |

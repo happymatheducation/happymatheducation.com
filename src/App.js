@@ -30,6 +30,7 @@ const RollingDice = lazy(() => import("./pages/Practice/RollingDice.js"))
 const LineThroughTwoPointsSlopeOnly = lazy(() => import("./pages/Practice/LineThroughTwoPoints_SlopeOnly.js"))
 const CompleteTheSquare = lazy(() => import("./pages/Practice/CompleteTheSquare.js"))
 const ChineseRemainderTheorem = lazy(() => import("./pages/Practice/ChineseRemainderTheorem.js"))
+const SimpleLogarithm = lazy(() => import("./pages/Practice/SimpleLogarithm.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -147,6 +148,7 @@ const App = () => {
                         <Route exact path='/Practice/LineThroughTwoPoints_SlopeOnly' element={<LineThroughTwoPointsSlopeOnly />} />
                         <Route exact path='/Practice/CompleteTheSquare' element={<CompleteTheSquare />} />
                         <Route exact path='/Practice/ChineseRemainderTheorem' element={<ChineseRemainderTheorem />} />
+                        <Route exact path='/Practice/SimpleLogarithm' element={<SimpleLogarithm />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
