@@ -173,7 +173,8 @@ function Practice() {
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/magic_squares_3x3.pdf'
                         >pdf</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/magic_squares_3x3_answers.pdf'
-                        >Answers</a>
+                        >Answers</a> | 
+                        <a href='/Practice/MagicSquares'>App</a>
                     </div>
                     <div className='practicediv'>
                         Prime Factorization For Factorials: <br />&nbsp;&nbsp;&nbsp;&nbsp;

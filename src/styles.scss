@@ -60,7 +60,7 @@ $hover: lighten($darkblue, 10%);
 }
 
 ::-webkit-scrollbar {
-    border-radius:50%;
+    border-radius: 50%;
 }
 
 /* Track */
@@ -78,7 +78,7 @@ $hover: lighten($darkblue, 10%);
     background: lighten($darkblue, 10%);
 }
 
-h1,h2 {
+h1, h2 {
     font-size: max(2vw, 20px);
     line-height: max(6vw, 60px);
     text-align: center;
@@ -236,9 +236,9 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-//    display: inline;
-//    font-weight: 900;
-//    font-size: inherit;
+    //    display: inline;
+    //    font-weight: 900;
+    //    font-size: inherit;
 }
 
 .container {
@@ -384,6 +384,58 @@ body {
     .practicebody {
         text-align: center;
         padding: max(2vw, 20px);
+
+        .magicSquares {
+            width: 50%;
+            margin: auto;
+
+            .leftSquare {
+                float: left;
+            }
+
+            .rightSquare {
+                float: left;
+            }
+
+            .invisible {
+                float: left;
+                display: none;
+            }
+
+            table {
+                width: max(9vw,90px);
+                margin-left: max(3vw,30px);
+                margin-bottom: max(3vw,30px);
+                table-layout: fixed;
+                border: 2px solid black;
+                border-collapse: collapse;
+            }
+
+            td {
+                width: max(3vw,30px);
+                height: max(3vw,30px);
+                border: 2px solid black;
+                border-collapse: collapse;
+            }
+
+            input {
+                width: max(3vw,30px);
+                background: none;
+                border: none;
+                outline: none;
+                text-align: center;
+                color: blue;
+                font-weight: bold;
+
+                &.correct {
+                    color: #00AA00;
+                }
+
+                &.wrong {
+                    color: #FF0000;
+                }
+            }
+        }
     }
 
 
@@ -578,7 +630,6 @@ body {
             font-size: 20px;
         }
     }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -587,7 +638,7 @@ body {
 
         div {
             text-align: center;
-//            margin-top: max(2vw, 20px);
+            //            margin-top: max(2vw, 20px);
         }
     }
 }
