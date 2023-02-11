@@ -13,9 +13,9 @@ const NavBar = () => {
                 <CustomLink to='/'>Home</CustomLink>
                 <CustomLink to='/classes'>Classes</CustomLink>
                 <CustomLink to='/practice'>Practice</CustomLink>
-                <CustomLink to='/contests'>Timeline</CustomLink>
+                <CustomLink to='/contests'>Contests</CustomLink>
                 <CustomLink to='/careers'>Career</CustomLink>
-                <CustomLink to='/team'>Our Team</CustomLink>
+                {/*<CustomLink to='/team'>Our Team</CustomLink>*/}
                 <CustomLink to = '/apply'>Contact</CustomLink> 
             </ul>
 
