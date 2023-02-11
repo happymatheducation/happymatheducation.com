@@ -26,6 +26,24 @@ const myMath = {
         return primeFactorization; //example [{prime:2,power:3}, {prime:3, power:1}];
     },
 
+    polynomialProduct(P, Q) {
+        //   P = P[0]x^n + P[1]x^(n-1) + ... + P[n-1]x + P[n]
+        // * Q = Q[0]x^m + Q[1]x^(m-1) + ... + Q[m-1]x + Q[m]
+        // = F
+        if (typeof P === 'number') { P = [P] };
+        if (typeof Q === 'number') { Q = [Q] };
+        let n = P.length - 1;
+        let m = Q.length - 1;
+        let F = [];
+        let a; // coefficient of result
+        for (let indexSum = 0; indexSum <= m + n; indexSum++) { //CRISS-CROSS algorithm
+            a = 0;
+            for (let iP = Math.max(0, indexSum - m); iP <= Math.min(n, indexSum); iP++) { a += P[iP] * Q[indexSum - iP] };
+            F.push(a);
+        }
+        return F;
+    },
+
     sumArray(array) {
         return array.reduce((accumulator, currentValue) => accumulator + currentValue);
     },

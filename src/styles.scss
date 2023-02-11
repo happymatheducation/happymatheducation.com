@@ -398,7 +398,7 @@ body {
         padding: max(2vw, 20px);
 
         .magicSquares {
-            width: 50%;
+            width: 80%;
             margin: auto;
 
             .leftSquare {
@@ -415,7 +415,7 @@ body {
             }
 
             table {
-                width: max(9vw,90px);
+                width: max(15vw,150px);
                 margin-left: max(3vw,30px);
                 margin-bottom: max(3vw,30px);
                 table-layout: fixed;
@@ -424,10 +424,11 @@ body {
             }
 
             td {
-                width: max(3vw,30px);
-                height: max(3vw,30px);
+                width: max(5vw,50px);
+                height: max(5vw,50px);
                 border: 2px solid black;
                 border-collapse: collapse;
+                font-size: max(2.5vw,25px);
             }
 
             input {
@@ -438,6 +439,7 @@ body {
                 text-align: center;
                 color: blue;
                 font-weight: bold;
+                font-size: max(2.5vw,25px);
 
                 &.correct {
                     color: #00AA00;

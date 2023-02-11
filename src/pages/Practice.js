@@ -20,7 +20,7 @@ function Practice() {
             <div width='60%' className="content">
                 <div style={{ justifyContent: 'space-between' }}>
                     Below are some topic based problems created by Happy Math Education (a.k.a Blessed Eduloo before 2021). If
-                    the creator is a volunteering student, then the name of the volunteer appears on the top right in each page.
+                    the creator of a pdf file is a volunteering student, then the name of the volunteer appears on the top right in each page.
                     <br /><br />Each set is designed to be a THOROUGH practice on that specific topic, therefore:
                     <br />1. There are many problems in each set;
                     <br />2. The level of difficulty may change drastically between different problems in the same
@@ -49,10 +49,10 @@ function Practice() {
             <div className="content" style={{ maxHeight: '50000px' }}>
                 <div className='practicediv'>
                     Arithmetic Sequence:<br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/ArithmeticSequence'>App</a> | 
                     <a style={{ display: 'inline' }}
                         href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/arithmetic_sequence.pdf'
-                    >pdf</a> | 
-                    <a href='/Practice/ArithmeticSequence'>App</a>
+                    >pdf</a> 
                 </div>
                 <div className='practicediv'>
                     Basic Similar Triangles: <br />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -63,19 +63,19 @@ function Practice() {
                 </div>
                 <div className='practicediv'>
                     Euclids Theorem: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/Euclids_Theorem'>App</a> | 
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/euclid_theorem.pdf'
                     >pdf</a> |
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/euclid_theorem_answers.pdf'
-                    >Answers</a> |
-                    <a href='/Practice/Euclids_Theorem'>App</a>
+                    >Answers</a> 
                 </div>
                 <div className='practicediv'>
                     Line Through Two Points: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/LineThroughTwoPoints_SlopeOnly'>App (Slope)</a> | 
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/line_through_two_points.pdf'
                     >pdf</a> |
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/line_through_two_points_answers.pdf'
-                    >Answers</a> |
-                    <a href='/Practice/LineThroughTwoPoints_SlopeOnly'>App (Slope)</a>
+                    >Answers</a> 
                 </div>
                 <div className='practicediv'>
                     Mental Math with Basic Algebra: <br />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -91,26 +91,26 @@ function Practice() {
                 </div>
                 <div className='practicediv'>
                     Number of Factors: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/NumberOfFactors'>App</a> | 
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/number_of_factors.pdf'
-                    >pdf</a> |
-                    <a href='/Practice/NumberOfFactors'>App</a>
+                    >pdf</a> 
                 </div>
                 <div className='practicediv'>
                     Quadratic Equations / Functions: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/Quadratic_Equations'>App (Find roots)</a> |
+                    <a href='/Practice/CompleteTheSquare'>App (Complete the Square / Vertex Form)</a> | 
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations.pdf'
                     >pdf</a> |
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_equations_answers.pdf'
-                    >Answers</a> |
-                    <a href='/Practice/Quadratic_Equations'>App (Find roots)</a> |
-                    <a href='/Practice/CompleteTheSquare'>App (Complete the Square / Vertex Form)</a>
+                    >Answers</a> 
                 </div>
                 <div className='practicediv'>
                     Rolling Dice: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/RollingDice'>App</a> |
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice.pdf'
                     >pdf</a> |
                     <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/rolling_dice_answers.pdf'
-                    >Answers</a> | 
-                    <a href='/Practice/RollingDice'>App</a>
+                    >Answers</a> 
                 </div>
                 <div className='practicediv'>
                     Simple Logarithm: <br />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -149,17 +149,17 @@ function Practice() {
                     </div>
                     <div className='practicediv'>
                         Chinese Remainder Theorem: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/ChineseRemainderTheorem'>App</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/chinese_remainder_theorem.pdf'
-                        >pdf</a> | 
-                        <a href='/Practice/ChineseRemainderTheorem'>App</a>
+                        >pdf</a> 
                     </div>
                     <div className='practicediv'>
                         Find Remainders: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/Find_Remainders'>App</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/remainder.pdf'
                         >pdf</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/remainder_answers.pdf'
-                        >Answers</a> |
-                        <a href='/Practice/Find_Remainders'>App</a>
+                        >Answers</a> 
                     </div>
                     <div className='practicediv'>
                         Logarithm with Quadratic Equations: <br />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -170,35 +170,35 @@ function Practice() {
                     </div>
                     <div className='practicediv'>
                         Magic Squares: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/MagicSquares'>App</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/magic_squares_3x3.pdf'
                         >pdf</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/magic_squares_3x3_answers.pdf'
-                        >Answers</a> | 
-                        <a href='/Practice/MagicSquares'>App</a>
+                        >Answers</a> 
                     </div>
                     <div className='practicediv'>
                         Prime Factorization For Factorials: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/PrimeFactorizationForFactorials'>App</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials.pdf'
                         >pdf</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/prime_factoriazation_for_factorials_answers.pdf'
-                        >Answers</a> |
-                        <a href='/Practice/PrimeFactorizationForFactorials'>App</a>
+                        >Answers</a> 
                     </div>
                     <div className='practicediv'>
                         Quadratic Diophantine Equations Type ab: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/Quadratic_Diophantine_Equations_Type_ab'>App</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab.pdf'
                         >pdf</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_type_ab_answers.pdf'
-                        >Answers</a> |
-                        <a href='/Practice/Quadratic_Diophantine_Equations_Type_ab'>App</a>
+                        >Answers</a> 
                     </div>
                     <div className='practicediv'>
                         Quadratic Diophantine Equations - Simple Square Type: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type'>App</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type.pdf'
                         >pdf</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/quadratic_diophantine_equations_-_simple_square_type_answer.pdf'
-                        >Answers</a> |
-                        <a href='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type'>App</a>
+                        >Answers</a> 
                     </div>
                     <div className='practicediv'>
                         Stars and Bars: <br />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -209,9 +209,9 @@ function Practice() {
                     </div>
                     <div className='practicediv'>
                         Trigs of Special Angles: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/Trigs_Of_Special_Angles'>App</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/trigs_of_special_angles.pdf'
-                        >pdf</a> |
-                        <a href='/Practice/Trigs_Of_Special_Angles'>App</a>
+                        >pdf</a> 
                     </div>
                 </div>
             </div>
@@ -240,11 +240,11 @@ function Practice() {
                     </div>
                     <div className='practicediv'>
                         De Moivres Formula: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/De_Moivres_Formula'>App</a> | 
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula.pdf'
                         >pdf</a> |
                         <a href='https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/de_moivres_formula_answers.pdf'
-                        >Answers</a> |
-                        <a href='/Practice/De_Moivres_Formula'>App</a>
+                        >Answers</a> 
                     </div>
                     <div className='practicediv'>
                         Linear Diophantine Equations: <br />&nbsp;&nbsp;&nbsp;&nbsp;
