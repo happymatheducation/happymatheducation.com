@@ -2,11 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\assets",
     "\\src\\components",
     "\\src\\pages",
     "\\src\\pages\\Practice"
   ],
-  "SelectedNode": "\\src\\styles.scss",
+  "SelectedNode": "\\src\\components\\FillBlanks.js",
   "PreviewInSolutionExplorer": false
 }

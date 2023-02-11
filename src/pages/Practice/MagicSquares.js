@@ -23,6 +23,10 @@ class MagicSquares extends Component {
             || givenIndex.every(element => [3, 6, 9].includes(element))
             || givenIndex.every(element => [1, 5, 9].includes(element))
             || givenIndex.every(element => [3, 5, 7].includes(element))
+            || givenIndex.every(element => [2, 4, 9].includes(element))
+            || givenIndex.every(element => [3, 4, 8].includes(element))
+            || givenIndex.every(element => [1, 6, 8].includes(element))
+            || givenIndex.every(element => [2, 6, 7].includes(element))
         ) {
             allIndex = allIndex.sort(() => Math.random() - 0.5);
             givenIndex = allIndex.slice(0, 3);
@@ -34,9 +38,9 @@ class MagicSquares extends Component {
         let a, b, c;
         let d, e, f;
         let g, h, i;
-        e = myMath.randomInteger(5, 50);
-        a = myMath.randomInteger(0, 2 * e);
-        c = myMath.randomInteger(0, 2 * e);
+        e = myMath.randomInteger(5, 20);
+        a = myMath.randomInteger(Math.floor(0.5 * e), Math.ceil(1.5 * e));
+        c = myMath.randomInteger(Math.floor(0.5 * e), Math.ceil(1.5 * e));
         i = 2 * e - a;
         g = 2 * e - c;
         b = g + i - e;
@@ -96,7 +100,7 @@ class MagicSquares extends Component {
         let cells = this.state.given.map(
             (value, i) =>
             (value ? this.state.correctAnswer[i]
-                : <input type="text" value={this.state.userAnswer[i]} key={i} id={'input'+i}
+                : <input type="number" value={this.state.userAnswer[i]} key={i} id={'input'+i}
                     onChange={
                         e => {
                             let userAnswer = this.state.userAnswer;
