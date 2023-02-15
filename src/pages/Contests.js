@@ -15,7 +15,7 @@ function Contests() {
                     if (content.style.maxHeight) {
                         content.style.maxHeight = null;
                     } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.maxHeight = "10000px";
                     }
                 }
             }>Grade 7</button>
@@ -62,7 +62,7 @@ function Contests() {
                     if (content.style.maxHeight) {
                         content.style.maxHeight = null;
                     } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.maxHeight = "10000px";
                     }
                 }
             }>Grade 8</button>
@@ -107,7 +107,7 @@ function Contests() {
                     if (content.style.maxHeight) {
                         content.style.maxHeight = null;
                     } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.maxHeight = "10000px";
                     }
                 }
             }>Grade 9</button>
@@ -133,7 +133,46 @@ function Contests() {
                         New Year<br />
 
                         <span><i className="bi bi-thermometer-snow"></i>February: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Pascal</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Pascal</a> |  
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#pcf'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={() => {
+                                let x = document.getElementById("PascalCutoff")
+                                if (x.style.display === 'none') { x.style.display = 'block' } else { x.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        <table id="PascalCutoff" className='cutoffsTable' style={{display:'none'}}>
+                            <thead>
+                                <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 1.5%) </th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 2022 </td><td> 102 </td><td> 133 </td></tr>
+                                <tr><td> 2021 </td><td> 118 </td><td> 138 </td></tr>
+                                <tr><td> 2020 </td><td> 114 </td><td> 136 </td></tr>
+                                <tr><td> 2019 </td><td> 104 </td><td> 130 </td></tr>
+                                <tr><td> 2018 </td><td> 105 </td><td> 134 </td></tr>
+                                <tr><td> 2017 </td><td> 112 </td><td> 134 </td></tr>
+                                <tr><td> 2016 </td><td> 101 </td><td> 132 </td></tr>
+                                <tr><td> 2015 </td><td> 116 </td><td> 136 </td></tr>
+                                <tr><td> 2014 </td><td> 104 </td><td> 129 </td></tr>
+                                <tr><td> 2013 </td><td> 112 </td><td> 135 </td></tr>
+                                <tr><td> 2012 </td><td> 111 </td><td> 136 </td></tr>
+                                <tr><td> 2011 </td><td> 104 </td><td> 132 </td></tr>
+                                <tr><td> 2010 </td><td> 107 </td><td> 134 </td></tr>
+                                <tr><td> 2009 </td><td> 103 </td><td> 132 </td></tr>
+                                <tr><td> 2008 </td><td> 103 </td><td> 135 </td></tr>
+                                <tr><td> 2007 </td><td> 110 </td><td> 134 </td></tr>
+                                <tr><td> 2006 </td><td> 113 </td><td> 136 </td></tr>
+                                <tr><td> 2005 </td><td> 98 </td><td> 125 </td></tr>
+                                <tr><td> 2004 </td><td> 104 </td><td> 132 </td></tr>
+                                <tr><td> 2003 </td><td> 99 </td><td> 130 </td></tr>
+                                <tr><td> 2002 </td><td> 101 </td><td> 132 </td></tr>
+                                <tr><td> 2001 </td><td> 83 </td><td> 122 </td></tr>
+                                <tr><td> 2000 </td><td> No data </td><td> No data </td></tr>
+                                <tr><td> 1999 </td><td> No data </td><td> No data </td></tr>
+                                <tr><td> 1998 </td><td> No data </td><td> No data </td></tr>
+                                <tr><td> 1997 </td><td> No data </td><td> No data </td></tr>
+                            </tbody>
+                        </table>
 
                         <span><i className="bi bi-thermometer-snow"></i>February: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
@@ -159,7 +198,7 @@ function Contests() {
                     if (content.style.maxHeight) {
                         content.style.maxHeight = null;
                     } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.maxHeight = "10000px";
                     }
                 }
             }>Grade 10</button>
@@ -185,7 +224,46 @@ function Contests() {
                         New Year<br />
 
                         <span><i className="bi bi-thermometer-snow"></i>February: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Cayley</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Cayley</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#pcf'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={() => {
+                                let x = document.getElementById("CayleyCutoff")
+                                if (x.style.display === 'none') { x.style.display = 'block' } else { x.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        <table id="CayleyCutoff" className='cutoffsTable' style={{ display: 'none' }}>
+                            <thead>
+                                <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 1.5%) </th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 2022 </td><td> 105 </td><td> 128 </td></tr>
+                                <tr><td> 2021 </td><td> 114 </td><td> 132 </td></tr>
+                                <tr><td> 2020 </td><td> 114 </td><td> 134 </td></tr>
+                                <tr><td> 2019 </td><td> 112 </td><td> 132 </td></tr>
+                                <tr><td> 2018 </td><td> 106 </td><td> 128 </td></tr>
+                                <tr><td> 2017 </td><td> 103 </td><td> 130 </td></tr>
+                                <tr><td> 2016 </td><td> 106 </td><td> 128 </td></tr>
+                                <tr><td> 2015 </td><td> 106 </td><td> 130 </td></tr>
+                                <tr><td> 2014 </td><td> 114 </td><td> 134 </td></tr>
+                                <tr><td> 2013 </td><td> 104 </td><td> 132 </td></tr>
+                                <tr><td> 2012 </td><td> 102 </td><td> 132 </td></tr>
+                                <tr><td> 2011 </td><td> 100 </td><td> 126 </td></tr>
+                                <tr><td> 2010 </td><td> 104 </td><td> 132 </td></tr>
+                                <tr><td> 2009 </td><td> 102 </td><td> 134 </td></tr>
+                                <tr><td> 2008 </td><td> 102 </td><td> 130 </td></tr>
+                                <tr><td> 2007 </td><td> 104 </td><td> 132 </td></tr>
+                                <tr><td> 2006 </td><td> 110 </td><td> 132 </td></tr>
+                                <tr><td> 2005 </td><td> 95 </td><td> 125 </td></tr>
+                                <tr><td> 2004 </td><td> 108 </td><td> 132 </td></tr>
+                                <tr><td> 2003 </td><td> 102 </td><td> 132 </td></tr>
+                                <tr><td> 2002 </td><td> 103 </td><td> 132 </td></tr>
+                                <tr><td> 2001 </td><td> 83 </td><td> 121 </td></tr>
+                                <tr><td> 2000 </td><td> No data </td><td> No data </td></tr>
+                                <tr><td> 1999 </td><td> No data </td><td> No data </td></tr>
+                                <tr><td> 1998 </td><td> No data </td><td> No data </td></tr>
+                                <tr><td> 1997 </td><td> No data </td><td> No data </td></tr>
+                            </tbody>
+                        </table>
 
                         <span><i className="bi bi-thermometer-snow"></i>February: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
@@ -210,7 +288,7 @@ function Contests() {
                     if (content.style.maxHeight) {
                         content.style.maxHeight = null;
                     } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.maxHeight = "10000px";
                     }
                 }
             }>Grade 11</button>
@@ -236,7 +314,46 @@ function Contests() {
                         New Year<br />
 
                         <span><i className="bi bi-thermometer-snow"></i>February: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Fermat</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/pcf.html'>Fermat</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#pcf'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={() => {
+                                let x = document.getElementById("FermatCutoff")
+                                if (x.style.display === 'none') { x.style.display = 'block' } else { x.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        <table id="FermatCutoff" className='cutoffsTable' style={{ display: 'none' }}>
+                            <thead>
+                                <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 1.5%) </th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 2022 </td><td> 100 </td><td> 126 </td></tr>
+                                <tr><td> 2021 </td><td> 112 </td><td> 134 </td></tr>
+                                <tr><td> 2020 </td><td> 106 </td><td> 130 </td></tr>
+                                <tr><td> 2019 </td><td> 108 </td><td> 130 </td></tr>
+                                <tr><td> 2018 </td><td> 101 </td><td> 126 </td></tr>
+                                <tr><td> 2017 </td><td> 104 </td><td> 126 </td></tr>
+                                <tr><td> 2016 </td><td> 106 </td><td> 128 </td></tr>
+                                <tr><td> 2015 </td><td> 108 </td><td> 126 </td></tr>
+                                <tr><td> 2014 </td><td> 104 </td><td> 126 </td></tr>
+                                <tr><td> 2013 </td><td> 102 </td><td> 128 </td></tr>
+                                <tr><td> 2012 </td><td> 101 </td><td> 126 </td></tr>
+                                <tr><td> 2011 </td><td> 100 </td><td> 128 </td></tr>
+                                <tr><td> 2010 </td><td> 103 </td><td> 130 </td></tr>
+                                <tr><td> 2009 </td><td> 98 </td><td> 130 </td></tr>
+                                <tr><td> 2008 </td><td> 99 </td><td> 126 </td></tr>
+                                <tr><td> 2007 </td><td> 101 </td><td> 130 </td></tr>
+                                <tr><td> 2006 </td><td> 104 </td><td> 128 </td></tr>
+                                <tr><td> 2005 </td><td> 104 </td><td> 126 </td></tr>
+                                <tr><td> 2004 </td><td> 96 </td><td> 128 </td></tr>
+                                <tr><td> 2003 </td><td> 100 </td><td> 126 </td></tr>
+                                <tr><td> 2002 </td><td> 104 </td><td> 134 </td></tr>
+                                <tr><td> 2001 </td><td> 81 </td><td> 118 </td></tr>
+                                <tr><td> 2000 </td><td> No data </td><td> No data </td></tr>
+                                <tr><td> 1999 </td><td> No data </td><td> No data </td></tr>
+                                <tr><td> 1998 </td><td> No data </td><td> No data </td></tr>
+                                <tr><td> 1997 </td><td> No data </td><td> No data </td></tr>
+                            </tbody>
+                        </table>
 
                         <span><i className="bi bi-thermometer-snow"></i>February: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
@@ -264,7 +381,7 @@ function Contests() {
                     if (content.style.maxHeight) {
                         content.style.maxHeight = null;
                     } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.maxHeight = "10000px";
                     }
                 }
             }>Grade 12</button>

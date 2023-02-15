@@ -260,6 +260,14 @@ body {
     /* max-height: auto; */
     padding: max(2.8vw, 28px);
     border-radius: 10px;
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .sticky {
@@ -428,7 +436,7 @@ body {
                 height: max(5vw,50px);
                 border: 2px solid black;
                 border-collapse: collapse;
-                font-size: max(2.5vw,25px);
+                font-size: max(2vw,20px);
             }
 
             input {
@@ -439,7 +447,7 @@ body {
                 text-align: center;
                 color: blue;
                 font-weight: bold;
-                font-size: max(2.5vw,25px);
+                font-size: max(2vw,20px);
 
                 &.correct {
                     color: #00AA00;
