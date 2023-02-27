@@ -181,8 +181,41 @@ function Contests() {
                         <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Fryer</a><br />
-
+                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Fryer</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#fgh'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={() => {
+                                let x = document.getElementById("FryerCutoff")
+                                if (x.style.display === 'none') { x.style.display = 'block' } else { x.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        <table id="FryerCutoff" className='cutoffsTable' style={{ display: 'none' }}>
+                            <thead>
+                                <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 10%) </th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 2022 </td><td> 25 </td><td> 30 </td></tr>
+                                <tr><td> 2021 </td><td> 32 </td><td> 34 </td></tr>
+                                <tr><td colspan="3"> 2020: cancelled due to Covid </td></tr>
+                                <tr><td> 2019 </td><td> 30 </td><td> 35 </td></tr>
+                                <tr><td> 2018 </td><td> 29 </td><td> 33 </td></tr>
+                                <tr><td> 2017 </td><td> 32 </td><td> 35 </td></tr>
+                                <tr><td> 2016 </td><td> 30 </td><td> 35 </td></tr>
+                                <tr><td> 2015 </td><td> 32 </td><td> 35 </td></tr>
+                                <tr><td> 2014 </td><td> 28 </td><td> 33 </td></tr>
+                                <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Gold Standard <br /> (&asymp; Top 4%) </th></tr>
+                                <tr><td> 2013 </td><td> 26 </td><td> 34 </td></tr>
+                                <tr><td> 2012 </td><td> 31 </td><td> 36 </td></tr>
+                                <tr><td> 2011 </td><td> 28 </td><td> 33 </td></tr>
+                                <tr><td> 2010 </td><td> 28 </td><td> 35 </td></tr>
+                                <tr><td> 2009 </td><td> 30 </td><td> 35 </td></tr>
+                                <tr><td> 2008 </td><td> 30 </td><td> 36 </td></tr>
+                                <tr><td> 2007 </td><td> 28 </td><td> 36 </td></tr>
+                                <tr><td> 2006 </td><td> 32 </td><td> 36 </td></tr>
+                                <tr><td> 2005 </td><td> 32 </td><td> 35 </td></tr>
+                                <tr><td> 2004 </td><td> 31 </td><td> 36 </td></tr>
+                                <tr><td> 2003 </td><td> 22 </td><td> 33 </td></tr>
+                            </tbody>
+                        </table>
                         <span><i className="bi bi-thermometer-sun"></i>June: </span>
                         End of G9
                     </h3>
@@ -272,8 +305,41 @@ function Contests() {
                         <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Galois</a><br />
-
+                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Galois</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#fgh'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={() => {
+                                let x = document.getElementById("GaloisCutoff")
+                                if (x.style.display === 'none') { x.style.display = 'block' } else { x.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        <table id="GaloisCutoff" className='cutoffsTable' style={{ display: 'none' }}>
+                            <thead>
+                                <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 10%) </th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 2022 </td><td> 26 </td><td> 30 </td></tr>
+                                <tr><td> 2021 </td><td> 29 </td><td> 31 </td></tr>
+                                <tr><td colspan="3"> 2020: cancelled due to Covid </td></tr>
+                                <tr><td> 2019 </td><td> 26 </td><td> 32 </td></tr>
+                                <tr><td> 2018 </td><td> 25 </td><td> 29 </td></tr>
+                                <tr><td> 2017 </td><td> 28 </td><td> 31 </td></tr>
+                                <tr><td> 2016 </td><td> 29 </td><td> 32 </td></tr>
+                                <tr><td> 2015 </td><td> 28 </td><td> 31 </td></tr>
+                                <tr><td> 2014 </td><td> 28 </td><td> 30 </td></tr>
+                                <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Gold Standard <br /> (&asymp; Top 4%) </th></tr>
+                                <tr><td> 2013 </td><td> 32 </td><td> 36 </td></tr>
+                                <tr><td> 2012 </td><td> 29 </td><td> 33 </td></tr>
+                                <tr><td> 2011 </td><td> 29 </td><td> 34 </td></tr>
+                                <tr><td> 2010 </td><td> 30 </td><td> 37 </td></tr>
+                                <tr><td> 2009 </td><td> 30 </td><td> 35 </td></tr>
+                                <tr><td> 2008 </td><td> 28 </td><td> 34 </td></tr>
+                                <tr><td> 2007 </td><td> 26 </td><td> 34 </td></tr>
+                                <tr><td> 2006 </td><td> 28 </td><td> 34 </td></tr>
+                                <tr><td> 2005 </td><td> 27 </td><td> 34 </td></tr>
+                                <tr><td> 2004 </td><td> 30 </td><td> 34 </td></tr>
+                                <tr><td> 2003 </td><td> 23 </td><td> 32 </td></tr>
+                            </tbody>
+                        </table>
                         <span><i className="bi bi-thermometer-sun"></i>June: </span>
                         End of G10
                     </h3>
@@ -365,8 +431,41 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Hypatia</a><br />
-
+                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Hypatia</a><br /> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#fgh'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={() => {
+                                let x = document.getElementById("HypatiaCutoff")
+                                if (x.style.display === 'none') { x.style.display = 'block' } else { x.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        <table id="HypatiaCutoff" className='cutoffsTable' style={{ display: 'none' }}>
+                            <thead>
+                                <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 10%) </th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td> 2022 </td><td> 30 </td><td> 33 </td></tr>
+                                <tr><td> 2021 </td><td> 30 </td><td> 33 </td></tr>
+                                <tr><td colspan="3"> 2020: cancelled due to Covid </td></tr>
+                                <tr><td> 2019 </td><td> 32 </td><td> 34 </td></tr>
+                                <tr><td> 2018 </td><td> 28 </td><td> 32 </td></tr>
+                                <tr><td> 2017 </td><td> 26 </td><td> 29 </td></tr>
+                                <tr><td> 2016 </td><td> 30 </td><td> 33 </td></tr>
+                                <tr><td> 2015 </td><td> 27 </td><td> 32 </td></tr>
+                                <tr><td> 2014 </td><td> 30 </td><td> 31 </td></tr>
+                                <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Gold Standard <br /> (&asymp; Top 4%) </th></tr>
+                                <tr><td> 2013 </td><td> 27 </td><td> 34 </td></tr>
+                                <tr><td> 2012 </td><td> 26 </td><td> 32 </td></tr>
+                                <tr><td> 2011 </td><td> 29 </td><td> 34 </td></tr>
+                                <tr><td> 2010 </td><td> 31 </td><td> 38 </td></tr>
+                                <tr><td> 2009 </td><td> 28 </td><td> 36 </td></tr>
+                                <tr><td> 2008 </td><td> 33 </td><td> 38 </td></tr>
+                                <tr><td> 2007 </td><td> 24 </td><td> 31 </td></tr>
+                                <tr><td> 2006 </td><td> 26 </td><td> 34 </td></tr>
+                                <tr><td> 2005 </td><td> 31 </td><td> 35 </td></tr>
+                                <tr><td> 2004 </td><td> 29 </td><td> 34 </td></tr>
+                                <tr><td> 2003 </td><td> 19 </td><td> 32 </td></tr>
+                            </tbody>
+                        </table>
                         <span><i className="bi bi-thermometer-sun"></i>June: </span>
                         End of G11
                     </h3>
