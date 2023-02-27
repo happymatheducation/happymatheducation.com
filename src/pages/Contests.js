@@ -431,7 +431,7 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Hypatia</a><br /> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Hypatia</a> |
                         <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#fgh'>Papers</a> |
                         <button className='cutoffsButton'
                             onClick={() => {
