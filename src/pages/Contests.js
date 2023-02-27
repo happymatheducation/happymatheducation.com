@@ -1,6 +1,39 @@
 
 function Contests() {
 
+    let euclidCutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
+        <thead>
+            <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 2.5%) </th></tr>
+        </thead>
+        <tbody>
+            <tr><td> 2022 </td><td> 68 </td><td> 85 </td></tr>
+            <tr><td> 2021 </td><td> 69 </td><td> 86 </td></tr>
+            <tr><td colSpan="3"> 2020: cancelled due to Covid </td></tr>
+            <tr><td> 2019 </td><td> 68 </td><td> 83 </td></tr>
+            <tr><td> 2018 </td><td> 64 </td><td> 79 </td></tr>
+            <tr><td> 2017 </td><td> 64 </td><td> 79 </td></tr>
+            <tr><td> 2016 </td><td> 65 </td><td> 80 </td></tr>
+            <tr><td> 2015 </td><td> 52 </td><td> 72 </td></tr>
+            <tr><td> 2014 </td><td> 60 </td><td> 79 </td></tr>
+            <tr><td> 2013 </td><td> 60 </td><td> 79 </td></tr>
+            <tr><td> 2012 </td><td> 56 </td><td> 78 </td></tr>
+            <tr><td> 2011 </td><td> 59 </td><td> 80 </td></tr>
+            <tr><td> 2010 </td><td> 60 </td><td> 81 </td></tr>
+            <tr><td> 2009 </td><td> 57 </td><td> 80 </td></tr>
+            <tr><td> 2008 </td><td> 56 </td><td> 83 </td></tr>
+            <tr><td> 2007 </td><td> 58 </td><td> 85 </td></tr>
+            <tr><td> 2006 </td><td> 63 </td><td> 83 </td></tr>
+            <tr><td> 2005 </td><td> 59 </td><td> 76 </td></tr>
+            <tr><td> 2004 </td><td> 56 </td><td> 80 </td></tr>
+            <tr><td> 2003 </td><td> 54 </td><td> 83 </td></tr>
+            <tr><td> 2002 </td><td> 51 </td><td> 79 </td></tr>
+            <tr><td> 2001 </td><td> Nodata </td><td> Nodata </td></tr>
+            <tr><td> 2000 </td><td> Nodata </td><td> Nodata </td></tr>
+            <tr><td> 1999 </td><td> Nodata </td><td> Nodata </td></tr>
+            <tr><td> 1998 </td><td> Nodata </td><td> Nodata </td></tr>
+        </tbody>
+    </table>;
+
     return (
         <>
 
@@ -195,14 +228,14 @@ function Contests() {
                             <tbody>
                                 <tr><td> 2022 </td><td> 25 </td><td> 30 </td></tr>
                                 <tr><td> 2021 </td><td> 32 </td><td> 34 </td></tr>
-                                <tr><td colspan="3"> 2020: cancelled due to Covid </td></tr>
+                                <tr><td colSpan="3"> 2020: cancelled due to Covid </td></tr>
                                 <tr><td> 2019 </td><td> 30 </td><td> 35 </td></tr>
                                 <tr><td> 2018 </td><td> 29 </td><td> 33 </td></tr>
                                 <tr><td> 2017 </td><td> 32 </td><td> 35 </td></tr>
                                 <tr><td> 2016 </td><td> 30 </td><td> 35 </td></tr>
                                 <tr><td> 2015 </td><td> 32 </td><td> 35 </td></tr>
                                 <tr><td> 2014 </td><td> 28 </td><td> 33 </td></tr>
-                                <tr><td colspan="3">  Gold Standard instead of Honour Roll before 2014  </td></tr>
+                                <tr><td colSpan="3">  Gold Standard instead of Honour Roll before 2014  </td></tr>
                                 <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Gold Standard <br /> (&asymp; Top 4%) </th></tr>
                                 <tr><td> 2013 </td><td> 26 </td><td> 34 </td></tr>
                                 <tr><td> 2012 </td><td> 31 </td><td> 36 </td></tr>
@@ -320,14 +353,14 @@ function Contests() {
                             <tbody>
                                 <tr><td> 2022 </td><td> 26 </td><td> 30 </td></tr>
                                 <tr><td> 2021 </td><td> 29 </td><td> 31 </td></tr>
-                                <tr><td colspan="3"> 2020: cancelled due to Covid </td></tr>
+                                <tr><td colSpan="3"> 2020: cancelled due to Covid </td></tr>
                                 <tr><td> 2019 </td><td> 26 </td><td> 32 </td></tr>
                                 <tr><td> 2018 </td><td> 25 </td><td> 29 </td></tr>
                                 <tr><td> 2017 </td><td> 28 </td><td> 31 </td></tr>
                                 <tr><td> 2016 </td><td> 29 </td><td> 32 </td></tr>
                                 <tr><td> 2015 </td><td> 28 </td><td> 31 </td></tr>
                                 <tr><td> 2014 </td><td> 28 </td><td> 30 </td></tr>
-                                <tr><td colspan="3">  Gold Standard instead of Honour Roll before 2014  </td></tr>
+                                <tr><td colSpan="3">  Gold Standard instead of Honour Roll before 2014  </td></tr>
                                 <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Gold Standard <br /> (&asymp; Top 4%) </th></tr>
                                 <tr><td> 2013 </td><td> 32 </td><td> 36 </td></tr>
                                 <tr><td> 2012 </td><td> 29 </td><td> 33 </td></tr>
@@ -348,9 +381,9 @@ function Contests() {
                 </div>
             </div>
 
-            <button className="collapsible" id='e' onClick={
+            <button className="collapsible" id='eleven' onClick={
                 () => {
-                    var me = document.getElementById('e')
+                    var me = document.getElementById('eleven')
                     me.classList.toggle('cactive')
                     var content = me.nextElementSibling;
                     if (content.style.maxHeight) {
@@ -430,7 +463,15 @@ function Contests() {
                         <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#euclid'>Papers</a> | 
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        {euclidCutoffTable}
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Hypatia</a> |
@@ -447,14 +488,14 @@ function Contests() {
                             <tbody>
                                 <tr><td> 2022 </td><td> 30 </td><td> 33 </td></tr>
                                 <tr><td> 2021 </td><td> 30 </td><td> 33 </td></tr>
-                                <tr><td colspan="3"> 2020: cancelled due to Covid </td></tr>
+                                <tr><td colSpan="3"> 2020: cancelled due to Covid </td></tr>
                                 <tr><td> 2019 </td><td> 32 </td><td> 34 </td></tr>
                                 <tr><td> 2018 </td><td> 28 </td><td> 32 </td></tr>
                                 <tr><td> 2017 </td><td> 26 </td><td> 29 </td></tr>
                                 <tr><td> 2016 </td><td> 30 </td><td> 33 </td></tr>
                                 <tr><td> 2015 </td><td> 27 </td><td> 32 </td></tr>
                                 <tr><td> 2014 </td><td> 30 </td><td> 31 </td></tr>
-                                <tr><td colspan="3">  Gold Standard instead of Honour Roll before 2014  </td></tr>
+                                <tr><td colSpan="3">  Gold Standard instead of Honour Roll before 2014  </td></tr>
                                 <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Gold Standard <br /> (&asymp; Top 4%) </th></tr>
                                 <tr><td> 2013 </td><td> 27 </td><td> 34 </td></tr>
                                 <tr><td> 2012 </td><td> 26 </td><td> 32 </td></tr>
@@ -475,9 +516,9 @@ function Contests() {
                 </div>
             </div>
 
-            <button className="collapsible" id='tw' onClick={
+            <button className="collapsible" id='twelve' onClick={
                 () => {
-                    var me = document.getElementById('tw')
+                    var me = document.getElementById('twelve')
                     me.classList.toggle('cactive')
                     var content = me.nextElementSibling;
                     if (content.style.maxHeight) {
@@ -515,7 +556,15 @@ function Contests() {
                         <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#euclid'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        {euclidCutoffTable}
 
                         <span><i className="bi bi-thermometer-sun"></i>June: </span>
                         End of G12
