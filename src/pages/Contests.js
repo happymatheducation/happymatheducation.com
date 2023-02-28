@@ -235,7 +235,7 @@ function Contests() {
                                 <tr><td> 2016 </td><td> 30 </td><td> 35 </td></tr>
                                 <tr><td> 2015 </td><td> 32 </td><td> 35 </td></tr>
                                 <tr><td> 2014 </td><td> 28 </td><td> 33 </td></tr>
-                                <tr><td colSpan="3">  Gold Standard instead of Honour Roll before 2014  </td></tr>
+                                <tr><td colSpan="3">  Gold Standard before 2014  <br /> instead of Honour Roll </td></tr>
                                 <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Gold Standard <br /> (&asymp; Top 4%) </th></tr>
                                 <tr><td> 2013 </td><td> 26 </td><td> 34 </td></tr>
                                 <tr><td> 2012 </td><td> 31 </td><td> 36 </td></tr>
@@ -360,7 +360,7 @@ function Contests() {
                                 <tr><td> 2016 </td><td> 29 </td><td> 32 </td></tr>
                                 <tr><td> 2015 </td><td> 28 </td><td> 31 </td></tr>
                                 <tr><td> 2014 </td><td> 28 </td><td> 30 </td></tr>
-                                <tr><td colSpan="3">  Gold Standard instead of Honour Roll before 2014  </td></tr>
+                                <tr><td colSpan="3">  Gold Standard before 2014  <br /> instead of Honour Roll </td></tr>
                                 <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Gold Standard <br /> (&asymp; Top 4%) </th></tr>
                                 <tr><td> 2013 </td><td> 32 </td><td> 36 </td></tr>
                                 <tr><td> 2012 </td><td> 29 </td><td> 33 </td></tr>
@@ -495,7 +495,7 @@ function Contests() {
                                 <tr><td> 2016 </td><td> 30 </td><td> 33 </td></tr>
                                 <tr><td> 2015 </td><td> 27 </td><td> 32 </td></tr>
                                 <tr><td> 2014 </td><td> 30 </td><td> 31 </td></tr>
-                                <tr><td colSpan="3">  Gold Standard instead of Honour Roll before 2014  </td></tr>
+                                <tr><td colSpan="3">  Gold Standard before 2014  <br /> instead of Honour Roll </td></tr>
                                 <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Gold Standard <br /> (&asymp; Top 4%) </th></tr>
                                 <tr><td> 2013 </td><td> 27 </td><td> 34 </td></tr>
                                 <tr><td> 2012 </td><td> 26 </td><td> 32 </td></tr>
