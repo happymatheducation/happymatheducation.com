@@ -1,0 +1,11 @@
+Euclid2021-9
+    <MathComponent display={false} tex={'\\text{Find all positive integer solutions for:}'} /><br />
+    <MathComponent display={false} tex={'4m^2+4n^2-4mn-2m-2n+1=43'} /><br /><br />
+    <MathComponent display={false} tex={'5m^2+5n^2-6mn-2m-2n+1=65'} /><br /><br />
+    <MathComponent display={false} tex={'3m^2+9n^2-10mn+2m-2n+1=34'} /><br /><br />
+    <MathComponent display={false} tex={'6m^2+6n^2-8mn-4m-4n+4=86'} /><br /><br />
+Euclid2020-10
+    <MathComponent display={false} tex={'\\text{Find the positive integers } a_1\\leq{a_2}\\leq{a_3}\\leq{a_4}\\leq{a_5}\\leq{a_6} \\text{ for each list of pairwise sums:} '} /><br />
+    <MathComponent display={false} tex={'(a) 5,6,7,7,8,8,9,9,10,10,11,11,12,13,14'} /><br /><br />
+    <MathComponent display={false} tex={'(b) 5,6,7,8,9,9,10,10,11,11,12,13,13,15,16'} /><br /><br />
+    <MathComponent display={false} tex={'(c) 5,7,8,10,11,13,14,15,17,19,20,20,22,25,29'} /><br /><br />
