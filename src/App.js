@@ -32,6 +32,7 @@ const CompleteTheSquare = lazy(() => import("./pages/Practice/CompleteTheSquare.
 const ChineseRemainderTheorem = lazy(() => import("./pages/Practice/ChineseRemainderTheorem.js"))
 const SimpleLogarithm = lazy(() => import("./pages/Practice/SimpleLogarithm.js"))
 const MagicSquares = lazy(() => import("./pages/Practice/MagicSquares.js"))
+const StarsAndBars = lazy(() => import("./pages/Practice/StarsAndBars.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -151,6 +152,7 @@ const App = () => {
                         <Route exact path='/Practice/ChineseRemainderTheorem' element={<ChineseRemainderTheorem />} />
                         <Route exact path='/Practice/SimpleLogarithm' element={<SimpleLogarithm />} />
                         <Route exact path='/Practice/MagicSquares' element={<MagicSquares />} />
+                        <Route exact path='/Practice/StarsAndBars' element={<StarsAndBars />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />

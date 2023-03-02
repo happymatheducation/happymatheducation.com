@@ -218,6 +218,7 @@ function Practice() {
                     </div>
                     <div className='practicediv'>
                         Stars and Bars: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/StarsAndBars'>App</a> | 
                         <a href={starts_and_bars}>pdf</a> |
                         <a href={starts_and_bars_answers}>Answers</a>
                     </div>
