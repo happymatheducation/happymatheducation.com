@@ -120,6 +120,7 @@ function Practice() {
                 </div>
                 <div className='practicediv'>
                     Mental Math with Basic Algebra: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/MentalMathWithBasicAlgebra'>App</a> |
                     <a href={mental_math_with_basic_algebra}>pdf</a> |
                     <a href={mental_math_with_basic_algebra_answers}>Answers</a>
                 </div>
