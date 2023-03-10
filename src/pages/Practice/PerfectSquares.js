@@ -13,6 +13,7 @@ class PerfectSquares extends Component {
     state = {
         correctAnswer: '',
         userAnswer: '',
+        hintString: '',
     };
 
     findN(x) {
@@ -38,14 +39,33 @@ class PerfectSquares extends Component {
         const a = myMath.randomFromArray(allFactors);
         const b = myMath.randomFromArray(allFactors);
         const c = myMath.randomFromArray(allFactors);
+        const product = a * b * c;
 
-        this.setState({ correctAnswer: this.findN(a * b * c) });
+        this.setState({ correctAnswer: this.findN(product) });
 
-        let questionString = '';
+        let questionString = '~' + a + '\\times ' + b + '\\times ' + c;
+        let hintString = '~' + a + '\\times ' + b + '\\times ' + c + '=';
+
+        let primeFactorization = myMath.primeFactorize(product);
+        for (let i = 0; i < primeFactorization.length; i++) {
+            let currentPrimeFactorization = primeFactorization[i];
+            let power = currentPrimeFactorization.power;
+            let prime = currentPrimeFactorization.prime;
+            if (currentPrimeFactorization.power === 1) {
+                hintString += prime;
+            } else {
+                hintString += prime + '^' + power;
+            }
+            if (i !== primeFactorization.length - 1) {
+                hintString += '\\times';
+            }
+        }
+        this.setState({ hintString: hintString });
+        
         if (Math.random() < 0.5) {
-            questionString = '~' + a + '\\times ' + b + '\\times ' + c + '\\times n~';
+            questionString += '\\times n~';
         } else {
-            questionString = '~{' + a + '\\times ' + b + '\\times ' + c + '\\over n}~';
+            questionString += '\\over n~';
         }
         return (<>
             What is the smallest integer value of <MathComponent display={false} tex={'n~'} />
@@ -68,9 +88,11 @@ class PerfectSquares extends Component {
         } else {
             correctAnswer = this.state.correctAnswer;
         }
-        return (
+        return (<>
             <MathComponent display={false}
                 tex={String.raw`\text{Incorrect! Answer: }${ correctAnswer }.~`} />
+            <MathComponent display={false} tex={String.raw`\text {Hint: }`
+                + this.state.hintString} /></>
         );
 }
 
