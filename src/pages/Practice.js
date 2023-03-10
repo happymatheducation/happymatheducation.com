@@ -134,6 +134,10 @@ function Practice() {
                     <a href={number_of_factors}>pdf</a>
                 </div>
                 <div className='practicediv'>
+                    Perfect Squares: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/PerfectSquares'>App</a>
+                </div>
+                <div className='practicediv'>
                     Quadratic Equations / Functions: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='/Practice/Quadratic_Equations'>App (Find roots)</a> |
                     <a href='/Practice/CompleteTheSquare'>App (Complete the Square / Vertex Form)</a> |

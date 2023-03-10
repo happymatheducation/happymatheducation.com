@@ -6,6 +6,10 @@ const myMath = {
     allPrimes: allPrimes,
     allPrimePowers: allPrimePowers,
 
+    randomFromArray(a) { //inclusive
+        return a[Math.floor(Math.random() * a.length)];
+    },
+
     randomInteger(from, to) { //inclusive
         return Math.floor(Math.random() * (to - from + 1)) + from;
     },
