@@ -134,7 +134,7 @@ class EuclidsTheorem extends Component {
             ctx.textBaseline = textBaselineH;
             ctx.fillText("H", H.x, H.y);
         }
-        return <Canvas draw={draw} width={canvasWidth} height={canvasHeight} />;
+        return <Canvas className='canvas' draw={draw} width={canvasWidth} height={canvasHeight} />;
     }
 
     isInteger = (num) => {

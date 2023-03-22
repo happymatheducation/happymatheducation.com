@@ -376,10 +376,12 @@ body {
         margin-bottom: 0;
     }
 
-    canvas {
+    .canvas {
         float: left;
         margin-left: max(2vw, 20px);
         margin-right: max(2vw, 20px);
+        margin-top: max(2vw, 20px);
+        margin-bottom: max(2vw, 20px);
     }
 
     .practiceheader {
@@ -503,8 +505,9 @@ body {
     .practicequiz {
         margin: 0;
 
-        canvas {
+        .canvas {
             float: none;
+            margin-bottom: 0;
         }
     }
 }
