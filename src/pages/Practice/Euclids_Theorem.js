@@ -209,7 +209,8 @@ class EuclidsTheorem extends Component {
             userAnswer: '',
             difficulty:''
         });
-        this.answerForm.current.focus();
+        if (window.innerWidth <= 800) { }
+        else { this.answerForm.current.focus() }        
     }
 
     checkAnswer = () => {
