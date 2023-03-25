@@ -36,6 +36,7 @@ const StarsAndBars = lazy(() => import("./pages/Practice/StarsAndBars.js"))
 const MentalMathWithBasicAlgebra = lazy(() => import("./pages/Practice/MentalMathWithBasicAlgebra.js"))
 const PerfectSquares = lazy(() => import("./pages/Practice/PerfectSquares.js"))
 const Simple3Dshapes = lazy(() => import("./pages/Practice/Simple3Dshapes.js"))
+const BasicSimilarTriangles = lazy(() => import("./pages/Practice/BasicSimilarTriangles.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -159,6 +160,7 @@ const App = () => {
                         <Route exact path='/Practice/MentalMathWithBasicAlgebra' element={<MentalMathWithBasicAlgebra />} />
                         <Route exact path='/Practice/PerfectSquares' element={<PerfectSquares />} />
                         <Route exact path='/Practice/Simple3Dshapes' element={<Simple3Dshapes />} />
+                        <Route exact path='/Practice/BasicSimilarTriangles' element={<BasicSimilarTriangles />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />

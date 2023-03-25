@@ -103,6 +103,7 @@ function Practice() {
                 </div>
                 <div className='practicediv'>
                     Basic Similar Triangles: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/BasicSimilarTriangles'>App</a> |
                     <a href={basic_similar_triangles}>pdf</a> |
                     <a href={basic_similar_triangles_answers}>Answers</a>
                 </div>

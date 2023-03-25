@@ -192,14 +192,16 @@ class EuclidsTheorem extends Component {
         this.setState({ correctAnswer: answer });
         this.setState({ question: question });
 
-        return (<><p style={{ textAlign: 'left' }}>
+        return (<><p>
+            {/*
             As shown, in
             <MathComponent display={false} tex={String.raw`~\triangle ABC,~`} />
             <MathComponent display={false} tex={String.raw`CH \perp AB,~`} /> and
             <MathComponent display={false} tex={String.raw`~\angle ACB = 90^\circ.~`} />
             If
-            <MathComponent display={false} tex={'~' + condition[0] + '~'} /> and
-            <MathComponent display={false} tex={'~' + condition[1] + '~'} />
+            */}
+            <MathComponent display={false} tex={'~' + condition[0] + ',~'} />
+            <MathComponent display={false} tex={'~' + condition[1] + '.~~'} />
             (Diagram not to scale)
         </p>{this.drawDiagram()}</>);
     }

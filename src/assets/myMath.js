@@ -107,6 +107,54 @@ const myMath = {
         for (x = 1; x <= k; x++) coeff /= x;
         return coeff;
     },
+    shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+    },
+    slope(firstPoint, secondPoint) {
+        return (secondPoint.y - firstPoint.y) / (secondPoint.x - firstPoint.x);
+    },
+    yIntercept(firstPoint, secondPoint) {
+        let slope = this.slope(firstPoint, secondPoint);
+        return firstPoint.y - slope * firstPoint.x;
+    },
+    arrayShiftRight(array, steps) {
+        let len = array.length;
+        steps = steps % len;
+        let endIndex = len - steps;
+        return array.slice(endIndex, len).concat(array.slice(0, endIndex))
+    },
+    reverseString(str) {
+        // Step 1. Use the split() method to return a new array
+        var splitString = str.split(""); // var splitString = "hello".split("");
+        // ["h", "e", "l", "l", "o"]
+
+        // Step 2. Use the reverse() method to reverse the new created array
+        var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+        // ["o", "l", "l", "e", "h"]
+
+        // Step 3. Use the join() method to join all elements of the array into a string
+        var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+        // "olleh"
+
+        //Step 4. Return the reversed string
+        return joinArray; // "olleh"
+    },
+    findIntersectionByPoints(A, B, C, D) { // find the intersection between AB and CD, return a Point object
+        let intersection = { x: 0, y: 0 };
+        if (A.x === B.x || C.x === D.x) { intersection.x = A.x === B.x ? A.x : C.x }
+        else {
+            let slopeAB = this.slope(A, B);
+            let slopeCD = this.slope(C, D);
+            let yinterceptAB = this.yIntercept(A, B);
+            let yinterceptCD = this.yIntercept(C, D);
+            intersection.x = (yinterceptAB - yinterceptCD) / (slopeCD - slopeAB);
+            intersection.y = slopeAB * intersection.x + yinterceptAB;
+        }
+        return intersection;
+    },
+    distance(A, B) { // return the distance between points A and B;
+        return Math.sqrt((A.x - B.x) ** 2 + (A.y - B.y) ** 2);
+    }
 };
 
 export default myMath;
