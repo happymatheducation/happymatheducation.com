@@ -385,17 +385,23 @@ class BasicSimilarTriangles extends Component {
             let P = myMath.findIntersectionByPoints(vertices[0], vertices[2], vertices[1], vertices[3]);
             P.name = 'P';
 
-            let sideNames = basesAreHorizontal
-                ? myMath.shuffleArray([
+            let sideNames;
+            let parallelCondition = '';
+            if (basesAreHorizontal) {
+                sideNames = myMath.shuffleArray([
                     ['P' + vertices[3].name, 'P' + vertices[1].name, vertices[3].name + vertices[1].name],
                     ['P' + vertices[2].name, 'P' + vertices[0].name, vertices[2].name + vertices[0].name],
                     [vertices[3].name + vertices[2].name, vertices[1].name + vertices[0].name]
-                ])
-                : myMath.shuffleArray([
+                ]);
+                parallelCondition = vertices[3].name + vertices[2].name + ' \\parallel ' + vertices[0].name + vertices[1].name + '.~';
+            } else {
+                sideNames = myMath.shuffleArray([
                     ['P' + vertices[3].name, 'P' + vertices[1].name, vertices[3].name + vertices[1].name],
                     ['P' + vertices[0].name, 'P' + vertices[2].name, vertices[0].name + vertices[2].name],
                     [vertices[3].name + vertices[0].name, vertices[1].name + vertices[2].name]
                 ]);
+                parallelCondition = vertices[3].name + vertices[0].name + ' \\parallel ' + vertices[2].name + vertices[1].name + '.~';
+            }
             let givenSideNames = sideNames[0];
             let askingSideNames = sideNames[1];
 
@@ -433,7 +439,7 @@ class BasicSimilarTriangles extends Component {
             })
 
             return (<><p>
-                <MathComponent display={false} tex={vertices[3].name + vertices[2].name + ' \\parallel ' + vertices[0].name + vertices[1].name + '.~'} />
+                <MathComponent display={false} tex={parallelCondition} />
                 <MathComponent display={false} tex={givenSides[0].name + '=' + givenSides[0].length + '.~'} />
                 <MathComponent display={false} tex={givenSides[1].name + '=' + givenSides[1].length + '.~'} />
                 <MathComponent display={false} tex={askingSides[0].name + '=' + askingSides[0].length + '.~'} />
