@@ -35,17 +35,32 @@ class BasicSimilarTriangles extends Component {
     //Drawing only;
     drawTriangle = (vertices, M, N) => {
 
-        // M on the side between P1 and P2
-        // N on the side between P1 and P3
-        let P1 = vertices[0];
-        let P2 = vertices[1];
-        let P3 = vertices[2];
+        // M on the side between vertices[0] and [1]
+        // N on the side between vertices[0] and [2]
 
         // Determine canvas size and diagram position
-        let xMax = Math.max(P1.x, P2.x, P3.x);
-        let xMin = Math.min(P1.x, P2.x, P3.x);
-        let yMax = Math.max(P1.y, P2.y, P3.y);
-        let yMin = Math.min(P1.y, P2.y, P3.y);
+        let xMax = vertices.reduce((accumulator, currentValue) => { return { x: Math.max(accumulator.x, currentValue.x) } }).x;
+        let xMin = vertices.reduce((accumulator, currentValue) => { return { x: Math.min(accumulator.x, currentValue.x) } }).x;
+        let yMax = vertices.reduce((accumulator, currentValue) => { return { y: Math.max(accumulator.y, currentValue.y) } }).y;
+        let yMin = vertices.reduce((accumulator, currentValue) => { return { y: Math.min(accumulator.y, currentValue.y) } }).y;
+
+        // Determine points' labels' positions.
+        let textAlignABC = [];
+        let textBaselineABC = [];
+        for (let i = 0; i < vertices.length; i++) {
+            if (vertices[i].x === xMin) { textAlignABC[i] = 'right' }
+            else if (vertices[i].x === xMax) { textAlignABC[i] = 'left' }
+            if (vertices[i].y === yMin) { textBaselineABC[i] = 'bottom' }
+            else if (vertices[i].y === yMax) { textBaselineABC[i] = 'top' }
+            for (let j = i + 1; j < vertices.length; j++) {
+                if (vertices[j].x === vertices[i].x) {
+                    [textBaselineABC[j], textBaselineABC[i]] = vertices[j].y < vertices[i].y ? ['bottom', 'top'] : ['top', 'bottom'];
+                } else if (vertices[j].y === vertices[i].y) {
+                    [textAlignABC[j], textAlignABC[i]] = vertices[j].x < vertices[i].x ? ['right', 'left'] : ['left', 'right'];
+                }
+            }
+        }
+
         let width = xMax - xMin;
         let height = yMax - yMin;
         let xCenter = (xMax + xMin) / 2;
@@ -55,59 +70,30 @@ class BasicSimilarTriangles extends Component {
         let canvasHeight = height + 3 * textSize;
         let xCorrection = canvasWidth / 2 - xCenter;
         let yCorrection = canvasHeight / 2 - yCenter;
-        P1.x += xCorrection;
-        P2.x += xCorrection;
-        P3.x += xCorrection;
-        M.x += xCorrection;
-        N.x += xCorrection;
-        P1.y += yCorrection;
-        P2.y += yCorrection;
-        P3.y += yCorrection;
-        M.y += yCorrection;
-        N.y += yCorrection;
-
-        // Determine points' labels' positions.
-
-        let textAlignP1, textAlignP2, textAlignP3;
-        textAlignP1 = P1.x < canvasWidth / 2 ? 'right' : 'left';
-        textAlignP2 = P2.x < canvasWidth / 2 ? 'right' : 'left';
-        textAlignP3 = P3.x < canvasWidth / 2 ? 'right' : 'left';
-
-        let textBaselineP1, textBaselineP2, textBaselineP3;
-        textBaselineP1 = P1.y < canvasHeight / 2 ? 'bottom' : 'top';
-        textBaselineP2 = P2.y < canvasHeight / 2 ? 'bottom' : 'top';
-        textBaselineP3 = P3.y < canvasHeight / 2 ? 'bottom' : 'top';
-
-        // Positioning 'M'
-        let [textAlignM, textBaselineM] = ['left', 'top'];
-        if (P1.x === P2.x) {
-            textAlignM = P3.x > P1.x ? 'right' : 'left';
-        } else if (P1.y === P2.y) {
-            textBaselineM = P3.y > P1.y ? 'bottom' : 'top';
-        } else {
-            let slope = myMath.slope(P1, P2);
-            let yIntercept = myMath.yIntercept(P1, P2);
-            if (slope > 0) {
-                [textAlignM, textBaselineM] = P3.y > slope * P3.x + yIntercept ? ['left', 'bottom'] : ['right', 'top'];
-            } else {
-                [textAlignM, textBaselineM] = P3.y > slope * P3.x + yIntercept ? ['right', 'bottom'] : ['left', 'top'];
-            }
+        for (let point of vertices.concat([M, N])) {
+            point.x += xCorrection;
+            point.y += yCorrection;
         }
 
-        // Positioning 'N'
-        let [textAlignN, textBaselineN] = ['left', 'top'];
-        if (P1.x === P3.x) {
-            textAlignN = P2.x > P1.x ? 'right' : 'left';
-        } else if (P1.y === P3.y) {
-            textBaselineN = P2.y > P1.y ? 'bottom' : 'top';
-        } else {
-            let slope = myMath.slope(P1, P3);
-            let yIntercept = myMath.yIntercept(P1, P3);
-            if (slope > 0) {
-                [textAlignN, textBaselineN] = P2.y > slope * P2.x + yIntercept ? ['left', 'bottom'] : ['right', 'top'];
+        // Positioning M, N
+        let [textAlignM, textBaselineM] = labelPosition(vertices[0], vertices[1], vertices[2]);
+        let [textAlignN, textBaselineN] = labelPosition(vertices[0], vertices[2], vertices[1]);
+        function labelPosition(P1, P2, P3) { // the position of the label of a point on side AB of triangle ABC
+            let [textAlign, textBaseline] = ['left', 'top'];
+            if (P1.x === P2.x) {
+                textAlign = P3.x > vertices[0].x ? 'right' : 'left';
+            } else if (P1.y === P2.y) {
+                textBaseline = P3.y > P1.y ? 'bottom' : 'top';
             } else {
-                [textAlignN, textBaselineN] = P2.y > slope * P2.x + yIntercept ? ['right', 'bottom'] : ['left', 'top'];
+                let slope = myMath.slope(P1, P2);
+                let yIntercept = myMath.yIntercept(P1, P2);
+                if (slope > 0) {
+                    [textAlign, textBaseline] = P3.y > slope * P3.x + yIntercept ? ['left', 'bottom'] : ['right', 'top'];
+                } else {
+                    [textAlign, textBaseline] = P3.y > slope * P3.x + yIntercept ? ['right', 'bottom'] : ['left', 'top'];
+                }
             }
+            return [textAlign, textBaseline]
         }
 
         // Draw;
@@ -117,10 +103,10 @@ class BasicSimilarTriangles extends Component {
             ctx.lineWidth = 3;
             ctx.lineJoin = 'round';
             ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-            ctx.moveTo(P1.x, P1.y);
-            ctx.lineTo(P2.x, P2.y);
-            ctx.lineTo(P3.x, P3.y);
-            ctx.lineTo(P1.x, P1.y);
+            ctx.moveTo(vertices[0].x, vertices[0].y);
+            ctx.lineTo(vertices[1].x, vertices[1].y);
+            ctx.lineTo(vertices[2].x, vertices[2].y);
+            ctx.lineTo(vertices[0].x, vertices[0].y);
             ctx.moveTo(M.x, M.y);
             ctx.lineTo(N.x, N.y);
             ctx.stroke();
@@ -128,17 +114,11 @@ class BasicSimilarTriangles extends Component {
             // Draw Points' labels;
             ctx.font = textSize + "px TimesNewRome";
 
-            ctx.textAlign = textAlignP1;
-            ctx.textBaseline = textBaselineP1;
-            ctx.fillText(vertices[0].name, P1.x, P1.y);
-
-            ctx.textAlign = textAlignP2;
-            ctx.textBaseline = textBaselineP2;
-            ctx.fillText(vertices[1].name, P2.x, P2.y);
-
-            ctx.textAlign = textAlignP3;
-            ctx.textBaseline = textBaselineP3;
-            ctx.fillText(vertices[2].name, P3.x, P3.y);
+            for (let i = 0; i < vertices.length; i++) {
+                ctx.textAlign = textAlignABC[i];
+                ctx.textBaseline = textBaselineABC[i];
+                ctx.fillText(vertices[i].name, vertices[i].x, vertices[i].y);
+            }
 
             ctx.textAlign = textAlignM;
             ctx.textBaseline = textBaselineM;
@@ -237,8 +217,8 @@ class BasicSimilarTriangles extends Component {
             } else {
                 let newVertexBase = Math.random() < 0.5 ? vertices[0] : vertices[1];
                 [newVertex.x, newVertex.y] = Math.random() < 0.5
-                    ? [newVertexBase.x, Math.abs(newVertexBase.y - 0.5 - 0.5 * Math.random())]
-                    : [Math.abs(newVertexBase.x - 0.5 - 0.5 * Math.random()), newVertexBase.y];
+                    ? [newVertexBase.x, Math.abs(newVertexBase.y - 0.3 - 0.7 * Math.random())]
+                    : [Math.abs(newVertexBase.x - 0.3 - 0.7 * Math.random()), newVertexBase.y];
             }
             vertices.push(newVertex);
 
@@ -258,7 +238,7 @@ class BasicSimilarTriangles extends Component {
             // N on the side between vertices[0] and [2];
 
             let [M, N] = [{ x: -1, y: -1, name: 'M' }, { x: -1, y: -1, name: 'N' }];
-            let MNposition = 1 / 3 + 1 / 3 * Math.random();
+            let MNposition = 0.3 + 0.4 * Math.random();
             M.x = vertices[0].x * MNposition + vertices[1].x * (1 - MNposition);
             M.y = vertices[0].y * MNposition + vertices[1].y * (1 - MNposition);
             N.x = vertices[0].x * MNposition + vertices[2].x * (1 - MNposition);
@@ -281,6 +261,7 @@ class BasicSimilarTriangles extends Component {
             let givenSides = [];
             let askingSides = [];
             let hintTex = '';
+
             for (let i = 0; i < givenSideNames.length; i++) {
                 givenSides.push({
                     name: givenSideNames[i],
