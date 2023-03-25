@@ -224,7 +224,7 @@ class BasicSimilarTriangles extends Component {
     generateQuestion = () => {
         let diagramSize = Math.min(window.innerWidth * 0.5, window.innerHeight * 0.3);
         let allCorners = [{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 1, y: 1 }, { x: 0, y: 1 }];
-        if (Math.random() < 0) { // MN in a triangle ABC
+        if (Math.random() < 0.5) { // MN in a triangle ABC
             // Determine coordinates of the three vertices of ABC;
             let vertices = myMath.shuffleArray(allCorners).slice(0, 2);
             let newVertex = { x: -1, y: -1 };
