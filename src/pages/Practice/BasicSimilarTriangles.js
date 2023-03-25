@@ -224,7 +224,7 @@ class BasicSimilarTriangles extends Component {
     generateQuestion = () => {
         let diagramSize = Math.min(window.innerWidth * 0.5, window.innerHeight * 0.3);
         let allCorners = [{ x: 0, y: 0 }, { x: 1, y: 0 }, { x: 1, y: 1 }, { x: 0, y: 1 }];
-        if (Math.random() < 0.5) { // MN in a triangle ABC
+        if (Math.random() < 0) { // MN in a triangle ABC
             // Determine coordinates of the three vertices of ABC;
             let vertices = myMath.shuffleArray(allCorners).slice(0, 2);
             let newVertex = { x: -1, y: -1 };
@@ -405,12 +405,20 @@ class BasicSimilarTriangles extends Component {
             let givenSideNames = sideNames[0];
             let askingSideNames = sideNames[1];
 
-            let ratioDenominator = myMath.randomInteger(2, 5);
+            // shorter side first. 
+            if (myMath.distance(P, vertices[3]) > myMath.distance(P, vertices[1])) {
+                [givenSideNames[0], givenSideNames[1]] = [givenSideNames[1], givenSideNames[0]];
+                [askingSideNames[0], askingSideNames[1]] = [askingSideNames[1], askingSideNames[0]];
+            }
+
+            let ratioDenominator = myMath.randomInteger(3, 5);
             let ratioNumerator = myMath.randomInteger(1, ratioDenominator - 1);
             let tick1 = myMath.randomInteger(1, Math.floor(50 / ratioDenominator));
             let tick2 = myMath.randomInteger(1, Math.floor(50 / ratioDenominator));
-            let givenSideLengths = [tick1 * ratioNumerator, tick1 * (ratioDenominator - ratioNumerator), tick1 * ratioDenominator].slice(0, givenSideNames.length);
-            let askingSideLengths = [tick2 * ratioNumerator, tick2 * (ratioDenominator - ratioNumerator), tick2 * ratioDenominator].slice(0, askingSideNames.length);
+            let shorterShare = Math.min(ratioNumerator, ratioDenominator - ratioNumerator);
+            let longerShare = Math.max(ratioNumerator, ratioDenominator - ratioNumerator);
+            let givenSideLengths = [tick1 * shorterShare, tick1 * longerShare, tick1 * ratioDenominator].slice(0, givenSideNames.length);
+            let askingSideLengths = [tick2 * shorterShare, tick2 * longerShare, tick2 * ratioDenominator].slice(0, askingSideNames.length);
             let givenSides = [];
             let askingSides = [];
             let hintTex = '';
