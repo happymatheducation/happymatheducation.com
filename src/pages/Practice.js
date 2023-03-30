@@ -108,6 +108,10 @@ function Practice() {
                     <a href={basic_similar_triangles_answers}>Answers</a>
                 </div>
                 <div className='practicediv'>
+                    Distance Between Two Points: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/DistanceBetweenTwoPoints'>App</a>
+                </div>
+                <div className='practicediv'>
                     Euclids Theorem: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='/Practice/Euclids_Theorem'>App</a> |
                     <a href={euclid_theorem}>pdf</a> |

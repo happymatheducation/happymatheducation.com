@@ -210,6 +210,7 @@ render() {
 
     let answerForm = (<>
         {this.state.beforeBlank}<input type="text" value={this.state.userAnswer} ref={this.answerForm} autoFocus
+            style={{ width: 'max(7vw, 70px)' }}
             onChange={e => {
                 let userAnswer = e.target.value.replaceAll('pi', '\u03c0');
                 userAnswer = userAnswer.replaceAll(' ', '');

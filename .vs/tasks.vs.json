@@ -5,6 +5,11 @@
       "taskLabel": "task-Practice",
       "appliesTo": "src/pages/Practice.js",
       "type": "launch"
+    },
+    {
+      "taskLabel": "task-Simple3Dshapes",
+      "appliesTo": "src/pages/Practice/Simple3Dshapes.js",
+      "type": "launch"
     }
   ]
 }
