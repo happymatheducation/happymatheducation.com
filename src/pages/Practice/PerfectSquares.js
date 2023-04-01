@@ -68,7 +68,7 @@ class PerfectSquares extends Component {
             questionString += '\\over n~';
         }
         return (<>
-            What is the smallest integer value of <MathComponent display={false} tex={'n~'} />
+            What is the smallest positive integer value of <MathComponent display={false} tex={'n~'} />
             if the number below is a perfect square?
             <MathComponent tex={questionString} />
         </>);
