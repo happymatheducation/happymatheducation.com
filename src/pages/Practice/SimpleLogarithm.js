@@ -143,8 +143,9 @@ class SimpleLogarithm extends Component {
         let p = power.p;
         let a = power.a;
         let [aToTheNewP, newP, newPIsFraction, newPDenominator, newPNumerator] = this.problemTypeSelector(a, p);
+        let problem=``;
 
-        if (Math.random() < 0.5) {
+        if (Math.random() < 0.4) {
             // logaa^p=p or plogba = logba^p; for types: p=+-2, p=+-3, p=+-1, a=2, blanks=a, p, a^p; for type: p=m/n, blank=p
             this.setState({
                 beforeBlank: 'Your Answer: ',
@@ -154,7 +155,7 @@ class SimpleLogarithm extends Component {
                 correctNumerator: newPNumerator,
                 correctAnswerSign: newP < 0 ? '-' : '',
             })
-            return <MathComponent display={false} tex={`\\log_{${a}}${aToTheNewP}=?`} />;
+            problem = `\\log_{${a}}${aToTheNewP}=?`;
         }
         else if (Math.random() < 0.5) {
             if (Math.random() < 0.5) {
@@ -163,14 +164,14 @@ class SimpleLogarithm extends Component {
                 let n = myMath.randomInteger(2, 12);
                 let x = m * n;
                 this.setState({
-                    beforeBlank: <MathComponent display={false} tex={`x=`} />,
+                    beforeBlank: <MathComponent display={false} tex={`\\Large x=`} />,
                     correctAnswer: x,
                     correctAnswerIsFraction: false,
                     correctDenominator: 1,
                     correctNumerator: x,
                     correctAnswerSign: '',
                 })
-                return <MathComponent display={false} tex={`\\log_{${a}}${m}+\\log_{${a}}${n}=\\log_{${a}}x`}/>;
+                problem = `\\log_{${a}}${m}+\\log_{${a}}${n}=\\log_{${a}}x`;
             }
             else {
                 // logam - logan = logax; blank=x
@@ -178,14 +179,14 @@ class SimpleLogarithm extends Component {
                 let x = myMath.randomInteger(2, 12);
                 let m = x * n;
                 this.setState({
-                    beforeBlank: <MathComponent display={false} tex={`x=`} />,
+                    beforeBlank: <MathComponent display={false} tex={`\\Large x=`} />,
                     correctAnswer: x,
                     correctAnswerIsFraction: false,
                     correctDenominator: 1,
                     correctNumerator: x,
                     correctAnswerSign: '',
                 })
-                return <MathComponent display={false} tex={`\\log_{${a}}${m}-\\log_{${a}}${n}=\\log_{${a}}x`} />;
+                problem = `\\log_{${a}}${m}-\\log_{${a}}${n}=\\log_{${a}}x`;
             }
         }
         else if (Math.random() < 0.8) {
@@ -206,7 +207,7 @@ class SimpleLogarithm extends Component {
                 correctNumerator: Math.abs(correctNumerator),
                 correctAnswerSign: correctDenominator * correctNumerator<0?'-':'',
             })
-            return <MathComponent display={false} tex={`\\log_{${aToTheNewP0}}${aToTheNewP}=?`} />;
+            problem = `\\log_{${aToTheNewP0}}${aToTheNewP}=?`
         }
         else if (Math.random() < 0.5) {
             // logaR1 * logR1R2 * logR2a^p=p; blank=p 
@@ -221,7 +222,7 @@ class SimpleLogarithm extends Component {
                 correctNumerator: newPNumerator,
                 correctAnswerSign: newP < 0 ? '-' : '',
             })
-            return <MathComponent display={false} tex={`(\\log_{${a}}${R1})(\\log_{${R1}}${R2})\\log_{${R2}}${aToTheNewP}=?`} />;
+            problem = `(\\log_{${a}}${R1})(\\log_{${R1}}${R2})\\log_{${R2}}${aToTheNewP}=?`;
         }
         else {
             // logab = value = 1/logba; example if logab=2 then logba=?
@@ -243,9 +244,10 @@ class SimpleLogarithm extends Component {
                     correctAnswerIsFraction: false,
                 })
             }
-            this.setState({ beforeBlank: <MathComponent display={false} tex={`\\log_ba=`} /> });
-            return (<MathComponent display={false} tex={`\\log_ab=${valueRawString}`} />);
+            this.setState({ beforeBlank: <MathComponent display={false} tex={`\\Large \\log_ba=`} /> });
+            problem = `\\log_ab=${valueRawString}`;
         }
+        return <MathComponent display={false} tex={'\\Large' + problem} />
     }
 
     clearAnswerForm = () => {
