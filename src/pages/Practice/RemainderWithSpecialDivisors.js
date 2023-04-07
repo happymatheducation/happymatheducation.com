@@ -13,11 +13,13 @@ class RemainderWithSpecialDivisors extends Component {
 
     generateQuestion = () => {
         const divisors = [2, 3, 4, 5, 9, 10, 11, 25];
+        const userAnswer = divisors.map(e => '');
         const dividend = myMath.randomInteger(100, 9999999);
         const remainders = divisors.map(divisor => dividend % divisor);
         this.setState({
             divisors: divisors,
             correctAnswer: remainders,
+            userAnswer: userAnswer,
         });
         return <MathComponent display={false} tex={'\\Large \\text{For }' + dividend} />;
     }
@@ -59,7 +61,7 @@ class RemainderWithSpecialDivisors extends Component {
         let divisors = this.state.divisors;
         let correctAnswer = this.state.correctAnswer;
         let userAnswer = divisors.map(
-            (value, i) => <td><input type="number" value={this.state.userAnswer[i]} key={i} id={'input' + i}
+            (value, i) => <td key={i}><input type="number" value={this.state.userAnswer[i]} id={'input' + i}
                 onChange={
                     e => {
                         let userAnswer = this.state.userAnswer;
