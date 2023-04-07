@@ -150,6 +150,10 @@ function Practice() {
                     <a href={quadratic_equations_answers}>Answers</a>
                 </div>
                 <div className='practicediv'>
+                    Remainder with Special Divisors: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/RemainderWithSpecialDivisors'>App</a>
+                </div>
+                <div className='practicediv'>
                     Rolling Dice: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='/Practice/RollingDice'>App</a> |
                     <a href={rolling_dice}>pdf</a> |
@@ -196,12 +200,6 @@ function Practice() {
                         <a href={chinese_remainder_theorem}>pdf</a>
                     </div>
                     <div className='practicediv'>
-                        Find Remainders: <br />&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href='/Practice/Find_Remainders'>App</a> |
-                        <a href={remainder}>pdf</a> |
-                        <a href={remainder_answers}>Answers</a>
-                    </div>
-                    <div className='practicediv'>
                         Logarithm with Quadratic Equations: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href={logarithm_with_quadratic_equations}>pdf</a> |
                         <a href={logarithm_with_quadratic_equations_answers}>Answers</a>
@@ -229,6 +227,12 @@ function Practice() {
                         <a href='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type'>App</a> |
                         <a href={quadratic_diophantine_equations_simple_square_type}>pdf</a> |
                         <a href={quadratic_diophantine_equations_simple_square_type_answer}>Answers</a>
+                    </div>
+                    <div className='practicediv'>
+                        Remainder of Products and Powers: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/RemainderOfProductsAndPowers'>App</a> |
+                        <a href={remainder}>pdf</a> |
+                        <a href={remainder_answers}>Answers</a>
                     </div>
                     <div className='practicediv'>
                         Stars and Bars: <br />&nbsp;&nbsp;&nbsp;&nbsp;

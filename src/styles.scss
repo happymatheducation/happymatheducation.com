@@ -378,7 +378,7 @@ body {
 
     .canvas {
         float: left;
-        margin-left: 15%;//max(2vw, 20px);
+        margin-left: 15%; //max(2vw, 20px);
         margin-right: 15%; //max(2vw, 20px);
         margin-top: max(2vw, 20px);
         margin-bottom: max(2vw, 20px);
@@ -406,6 +406,50 @@ body {
     .practicebody {
         text-align: center;
         padding: max(2vw, 20px);
+
+        .remainderTable {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+
+            .invisible {
+                display: none;
+            }
+
+            table {
+                width: max(15vw,150px);
+                margin-left: max(3vw,30px);
+                margin-bottom: max(3vw,30px);
+                table-layout: fixed;
+                border: 2px solid black;
+            }
+
+            td {
+                width: max(5vw,50px);
+                height: max(5vw,50px);
+                border: 2px solid black;
+                font-size: max(2vw,20px);
+            }
+
+            input {
+                width: max(3vw,30px);
+                background: none;
+                border: none;
+                outline: none;
+                text-align: center;
+                color: blue;
+                font-weight: bold;
+                font-size: max(2vw,20px);
+
+                &.correct {
+                    color: #00AA00;
+                }
+
+                &.wrong {
+                    color: #FF0000;
+                }
+            }
+        }
 
         .magicSquares {
             width: 80%;

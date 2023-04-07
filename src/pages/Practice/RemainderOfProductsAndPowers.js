@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import FillBlanks from "../../components/FillBlanks";
 import { MathComponent } from "mathjax-react";
 
-class Find_Remainders extends Component {
+class RemainderOfProductsAndPowers extends Component {
 
     constructor() {
         super();
@@ -108,4 +108,4 @@ render() {
 }
 }
 
-export default Find_Remainders;
+export default RemainderOfProductsAndPowers;

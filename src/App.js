@@ -21,7 +21,7 @@ const QuadraticDiophantineEquationsTypeAB = lazy(() => import("./pages/Practice/
 const QuadraticDiophantineEquationsSimpleSquareType = lazy(() => import("./pages/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type.js"))
 const TrigsOfSpeicalAngles = lazy(() => import("./pages/Practice/Trigs_Of_Special_Angles.js"))
 const NumberOfFactors = lazy(() => import("./pages/Practice/NumberOfFactors.js"))
-const FindRemainders = lazy(() => import("./pages/Practice/Find_Remainders.js"))
+const RemainderOfProductsAndPowers = lazy(() => import("./pages/Practice/RemainderOfProductsAndPowers.js"))
 const DeMoivresFormula = lazy(() => import("./pages/Practice/De_Moivres_Formula.js"))
 const EuclidsTheorem = lazy(() => import("./pages/Practice/Euclids_Theorem.js"))
 const PrimeFactorizationForFactorials = lazy(() => import("./pages/Practice/PrimeFactorizationForFactorials.js"))
@@ -38,6 +38,7 @@ const PerfectSquares = lazy(() => import("./pages/Practice/PerfectSquares.js"))
 const Simple3Dshapes = lazy(() => import("./pages/Practice/Simple3Dshapes.js"))
 const BasicSimilarTriangles = lazy(() => import("./pages/Practice/BasicSimilarTriangles.js"))
 const DistanceBetweenTwoPoints = lazy(() => import("./pages/Practice/DistanceBetweenTwoPoints.js"))
+const RemainderWithSpecialDivisors = lazy(() => import("./pages/Practice/RemainderWithSpecialDivisors.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -146,7 +147,7 @@ const App = () => {
                         <Route exact path='/Practice/Quadratic_Diophantine_Equations_Simple_Square_Type' element={<QuadraticDiophantineEquationsSimpleSquareType />} />
                         <Route exact path='/Practice/Trigs_Of_Special_Angles' element={<TrigsOfSpeicalAngles />} />
                         <Route exact path='/Practice/NumberOfFactors' element={<NumberOfFactors />} />
-                        <Route exact path='/Practice/Find_Remainders' element={<FindRemainders />} />
+                        <Route exact path='/Practice/RemainderOfProductsAndPowers' element={<RemainderOfProductsAndPowers />} />
                         <Route exact path='/Practice/De_Moivres_Formula' element={<DeMoivresFormula />} />
                         <Route exact path='/Practice/PrimeFactorizationForFactorials' element={<PrimeFactorizationForFactorials />} />
                         <Route exact path='/Practice/Euclids_Theorem' element={<EuclidsTheorem />} />
@@ -163,6 +164,7 @@ const App = () => {
                         <Route exact path='/Practice/Simple3Dshapes' element={<Simple3Dshapes />} />
                         <Route exact path='/Practice/BasicSimilarTriangles' element={<BasicSimilarTriangles />} />
                         <Route exact path='/Practice/DistanceBetweenTwoPoints' element={<DistanceBetweenTwoPoints />} />
+                        <Route exact path='/Practice/RemainderWithSpecialDivisors' element={<RemainderWithSpecialDivisors />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
