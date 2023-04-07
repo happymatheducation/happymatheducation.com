@@ -65,19 +65,23 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a><br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a><br />
+                        <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a> |
+                        <a href='https://cms.math.ca/competitions/cjmc/cjmc2022/getting-ready/'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
-                        <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a><br />
+                        <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a> |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-half"></i>March: </span>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a> |
+                        <a href='https://mathkangaroo.ca/samples/en'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-sun"></i>May: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/gauss.html'>Gauss 7</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/gauss.html'>Gauss 7</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#gauss'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-sun"></i>June: </span>
                         End of G7
@@ -112,19 +116,23 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 7/8</a><br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a><br />
+                        <a href='https://cms.math.ca/competitions/cjmc/'>CJMC</a> |
+                        <a href='https://cms.math.ca/competitions/cjmc/cjmc2022/getting-ready/'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
-                        <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a><br />
+                        <a href='https://www.maa.org/math-competitions/amc-8'>AMC 8</a> |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_8_Problems_and_Solutions'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-half"></i>March: </span>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a> |
+                        <a href='https://mathkangaroo.ca/samples/en'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-sun"></i>May: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/gauss.html'>Gauss 8</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/gauss.html'>Gauss 8</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#gauss'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-sun"></i>June: </span>
                         End of G8
@@ -157,10 +165,12 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 9/10</a><br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a><br />
+                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a> |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a><br />
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
@@ -212,7 +222,8 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>March: </span>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a> |
+                        <a href='https://mathkangaroo.ca/samples/en'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Fryer</a> |
@@ -283,10 +294,12 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/bcc.html'>BCC 9/10</a><br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a><br />
+                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a> |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a><br />
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
@@ -338,7 +351,8 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>March: </span>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a> |
+                        <a href='https://mathkangaroo.ca/samples/en'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/fgh.html'>Galois</a> |
@@ -405,13 +419,16 @@ function Contests() {
                         <a href='https://cariboutests.com/'>Caribou (year-round)</a><br />
 
                         <span><i className="bi bi-thermometer-low"></i>October: </span>
-                        <a href='https://cms.math.ca/competitions/comc/'>COMC</a><br />
+                        <a href='https://cms.math.ca/competitions/comc/'>COMC</a> |
+                        <a href='https://cms.math.ca/competitions/comc/comc2022/getting-ready/'>Papers</a><br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a><br />
+                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a> |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a><br />
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
@@ -463,7 +480,8 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>March: </span>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a> |
+                        <a href='https://mathkangaroo.ca/samples/en'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a> |
@@ -541,13 +559,16 @@ function Contests() {
                         <a href='https://cariboutests.com/'>Caribou (year-round)</a><br />
 
                         <span><i className="bi bi-thermometer-low"></i>October: </span>
-                        <a href='https://cms.math.ca/competitions/comc/'>COMC</a><br />
+                        <a href='https://cms.math.ca/competitions/comc/'>COMC</a> |
+                        <a href='https://cms.math.ca/competitions/comc/comc2022/getting-ready/'>Papers</a><br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a><br />
+                        <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a> |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a><br />
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
-                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a> |
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a><br />
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
@@ -556,7 +577,8 @@ function Contests() {
                         <a href='https://www.cemc.uwaterloo.ca/contests/ccc-cco.html'>CCC</a><br />
 
                         <span><i className="bi bi-thermometer-half"></i>March: </span>
-                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a><br />
+                        <a href='https://mathkangaroo.ca/en'>Kangaroo</a> |
+                        <a href='https://mathkangaroo.ca/samples/en'>Papers</a> <br />
 
                         <span><i className="bi bi-thermometer-half"></i>April: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/euclid.html'>Euclid</a> |
