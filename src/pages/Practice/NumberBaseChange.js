@@ -23,7 +23,7 @@ class NumberBaseChange extends Component {
         let baseBRep = myMath.integerBaseChange(base10Rep, 10, baseB);
         let questionString = '';
 
-        if (Math.random() < 0) { // Change from base 10 to baseB
+        if (Math.random() < 0.5) { // Change from base 10 to baseB
             questionString = '\\text{Change }' + base10Rep + '\\text{ to base }' + baseB;
             this.setState({ correctAnswer: baseBRep });
         } else { // Change from baseB to base 10
