@@ -39,6 +39,7 @@ const Simple3Dshapes = lazy(() => import("./pages/Practice/Simple3Dshapes.js"))
 const BasicSimilarTriangles = lazy(() => import("./pages/Practice/BasicSimilarTriangles.js"))
 const DistanceBetweenTwoPoints = lazy(() => import("./pages/Practice/DistanceBetweenTwoPoints.js"))
 const RemainderWithSpecialDivisors = lazy(() => import("./pages/Practice/RemainderWithSpecialDivisors.js"))
+const NumberBaseChange = lazy(() => import("./pages/Practice/NumberBaseChange.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -165,6 +166,7 @@ const App = () => {
                         <Route exact path='/Practice/BasicSimilarTriangles' element={<BasicSimilarTriangles />} />
                         <Route exact path='/Practice/DistanceBetweenTwoPoints' element={<DistanceBetweenTwoPoints />} />
                         <Route exact path='/Practice/RemainderWithSpecialDivisors' element={<RemainderWithSpecialDivisors />} />
+                        <Route exact path='/Practice/NumberBaseChange' element={<NumberBaseChange />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />

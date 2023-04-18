@@ -131,6 +131,7 @@ function Practice() {
                 </div>
                 <div className='practicediv'>
                     Number Base Change: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/NumberBaseChange'>App</a> |
                     <a href={number_base_change}>pdf</a>
                 </div>
                 <div className='practicediv'>

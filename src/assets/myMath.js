@@ -154,6 +154,26 @@ const myMath = {
     },
     distance(A, B) { // return the distance between points A and B;
         return Math.sqrt((A.x - B.x) ** 2 + (A.y - B.y) ** 2);
+    },
+    integerBaseChange(representation, from, to) { // change the representation from base "from" to base "to", where "from", "to" <= 10
+        // Change to base 10;
+        let value = 0;
+        let power = 0;
+        while (representation) {
+            value += (representation % 10) * (from ** power);
+            power += 1;
+            representation = Math.floor(representation / 10);
+        }
+
+        // Change to base "to";
+        power = 0
+        while (value) {
+            representation += (value % to) * (10 ** power);
+            power += 1;
+            value = Math.floor(value / to);
+        }
+
+        return representation
     }
 };
 
