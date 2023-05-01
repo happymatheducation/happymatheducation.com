@@ -39,6 +39,7 @@ import remainder_answers from './uploads/remainder_answers.pdf';
 import rolling_dice from './uploads/rolling_dice.pdf';
 import rolling_dice_answers from './uploads/rolling_dice_answers.pdf';
 import simple_trig_inequality from './uploads/simple_trig_inequality.pdf';
+import simple_trig_inequality_answers from './uploads/simple_trig_inequality Answers.pdf';
 import starts_and_bars from './uploads/starts_and_bars.pdf';
 import starts_and_bars_answers from './uploads/starts_and_bars_answers.pdf';
 import trigs_of_special_angles from './uploads/trigs_of_special_angles.pdf';
@@ -292,7 +293,7 @@ function Practice() {
                     <div className='practicediv'>
                         Simple Trig Inequality: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href={simple_trig_inequality}>pdf</a> |
-                        <a href={prime_factoriazation_for_factorials_answers}>Answers</a>
+                        <a href={simple_trig_inequality_answers}>Answers</a>
                     </div>
                 </div>
             </div>
