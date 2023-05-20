@@ -40,6 +40,7 @@ const BasicSimilarTriangles = lazy(() => import("./pages/Practice/BasicSimilarTr
 const DistanceBetweenTwoPoints = lazy(() => import("./pages/Practice/DistanceBetweenTwoPoints.js"))
 const RemainderWithSpecialDivisors = lazy(() => import("./pages/Practice/RemainderWithSpecialDivisors.js"))
 const NumberBaseChange = lazy(() => import("./pages/Practice/NumberBaseChange.js"))
+const SimpleTrigIequality = lazy(() => import("./pages/Practice/SimpleTrigIequality.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -167,6 +168,7 @@ const App = () => {
                         <Route exact path='/Practice/DistanceBetweenTwoPoints' element={<DistanceBetweenTwoPoints />} />
                         <Route exact path='/Practice/RemainderWithSpecialDivisors' element={<RemainderWithSpecialDivisors />} />
                         <Route exact path='/Practice/NumberBaseChange' element={<NumberBaseChange />} />
+                        <Route exact path='/Practice/SimpleTrigIequality' element={<SimpleTrigIequality />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />

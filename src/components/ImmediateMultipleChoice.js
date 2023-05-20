@@ -41,14 +41,14 @@ class ImmediateMultipleChoice extends Component {
             const jsConfetti = new JSConfetti()
             jsConfetti.addConfetti()
         } else {
-            let correctAnswer = <MathComponent
+            let userChoiceButton = document.getElementById(userChoiceID);
+            userChoiceButton.className += " wrongchoice";
+/*            let correctAnswer = <MathComponent
                 display={false}
                 tex={this.props.allChoices[this.props.correctChoiceID].tex}
             />;
-            let userChoiceButton = document.getElementById(userChoiceID);
-            userChoiceButton.className += " wrongchoice";
             this.setState({ correctMessage: <span style={{ color: '#990000' }}>Incorrect! The correct answer is {correctAnswer}.</span> });
-        }
+*/        }
         this.setState({ paused: true });
     }
 
@@ -80,7 +80,10 @@ class ImmediateMultipleChoice extends Component {
                     onClick={() => { !this.state.paused ? this.checkAnswer(i) : void (0) }}>
                     <MathComponent tex={allChoices[i].tex} display={false} />
                 </button>);
+            if (this.props.verticalAlignChoices) { choiceButtons.push(<br key={i+100} />) };
         }
+        choiceButtons.pop();
+
 
         return (
             <div className='practicequiz' >
@@ -102,8 +105,7 @@ class ImmediateMultipleChoice extends Component {
 
                     {this.state.started &&
                         <>{choiceButtons}<br />
-                        {this.state.correctMessage}
-                        <br />
+                        {/*this.state.correctMessage*/}
                         <button className="btn" onClick={this.next}
                             style={this.state.paused ? {} : { visibility: 'hidden' }}
                             >Next</button>

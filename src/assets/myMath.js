@@ -152,9 +152,11 @@ const myMath = {
         }
         return intersection;
     },
+
     distance(A, B) { // return the distance between points A and B;
         return Math.sqrt((A.x - B.x) ** 2 + (A.y - B.y) ** 2);
     },
+
     integerBaseChange(representation, from, to) { // change the representation from base "from" to base "to", where "from", "to" <= 10
         // Change to base 10;
         let value = 0;
@@ -174,7 +176,46 @@ const myMath = {
         }
 
         return representation
-    }
+    },
+
+    intervalIntersection(A, B) { // find the intersection between intervals A (string) and B (string). Return '' for an exmpty set. 
+        function stringToObject(X) {
+            let Xobj = { left: null, leftOpen: null, right: null, rightOpen: null }
+            Xobj.leftOpen = X.includes('[') ? false : true;
+            Xobj.rightOpen = X.includes(']') ? false : true;
+            X = X.replace('[', '(');
+            X = X.replace(']', ')');
+            Xobj.left = parseFloat(X.slice(X.indexOf('(') + 1, X.indexOf(',')));
+            Xobj.right = parseFloat(X.slice(X.indexOf(',') + 1, X.indexOf(')')));
+            return Xobj;
+        }
+
+        A = stringToObject(A);
+        B = stringToObject(B);
+
+        if (A.left > B.right || A.right < B.left) {
+            return '' // empty interval. 
+        }
+        if (
+            (A.left === B.right && (A.leftOpen || B.rightOpen)) ||
+            (B.left === A.right && (B.leftOpen || A.rightOpen))
+        ) { return '' }
+
+        let C = { left: null, leftOpen: null, right: null, rightOpen: null }
+        if (A.left < B.left) { C.left = B.left; C.leftOpen = B.leftOpen }
+        else if (A.left > B.left) { C.left = A.left; C.leftOpen = A.leftOpen }
+        else {
+            C.left = A.left;
+            C.leftOpen = !A.leftOpen && !B.leftOpen ? false : true;
+        }
+        if (A.right < B.right) { C.right = A.right; C.rightOpen = A.rightOpen }
+        else if (A.right > B.right) { C.right = B.right; C.rightOpen = B.rightOpen }
+        else {
+            C.right = A.right;
+            C.rightOpen = !A.rightOpen && !B.rightOpen ? false : true;
+        }
+        return C
+    },
 };
 
 export default myMath;

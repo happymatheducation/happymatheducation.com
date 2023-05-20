@@ -292,6 +292,7 @@ function Practice() {
                     </div>
                     <div className='practicediv'>
                         Simple Trig Inequality: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/SimpleTrigIequality'>App</a> |
                         <a href={simple_trig_inequality}>pdf</a> |
                         <a href={simple_trig_inequality_answers}>Answers</a>
                     </div>
