@@ -22,7 +22,7 @@ class De_Moivres_Formula extends Component {
             { tex: String.raw`-i`, value: 270 },
             { tex: String.raw`{1 \over 2} - i{\sqrt3 \over 2}`, value: 300 },
             { tex: String.raw`{\sqrt2 \over 2} - i{\sqrt2 \over 2}`, value: 315 },
-            { tex: String.raw`{\sqrt3 \over 2} - i{\sqrt1 \over 2}`, value: 330 },
+            { tex: String.raw`{\sqrt3 \over 2} - i{1 \over 2}`, value: 330 },
         ],
     };
 
