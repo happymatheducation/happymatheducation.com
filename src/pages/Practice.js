@@ -202,6 +202,10 @@ function Practice() {
                         <a href={chinese_remainder_theorem}>pdf</a>
                     </div>
                     <div className='practicediv'>
+                        Law of Cosine: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/LawOfCos'>App</a>
+                    </div>
+                    <div className='practicediv'>
                         Logarithm with Quadratic Equations: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href={logarithm_with_quadratic_equations}>pdf</a> |
                         <a href={logarithm_with_quadratic_equations_answers}>Answers</a>

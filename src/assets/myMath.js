@@ -216,6 +216,22 @@ const myMath = {
         }
         return C
     },
+
+    lawCosC([c, b, a]) {
+        return this.reduceFraction(a * a + b * b - c * c, 2 * a * b);
+    },
+
+    fractionToTex([numerator, denominator]) {
+        let posFraction = '{' + Math.abs(numerator) + '\\over' + Math.abs(denominator) + '}';
+        if (numerator * denominator > 0) {
+            return posFraction
+        } else if (numerator * denominator < 0) {
+            return '-' + posFraction;
+        } else if (numerator === 0) {
+            return '0'
+        } else { return '\\text{undefined}' }
+    }
+
 };
 
 export default myMath;
