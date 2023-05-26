@@ -230,8 +230,18 @@ const myMath = {
         } else if (numerator === 0) {
             return '0'
         } else { return '\\text{undefined}' }
-    }
+    },
 
+    fractionToString([numerator, denominator]) {
+        let posFraction = Math.abs(numerator) + '/' + Math.abs(denominator);
+        if (numerator * denominator > 0) {
+            return posFraction
+        } else if (numerator * denominator < 0) {
+            return '-' + posFraction;
+        } else if (numerator === 0) {
+            return '0'
+        } else { return '\\text{undefined}' }
+    },
 };
 
 export default myMath;

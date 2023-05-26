@@ -12,25 +12,20 @@ class LawOfCos extends Component {
     }
 
     state = {
-        correctAnswer: '',
-        userAnswer: '',
         beforeBlank: '',
-        correctAnswerTex: '',
+
+        userAnswer: '',
+        userAnswerRawString: '',
+        userAnswerIsFraction: null,
+        userNumerator: '',
+        userDenominator: '',
+
+        correctAnswerIsFraction: false,
+        correctNumerator: '',
+        correctDenominator: '',
+        correctAnswer: '',
+        correctAnswerSign: '',
     };
-
-    isInteger = (num) => {
-        let rounded = Math.round(num);
-        let error = Math.abs(rounded - num);
-        return error < 0.00001 ? true : false;
-    }
-
-    valueToString = (value) => {
-        if (this.isInteger(value)) {
-            return Math.round(value);
-        } else if (this.isInteger(value ** 2)) {
-            return String.raw`\sqrt {${Math.round(value ** 2)}}`;
-        }
-    }
 
     //Drawing only;
     drawTriangle = (vertices) => {
@@ -123,7 +118,7 @@ class LawOfCos extends Component {
         let [i, j, k] = myMath.shuffleArray([0, 1, 2]); // randomized the order of given sides
         let vertexNames = myMath.shuffleArray(['A', 'B', 'C']); // randomize the names, otherwise a<b<c
         let givens = '';
-        let asking, correctAnswerTex, correctAnswer;
+        let asking, correctAnswer;
         if (Math.random() < 0.5) {
             // SSS => A
             givens = vertexNames[j] + vertexNames[k] + ' = ' + sides[i] + ',~'
@@ -131,21 +126,24 @@ class LawOfCos extends Component {
                 + vertexNames[i] + vertexNames[j] + ' = ' + sides[k] + '.~';
             let tt = myMath.randomFromArray([0, 1, 2]); // randomly selected one angle to ask.
             asking = '\\cos ' + vertexNames[tt];
-            correctAnswerTex = myMath.fractionToTex(anglesCos[tt]);
             correctAnswer = anglesCos[tt][0] / anglesCos[tt][1];
+            this.setState({
+                correctAnswerIsFraction: anglesCos[tt][0] === 0 ? false : true,
+                correctAnswerSign: correctAnswer < 0 ? '-' : '',
+                correctNumerator: Math.abs(anglesCos[tt][0]),
+                correctDenominator: Math.abs(anglesCos[tt][1]),
+            })
         } else {
             // SAS => S
             givens = vertexNames[j] + vertexNames[k] + ' = ' + sides[i] + ',~'
                 + vertexNames[i] + vertexNames[k] + ' = ' + sides[j] + ',~'
             givens += '\\cos ' + vertexNames[k] + '= ' + myMath.fractionToTex(anglesCos[k]) + '.~';
             asking = vertexNames[i] + vertexNames[j];
-            correctAnswerTex = sides[k];
             correctAnswer = sides[k];
         }
 
         this.setState({
             beforeBlank: asking,
-            correctAnswerTex: correctAnswerTex,
             correctAnswer: correctAnswer,
         })
 
@@ -174,7 +172,19 @@ class LawOfCos extends Component {
 
     clearAnswerForm = () => {
         this.setState({
-            userAnswer: ''
+            userAnswerRawString: '',
+            userDenominator: '',
+            userNumerator: '',
+            userAnswer: '',
+            userAnswerIsFraction: null,
+
+            correctAnswerIsFraction: false,
+            correctNumerator: '',
+            correctDenominator: '',
+            correctAnswer: '',
+            correctAnswerSign: '',
+
+            beforeBlank: '',
         });
         if (window.innerWidth <= 800) { }
         else { this.answerForm.current.focus(); }
@@ -184,23 +194,62 @@ class LawOfCos extends Component {
 
     checkAnswer = () => {
         let correctAnswer;
-        if (parseInt(this.state.userAnswer) === this.state.correctAnswer) {
-            return true;
+        if (!this.state.userAnswerIsFraction) {
+            if (parseFloat(this.state.userAnswer) === parseFloat(this.state.correctAnswer)) {
+                return true;
+            }
         } else {
-            correctAnswer = this.state.correctAnswerTex;
+            let userNumerator = parseInt(this.state.userNumerator);
+            let userDenominator = parseInt(this.state.userDenominator);
+            let userSign = '';
+            if (userNumerator * userDenominator < 0) {
+                userSign = '-';
+                userNumerator = Math.abs(userNumerator);
+                userDenominator = Math.abs(userDenominator);
+            }
+            if (this.state.correctAnswerIsFraction
+                && userNumerator === this.state.correctNumerator
+                && userDenominator === this.state.correctDenominator
+                && userSign === this.state.correctAnswerSign) {
+                return true;
+            }
         }
-        return (<>
-            <MathComponent display={false}
-                tex={'\\text{Incorrect!}~' + this.state.beforeBlank + '=' + correctAnswer + '.~'} />
-        </>);
+        if (!this.state.correctAnswerIsFraction) {
+            correctAnswer = this.state.correctAnswer;
+        } else {
+            correctAnswer = String.raw`${this.state.correctAnswerSign}{${this.state.correctNumerator} \over ${this.state.correctDenominator}}`;
+        }
+        return (< MathComponent display={false} tex={'\\text{Incorrect! }' + this.state.beforeBlank + '=' + correctAnswer} />);
+    }
+
+    handleUserAnswer = (rawString) => {
+        this.setState({ userAnswerRawString: rawString });
+        if (rawString.includes("/")) {
+            let fractionPosition = rawString.indexOf("/");
+            let numerator = rawString.substring(0, fractionPosition);
+            let denominator = rawString.substring(fractionPosition + 1);
+            this.setState({
+                userAnswerIsFraction: true,
+                userNumerator: numerator,
+                userDenominator: denominator,
+                userAnswer: '',
+            });
+        } else {
+            this.setState({
+                userAnswerIsFraction: false,
+                userAnswer: rawString,
+                userNumerator: '',
+                userDenominator: '',
+            })
+        }
     }
 
     render() {
 
         let answerForm = (<>
             <MathComponent display={false} tex={'~' + this.state.beforeBlank + '=~'} />
-            <input type="number" value={this.state.userAnswer} ref={this.answerForm} autoFocus
-                onChange={e => this.setState({ userAnswer: e.target.value })}></input>{this.state.difficulty}<br />
+            <input type="text" value={this.state.userAnswerRawString} ref={this.answerForm} autoFocus
+                onChange={e => this.handleUserAnswer(e.target.value)}></input><br />
         </>);
         return (
             <FillBlanks
