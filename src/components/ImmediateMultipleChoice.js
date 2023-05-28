@@ -80,9 +80,8 @@ class ImmediateMultipleChoice extends Component {
                     onClick={() => { !this.state.paused ? this.checkAnswer(i) : void (0) }}>
                     <MathComponent tex={allChoices[i].tex} display={false} />
                 </button>);
-            if (this.props.verticalAlignChoices) { choiceButtons.push(<br key={i+100} />) };
+            if (this.props.verticalAlignChoices && i !== allChoices.length - 1) { choiceButtons.push(<br key={i + 100} />) };
         }
-        choiceButtons.pop();
 
 
         return (
