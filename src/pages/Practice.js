@@ -166,6 +166,10 @@ function Practice() {
                     <a href='/Practice/Simple3Dshapes'>App</a>
                 </div>
                 <div className='practicediv'>
+                    Simple Linear Diophantine Equation: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/SimpleLinearDiophantineEquation'>App</a>
+                </div>
+                <div className='practicediv'>
                     Simple Logarithm: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='/Practice/SimpleLogarithm'>App</a>
                 </div>

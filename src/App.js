@@ -42,6 +42,7 @@ const RemainderWithSpecialDivisors = lazy(() => import("./pages/Practice/Remaind
 const NumberBaseChange = lazy(() => import("./pages/Practice/NumberBaseChange.js"))
 const SimpleTrigIequality = lazy(() => import("./pages/Practice/SimpleTrigIequality.js"))
 const LawOfCos = lazy(() => import("./pages/Practice/LawOfCos.js"))
+const SimpleLinearDiophantineEquation = lazy(() => import("./pages/Practice/SimpleLinearDiophantineEquation.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -171,6 +172,7 @@ const App = () => {
                         <Route exact path='/Practice/NumberBaseChange' element={<NumberBaseChange />} />
                         <Route exact path='/Practice/SimpleTrigIequality' element={<SimpleTrigIequality />} />
                         <Route exact path='/Practice/LawOfCos' element={<LawOfCos />} />
+                        <Route exact path='/Practice/SimpleLinearDiophantineEquation' element={<SimpleLinearDiophantineEquation />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
