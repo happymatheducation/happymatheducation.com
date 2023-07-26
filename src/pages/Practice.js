@@ -125,6 +125,10 @@ function Practice() {
                     <a href={line_through_two_points_answers}>Answers</a>
                 </div>
                 <div className='practicediv'>
+                    Linear Diophantine Equation, Simple: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/SimpleLinearDiophantineEquation'>App</a>
+                </div>
+                <div className='practicediv'>
                     Mental Math with Basic Algebra: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='/Practice/MentalMathWithBasicAlgebra'>App</a> |
                     <a href={mental_math_with_basic_algebra}>pdf</a> |
@@ -166,14 +170,6 @@ function Practice() {
                     <a href='/Practice/Simple3Dshapes'>App</a>
                 </div>
                 <div className='practicediv'>
-                    Simple Linear Diophantine Equation: <br />&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href='/Practice/SimpleLinearDiophantineEquation'>App</a>
-                </div>
-                <div className='practicediv'>
-                    Simple Logarithm: <br />&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href='/Practice/SimpleLogarithm'>App</a>
-                </div>
-                <div className='practicediv'>
                     Two Line Intersection: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href={two_line_intersection}>pdf</a> |
                     <a href={two_line_intersection_answers}>Answers</a>
@@ -210,9 +206,8 @@ function Practice() {
                         <a href='/Practice/LawOfCos'>App</a>
                     </div>
                     <div className='practicediv'>
-                        Logarithm with Quadratic Equations: <br />&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href={logarithm_with_quadratic_equations}>pdf</a> |
-                        <a href={logarithm_with_quadratic_equations_answers}>Answers</a>
+                        Logarithm, Simple: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/SimpleLogarithm'>App</a>
                     </div>
                     <div className='practicediv'>
                         Magic Squares: <br />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -294,7 +289,13 @@ function Practice() {
                         <a href={logarithm}>pdf</a>
                     </div>
                     <div className='practicediv'>
+                        Logarithm with Quadratic Equations: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href={logarithm_with_quadratic_equations}>pdf</a> |
+                        <a href={logarithm_with_quadratic_equations_answers}>Answers</a>
+                    </div>
+                    <div className='practicediv'>
                         Polynomial Factorization: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/PolynomialFactorization'>App</a> |
                         <a href={polynomial_factorization}>pdf</a> |
                         <a href={polynomial_factorization_answers}>Answers</a>
                     </div>

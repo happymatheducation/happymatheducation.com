@@ -242,6 +242,31 @@ const myMath = {
             return '0'
         } else { return '\\text{undefined}' }
     },
+
+    arraysAreSame(firstArray, secondArray, ordered) {
+        if (firstArray.length !== secondArray.length) { return false }
+        else if (ordered) {
+            let same = true;
+            for (let i = 0; i < firstArray.length; i++) {
+                if (firstArray[i] !== secondArray[i]) { same = false }
+            }
+            return same;
+        }
+        else {
+            if (this.arraysAreSame(firstArray, secondArray, true)) { return true }
+            else {
+                let currentElement = firstArray[0];
+                let newFirstArray = firstArray.toSpliced(0, 1);
+                if (!secondArray.includes(currentElement)) { return false }
+                else {
+                    let currentIndex = secondArray.findIndex(e => e === currentElement);
+                    let newSecondArray = secondArray.toSpliced(currentIndex, 1);
+                    return this.arraysAreSame(newFirstArray, newSecondArray, false);
+                }
+            }
+        }
+    },
+
 };
 
 export default myMath;

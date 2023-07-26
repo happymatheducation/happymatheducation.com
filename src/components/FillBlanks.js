@@ -40,12 +40,12 @@ class FillBlanks extends Component {
     }
 
     next = () => {
-        this.props.clearAnswerForm();
         this.setState({
             paused: false,
             currentQuestion: this.props.generateQuestion(),
             correctMessage: ""
         });
+        this.props.clearAnswerForm();
     }
 
     render = () => {
