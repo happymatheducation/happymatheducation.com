@@ -44,6 +44,7 @@ const SimpleTrigIequality = lazy(() => import("./pages/Practice/SimpleTrigIequal
 const LawOfCos = lazy(() => import("./pages/Practice/LawOfCos.js"))
 const SimpleLinearDiophantineEquation = lazy(() => import("./pages/Practice/SimpleLinearDiophantineEquation.js"))
 const PolynomialFactorization = lazy(() => import("./pages/Practice/PolynomialFactorization.js"))
+const VietasTheorem = lazy(() => import("./pages/Practice/VietasTheorem.js"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -175,6 +176,7 @@ const App = () => {
                         <Route exact path='/Practice/LawOfCos' element={<LawOfCos />} />
                         <Route exact path='/Practice/SimpleLinearDiophantineEquation' element={<SimpleLinearDiophantineEquation />} />
                         <Route exact path='/Practice/PolynomialFactorization' element={<PolynomialFactorization />} />
+                        <Route exact path='/Practice/VietasTheorem' element={<VietasTheorem />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />

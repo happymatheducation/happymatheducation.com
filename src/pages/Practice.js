@@ -152,8 +152,9 @@ function Practice() {
                     Quadratic Equations / Functions: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='/Practice/Quadratic_Equations'>App (Find roots)</a> |
                     <a href='/Practice/CompleteTheSquare'>App (Complete the Square / Vertex Form)</a> |
-                    <a href={quadratic_equations}>pdf</a> |
-                    <a href={quadratic_equations_answers}>Answers</a>
+                    <a href='/Practice/VietasTheorem'>App (Vieta's Theorem)</a> |
+                    <a href={quadratic_equations}>pdf (Find roots)</a> |
+                    <a href={quadratic_equations_answers}>Answers (Find roots)</a>
                 </div>
                 <div className='practicediv'>
                     Remainder with Special Divisors: <br />&nbsp;&nbsp;&nbsp;&nbsp;
