@@ -74,15 +74,15 @@ class VietasTheorem extends Component {
             case 5:
                 let bb = -b;
                 if (bb > 1) {
-                    beforeBlank = `+${bb}x`
+                    beforeBlank = `+${bb}x_2`
                 } else if (bb === 1) {
-                    beforeBlank = `+x`
+                    beforeBlank = `+x_2`
                 } else if (bb === 0) {
                     beforeBlank = ``
                 } else if (bb === -1) {
-                    beforeBlank = `-x`
+                    beforeBlank = `-x_2`
                 } else {
-                    beforeBlank = `${bb}x`
+                    beforeBlank = `${bb}x_2`
                 }
                 beforeBlank = 'x_1^2' + beforeBlank + ' = ';
                 correctAnswer = -b*sum-c;
