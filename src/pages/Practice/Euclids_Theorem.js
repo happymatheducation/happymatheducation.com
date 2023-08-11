@@ -17,9 +17,9 @@ class EuclidsTheorem extends Component {
         difficulty:'',
     };
 
-    unitVector = (A, B) => {
-        const xDiff = B.x - A.x;
-        const yDiff = B.y - A.y;
+    unitVector = (U, V) => {
+        const xDiff = V.x - U.x;
+        const yDiff = V.y - U.y;
         const distance = Math.sqrt(xDiff ** 2 + yDiff ** 2);
         const unitX = xDiff / distance;
         const unitY = yDiff / distance;
@@ -27,108 +27,109 @@ class EuclidsTheorem extends Component {
     }
 
     //Drawing only;
-    drawDiagram = () => {
-        // Determine coordinates of A, B, C, H;
-        let AB = Math.min(window.innerWidth * 0.5, window.innerHeight * 0.3); // Hypotenuse, also Diameter;
-        let radius = AB / 2;
+    drawDiagram = (allPointLabels) => {
+        let [pointU, pointV, pointW] = allPointLabels;
+        // Determine coordinates of U, V, W, H;
+        let UV = Math.min(window.innerWidth * 0.5, window.innerHeight * 0.3); // Hypotenuse, also Diameter;
+        let radius = UV / 2;
         let angleOfRotation = Math.random() * Math.PI * 2;
-        let A = { x: - radius * Math.cos(angleOfRotation), y: - radius * Math.sin(angleOfRotation) };
-        let B = { x: -A.x, y: -A.y };
-        let AH = Math.random() * AB * 0.8 + AB * 0.1; // 0.1 < AH/AB < 0.9;
-        let BH = AB - AH;
-        let H = { x: (AH * B.x + BH * A.x) / AB, y: (AH * B.y + BH * A.y) / AB };
-        let CH = Math.sqrt(AH * BH);
-        let C = { x: - CH * Math.sin(angleOfRotation) + H.x, y: CH * Math.cos(angleOfRotation) + H.y };
+        let U = { x: - radius * Math.cos(angleOfRotation), y: - radius * Math.sin(angleOfRotation) };
+        let V = { x: -U.x, y: -U.y };
+        let UH = Math.random() * UV * 0.8 + UV * 0.1; // 0.1 < UH/UV < 0.9;
+        let VH = UV - UH;
+        let H = { x: (UH * V.x + VH * U.x) / UV, y: (UH * V.y + VH * U.y) / UV };
+        let WH = Math.sqrt(UH * VH);
+        let W = { x: - WH * Math.sin(angleOfRotation) + H.x, y: WH * Math.cos(angleOfRotation) + H.y };
 
         // Determine canvas size and diagram position
-        let xMax = Math.max(A.x, B.x, C.x);
-        let xMin = Math.min(A.x, B.x, C.x);
-        let yMax = Math.max(A.y, B.y, C.y);
-        let yMin = Math.min(A.y, B.y, C.y);
+        let xMax = Math.max(U.x, V.x, W.x);
+        let xMin = Math.min(U.x, V.x, W.x);
+        let yMax = Math.max(U.y, V.y, W.y);
+        let yMin = Math.min(U.y, V.y, W.y);
         let width = xMax - xMin;
         let height = yMax - yMin;
-        let xCenter = (xMax + xMin) / 2;
-        let yCenter = (yMax + yMin) / 2;
+        let xWenter = (xMax + xMin) / 2;
+        let yWenter = (yMax + yMin) / 2;
         let textSize = Math.max(window.innerWidth / 100, 10) * 2;
         let canvasWidth = width + 3 * textSize;
         let canvasHeight = height + 3 * textSize;
-        let xCorrection = canvasWidth / 2 - xCenter;
-        let yCorrection = canvasHeight / 2 - yCenter;
-        A.x += xCorrection;
-        B.x += xCorrection;
-        C.x += xCorrection;
-        H.x += xCorrection;
-        A.y += yCorrection;
-        B.y += yCorrection;
-        C.y += yCorrection;
-        H.y += yCorrection;
+        let xWorrection = canvasWidth / 2 - xWenter;
+        let yWorrection = canvasHeight / 2 - yWenter;
+        U.x += xWorrection;
+        V.x += xWorrection;
+        W.x += xWorrection;
+        H.x += xWorrection;
+        U.y += yWorrection;
+        V.y += yWorrection;
+        W.y += yWorrection;
+        H.y += yWorrection;
 
         // Determine points' labels' positions. 
-        let textAlignA, textAlignB, textAlignC, textAlignH;
-        let textBaselineA, textBaselineB, textBaselineC, textBaselineH;
-        [textAlignA, textAlignB] = A.x >= B.x ? ['left', 'right'] : ['right', 'left'];
-        [textBaselineA, textBaselineB] = A.y >= B.y ? ['top', 'bottom'] : ['bottom', 'top'];
-        [textAlignC, textAlignH] = C.x >= H.x ? ['left', 'right'] : ['right', 'left'];
-        [textBaselineC, textBaselineH] = C.y >= H.y ? ['top', 'bottom'] : ['bottom', 'top'];
+        let textAlignU, textAlignV, textAlignW, textAlignH;
+        let textBaselineU, textBaselineV, textBaselineW, textBaselineH;
+        [textAlignU, textAlignV] = U.x >= V.x ? ['left', 'right'] : ['right', 'left'];
+        [textBaselineU, textBaselineV] = U.y >= V.y ? ['top', 'bottom'] : ['bottom', 'top'];
+        [textAlignW, textAlignH] = W.x >= H.x ? ['left', 'right'] : ['right', 'left'];
+        [textBaselineW, textBaselineH] = W.y >= H.y ? ['top', 'bottom'] : ['bottom', 'top'];
 
         // To draw the little square for 'perpendicular';
-        let unitCA = this.unitVector(C, A);
-        let unitCB = this.unitVector(C, B);
-        let unitHA = Math.abs(H.x - A.x) < Math.abs(H.x - B.x) ? this.unitVector(H, B) : this.unitVector(H, A);
-        let unitHC = this.unitVector(H, C);
+        let unitWU = this.unitVector(W, U);
+        let unitWV = this.unitVector(W, V);
+        let unitHU = Math.abs(H.x - U.x) < Math.abs(H.x - V.x) ? this.unitVector(H, V) : this.unitVector(H, U);
+        let unitHW = this.unitVector(H, W);
 
         let squarescale = 10;
-        unitCA.x *= squarescale;
-        unitCA.y *= squarescale;
-        unitCB.x *= squarescale;
-        unitCB.y *= squarescale;
-        unitHA.x *= squarescale;
-        unitHA.y *= squarescale;
-        unitHC.x *= squarescale;
-        unitHC.y *= squarescale;
+        unitWU.x *= squarescale;
+        unitWU.y *= squarescale;
+        unitWV.x *= squarescale;
+        unitWV.y *= squarescale;
+        unitHU.x *= squarescale;
+        unitHU.y *= squarescale;
+        unitHW.x *= squarescale;
+        unitHW.y *= squarescale;
 
         // Draw;
         const draw = (ctx) => {
-            // Draw the triangle ABC and height CH
+            // Draw the triangle UVW and height WH
             ctx.beginPath();
             ctx.lineWidth = 3;
             ctx.lineJoin = 'round';
             ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-            ctx.moveTo(A.x, A.y);
-            ctx.lineTo(B.x, B.y);
-            ctx.lineTo(C.x, C.y);
-            ctx.lineTo(A.x, A.y);
+            ctx.moveTo(U.x, U.y);
+            ctx.lineTo(V.x, V.y);
+            ctx.lineTo(W.x, W.y);
+            ctx.lineTo(U.x, U.y);
             ctx.moveTo(H.x, H.y);
-            ctx.lineTo(C.x, C.y);
+            ctx.lineTo(W.x, W.y);
             ctx.stroke();
 
             // Draw the 'perpendicular' squares
             ctx.lineWidth = 1;
-            ctx.lineTo(C.x + unitCA.x, C.y + unitCA.y);
-            ctx.lineTo(C.x + unitCA.x + unitCB.x, C.y + unitCA.y + unitCB.y);
-            ctx.lineTo(C.x + unitCB.x, C.y + unitCB.y);
-            ctx.lineTo(C.x, C.y);
+            ctx.lineTo(W.x + unitWU.x, W.y + unitWU.y);
+            ctx.lineTo(W.x + unitWU.x + unitWV.x, W.y + unitWU.y + unitWV.y);
+            ctx.lineTo(W.x + unitWV.x, W.y + unitWV.y);
+            ctx.lineTo(W.x, W.y);
             ctx.moveTo(H.x, H.y);
-            ctx.lineTo(H.x + unitHC.x, H.y + unitHC.y);
-            ctx.lineTo(H.x + unitHC.x + unitHA.x, H.y + unitHC.y + unitHA.y);
-            ctx.lineTo(H.x + unitHA.x, H.y + unitHA.y);
+            ctx.lineTo(H.x + unitHW.x, H.y + unitHW.y);
+            ctx.lineTo(H.x + unitHW.x + unitHU.x, H.y + unitHW.y + unitHU.y);
+            ctx.lineTo(H.x + unitHU.x, H.y + unitHU.y);
             ctx.moveTo(H.x, H.y);
             ctx.stroke();
 
             // Draw Points' labels;
             ctx.font = textSize + "px TimesNewRome";
 
-            ctx.textAlign = textAlignA;
-            ctx.textBaseline = textBaselineA;
-            ctx.fillText("A", A.x, A.y);
+            ctx.textAlign = textAlignU;
+            ctx.textBaseline = textBaselineU;
+            ctx.fillText(pointU, U.x, U.y);
 
-            ctx.textAlign = textAlignB;
-            ctx.textBaseline = textBaselineB;
-            ctx.fillText("B", B.x, B.y);
+            ctx.textAlign = textAlignV;
+            ctx.textBaseline = textBaselineV;
+            ctx.fillText(pointV, V.x, V.y);
 
-            ctx.textAlign = textAlignC;
-            ctx.textBaseline = textBaselineC;
-            ctx.fillText("C", C.x, C.y);
+            ctx.textAlign = textAlignW;
+            ctx.textBaseline = textBaselineW;
+            ctx.fillText(pointW, W.x, W.y);
 
             ctx.textAlign = textAlignH;
             ctx.textBaseline = textBaselineH;
@@ -152,36 +153,40 @@ class EuclidsTheorem extends Component {
     }
 
     generateQuestion = () => {
-        let AH = { name: 'AH', value: 0 };
-        let BH = { name: 'BH', value: 0 };
-        let CH = { name: 'CH', value: 0 };
-        let AB = { name: 'AB', value: 0 };
-        let AC = { name: 'AC', value: 0 };
-        let BC = { name: 'BC', value: 0 };
-        let segments = [AH, BH, CH, AB, AC, BC];
-        let allAH = [1, 4, 1, 9, 9, 16, 1, 1, 2, 1, 3, 2, 3, 3, 4];
-        let allCH = [2, 2, 3, 3, 12, 12, 1, Math.sqrt(2), Math.sqrt(2), Math.sqrt(3), Math.sqrt(3), Math.sqrt(6), Math.sqrt(6), Math.sqrt(12), Math.sqrt(12)];
-        let selector = Math.floor(Math.random() * allAH.length);
-        AH.value = allAH[selector];
-        CH.value = allCH[selector];
-        BH.value = CH.value ** 2 / AH.value;
-        AB.value = AH.value + BH.value;
-        AC.value = Math.sqrt(AH.value * AB.value);
-        BC.value = Math.sqrt(BH.value * AB.value);
+        let allPointLabels = ['A', 'B', 'C'];
+        allPointLabels.sort(() => Math.random() - 0.5);
+        let [pointU, pointV, pointW] = allPointLabels;
+        // WH is the height on hypotenuse
+        let UH = { name: pointU + 'H', value: 0 };
+        let VH = { name: pointV + 'H', value: 0 };
+        let WH = { name: pointW + 'H', value: 0 };
+        let UV = { name: pointU + pointV, value: 0 };
+        let UW = { name: pointU + pointW, value: 0 };
+        let VW = { name: pointV + pointW, value: 0 };
+        let segments = [UH, VH, WH, UV, UW, VW];
+        let allUH = [1, 4, 1, 9, 9, 16, 1, 1, 2, 1, 3, 2, 3, 3, 4];
+        let allWH = [2, 2, 3, 3, 12, 12, 1, Math.sqrt(2), Math.sqrt(2), Math.sqrt(3), Math.sqrt(3), Math.sqrt(6), Math.sqrt(6), Math.sqrt(12), Math.sqrt(12)];
+        let selector = Math.floor(Math.random() * allUH.length);
+        UH.value = allUH[selector];
+        WH.value = allWH[selector];
+        VH.value = WH.value ** 2 / UH.value;
+        UV.value = UH.value + VH.value;
+        UW.value = Math.sqrt(UH.value * UV.value);
+        VW.value = Math.sqrt(VH.value * UV.value);
 
         segments.sort(() => Math.random() - 0.5);
         let condition = ['', ''];
         let selectedConditionsRaw = segments[0].name + segments[1].name;
-        if (selectedConditionsRaw === 'ABCH' || selectedConditionsRaw === 'CHAB') {
+        if (selectedConditionsRaw === pointU + pointV + pointW + 'H' || selectedConditionsRaw === pointW + 'H' + pointU + pointV) {
             segments[1] = segments[5];
             selectedConditionsRaw = segments[0].name + segments[1].name;
         }
-
-        if (selectedConditionsRaw === 'ACBH'
-            || selectedConditionsRaw === 'BHAC'
-            || selectedConditionsRaw === 'AHBC'
-            || selectedConditionsRaw === 'BCAH') {
-            this.setState({ difficulty:' (Hard)' })
+        let difficulty = '';
+        if (selectedConditionsRaw === pointU + pointW + pointV + 'H'
+            || selectedConditionsRaw === pointV + 'H' + pointU + pointW
+            || selectedConditionsRaw === pointU + 'H' + pointV + pointW
+            || selectedConditionsRaw === pointV + pointW + pointU + 'H') {
+            difficulty = ' (Hard)'
         }
         
         condition[0] = segments[0].name + '=' + this.valueToString(segments[0].value);
@@ -191,30 +196,30 @@ class EuclidsTheorem extends Component {
         let answer = toSquareQuestion ? Math.round(segments[2].value ** 2) : Math.round(segments[2].value);
         this.setState({ correctAnswer: answer });
         this.setState({ question: question });
+        this.setState({ difficulty: difficulty });
 
         return (<><p>
             {/*
-            As shown, in
-            <MathComponent display={false} tex={String.raw`~\triangle ABC,~`} />
-            <MathComponent display={false} tex={String.raw`CH \perp AB,~`} /> and
-            <MathComponent display={false} tex={String.raw`~\angle ACB = 90^\circ.~`} />
+            Us shown, in
+            <MathComponent display={false} tex={String.raw`~\triangle UVW,~`} />
+            <MathComponent display={false} tex={String.raw`WH \perp UV,~`} /> and
+            <MathComponent display={false} tex={String.raw`~\angle UWV = 90^\circ.~`} />
             If
             */}
             <MathComponent display={false} tex={'~' + condition[0] + ',~'} />
             <MathComponent display={false} tex={'~' + condition[1] + '.~~'} />
             (Diagram not to scale)
-        </p>{this.drawDiagram()}</>);
+        </p>{this.drawDiagram(allPointLabels)}</>);
     }
 
     clearAnswerForm = () => {
         this.setState({
             userAnswer: '',
-            difficulty:''
         });
         if (window.innerWidth <= 800) { }
         else { this.answerForm.current.focus(); }
         document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.documentElement.scrollTop = 0; // For Whrome, Firefox, IE and Opera
     }
 
     checkAnswer = () => {
@@ -235,7 +240,8 @@ class EuclidsTheorem extends Component {
         let answerForm = (<>
             <MathComponent display={false} tex={'~' + this.state.question + '=~'} />
             <input type="number" value={this.state.userAnswer} ref={this.answerForm} autoFocus
-                onChange={e => this.setState({ userAnswer: e.target.value })}></input>{this.state.difficulty}<br />
+                onChange={e => this.setState({ userAnswer: e.target.value })}></input>
+            {this.state.difficulty}<br />
         </>);
         return (
             <FillBlanks
