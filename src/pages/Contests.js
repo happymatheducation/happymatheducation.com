@@ -34,6 +34,46 @@ function Contests() {
         </tbody>
     </table>;
 
+    let CSMCCutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
+        <thead>
+            <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 2.5%) </th></tr>
+        </thead>
+        <tbody>
+            <tr><td> 2022 </td><td> 34 </td><td> 42 </td></tr>
+            <tr><td> 2021 </td><td> 32 </td><td> 46 </td></tr>
+            <tr><td> 2020 </td><td> 42 </td><td> 52 </td></tr>
+            <tr><td> 2019 </td><td> 37 </td><td> 49 </td></tr>
+            <tr><td> 2018 </td><td> 35 </td><td> 44 </td></tr>
+            <tr><td> 2017 </td><td> 39 </td><td> 45 </td></tr>
+            <tr><td> 2016 </td><td> 38 </td><td> 45 </td></tr>
+            <tr><td> 2015 </td><td> 39 </td><td> 46 </td></tr>
+            <tr><td> 2014 </td><td> 39 </td><td> 47 </td></tr>
+            <tr><td> 2013 </td><td> 43 </td><td> 51 </td></tr>
+            <tr><td> 2012 </td><td> 42 </td><td> 48 </td></tr>
+            <tr><td> 2011 </td><td> 39 </td><td> 48 </td></tr>
+        </tbody>
+    </table>;
+
+    let CIMCCutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
+        <thead>
+            <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 2.5%) </th></tr>
+        </thead>
+        <tbody>
+            <tr><td> 2022 </td><td> 38 </td><td> 47 </td></tr>
+            <tr><td> 2021 </td><td> 37 </td><td> 47 </td></tr>
+            <tr><td> 2020 </td><td> 41 </td><td> 49 </td></tr>
+            <tr><td> 2019 </td><td> 36 </td><td> 47 </td></tr>
+            <tr><td> 2018 </td><td> 40 </td><td> 47 </td></tr>
+            <tr><td> 2017 </td><td> 43 </td><td> 52 </td></tr>
+            <tr><td> 2016 </td><td> 40 </td><td> 47 </td></tr>
+            <tr><td> 2015 </td><td> 42 </td><td> 52 </td></tr>
+            <tr><td> 2014 </td><td> 43 </td><td> 49 </td></tr>
+            <tr><td> 2013 </td><td> 45 </td><td> 52 </td></tr>
+            <tr><td> 2012 </td><td> 40 </td><td> 52 </td></tr>
+            <tr><td> 2011 </td><td> 40 </td><td> 48 </td></tr>
+        </tbody>
+    </table>;
+
     return (
         <>
 
@@ -170,7 +210,14 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a> |
-                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        {CIMCCutoffTable}
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
@@ -299,7 +346,14 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a> |
-                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        {CIMCCutoffTable}
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
@@ -428,7 +482,14 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a> |
-                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a> | 
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        {CSMCCutoffTable}
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
@@ -568,7 +629,14 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a> |
-                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a><br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#csimc'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        {CSMCCutoffTable}
 
                         <span><i className="bi bi-thermometer-snow"></i>January: </span>
                         New Year<br />
