@@ -96,17 +96,15 @@ function Practice() {
             </button>
             <div className="content" style={{ maxHeight: '50000px' }}>
                 <div className='practicediv'>
+                    Angle Chase in a Circle: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/AngleChase'>App</a>
+                </div>
+                <div className='practicediv'>
                     Arithmetic Sequence:<br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='/Practice/ArithmeticSequence'>App</a> |
                     <a href={arithmetic_sequence}
                     //href=' https://203076101960895753.weebly.com/uploads/1/3/6/4/136474762/arithmetic_sequence.pdf'
                     >pdf</a>
-                </div>
-                <div className='practicediv'>
-                    Basic Similar Triangles: <br />&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href='/Practice/BasicSimilarTriangles'>App</a> |
-                    <a href={basic_similar_triangles}>pdf</a> |
-                    <a href={basic_similar_triangles_answers}>Answers</a>
                 </div>
                 <div className='practicediv'>
                     Distance Between Two Points: <br />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -165,6 +163,12 @@ function Practice() {
                     <a href='/Practice/RollingDice'>App</a> |
                     <a href={rolling_dice}>pdf</a> |
                     <a href={rolling_dice_answers}>Answers</a>
+                </div>
+                <div className='practicediv'>
+                    Similar Triangles, Basic: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/BasicSimilarTriangles'>App</a> |
+                    <a href={basic_similar_triangles}>pdf</a> |
+                    <a href={basic_similar_triangles_answers}>Answers</a>
                 </div>
                 <div className='practicediv'>
                     Simple 3D shapes: <br />&nbsp;&nbsp;&nbsp;&nbsp;

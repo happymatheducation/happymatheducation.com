@@ -14,6 +14,10 @@ const myMath = {
         return Math.floor(Math.random() * (to - from + 1)) + from;
     },
 
+    randomRealNumber(from, to) {
+        let ratio = Math.random();
+        return (ratio * from + (1 - ratio) * to);
+    },
     primeFactorize(number) { //does not work for 101 ^ 2
         let primeFactorization = [];
         let iCount;

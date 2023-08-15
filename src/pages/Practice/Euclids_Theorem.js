@@ -48,21 +48,21 @@ class EuclidsTheorem extends Component {
         let yMin = Math.min(U.y, V.y, W.y);
         let width = xMax - xMin;
         let height = yMax - yMin;
-        let xWenter = (xMax + xMin) / 2;
-        let yWenter = (yMax + yMin) / 2;
+        let xCenter = (xMax + xMin) / 2;
+        let yCenter = (yMax + yMin) / 2;
         let textSize = Math.max(window.innerWidth / 100, 10) * 2;
         let canvasWidth = width + 3 * textSize;
         let canvasHeight = height + 3 * textSize;
-        let xWorrection = canvasWidth / 2 - xWenter;
-        let yWorrection = canvasHeight / 2 - yWenter;
-        U.x += xWorrection;
-        V.x += xWorrection;
-        W.x += xWorrection;
-        H.x += xWorrection;
-        U.y += yWorrection;
-        V.y += yWorrection;
-        W.y += yWorrection;
-        H.y += yWorrection;
+        let xCorrection = canvasWidth / 2 - xCenter;
+        let yCorrection = canvasHeight / 2 - yCenter;
+        U.x += xCorrection;
+        V.x += xCorrection;
+        W.x += xCorrection;
+        H.x += xCorrection;
+        U.y += yCorrection;
+        V.y += yCorrection;
+        W.y += yCorrection;
+        H.y += yCorrection;
 
         // Determine points' labels' positions. 
         let textAlignU, textAlignV, textAlignW, textAlignH;
