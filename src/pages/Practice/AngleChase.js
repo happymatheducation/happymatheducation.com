@@ -408,7 +408,7 @@ class AngleChase extends Component {
     }
     drawRadiusTangent = () => {
         let OPplusRadius = Math.min(window.innerWidth * 0.5, window.innerHeight * 0.3); // Hypotenuse, also Diameter;
-        let radius = OPplusRadius * myMath.randomRealNumber(0.2, 0.45);
+        let radius = OPplusRadius * myMath.randomRealNumber(0.3, 0.45);
         let OP = OPplusRadius - radius;
         let angleOfP = Math.random() * 2 * Math.PI;
         let anglePOT = Math.acos(radius / OP);
@@ -479,7 +479,7 @@ class AngleChase extends Component {
     }
     drawChordTangent = () => {
         let OPplusRadius = Math.min(window.innerWidth * 0.5, window.innerHeight * 0.3); // Hypotenuse, also Diameter;
-        let radius = OPplusRadius * myMath.randomRealNumber(0.2, 0.45);
+        let radius = OPplusRadius * myMath.randomRealNumber(0.3, 0.45);
         let OP = OPplusRadius - radius;
         let angleOfP = Math.random() * 2 * Math.PI;
         let anglePOA = Math.acos(radius / OP);
