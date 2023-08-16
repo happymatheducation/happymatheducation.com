@@ -74,6 +74,48 @@ function Contests() {
         </tbody>
     </table>;
 
+    let COMCCutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
+        <thead>
+            <tr>
+                <th> Year </th>
+                <th> Honours <br /> (Top 50%) </th>
+                <th> Distinction <br /> (Top 25%) </th>
+                <th> Repechage <br /> (Top 125) </th>
+                <th> CMO <br /> (Top 50) </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td> 2022 </td><td> 28 </td><td> 41 </td><td> 63.5 </td><td> 69 </td></tr>
+            <tr><td> 2021 </td><td> 29 </td><td> NA </td><td> 62 </td><td> 68 </td></tr>
+            <tr><td> 2020 </td><td> 33 </td><td> 44 </td><td> 60.5 </td><td> 66 </td></tr>
+            <tr><td> 2019 </td><td> 32 </td><td> 44 </td><td> 61 </td><td> 66.5 </td></tr>
+            <tr><td> 2018 </td><td> 23.5 </td><td> 33 </td><td> 52 </td><td> 61 </td></tr>
+            <tr><td> 2017 </td><td> 36.5 </td><td> NA </td><td> 57.5 </td><td> 64 </td></tr>
+            <tr><td> 2016 </td><td> 33 </td><td> NA </td><td> 61 </td><td> 69 </td></tr>
+            <tr><td> 2015 </td><td> 32 </td><td> NA </td><td> 55 </td><td> 66 </td></tr>
+            <tr><td> 2014 </td><td> 38 </td><td> NA </td><td> 62 </td><td> 69 </td></tr>
+            <tr><td> 2013 </td><td> 26 </td><td> NA </td><td> 53 </td><td> 60 </td></tr>
+            <tr><td> 2012 </td><td> 31 </td><td> 40 </td><td> 53 </td><td> 57 </td></tr>
+            <tr><td> 2011 </td><td> 36 </td><td> 48 </td><td> 66 </td><td> 70 </td></tr>
+            <tr><td> 2010 </td><td> 44 </td><td> 51 </td><td> 67 </td><td> 71 </td></tr>
+            <tr><td> 2009 </td><td> 39 </td><td> 49 </td><td> 66 </td><td> 70 </td></tr>
+            <tr><td> 2008 </td><td> 45 </td><td> 54 </td><td> 68 </td><td> 72 </td></tr>
+            <tr><td> 2007 </td><td> 41 </td><td> 53 </td><td> 68 </td><td> 72 </td></tr>
+            <tr><td> 2006 </td><td> 30 </td><td> 40 </td><td> 62 </td><td> 68 </td></tr>
+            <tr><td> 2005 </td><td> 41 </td><td> 49 </td><td> 65 </td><td> 70 </td></tr>
+            <tr><td> 2004 </td><td> 36 </td><td> 48 </td><td> 64 </td><td> 68 </td></tr>
+            <tr><td> 2003 </td><td> 35 </td><td> 43 </td><td> 59 </td><td> 64 </td></tr>
+            <tr><td> 2002 </td><td> 39 </td><td> 47 </td><td> 63 </td><td> 68 </td></tr>
+            <tr><td> 2001 </td><td> 44 </td><td> 55 </td><td> 70 </td><td> 72 </td></tr>
+            <tr><td> 2000 </td><td> 34 </td><td> 47 </td><td> 65 </td><td> 70 </td></tr>
+            <tr><td> 1999 </td><td> NA </td><td> NA </td><td> &asymp; 61 </td><td> &asymp; 68 </td></tr>
+            <tr><td> 1998 </td><td> NA </td><td> NA </td><td> &asymp; 57 </td><td> &asymp; 62 </td></tr>
+            <tr><td> 1997 </td><td> NA </td><td> NA </td><td> NA </td><td> NA </td></tr>
+            <tr><td> 1996 </td><td> &asymp; 23 </td><td> &asymp; 31 </td><td> 43 </td><td> 49 </td></tr>
+        </tbody>
+    </table>;
+
+
     return (
         <>
 
@@ -92,7 +134,7 @@ function Contests() {
                     }
                 }
             }>Grade 7</button>
-            <div className="content">
+            <div className="content"> {/* Grade 7 */ }
 
                 <div className='container'>
                     <h3>
@@ -143,7 +185,7 @@ function Contests() {
                     }
                 }
             }>Grade 8</button>
-            <div className="content">
+            <div className="content">  {/* Grade 8 */}
 
                 <div className='container'>
                     <h3>
@@ -192,7 +234,7 @@ function Contests() {
                     }
                 }
             }>Grade 9</button>
-            <div className="content">
+            <div className="content">  {/* Grade 9 */}
 
                 <div className='container'>
                     <h3>
@@ -328,7 +370,7 @@ function Contests() {
                     }
                 }
             }>Grade 10</button>
-            <div className="content">
+            <div className="content">  {/* Grade 10 */}
 
                 <div className='container'>
                     <h3>
@@ -463,7 +505,7 @@ function Contests() {
                     }
                 }
             }>Grade 11</button>
-            <div className="content">
+            <div className="content">  {/* Grade 11 */}
 
                 <div className='container'>
                     <h3>
@@ -474,7 +516,14 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>October: </span>
                         <a href='https://cms.math.ca/competitions/comc/'>COMC</a> |
-                        <a href='https://cms.math.ca/competitions/comc/comc2022/getting-ready/'>Papers</a><br />
+                        <a href='https://cms.math.ca/competitions/comc/comc2022/getting-ready/'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        {COMCCutoffTable}
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a> |
@@ -610,7 +659,7 @@ function Contests() {
                     }
                 }
             }>Grade 12</button>
-            <div className="content">
+            <div className="content"> {/* Grade 12 */}
 
                 <div className='container'>
                     <h3>
@@ -621,7 +670,14 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>October: </span>
                         <a href='https://cms.math.ca/competitions/comc/'>COMC</a> |
-                        <a href='https://cms.math.ca/competitions/comc/comc2022/getting-ready/'>Papers</a><br />
+                        <a href='https://cms.math.ca/competitions/comc/comc2022/getting-ready/'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Cutoffs</button><br />
+                        {COMCCutoffTable}
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a> |
