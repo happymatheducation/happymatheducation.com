@@ -616,7 +616,7 @@ class AngleChase extends Component {
                 diagram = this.drawRadiusTangent();
                 break;
             case 6: // Chord Tangent Angle
-                given = 'PT \\text{ is tangent to Circle } O \\text{ at } A. ';
+                given = 'PA \\text{ is tangent to Circle } O \\text{ at } A. ';
                 if (Math.random() < 0.5) {
                     question = '\\angle ACB';
                     given += '\\angle PAB = ' + angleACB + '^\\circ';
