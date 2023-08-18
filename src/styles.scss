@@ -354,6 +354,10 @@ body {
         font-size: max(1.4vw, 14px);
         width: max(5vw, 50px);
         text-align: center;
+
+        &.longFraction {
+            width: max(8vw, 80px);
+        }
     }
 
     .sign {

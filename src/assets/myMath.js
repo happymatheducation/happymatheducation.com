@@ -6,6 +6,23 @@ const myMath = {
     allPrimes: allPrimes,
     allPrimePowers: allPrimePowers,
 
+    isInteger(num) {
+        let rounded = Math.round(num);
+        let error = Math.abs(rounded - num);
+        return error < 0.00001 ? true : false;
+    },
+
+    sqrtSimplification(n) {
+        // n = p^2 * k;
+        let p = 1;
+        let i = 2;
+        while (i <= Math.sqrt(n)) {
+            if (n % (i * i) === 0) { p *= i; n /= i * i; i = 2; }
+            else { i++ };
+        };
+        return [p, n];
+    },
+
     randomFromArray(a) { //inclusive
         return a[Math.floor(Math.random() * a.length)];
     },
@@ -81,6 +98,30 @@ const myMath = {
         numerator = numerator / gcd;
         denominator = denominator / gcd;
         return [numerator, denominator];
+    },
+
+    fractionMultiplication([numerator1, denominator1], [numerator2, denominator2]) {
+        let numerator = numerator1 * numerator2;
+        let denominator = denominator1 * denominator2;
+        return this.reduceFraction(numerator, denominator);
+    },
+
+    fractionDivision([numerator1, denominator1], [numerator2, denominator2]) {
+        let numerator = numerator1 * denominator2;
+        let denominator = denominator1 * numerator2;
+        return this.reduceFraction(numerator, denominator);
+    },
+
+    fractionAddition([numerator1, denominator1], [numerator2, denominator2]) {
+        let denominator = denominator1 * denominator2;
+        let numerator = numerator1 * denominator2 + numerator2 * denominator1;
+        return this.reduceFraction(numerator, denominator);
+    },
+
+    fractionSubtraction([numerator1, denominator1], [numerator2, denominator2]) {
+        let denominator = denominator1 * denominator2;
+        let numerator = numerator1 * denominator2 - numerator2 * denominator1;
+        return this.reduceFraction(numerator, denominator);
     },
 
     isPrime(number) { // cannot check 101^2
@@ -226,6 +267,9 @@ const myMath = {
     },
 
     fractionToTex([numerator, denominator]) {
+        if (this.isInteger(numerator / denominator)) {
+            return Math.round(numerator / denominator) + '';
+        }
         let posFraction = '{' + Math.abs(numerator) + '\\over' + Math.abs(denominator) + '}';
         if (numerator * denominator > 0) {
             return posFraction

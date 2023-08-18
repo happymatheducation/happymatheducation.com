@@ -18,20 +18,6 @@ class AngleChase extends Component {
         hintTex: '',
     };
 
-    isInteger = (num) => {
-        let rounded = Math.round(num);
-        let error = Math.abs(rounded - num);
-        return error < 0.00001 ? true : false;
-    }
-
-    valueToString = (value) => {
-        if (this.isInteger(value)) {
-            return Math.round(value);
-        } else if (this.isInteger(value ** 2)) {
-            return String.raw`\sqrt {${Math.round(value ** 2)}}`;
-        }
-    }
-
     //Drawing only;
     drawDiameter = () => {
         // AB is diameter;

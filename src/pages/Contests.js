@@ -33,7 +33,6 @@ function Contests() {
             <tr><td> 1998 </td><td> Nodata </td><td> Nodata </td></tr>
         </tbody>
     </table>;
-
     let CSMCCutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
         <thead>
             <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 2.5%) </th></tr>
@@ -53,7 +52,6 @@ function Contests() {
             <tr><td> 2011 </td><td> 39 </td><td> 48 </td></tr>
         </tbody>
     </table>;
-
     let CIMCCutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
         <thead>
             <tr><th> Year </th><th> Certificate <br /> (Top 25%) </th><th> Honour Roll <br /> (&asymp; Top 2.5%) </th></tr>
@@ -73,7 +71,6 @@ function Contests() {
             <tr><td> 2011 </td><td> 40 </td><td> 48 </td></tr>
         </tbody>
     </table>;
-
     let COMCCutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
         <thead>
             <tr>
@@ -114,7 +111,6 @@ function Contests() {
             <tr><td> 1996 </td><td> &asymp; 23 </td><td> &asymp; 31 </td><td> 43 </td><td> 49 </td></tr>
         </tbody>
     </table>;
-
 
     return (
         <>

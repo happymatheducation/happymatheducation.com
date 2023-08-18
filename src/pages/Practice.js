@@ -149,10 +149,12 @@ function Practice() {
                 <div className='practicediv'>
                     Quadratic Equations / Functions: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href='/Practice/Quadratic_Equations'>App (Find roots)</a> |
-                    <a href='/Practice/CompleteTheSquare'>App (Complete the Square / Vertex Form)</a> |
-                    <a href='/Practice/VietasTheorem'>App (Vieta's Theorem)</a> |
-                    <a href={quadratic_equations}>pdf (Find roots)</a> |
-                    <a href={quadratic_equations_answers}>Answers (Find roots)</a>
+                    <a href={quadratic_equations}>pdf</a> |
+                    <a href={quadratic_equations_answers}>Answers</a>
+                    <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/CompleteTheSquare'>App (Complete the Square / Vertex Form)</a>
+                    <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/VietasTheorem'>App (Vieta's Theorem)</a>
                 </div>
                 <div className='practicediv'>
                     Remainder with Special Divisors: <br />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -305,7 +307,11 @@ function Practice() {
                         <a href={polynomial_factorization_answers}>Answers</a>
                     </div>
                     <div className='practicediv'>
-                        Simple Trig Inequality: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        Trig Identities II: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/TrigIdentitiesII'>App</a>
+                    </div>
+                    <div className='practicediv'>
+                        Trig Inequality, simple: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href='/Practice/SimpleTrigIequality'>App</a> |
                         <a href={simple_trig_inequality}>pdf</a> |
                         <a href={simple_trig_inequality_answers}>Answers</a>
