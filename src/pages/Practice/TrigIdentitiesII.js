@@ -23,11 +23,14 @@ class TrigIdentitiesII extends Component {
         correctDenominator: '',
         correctAnswer: '',
         correctAnswerSign: '',
+
+        hintTex:''
     };
 
     generateQuestion = () => {
         let problem, beforeBlank,
-            correctAnswer, correctNumerator, correctDenominator, correctAnswerSign, correctAnswerIsFraction;
+            correctAnswer, correctNumerator, correctDenominator, correctAnswerSign, correctAnswerIsFraction,
+            hintTex;
 
         // The angles alpha and beta are used for sum or difference of angle formula for cosine and sine, only;
         let alpha = myMath.randomFromArray([
@@ -71,6 +74,7 @@ class TrigIdentitiesII extends Component {
                     myMath.fractionMultiplication(alpha.cos, beta.cos),
                     myMath.fractionMultiplication(alpha.sin, beta.sin)
                 );
+                hintTex = '\\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta';
                 break;
             case 2: // cos(alpha - beta)
                 beforeBlank = '\\cos(\\alpha - \\beta)=';
@@ -79,6 +83,7 @@ class TrigIdentitiesII extends Component {
                     myMath.fractionMultiplication(alpha.cos, beta.cos),
                     myMath.fractionMultiplication(alpha.sin, beta.sin)
                 );
+                hintTex = '\\cos(\\alpha-\\beta)=\\cos\\alpha\\cos\\beta+\\sin\\alpha\\sin\\beta';
                 break;
             case 3: // sin(alpha + beta)
                 beforeBlank = '\\sin(\\alpha + \\beta)=';
@@ -87,6 +92,7 @@ class TrigIdentitiesII extends Component {
                     myMath.fractionMultiplication(alpha.sin, beta.cos),
                     myMath.fractionMultiplication(alpha.cos, beta.sin)
                 );
+                hintTex = '\\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta';
                 break;
             case 4: // sin(alpha - beta)
                 beforeBlank = '\\sin(\\alpha - \\beta)=';
@@ -95,6 +101,7 @@ class TrigIdentitiesII extends Component {
                     myMath.fractionMultiplication(alpha.sin, beta.cos),
                     myMath.fractionMultiplication(alpha.cos, beta.sin)
                 );
+                hintTex = '\\sin(\\alpha-\\beta)=\\sin\\alpha\\cos\\beta-\\cos\\alpha\\sin\\beta';
                 break;
             case 5: // tan(theta1 + theta2)
                 beforeBlank = '\\tan(\\theta_1 + \\theta_2)=';
@@ -111,6 +118,7 @@ class TrigIdentitiesII extends Component {
                     myMath.fractionAddition(tanTheta1, tanTheta2),
                     myMath.fractionSubtraction([1, 1], myMath.fractionMultiplication(tanTheta1, tanTheta2))
                 )
+                hintTex = '\\tan(\\theta_1+\\theta_2)={\\tan\\theta_1+\\tan\\theta_2\\over1-\\tan\\theta_1\\tan\\theta_2}';
                 break;
             case 6: // tan(theta1 - theta2)
                 beforeBlank = '\\tan(\\theta_1 - \\theta_2)=';
@@ -126,6 +134,7 @@ class TrigIdentitiesII extends Component {
                     myMath.fractionSubtraction(tanTheta1, tanTheta2),
                     myMath.fractionAddition([1, 1], myMath.fractionMultiplication(tanTheta1, tanTheta2))
                 )
+                hintTex = '\\tan(\\theta_1-\\theta_2)={\\tan\\theta_1-\\tan\\theta_2\\over1+\\tan\\theta_1\\tan\\theta_2}';
                 break;
             case 7: // tan(2theta)
                 beforeBlank = '\\tan(2\\theta)=';
@@ -140,6 +149,7 @@ class TrigIdentitiesII extends Component {
                     myMath.fractionAddition(tanTheta, tanTheta),
                     myMath.fractionSubtraction([1, 1], myMath.fractionMultiplication(tanTheta, tanTheta))
                 )
+                hintTex = '\\tan(2\\theta)={2\\tan\\theta\\over1-\\tan^2\\theta}';
                 break;
             case 8: // cos(2theta)
                 let cosOrSinThetaTex;
@@ -152,12 +162,14 @@ class TrigIdentitiesII extends Component {
                 else if (p === 1) { cosOrSinThetaTex = '{\\sqrt{' + k + '} \\over ' + d + '}' }
                 else { cosOrSinThetaTex = '{' + p + '\\sqrt{' + k + '} \\over ' + d + '}' }; // cosOrSinThetaTex
 
-                if (Math.random() > 0.5) {
+                if (Math.random() > 0.5) { // 2cos^2theta - 1 = cos2theta
                     problem = '\\cos\\theta = ' + (Math.random() > 0.5 ? '' : '-') + cosOrSinThetaTex + '.~';
                     [correctNumerator, correctDenominator] = myMath.fractionSubtraction([2 * n, d * d], [1, 1]);
-                } else {
+                    hintTex = '\\cos2\\theta = 2\\cos^2\\theta-1';
+                } else { // 1 - 2sin^2theta = cos2theta
                     problem = '\\sin\\theta = ' + (Math.random() > 0.5 ? '' : '-') + cosOrSinThetaTex + '.~';
                     [correctNumerator, correctDenominator] = myMath.fractionSubtraction([1, 1], [2 * n, d * d]);
+                    hintTex = '\\cos2\\theta = 1 - 2\\sin^2\\theta';
                 }
                 break;
             case 9: // sin(2theta)
@@ -193,6 +205,7 @@ class TrigIdentitiesII extends Component {
                 problem = '\\cos\\theta = ' + (isCosPositive===1 ? '' : '-') + cosThetaTex + ',~'
                     + '\\sin\\theta = ' + (isSinPositive===1 ? '' : '-') + sinThetaTex + '.~';
                 [correctNumerator, correctDenominator] = myMath.reduceFraction(2 * a * b * isCosPositive * isSinPositive, cc);
+                hintTex = '\\sin2\\theta = 2\\sin\\theta\\cos\\theta';
                 break;
             default:
                 break;
@@ -209,6 +222,7 @@ class TrigIdentitiesII extends Component {
             correctDenominator: Math.abs(correctDenominator),
             correctAnswerSign: correctAnswerSign,
             beforeBlank: beforeBlank,
+            hintTex: hintTex,
         });
         return <MathComponent display={false} tex={problem} />
     }
@@ -275,7 +289,7 @@ class TrigIdentitiesII extends Component {
             correctAnswer = <MathComponent display={false}
                 tex={String.raw`${this.state.correctAnswerSign}{${this.state.correctNumerator} \over ${this.state.correctDenominator}}`} />;
         }
-        return (<>Incorrect! The correct answer is {correctAnswer}</>);
+        return (<>Incorrect! The correct answer is {correctAnswer}. Hint: <MathComponent display={false} tex={this.state.hintTex} /></>);
     }
 
     render() {
