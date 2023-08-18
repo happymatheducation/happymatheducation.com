@@ -200,6 +200,7 @@ function Practice() {
                 <div style={{ justifyContent: 'space-between' }}>
                     <div className='practicediv'>
                         Binomial Theorem: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/BinomialTheorem'>App</a> |
                         <a href={binomial_theorem}>pdf</a> |
                         <a href={binomial_theorem_answers}>Answers</a>
                     </div>
