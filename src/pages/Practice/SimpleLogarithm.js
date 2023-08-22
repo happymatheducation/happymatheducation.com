@@ -143,26 +143,26 @@ class SimpleLogarithm extends Component {
         let p = power.p;
         let a = power.a;
         let [aToTheNewP, newP, newPIsFraction, newPDenominator, newPNumerator] = this.problemTypeSelector(a, p);
-        let problem=``;
+        let problem = ``;
+        let n, m, x
 
-        if (Math.random() < 0.4) {
-            // logaa^p=p or plogba = logba^p; for types: p=+-2, p=+-3, p=+-1, a=2, blanks=a, p, a^p; for type: p=m/n, blank=p
-            this.setState({
-                beforeBlank: 'Your Answer: ',
-                correctAnswer: newP,
-                correctAnswerIsFraction: newPIsFraction,
-                correctDenominator: newPDenominator,
-                correctNumerator: newPNumerator,
-                correctAnswerSign: newP < 0 ? '-' : '',
-            })
-            problem = `\\log_{${a}}${aToTheNewP}=?`;
-        }
-        else if (Math.random() < 0.5) {
-            if (Math.random() < 0.5) {
-                // logam + logan = logax; blank=x
-                let m = myMath.randomInteger(2, 12);
-                let n = myMath.randomInteger(2, 12);
-                let x = m * n;
+        let formulaID = myMath.randomInteger(1, 6);
+        switch (formulaID) {
+            case 1: // logaa^p=p or plogba = logba^p; for types: p=+-2, p=+-3, p=+-1, a=2, blanks=a, p, a^p; for type: p=m/n, blank=p
+                this.setState({
+                    beforeBlank: 'Your Answer: ',
+                    correctAnswer: newP,
+                    correctAnswerIsFraction: newPIsFraction,
+                    correctDenominator: newPDenominator,
+                    correctNumerator: newPNumerator,
+                    correctAnswerSign: newP < 0 ? '-' : '',
+                })
+                problem = `\\log_{${a}}${aToTheNewP}=?`;
+                break;
+            case 2: // logam + logan = logax; blank=x
+                m = myMath.randomInteger(2, 12);
+                n = myMath.randomInteger(2, 12);
+                x = m * n;
                 this.setState({
                     beforeBlank: <MathComponent display={false} tex={`\\Large x=`} />,
                     correctAnswer: x,
@@ -172,81 +172,81 @@ class SimpleLogarithm extends Component {
                     correctAnswerSign: '',
                 })
                 problem = `\\log_{${a}}${m}+\\log_{${a}}${n}=\\log_{${a}}x`;
-            }
-            else {
-                // logam - logan = logax; blank=x
-                let n = myMath.randomInteger(2, 12);
-                let x = myMath.randomInteger(2, 12);
-                let m = x * n;
-                this.setState({
-                    beforeBlank: <MathComponent display={false} tex={`\\Large x=`} />,
-                    correctAnswer: x,
-                    correctAnswerIsFraction: false,
-                    correctDenominator: 1,
-                    correctNumerator: x,
-                    correctAnswerSign: '',
-                })
-                problem = `\\log_{${a}}${m}-\\log_{${a}}${n}=\\log_{${a}}x`;
-            }
-        }
-        else if (Math.random() < 0.8) {
-            // change base formula; loga^p0 a^p=p/p0, blank=p/p0
-            const _allPowers = allPowers.filter(value => value.a === a);
-            let power0 = _allPowers[Math.floor(Math.random() * _allPowers.length)];
-            let p0 = power0.p;
-            let [aToTheNewP0, newP0, newP0IsFraction, newP0Denominator, newP0Numerator] = this.problemTypeSelector(a, p0);
-            while (newP0 === newP) { [aToTheNewP0, newP0, newP0IsFraction, newP0Denominator, newP0Numerator] = this.problemTypeSelector(a, p0); }
-            
-            let [correctNumerator, correctDenominator] = myMath.reduceFraction(newPNumerator * newP0Denominator, newP0Numerator * newPDenominator);
+                break;
+            case 3: // logam - logan = logax; blank=x
+                    n = myMath.randomInteger(2, 12);
+                    x = myMath.randomInteger(2, 12);
+                    m = x * n;
+                    this.setState({
+                        beforeBlank: <MathComponent display={false} tex={`\\Large x=`} />,
+                        correctAnswer: x,
+                        correctAnswerIsFraction: false,
+                        correctDenominator: 1,
+                        correctNumerator: x,
+                        correctAnswerSign: '',
+                    })
+                    problem = `\\log_{${a}}${m}-\\log_{${a}}${n}=\\log_{${a}}x`;                
+                break;
+            case 4: // change base formula; loga^p0 a^p=p/p0, blank=p/p0
+                const _allPowers = allPowers.filter(value => value.a === a);
+                let power0 = _allPowers[Math.floor(Math.random() * _allPowers.length)];
+                let p0 = power0.p;
+                let [aToTheNewP0, newP0, newP0IsFraction, newP0Denominator, newP0Numerator] = this.problemTypeSelector(a, p0);
+                while (newP0 === newP) { [aToTheNewP0, newP0, newP0IsFraction, newP0Denominator, newP0Numerator] = this.problemTypeSelector(a, p0); }
 
-            this.setState({
-                beforeBlank: 'Your Answer: ',
-                correctAnswer: newP / newP0,
-                correctAnswerIsFraction: Number.isInteger(newP / newP0) ? false : true,
-                correctDenominator: Math.abs(correctDenominator),
-                correctNumerator: Math.abs(correctNumerator),
-                correctAnswerSign: correctDenominator * correctNumerator<0?'-':'',
-            })
-            problem = `\\log_{${aToTheNewP0}}${aToTheNewP}=?`
-        }
-        else if (Math.random() < 0.5) {
-            // logaR1 * logR1R2 * logR2a^p=p; blank=p 
-            let R1 = myMath.randomInteger(20, 99);
-            let R2 = myMath.randomInteger(20, 99);
+                let [correctNumerator, correctDenominator] = myMath.reduceFraction(newPNumerator * newP0Denominator, newP0Numerator * newPDenominator);
 
-            this.setState({
-                beforeBlank: 'Your Answer: ',
-                correctAnswer: newP,
-                correctAnswerIsFraction: newPIsFraction,
-                correctDenominator: newPDenominator,
-                correctNumerator: newPNumerator,
-                correctAnswerSign: newP < 0 ? '-' : '',
-            })
-            problem = `(\\log_{${a}}${R1})(\\log_{${R1}}${R2})\\log_{${R2}}${aToTheNewP}=?`;
-        }
-        else {
-            // logab = value = 1/logba; example if logab=2 then logba=?
-            let value = myMath.randomInteger(2, 20);
-            let valueRawString;
-            if (Math.random() < 0.5) {
-                valueRawString = value;
                 this.setState({
-                    correctAnswer: 1 / value,
-                    correctAnswerIsFraction: true,
-                    correctNumerator: 1,
-                    correctDenominator: value,
-                    correctAnswerSign:'',
-                });
-            } else {
-                valueRawString = `{1 \\over ${value}}`;
-                this.setState({
-                    correctAnswer: value,
-                    correctAnswerIsFraction: false,
+                    beforeBlank: 'Your Answer: ',
+                    correctAnswer: newP / newP0,
+                    correctAnswerIsFraction: Number.isInteger(newP / newP0) ? false : true,
+                    correctDenominator: Math.abs(correctDenominator),
+                    correctNumerator: Math.abs(correctNumerator),
+                    correctAnswerSign: correctDenominator * correctNumerator < 0 ? '-' : '',
                 })
-            }
-            this.setState({ beforeBlank: <MathComponent display={false} tex={`\\Large \\log_ba=`} /> });
-            problem = `\\log_ab=${valueRawString}`;
+                problem = `\\log_{${aToTheNewP0}}${aToTheNewP}=?`
+                break;
+            case 5: // logaR1 * logR1R2 * logR2a^p=p; blank=p 
+                let R1 = myMath.randomInteger(20, 99);
+                let R2 = myMath.randomInteger(20, 99);
+
+                this.setState({
+                    beforeBlank: 'Your Answer: ',
+                    correctAnswer: newP,
+                    correctAnswerIsFraction: newPIsFraction,
+                    correctDenominator: newPDenominator,
+                    correctNumerator: newPNumerator,
+                    correctAnswerSign: newP < 0 ? '-' : '',
+                })
+                problem = `(\\log_{${a}}${R1})(\\log_{${R1}}${R2})\\log_{${R2}}${aToTheNewP}=?`;
+                break;
+            case 6: // logab = value = 1/logba; example if logab=2 then logba=?
+                let value = myMath.randomInteger(2, 20);
+                let valueRawString;
+                if (Math.random() < 0.5) {
+                    valueRawString = value;
+                    this.setState({
+                        correctAnswer: 1 / value,
+                        correctAnswerIsFraction: true,
+                        correctNumerator: 1,
+                        correctDenominator: value,
+                        correctAnswerSign: '',
+                    });
+                } else {
+                    valueRawString = `{1 \\over ${value}}`;
+                    this.setState({
+                        correctAnswer: value,
+                        correctAnswerIsFraction: false,
+                    })
+                }
+                this.setState({ beforeBlank: <MathComponent display={false} tex={`\\Large \\log_ba=`} /> });
+                problem = `\\log_ab=${valueRawString}`;
+                break;
+            default:
+                console.log('formularID=' + formulaID);
+                break;
         }
+
         return <MathComponent display={false} tex={'\\Large' + problem} />
     }
 
