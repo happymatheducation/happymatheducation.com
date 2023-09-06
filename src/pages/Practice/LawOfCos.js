@@ -140,6 +140,12 @@ class LawOfCos extends Component {
             givens += '\\cos ' + vertexNames[k] + '= ' + myMath.fractionToTex(anglesCos[k]) + '.~';
             asking = vertexNames[i] + vertexNames[j];
             correctAnswer = sides[k];
+            this.setState({
+                correctAnswerIsFraction: false,
+                correctAnswerSign: '',
+                correctNumerator: '',
+                correctDenominator: '',
+            })
         }
 
         this.setState({
@@ -177,15 +183,8 @@ class LawOfCos extends Component {
             userNumerator: '',
             userAnswer: '',
             userAnswerIsFraction: null,
-
-            correctAnswerIsFraction: false,
-            correctNumerator: '',
-            correctDenominator: '',
-            correctAnswer: '',
-            correctAnswerSign: '',
-
-            beforeBlank: '',
         });
+
         if (window.innerWidth <= 800) { }
         else { this.answerForm.current.focus(); }
         document.body.scrollTop = 0; // For Safari
