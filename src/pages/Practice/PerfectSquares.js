@@ -54,7 +54,7 @@ class PerfectSquares extends Component {
             if (currentPrimeFactorization.power === 1) {
                 hintString += prime;
             } else {
-                hintString += prime + '^' + power;
+                hintString += prime + '^{' + power + '}';
             }
             if (i !== primeFactorization.length - 1) {
                 hintString += '\\times';
