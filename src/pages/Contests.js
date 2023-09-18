@@ -111,6 +111,118 @@ function Contests() {
             <tr><td> 1996 </td><td> &asymp; 23 </td><td> &asymp; 31 </td><td> 43 </td><td> 49 </td></tr>
         </tbody>
     </table>;
+    let AMC10ACutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
+        <thead>
+            <tr>
+                <th> Year </th>
+                <th> AIME floor </th>
+                <th> Distinction <br /> (Top 5%) </th>
+                <th> Distinguished Honor Roll <br /> (Top 1%) </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td> 2022 </td><td> 93 </td><td> 100.5 </td><td> 121.5 </td></tr>
+            <tr><td> 2021Fall </td><td> 96 </td><td> 100.5 </td><td> 117 </td></tr>
+            <tr><td> 2021Spring </td><td> 103.5 </td><td> 112.5 </td><td> 132 </td></tr>
+            <tr><td> 2020 </td><td> 103.5 </td><td> 105 </td><td> 124.5 </td></tr>
+            <tr><td> 2019 </td><td> 96 </td><td> 103.5 </td><td> 123 </td></tr>
+            <tr><td> 2018 </td><td> 111 </td><td> 100.5 </td><td> 127.5 </td></tr>
+            <tr><td> 2017 </td><td> 112.5 </td><td> 112.5 </td><td> 127.5 </td></tr>
+            <tr><td> 2016 </td><td> 110 </td><td> NA </td><td> 120 </td></tr>
+            <tr><td> 2015 </td><td> 106.5 </td><td> NA </td><td> 115.5 </td></tr>
+            <tr><td> 2014 </td><td> 120 </td><td> NA </td><td> 132 </td></tr>
+            <tr><td> 2013 </td><td> 108 </td><td> NA </td><td> 117 </td></tr>
+            <tr><td> 2012 </td><td> 115.5 </td><td> NA </td><td> 121.5 </td></tr>
+            <tr><td> 2011 </td><td> 117 </td><td> 117 </td><td> 129 </td></tr>
+            <tr><td> 2010 </td><td> 118.5 </td><td> 118.5 </td><td> 121.5 </td></tr>
+            <tr><td> 2009 </td><td> 120 </td><td> 120 </td><td> 133.5 </td></tr>
+            <tr><td> 2008 </td><td> 117 </td><td> 100.5 </td><td> 127.5 </td></tr>
+        </tbody>
+    </table>;
+    let AMC10BCutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
+        <thead>
+            <tr>
+                <th> Year </th>
+                <th> AIME floor </th>
+                <th> Distinction <br /> (Top 5%) </th>
+                <th> Distinguished Honor Roll <br /> (Top 1%) </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td> 2022 </td><td> 94.5 </td><td> 100.5 </td><td> 114 </td></tr>
+            <tr><td> 2021Fall </td><td> 96 </td><td> 100.5 </td><td> 120 </td></tr>
+            <tr><td> 2021Spring </td><td> 102 </td><td> 108 </td><td> 126 </td></tr>
+            <tr><td> 2020 </td><td> 102 </td><td> 103.5 </td><td> 120 </td></tr>
+            <tr><td> 2019 </td><td> 102 </td><td> 108 </td><td> 121.5 </td></tr>
+            <tr><td> 2018 </td><td> 108 </td><td> 97.5 </td><td> 123 </td></tr>
+            <tr><td> 2017 </td><td> 120 </td><td> 120 </td><td> 136.5 </td></tr>
+            <tr><td> 2016 </td><td> 110 </td><td> NA </td><td> 124.5 </td></tr>
+            <tr><td> 2015 </td><td> 120 </td><td> NA </td><td> 132 </td></tr>
+            <tr><td> 2014 </td><td> 120 </td><td> NA </td><td> 132 </td></tr>
+            <tr><td> 2013 </td><td> 120 </td><td> NA </td><td> 129 </td></tr>
+            <tr><td> 2012 </td><td> 120 </td><td> NA </td><td> 133.5 </td></tr>
+            <tr><td> 2011 </td><td> 117 </td><td> 117 </td><td> 133.5 </td></tr>
+            <tr><td> 2010 </td><td> 118.5 </td><td> 118.5 </td><td> 124.5 </td></tr>
+            <tr><td> 2009 </td><td> 120 </td><td> 124.5 </td><td> 141 </td></tr>
+            <tr><td> 2008 </td><td> 120 </td><td> 100.5 </td><td> 127.5 </td></tr>
+        </tbody>
+    </table>;
+    let AMC12ACutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
+        <thead>
+            <tr>
+                <th> Year </th>
+                <th> AIME floor </th>
+                <th> Distinction <br /> (Top 5%) </th>
+                <th> Distinguished Honor Roll <br /> (Top 1%) </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td> 2022 </td><td> 85.5 </td><td> 106.5 </td><td> 126 </td></tr>
+            <tr><td> 2021Fall </td><td> 91.5 </td><td> 111 </td><td> 130.5 </td></tr>
+            <tr><td> 2021Spring </td><td> 93 </td><td> 114 </td><td> 133.5 </td></tr>
+            <tr><td> 2020 </td><td> 87 </td><td> 100.5 </td><td> 123 </td></tr>
+            <tr><td> 2019 </td><td> 84 </td><td> NA </td><td> 121.5 </td></tr>
+            <tr><td> 2018 </td><td> 93 </td><td> NA </td><td> 120 </td></tr>
+            <tr><td> 2017 </td><td> 96 </td><td> 96 </td><td> 115.5 </td></tr>
+            <tr><td> 2016 </td><td> 93 </td><td> NA </td><td> 111 </td></tr>
+            <tr><td> 2015 </td><td> 99 </td><td> NA </td><td> 117 </td></tr>
+            <tr><td> 2014 </td><td> 93 </td><td> NA </td><td> 109.5 </td></tr>
+            <tr><td> 2013 </td><td> 88.5 </td><td> NA </td><td> 106.5 </td></tr>
+            <tr><td> 2012 </td><td> 94.5 </td><td> NA </td><td> 109.5 </td></tr>
+            <tr><td> 2011 </td><td> 93 </td><td> 92 </td><td> 112.5 </td></tr>
+            <tr><td> 2010 </td><td> 88.5 </td><td> 88.5 </td><td> 108 </td></tr>
+            <tr><td> 2009 </td><td> 97.5 </td><td> 100.5 </td><td> 117 </td></tr>
+            <tr><td> 2008 </td><td> 97.5 </td><td> 97.5 </td><td> 120 </td></tr>
+        </tbody>
+    </table>;
+    let AMC12BCutoffTable = <table className='cutoffsTable' style={{ display: 'none' }}>
+        <thead>
+            <tr>
+                <th> Year </th>
+                <th> AIME floor </th>
+                <th> Distinction <br /> (Top 5%) </th>
+                <th> Distinguished Honor Roll <br /> (Top 1%) </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td> 2022 </td><td> 81 </td><td> 105 </td><td> 129 </td></tr>
+            <tr><td> 2021Fall </td><td> 84 </td><td> 103.5 </td><td> 130.5 </td></tr>
+            <tr><td> 2021Spring </td><td> 91.5 </td><td> 109.5 </td><td> 132 </td></tr>
+            <tr><td> 2020 </td><td> 87 </td><td> 97.5 </td><td> 120 </td></tr>
+            <tr><td> 2019 </td><td> 94.5 </td><td> NA </td><td> 123 </td></tr>
+            <tr><td> 2018 </td><td> 99 </td><td> NA </td><td> 126 </td></tr>
+            <tr><td> 2017 </td><td> 100 </td><td> 100.5 </td><td> 129 </td></tr>
+            <tr><td> 2016 </td><td> 100.5 </td><td> NA </td><td> 127.5 </td></tr>
+            <tr><td> 2015 </td><td> 100.5 </td><td> NA </td><td> 126 </td></tr>
+            <tr><td> 2014 </td><td> 100.5 </td><td> NA </td><td> 121.5 </td></tr>
+            <tr><td> 2013 </td><td> 93 </td><td> NA </td><td> 108 </td></tr>
+            <tr><td> 2012 </td><td> 99 </td><td> NA </td><td> 114 </td></tr>
+            <tr><td> 2011 </td><td> 97.5 </td><td> 92 </td><td> 121.5 </td></tr>
+            <tr><td> 2010 </td><td> 88.5 </td><td> 88.5 </td><td> 108 </td></tr>
+            <tr><td> 2009 </td><td> 100 </td><td> 108 </td><td> 124.5 </td></tr>
+            <tr><td> 2008 </td><td> 97.5 </td><td> 97.5 </td><td> 120 </td></tr>
+        </tbody>
+    </table>;
 
     return (
         <>
@@ -244,7 +356,21 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a> |
-                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a> <br />
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Paper A Cutoffs</button>
+                        {AMC10ACutoffTable} | 
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Paper B Cutoffs</button><br />
+                        {AMC10BCutoffTable}
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a> |
@@ -380,7 +506,21 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a> |
-                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a> <br />
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a>  |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Paper A Cutoffs</button>
+                        {AMC10ACutoffTable} |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Paper B Cutoffs</button><br />
+                        {AMC10BCutoffTable}
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CIMC</a> |
@@ -523,7 +663,21 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a> |
-                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a> <br />
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Paper A Cutoffs</button>
+                        {AMC12ACutoffTable} |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Paper B Cutoffs</button><br />
+                        {AMC12BCutoffTable}
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a> |
@@ -677,7 +831,21 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a> |
-                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a><br />
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a> |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Paper A Cutoffs</button>
+                        {AMC12ACutoffTable} |
+                        <button className='cutoffsButton'
+                            onClick={e => {
+                                let theTable = e.target.nextElementSibling;
+                                while (theTable.tagName !== 'TABLE') { theTable = theTable.nextElementSibling }
+                                if (theTable.style.display === 'none') { theTable.style.display = 'block' } else { theTable.style.display = 'none' };
+                            }}>Paper B Cutoffs</button><br />
+                        {AMC12BCutoffTable}
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/csimc.html'>CSMC</a> |
