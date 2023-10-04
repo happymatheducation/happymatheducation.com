@@ -344,6 +344,9 @@ function Practice() {
                     <a href='/Practice/SimpleMultiplication'>Simple Multiplication</a>
                 </div>
                 <div className='practicediv'>
+                    <a href='/Practice/SimpleDivision'>Simple Division</a>
+                </div>
+                <div className='practicediv'>
                     <a href='/Practice/OneStepEquation'>One Step Equation</a>
                 </div>
                 <div className='practicediv' style={{ display: 'none' }}>
