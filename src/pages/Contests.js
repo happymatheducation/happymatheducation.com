@@ -115,9 +115,9 @@ function Contests() {
         <thead>
             <tr>
                 <th> Year </th>
-                <th> AIME floor </th>
+                <th> AIME <br /> floor </th>
                 <th> Distinction <br /> (Top 5%) </th>
-                <th> Distinguished Honor Roll <br /> (Top 1%) </th>
+                <th> Distinguished <br /> Honor Roll <br /> (Top 1%) </th>
             </tr>
         </thead>
         <tbody>
@@ -143,9 +143,9 @@ function Contests() {
         <thead>
             <tr>
                 <th> Year </th>
-                <th> AIME floor </th>
+                <th> AIME <br /> floor </th>
                 <th> Distinction <br /> (Top 5%) </th>
-                <th> Distinguished Honor Roll <br /> (Top 1%) </th>
+                <th> Distinguished <br /> Honor Roll <br /> (Top 1%) </th>
             </tr>
         </thead>
         <tbody>
@@ -171,9 +171,9 @@ function Contests() {
         <thead>
             <tr>
                 <th> Year </th>
-                <th> AIME floor </th>
+                <th> AIME <br /> floor </th>
                 <th> Distinction <br /> (Top 5%) </th>
-                <th> Distinguished Honor Roll <br /> (Top 1%) </th>
+                <th> Distinguished <br /> Honor Roll <br /> (Top 1%) </th>
             </tr>
         </thead>
         <tbody>
@@ -199,9 +199,9 @@ function Contests() {
         <thead>
             <tr>
                 <th> Year </th>
-                <th> AIME floor </th>
+                <th> AIME <br /> floor </th>
                 <th> Distinction <br /> (Top 5%) </th>
-                <th> Distinguished Honor Roll <br /> (Top 1%) </th>
+                <th> Distinguished <br /> Honor Roll <br /> (Top 1%) </th>
             </tr>
         </thead>
         <tbody>
