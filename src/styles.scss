@@ -600,6 +600,17 @@ body {
     transition: max-height 0.4s ease-out;
 }
 
+.contestContent {
+    padding: 3px;
+    //    background-color: #F4F4F4;
+    font-size: max(1.4vw, 14px);
+    line-height: max(2.8vw, 28px);
+    max-height: 0;
+    white-space: pre-wrap;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
 .practicecollapsible {
     max-height: 100%;
 }

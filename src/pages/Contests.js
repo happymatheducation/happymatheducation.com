@@ -242,7 +242,7 @@ function Contests() {
                     }
                 }
             }>Grade 7</button>
-            <div className="content"> {/* Grade 7 */ }
+            <div className="contestContent"> {/* Grade 7 */ }
 
                 <div className='container'>
                     <h3>
@@ -293,7 +293,7 @@ function Contests() {
                     }
                 }
             }>Grade 8</button>
-            <div className="content">  {/* Grade 8 */}
+            <div className="contestContent">  {/* Grade 8 */}
 
                 <div className='container'>
                     <h3>
@@ -342,7 +342,7 @@ function Contests() {
                     }
                 }
             }>Grade 9</button>
-            <div className="content">  {/* Grade 9 */}
+            <div className="contestContent">  {/* Grade 9 */}
 
                 <div className='container'>
                     <h3>
@@ -493,7 +493,7 @@ function Contests() {
                     }
                 }
             }>Grade 10</button>
-            <div className="content">  {/* Grade 10 */}
+            <div className="contestContent">  {/* Grade 10 */}
 
                 <div className='container'>
                     <h3>
@@ -643,7 +643,7 @@ function Contests() {
                     }
                 }
             }>Grade 11</button>
-            <div className="content">  {/* Grade 11 */}
+            <div className="contestContent">  {/* Grade 11 */}
 
                 <div className='container'>
                     <h3>
@@ -812,7 +812,7 @@ function Contests() {
                     }
                 }
             }>Grade 12</button>
-            <div className="content"> {/* Grade 12 */}
+            <div className="contestContent"> {/* Grade 12 */}
 
                 <div className='container'>
                     <h3>
