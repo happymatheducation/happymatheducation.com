@@ -356,7 +356,8 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a> |
-                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a> |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a> 
+                        <br />
                         <button className='cutoffsButton'
                             onClick={e => {
                                 let theTable = e.target.nextElementSibling;
@@ -506,7 +507,8 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 10</a> |
-                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a>  |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_10_Problems_and_Solutions'>Papers</a>
+                        <br />
                         <button className='cutoffsButton'
                             onClick={e => {
                                 let theTable = e.target.nextElementSibling;
@@ -663,7 +665,8 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a> |
-                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a> |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a> 
+                        <br />
                         <button className='cutoffsButton'
                             onClick={e => {
                                 let theTable = e.target.nextElementSibling;
@@ -831,7 +834,8 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-low"></i>November: </span>
                         <a href='https://www.maa.org/math-competitions/amc-1012'>AMC 12</a> |
-                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a> |
+                        <a href='https://artofproblemsolving.com/wiki/index.php/AMC_12_Problems_and_Solutions'>Papers</a> 
+                        <br />
                         <button className='cutoffsButton'
                             onClick={e => {
                                 let theTable = e.target.nextElementSibling;
