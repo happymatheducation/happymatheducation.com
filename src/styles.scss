@@ -547,6 +547,14 @@ body {
             border-bottom: max(0.1vw, 1px) solid black;
         }
     }
+
+    .inlineFraction {
+        display: inline;
+        margin: auto;
+        .numerator {
+            border-bottom: max(0.1vw, 1px) solid black;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {
