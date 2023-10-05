@@ -58,6 +58,8 @@ const FractionReduction = lazy(() => import("./pages/Practice/FractionReduction.
 const FractionAddition = lazy(() => import("./pages/Practice/FractionAddition.js"))
 const Average = lazy(() => import("./pages/Practice/Average.js"))
 const RoundingSquareRoot = lazy(() => import("./pages/Practice/RoundingSquareRoot.js"))
+const GreatestCommonDivisor = lazy(() => import("./pages/Practice/GreatestCommonDivisor.js"))
+const LeaseCommonMultiple = lazy(() => import("./pages/Practice/LeaseCommonMultiple.js"))
 const Adventure = lazy(() => import("./pages/Practice/Adventure.js"))
 
 export function backToTop(mybutton) {
@@ -198,6 +200,8 @@ const App = () => {
                         <Route exact path='/Practice/FractionAddition' element={<FractionAddition />} />
                         <Route exact path='/Practice/Average' element={<Average />} />
                         <Route exact path='/Practice/RoundingSquareRoot' element={<RoundingSquareRoot />} />
+                        <Route exact path='/Practice/GreatestCommonDivisor' element={<GreatestCommonDivisor />} />
+                        <Route exact path='/Practice/LeaseCommonMultiple' element={<LeaseCommonMultiple />} />
                         <Route exact path='/Practice/Adventure' element={<Adventure />} />
                         <Route exact path='/*' element={<Notfound />} />
                     </Routes>

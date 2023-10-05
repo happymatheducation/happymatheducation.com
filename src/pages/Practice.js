@@ -361,6 +361,12 @@ function Practice() {
                 <div className='practicediv'>
                     <a href='/Practice/RoundingSquareRoot'>Rounding Square Root</a>
                 </div>
+                <div className='practicediv'>
+                    <a href='/Practice/GreatestCommonDivisor'>Greatest Common Divisor</a>
+                </div>
+                <div className='practicediv'>
+                    <a href='/Practice/LeaseCommonMultiple'>Lease Common Multiple</a>
+                </div>
                 <div className='practicediv' style={{ display: 'none' }}>
                     Grade 10: <a href='/Practice/Adventure'>Adventure</a>
                 </div>
