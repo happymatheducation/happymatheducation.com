@@ -3,7 +3,7 @@ import InlineBlanks from "../../components/InlineBlanks";
 import { MathComponent } from "mathjax-react";
 import myMath from "../../assets/myMath";
 
-class FractionReduction extends Component {
+class FractionAddition extends Component {
 
     constructor() {
         super();
@@ -19,22 +19,28 @@ class FractionReduction extends Component {
     };
 
     generateQuestion = () => {
-        let denominator = 1;
-        let numerator = 1;
-        while (numerator % denominator === 0) {
-            denominator = myMath.randomInteger(2, 10);
-            numerator = myMath.randomInteger(2, 10);
-        }
-        let factor = myMath.randomInteger(2, 10);
-        denominator = denominator * factor;
-        numerator = numerator * factor;
+        let correctNumerator = 1;
+        let correctDenominator = 1;
+        let question = '';
+        let denominator1, denominator2, numerator1, numerator2;
+        while (correctNumerator === correctDenominator) {
+            denominator1 = myMath.randomInteger(2, 10);
+            numerator1 = myMath.randomInteger(1, denominator1 - 1);
+            [numerator1, denominator1] = myMath.reduceFraction(numerator1, denominator1);
+            denominator2 = myMath.randomInteger(2, 10);
+            numerator2 = myMath.randomInteger(1, denominator2 - 1);
+            [numerator2, denominator2] = myMath.reduceFraction(numerator2, denominator2);
 
-        let [reducedNumerator, reducedDenominator] = myMath.reduceFraction(numerator, denominator);
-        let question = '{' + numerator + '\\over' + denominator + '} =~';
+            question = '{' + numerator1 + '\\over' + denominator1 + '} + { ' + numerator2 + '\\over' + denominator2 + '} =~';
+
+            correctDenominator = denominator1 * denominator2;
+            correctNumerator = numerator1 * denominator2 + numerator2 * denominator1;
+        }
+        [correctNumerator, correctDenominator] = myMath.reduceFraction(correctNumerator, correctDenominator);
 
         this.setState({
-            correctNumerator: reducedNumerator,
-            correctDenominator: reducedDenominator,
+            correctNumerator: correctNumerator,
+            correctDenominator: correctDenominator,
             question: question,
         });
 
@@ -92,4 +98,4 @@ class FractionReduction extends Component {
     }
 }
 
-export default FractionReduction;
+export default FractionAddition;

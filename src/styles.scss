@@ -549,10 +549,10 @@ body {
     }
 
     .inlineFraction {
-        display: inline;
-        margin: auto;
+        display: inline-block;
+        vertical-align: middle;
         .numerator {
-            border-bottom: max(0.1vw, 1px) solid black;
+            border-bottom: max(0.2vw, 2px) solid black;
         }
     }
 }
