@@ -358,6 +358,9 @@ function Practice() {
                 <div className='practicediv'>
                     <a href='/Practice/Average'>Average</a>
                 </div>
+                <div className='practicediv'>
+                    <a href='/Practice/RoundingSquareRoot'>Rounding Square Root</a>
+                </div>
                 <div className='practicediv' style={{ display: 'none' }}>
                     Grade 10: <a href='/Practice/Adventure'>Adventure</a>
                 </div>

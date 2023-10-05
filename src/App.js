@@ -57,6 +57,7 @@ const OneStepEquation = lazy(() => import("./pages/Practice/OneStepEquation.js")
 const FractionReduction = lazy(() => import("./pages/Practice/FractionReduction.js"))
 const FractionAddition = lazy(() => import("./pages/Practice/FractionAddition.js"))
 const Average = lazy(() => import("./pages/Practice/Average.js"))
+const RoundingSquareRoot = lazy(() => import("./pages/Practice/RoundingSquareRoot.js"))
 const Adventure = lazy(() => import("./pages/Practice/Adventure.js"))
 
 export function backToTop(mybutton) {
@@ -196,6 +197,7 @@ const App = () => {
                         <Route exact path='/Practice/FractionReduction' element={<FractionReduction />} />
                         <Route exact path='/Practice/FractionAddition' element={<FractionAddition />} />
                         <Route exact path='/Practice/Average' element={<Average />} />
+                        <Route exact path='/Practice/RoundingSquareRoot' element={<RoundingSquareRoot />} />
                         <Route exact path='/Practice/Adventure' element={<Adventure />} />
                         <Route exact path='/*' element={<Notfound />} />
                     </Routes>
