@@ -370,6 +370,9 @@ function Practice() {
                 <div className='practicediv'>
                     <a href='/Practice/MutidigitTimesOnedigit'>Muti-digit Times One-digit</a>
                 </div>
+                <div className='practicediv'>
+                    <a href='/Practice/LongDivision'>Long Division</a>
+                </div>
                 <div className='practicediv' style={{ display: 'none' }}>
                     Grade 10: <a href='/Practice/Adventure'>Adventure</a>
                 </div>
