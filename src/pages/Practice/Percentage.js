@@ -28,7 +28,7 @@ class Percentage extends Component {
 
         let [reducedNum, reducedDenom] = myMath.reduceFraction(p, 100);
         let total = reducedDenom * myMath.randomInteger(1, 10);
-        let part = total / 100 * p;
+        let part = Math.round(total / 100 * p);
 
         this.setState({ p: p, total: total, part: part });
 
