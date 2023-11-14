@@ -18,8 +18,8 @@ class Average extends Component {
 
     generateQuestion = () => {
 
-        const n = myMath.randomInteger(2, 7);
-        let sum = myMath.randomInteger(20, 100);
+        const n = myMath.randomInteger(2, 5);
+        let sum = myMath.randomInteger(10, 25);
         const avg = Math.floor(sum / n);
         sum = avg * n;
 
