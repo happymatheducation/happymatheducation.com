@@ -21,13 +21,12 @@ class Percentage extends Component {
     generateQuestion = () => {
 
         // part is p % of total;
-
         let p = myMath.randomInteger(1, 100);
-        if (p > 10 && p < 30) { p = 5 * Math.round(p / 5) }
-        else if (p >= 30) { p = 10 * Math.round(p / 10) }
+        if (p > 10) { p = 10 * Math.round(p / 10) }
 
         let [reducedNum, reducedDenom] = myMath.reduceFraction(p, 100);
         let total = reducedDenom * myMath.randomInteger(1, 10);
+        if (total > 10) { total = 10 * Math.round(total / 10) };
         let part = Math.round(total / 100 * p);
 
         this.setState({ p: p, total: total, part: part });
