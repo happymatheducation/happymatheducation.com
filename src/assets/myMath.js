@@ -315,6 +315,16 @@ const myMath = {
         }
     },
 
+    findAllFactors(n) {
+        let factors = [];
+        for (let i = 1; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                factors.push(i);
+                factors.push(Math.round(n / i));
+            }
+        }
+        return factors;
+    },
 };
 
 export default myMath;
