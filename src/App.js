@@ -64,6 +64,7 @@ const MutidigitTimesOnedigit = lazy(() => import("./pages/Practice/MutidigitTime
 const LongDivision = lazy(() => import("./pages/Practice/LongDivision.js"))
 const TwoDigitTimesTwoDigit = lazy(() => import("./pages/Practice/TwoDigitTimesTwoDigit.js"))
 const Percentage = lazy(() => import("./pages/Practice/Percentage.js"))
+const SimpleLinearEquation = lazy(() => import("./pages/Practice/SimpleLinearEquation.js"))
 const Adventure = lazy(() => import("./pages/Practice/Adventure.js"))
 
 export function backToTop(mybutton) {
@@ -210,6 +211,7 @@ const App = () => {
                         <Route exact path='/Practice/LongDivision' element={<LongDivision />} />
                         <Route exact path='/Practice/TwoDigitTimesTwoDigit' element={<TwoDigitTimesTwoDigit />} />
                         <Route exact path='/Practice/Percentage' element={<Percentage />} />
+                        <Route exact path='/Practice/SimpleLinearEquation' element={<SimpleLinearEquation />} />
                         <Route exact path='/Practice/Adventure' element={<Adventure />} />
                         <Route exact path='/*' element={<Notfound />} />
                     </Routes>
