@@ -382,6 +382,9 @@ function Practice() {
                 <div className='practicediv'>
                     <a href='/Practice/SimpleLinearEquation'>Simple Linear Equation</a>
                 </div>
+                <div className='practicediv'>
+                    <a href='/Practice/SimpleSystemOfLinearEquations'>Simple System Of Linear Equations</a>
+                </div>
                 <div className='practicediv' style={{ display: 'none' }}>
                     Grade 10: <a href='/Practice/Adventure'>Adventure</a>
                 </div>
