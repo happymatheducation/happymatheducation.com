@@ -3,7 +3,7 @@ import InlineBlanks from "../../components/InlineBlanks";
 import { MathComponent } from "mathjax-react";
 import myMath from "../../assets/myMath";
 
-class FractionAddition extends Component {
+class FractionAdditionAndSubtraction extends Component {
 
     constructor() {
         super();
@@ -19,11 +19,11 @@ class FractionAddition extends Component {
     };
 
     generateQuestion = () => {
-        let correctNumerator = 1;
-        let correctDenominator = 1;
+        let sumNumerator = 1;
+        let sumDenominator = 1;
         let question = '';
         let denominator1, denominator2, numerator1, numerator2;
-        while (correctNumerator === correctDenominator) {
+        while (sumNumerator === sumDenominator) {
             denominator1 = myMath.randomInteger(2, 10);
             numerator1 = myMath.randomInteger(1, denominator1 - 1);
             [numerator1, denominator1] = myMath.reduceFraction(numerator1, denominator1);
@@ -31,18 +31,27 @@ class FractionAddition extends Component {
             numerator2 = myMath.randomInteger(1, denominator2 - 1);
             [numerator2, denominator2] = myMath.reduceFraction(numerator2, denominator2);
 
-            question = '{' + numerator1 + '\\over' + denominator1 + '} + { ' + numerator2 + '\\over' + denominator2 + '} =~';
-
-            correctDenominator = denominator1 * denominator2;
-            correctNumerator = numerator1 * denominator2 + numerator2 * denominator1;
+            sumDenominator = denominator1 * denominator2;
+            sumNumerator = numerator1 * denominator2 + numerator2 * denominator1;
         }
-        [correctNumerator, correctDenominator] = myMath.reduceFraction(correctNumerator, correctDenominator);
-
-        this.setState({
-            correctNumerator: correctNumerator,
-            correctDenominator: correctDenominator,
-            question: question,
-        });
+        [sumNumerator, sumDenominator] = myMath.reduceFraction(sumNumerator, sumDenominator);
+        
+        if (Math.random()>0.5) 
+        {
+            question = '{' + numerator1 + '\\over' + denominator1 + '} + { ' + numerator2 + '\\over' + denominator2 + '} =~';
+            this.setState({
+                correctNumerator: sumNumerator,
+                correctDenominator: sumDenominator,
+                question: question,
+            });
+        } else {
+            question = '{' + sumNumerator + '\\over' + sumDenominator + '} - { ' + numerator2 + '\\over' + denominator2 + '} =~';
+            this.setState({
+                correctNumerator: numerator1,
+                correctDenominator: denominator1,
+                question: question,
+            });
+        }
 
         return null;
     }
@@ -98,4 +107,4 @@ class FractionAddition extends Component {
     }
 }
 
-export default FractionAddition;
+export default FractionAdditionAndSubtraction;

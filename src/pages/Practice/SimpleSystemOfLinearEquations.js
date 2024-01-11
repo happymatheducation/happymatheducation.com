@@ -42,7 +42,7 @@ class SimpleSystemOfLinearEquations extends Component {
         let c = myMath.randomInteger(1, 5);
         let d = myMath.randomInteger(1, 3);
         d = Math.random() > 0.5 ? d : -d;
-        if (a === c && b === d) { d=-d }
+        if (a*d === b*c) { d=-d }
 
         let p = a * x + b * y;
         let q = c * x + d * y;

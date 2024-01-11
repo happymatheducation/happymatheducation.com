@@ -55,7 +55,7 @@ const SimpleMultiplication = lazy(() => import("./pages/Practice/SimpleMultiplic
 const SimpleDivision = lazy(() => import("./pages/Practice/SimpleDivision.js"))
 const OneStepEquation = lazy(() => import("./pages/Practice/OneStepEquation.js"))
 const FractionReduction = lazy(() => import("./pages/Practice/FractionReduction.js"))
-const FractionAddition = lazy(() => import("./pages/Practice/FractionAddition.js"))
+const FractionAdditionAndSubtraction = lazy(() => import("./pages/Practice/FractionAdditionAndSubtraction.js"))
 const Average = lazy(() => import("./pages/Practice/Average.js"))
 const RoundingSquareRoot = lazy(() => import("./pages/Practice/RoundingSquareRoot.js"))
 const GreatestCommonDivisor = lazy(() => import("./pages/Practice/GreatestCommonDivisor.js"))
@@ -66,6 +66,7 @@ const TwoDigitTimesTwoDigit = lazy(() => import("./pages/Practice/TwoDigitTimesT
 const Percentage = lazy(() => import("./pages/Practice/Percentage.js"))
 const SimpleLinearEquation = lazy(() => import("./pages/Practice/SimpleLinearEquation.js"))
 const SimpleSystemOfLinearEquations = lazy(() => import("./pages/Practice/SimpleSystemOfLinearEquations.js"))
+const FractionMultiplicationAndDivision = lazy(() => import("./pages/Practice/FractionMultiplicationAndDivision.js"))
 const Adventure = lazy(() => import("./pages/Practice/Adventure.js"))
 
 export function backToTop(mybutton) {
@@ -203,7 +204,7 @@ const App = () => {
                         <Route exact path='/Practice/SimpleDivision' element={<SimpleDivision />} />
                         <Route exact path='/Practice/OneStepEquation' element={<OneStepEquation />} />
                         <Route exact path='/Practice/FractionReduction' element={<FractionReduction />} />
-                        <Route exact path='/Practice/FractionAddition' element={<FractionAddition />} />
+                        <Route exact path='/Practice/FractionAdditionAndSubtraction' element={<FractionAdditionAndSubtraction />} />
                         <Route exact path='/Practice/Average' element={<Average />} />
                         <Route exact path='/Practice/RoundingSquareRoot' element={<RoundingSquareRoot />} />
                         <Route exact path='/Practice/GreatestCommonDivisor' element={<GreatestCommonDivisor />} />
@@ -214,6 +215,7 @@ const App = () => {
                         <Route exact path='/Practice/Percentage' element={<Percentage />} />
                         <Route exact path='/Practice/SimpleLinearEquation' element={<SimpleLinearEquation />} />
                         <Route exact path='/Practice/SimpleSystemOfLinearEquations' element={<SimpleSystemOfLinearEquations />} />
+                        <Route exact path='/Practice/FractionMultiplicationAndDivision' element={<FractionMultiplicationAndDivision />} />
                         <Route exact path='/Practice/Adventure' element={<Adventure />} />
                         <Route exact path='/*' element={<Notfound />} />
                     </Routes>

@@ -353,7 +353,7 @@ function Practice() {
                     <a href='/Practice/FractionReduction'>Fraction Reduction</a>
                 </div>
                 <div className='practicediv'>
-                    <a href='/Practice/FractionAddition'>Fraction Addition</a>
+                    <a href='/Practice/FractionAdditionAndSubtraction'>Fraction Addition and Subtraction</a>
                 </div>
                 <div className='practicediv'>
                     <a href='/Practice/Average'>Average</a>
@@ -384,6 +384,9 @@ function Practice() {
                 </div>
                 <div className='practicediv'>
                     <a href='/Practice/SimpleSystemOfLinearEquations'>Simple System Of Linear Equations</a>
+                </div>
+                <div className='practicediv'>
+                    <a href='/Practice/FractionMultiplicationAndDivision'>Fraction Multiplication And Division</a>
                 </div>
                 <div className='practicediv' style={{ display: 'none' }}>
                     Grade 10: <a href='/Practice/Adventure'>Adventure</a>
