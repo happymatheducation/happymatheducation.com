@@ -388,6 +388,9 @@ function Practice() {
                 <div className='practicediv'>
                     <a href='/Practice/FractionMultiplicationAndDivision'>Fraction Multiplication And Division</a>
                 </div>
+                <div className='practicediv'>
+                    <a href='/Practice/CrossMultiplication'>Cross Multiplication</a>
+                </div>
                 <div className='practicediv' style={{ display: 'none' }}>
                     Grade 10: <a href='/Practice/Adventure'>Adventure</a>
                 </div>

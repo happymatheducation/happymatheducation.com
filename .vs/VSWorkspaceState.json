@@ -4,8 +4,9 @@
     "\\public",
     "\\src",
     "\\src\\components",
-    "\\src\\pages"
+    "\\src\\pages",
+    "\\src\\pages\\Practice"
   ],
-  "SelectedNode": "\\src\\HappyMath 2024Jan-Jun Timetable.png",
+  "SelectedNode": "\\src\\pages\\Practice\\LawOfCos.js",
   "PreviewInSolutionExplorer": false
 }
