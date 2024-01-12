@@ -84,7 +84,7 @@ class FractionAdditionAndSubtraction extends Component {
                 generateQuestion={this.generateQuestion}
                 clearAnswerForm={this.clearAnswerForm}
                 answerForm={(<>
-                    <MathComponent tex={'\\Large x='} display={false}/>
+                    <MathComponent tex={'\\Large x= '} display={false}/>
                     <input type="number" value={this.state.userAnswer} ref={this.answerForm} autoFocus
                         style={{ fontSize: '24px' }}
                         onChange={e => this.setState({ userAnswer: e.target.value })}></input>
