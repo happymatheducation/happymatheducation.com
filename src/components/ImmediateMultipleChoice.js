@@ -26,7 +26,11 @@ class ImmediateMultipleChoice extends Component {
 
     start = () => {
         this.setState({ started: true, currentQuestion: this.props.generateQuestion() });
-        setInterval(() => this.setState({ timeElapsed: this.state.timeElapsed + 1 }), 1000);
+        setInterval(() => {
+            if (!this.state.paused) {
+                this.setState({ timeElapsed: this.state.timeElapsed + 1 })
+            }
+        }, 1000);
     }
 
     checkAnswer = (userChoiceID) => {
