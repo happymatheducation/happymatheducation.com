@@ -18,6 +18,7 @@ class PolynomialInequality extends Component {
     generateQuestion = () => {
         let allRoots = [];
         while (allRoots.length <= 1) {
+            allRoots = [];
             for (let i = 0; i < 10; i++) {
                 if (Math.random() > 0.7) {
                     allRoots.push({ value: i + 1, multiplicity: myMath.randomInteger(1, 10) });
