@@ -325,6 +325,18 @@ const myMath = {
         }
         return factors;
     },
+
+    roots2PolynomialString(allRoots) {
+
+        //allRoots = [{value:1, multiplicity:3}, {value:5, multiplicity:1}]
+        let factoredForm = '';
+
+        for (let i = 0; i < allRoots.length; i++) {
+            let currentRoot = allRoots[i];
+            factoredForm += '(x-' + currentRoot.value + ')' + (currentRoot.multiplicity === 1 ? '' : '^{'+currentRoot.multiplicity+'}');
+        }
+        return factoredForm;
+    },
 };
 
 export default myMath;

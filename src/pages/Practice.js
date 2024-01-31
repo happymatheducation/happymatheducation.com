@@ -224,6 +224,10 @@ function Practice() {
                         <a href={magic_squares_3x3_answers}>Answers</a>
                     </div>
                     <div className='practicediv'>
+                        Polynomial Inequality: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href='/Practice/PolynomialInequality'>App</a>
+                    </div>
+                    <div className='practicediv'>
                         Prime Factorization For Factorials: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href='/Practice/PrimeFactorizationForFactorials'>App</a> |
                         <a href={prime_factoriazation_for_factorials}>pdf</a> |

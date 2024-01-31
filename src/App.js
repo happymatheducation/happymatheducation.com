@@ -48,6 +48,7 @@ const VietasTheorem = lazy(() => import("./pages/Practice/VietasTheorem.js"))
 const AngleChase = lazy(() => import("./pages/Practice/AngleChase"))
 const TrigIdentitiesII = lazy(() => import("./pages/Practice/TrigIdentitiesII"))
 const BinomialTheorem = lazy(() => import("./pages/Practice/BinomialTheorem"))
+const PolynomialInequality = lazy(() => import("./pages/Practice/PolynomialInequality"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -198,6 +199,7 @@ const App = () => {
                         <Route exact path='/Practice/AngleChase' element={<AngleChase />} />
                         <Route exact path='/Practice/TrigIdentitiesII' element={<TrigIdentitiesII />} />
                         <Route exact path='/Practice/BinomialTheorem' element={<BinomialTheorem />} />
+                        <Route exact path='/Practice/PolynomialInequality' element={<PolynomialInequality />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
