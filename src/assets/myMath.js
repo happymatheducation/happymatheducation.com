@@ -337,6 +337,11 @@ const myMath = {
         }
         return factoredForm;
     },
+
+    factorial(n) {
+        if (n <= 1) { return 1 }
+        else { return this.factorial(n-1)*n }
+    }
 };
 
 export default myMath;

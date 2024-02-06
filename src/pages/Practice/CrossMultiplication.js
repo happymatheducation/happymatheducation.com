@@ -3,7 +3,7 @@ import InlineBlanks from "../../components/InlineBlanks";
 import { MathComponent } from "mathjax-react";
 import myMath from "../../assets/myMath";
 
-class FractionAdditionAndSubtraction extends Component {
+class CrossMultiplication extends Component {
 
     constructor() {
         super();
@@ -96,4 +96,4 @@ class FractionAdditionAndSubtraction extends Component {
     }
 }
 
-export default FractionAdditionAndSubtraction;
+export default CrossMultiplication;
