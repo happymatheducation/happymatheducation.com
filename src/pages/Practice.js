@@ -177,6 +177,10 @@ function Practice() {
                     <a href='/Practice/Simple3Dshapes'>App</a>
                 </div>
                 <div className='practicediv'>
+                    SOH CAH TOA: <br />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href='/Practice/SOH_CAH_TOA'>App</a>
+                </div>
+                <div className='practicediv'>
                     Two Line Intersection: <br />&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href={two_line_intersection}>pdf</a> |
                     <a href={two_line_intersection_answers}>Answers</a>

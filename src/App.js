@@ -49,6 +49,7 @@ const AngleChase = lazy(() => import("./pages/Practice/AngleChase"))
 const TrigIdentitiesII = lazy(() => import("./pages/Practice/TrigIdentitiesII"))
 const BinomialTheorem = lazy(() => import("./pages/Practice/BinomialTheorem"))
 const PolynomialInequality = lazy(() => import("./pages/Practice/PolynomialInequality"))
+const SOH_CAH_TOA = lazy(() => import("./pages/Practice/SOH_CAH_TOA"))
 
 const SimpleAddition = lazy(() => import("./pages/Practice/SimpleAddition.js"))
 const SimpleSubtraction = lazy(() => import("./pages/Practice/SimpleSubtraction.js"))
@@ -201,6 +202,7 @@ const App = () => {
                         <Route exact path='/Practice/TrigIdentitiesII' element={<TrigIdentitiesII />} />
                         <Route exact path='/Practice/BinomialTheorem' element={<BinomialTheorem />} />
                         <Route exact path='/Practice/PolynomialInequality' element={<PolynomialInequality />} />
+                        <Route exact path='/Practice/SOH_CAH_TOA' element={<SOH_CAH_TOA />} />
                         
                         <Route exact path='/Practice/SimpleAddition' element={<SimpleAddition />} />
                         <Route exact path='/Practice/SimpleSubtraction' element={<SimpleSubtraction />} />
