@@ -71,6 +71,7 @@ const SimpleSystemOfLinearEquations = lazy(() => import("./pages/Practice/Simple
 const FractionMultiplicationAndDivision = lazy(() => import("./pages/Practice/FractionMultiplicationAndDivision.js"))
 const CrossMultiplication = lazy(() => import("./pages/Practice/CrossMultiplication.js"))
 const BasicCounting = lazy(() => import("./pages/Practice/BasicCounting.js"))
+const LongSubtraction = lazy(() => import("./pages/Practice/LongSubtraction.js"))
 const Adventure = lazy(() => import("./pages/Practice/Adventure.js"))
 
 export function backToTop(mybutton) {
@@ -224,6 +225,7 @@ const App = () => {
                         <Route exact path='/Practice/FractionMultiplicationAndDivision' element={<FractionMultiplicationAndDivision />} />
                         <Route exact path='/Practice/CrossMultiplication' element={<CrossMultiplication />} />
                         <Route exact path='/Practice/BasicCounting' element={<BasicCounting />} />
+                        <Route exact path='/Practice/LongSubtraction' element={<LongSubtraction />} />
                         <Route exact path='/Practice/Adventure' element={<Adventure />} />
                         <Route exact path='/*' element={<Notfound />} />
                     </Routes>
