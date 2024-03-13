@@ -223,6 +223,38 @@ function Contests() {
             <tr><td> 2008 </td><td> 97.5 </td><td> 97.5 </td><td> 120 </td></tr>
         </tbody>
     </table>;
+    let Gauss8AnswerKeys = [
+        { id: 2023, answers: 'BABDC ABADC ABDDD ECDCB DECBA' },
+        { id: 2022, answers: 'EDCDC BDDBE CBCAB CBCCA EDEBB' },
+        { id: 2021, answers: 'CBBBB CDBCA CDEBD EDAAB EAADD' },
+        { id: 2020, answers: 'DEEEA DCBAE AECDB CCCDB BADAD' },
+        { id: 2019, answers: 'EBADE ECCEA CACDD BBDAE ABEED' },
+        { id: 2018, answers: 'CDBCE ABDCB ECABB CDEAD CBEDB' },
+        { id: 2017, answers: 'CAEBB BADDB DDCCE BDEEB CDCDE' },
+        { id: 2016, answers: 'ABCCB DAACC EEDAA BBEDA CDDBB' },
+        { id: 2015, answers: 'AEEBE BBAEC CCBAD DCCDB EBEAE' },
+        { id: 2014, answers: 'DEBDD ACBAD EEAAB BBDDC EEBBD' },
+        { id: 2013, answers: 'DDCBB CCAEB EACDC EDBEE BACBD' },
+        { id: 2012, answers: 'ABDAB EACDB AECBD DBBCE DCCED' },
+        { id: 2011, answers: 'DCEDA BBEAD DACEC CBDDB ACBDE' },
+        { id: 2010, answers: 'ACBAD CBDEE EDBCB CEBAD ABDAB' },
+        { id: 2009, answers: 'BDCBC DEAAA CDAEB DBEBE BDABB' },
+        { id: 2008, answers: 'CDABA EADCE DDBAB CADCD ABDEE' },
+        { id: 2007, answers: 'EBDCA BAEBC EDBCA ADEEB AAECD' },
+        { id: 2006, answers: 'EBABB CACAE CCAED ADACD DBABC' },
+        { id: 2005, answers: 'BACCE CDDBD EEAEB CECAA EDCBA' },
+        { id: 2004, answers: 'BCBAD ADEDE CDBAB DCBAE EACBB' },
+        { id: 2003, answers: 'BAECA DBEEA EBCCB AADAD DDDCC' },
+        { id: 2002, answers: 'EBCED BECAD EDEAC AABED DBEAC' },
+        { id: 2001, answers: 'ABAEC DBADE DBDCC EACEA CAEBD' },
+        { id: 2000, answers: 'BBDEA BACDB CCEAD DCBCE DAEBA' },
+        { id: 1999, answers: 'AEDCB ABBDA DAEDE CBCBD BEEAC' },
+        { id: 1998, answers: 'EADEA CBDAC DBCAE CBDEB EDBCA' }
+    ];
+    let Gauss8Years = [];
+    for (let i = 2023; i >=1998; i--) {
+        Gauss8Years.push(<option value={i} key={i}>{i}</option>);
+    }
 
     return (
         <>
@@ -322,7 +354,24 @@ function Contests() {
 
                         <span><i className="bi bi-thermometer-sun"></i>May: </span>
                         <a href='https://www.cemc.uwaterloo.ca/contests/gauss.html'>Gauss 8</a> |
-                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#gauss'>Papers</a> <br />
+                        <a href='https://www.cemc.uwaterloo.ca/contests/past_contests.html#gauss'>Papers</a> |
+
+                        <select id="YearOfGauss8AnswerKey" onChange={
+                            () => { 
+                                let me = document.getElementById('YearOfGauss8AnswerKey')
+                                if (me.value === 'AnswerKeys') {
+                                    me.nextElementSibling.nextElementSibling.innerHTML = '';
+                                } else {
+                                    let keys = Gauss8AnswerKeys.find(e => e.id === parseInt(me.value)).answers;
+                                    me.nextElementSibling.nextElementSibling.innerHTML = keys;
+                                }
+                            }
+                        }>
+                            <option value="AnswerKeys">Answer Keys</option>
+                            {Gauss8Years}
+                        </select> <br />
+
+                        <p id="KeysOfGauss8"></p>
 
                         <span><i className="bi bi-thermometer-sun"></i>June: </span>
                         End of G8
